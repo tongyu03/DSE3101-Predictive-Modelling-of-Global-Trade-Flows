@@ -6,6 +6,7 @@ Created on Wed Mar 19 22:03:53 2025
 """
 
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Load the CSV file
 sgp_trade_raw = "en_SGP_AllYears_WITS_Trade_Summary.CSV"
@@ -34,4 +35,104 @@ relevant_indicators = [
 
 sgp_trade_cleaned = sgp_trade_cleaned[sgp_trade_cleaned["Indicator"].isin(relevant_indicators)]
 
+sgp_trade_cleaned = sgp_trade_cleaned[sgp_trade_cleaned["Product categories"] == "All Products"]
+
+sgp_trade_cleaned = sgp_trade_cleaned[sgp_trade_cleaned["Partner"] != "World"]
 print(sgp_trade_cleaned.head())
+
+trade_summary = sgp_trade_cleaned.groupby(["Year", "Partner", "Indicator Type"])["Trade_Value"].sum().reset_index()
+
+
+# Plot trade volume over time
+plt.figure(figsize=(12, 6))
+
+# Loop through unique partners and indicator types
+for partner in trade_summary["Partner"].unique():
+    for indicator_type in trade_summary["Indicator Type"].unique():
+        subset = trade_summary[(trade_summary["Partner"] == partner) & (trade_summary["Indicator Type"] == indicator_type)]
+        plt.plot(subset["Year"], subset["Trade_Value"], label=f"{partner} - {indicator_type}")
+
+# Customize the plot
+plt.xlabel("Year")
+plt.ylabel("Trade Volume (US$ Mil)")
+plt.title("Trade Volume Over Time by Partner and Indicator Type")
+plt.legend(loc="upper left", bbox_to_anchor=(1,1))
+plt.grid(True)
+
+# Show the plot
+plt.show()
+
+#%%
+
+# time-series training
+
+import xgboost as xgb
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_absolute_error
+
+
+# Sort by Year for time-series modeling
+trade_summary = trade_summary.sort_values(by=["Year"])
+
+# Create lag features (1-year, 2-year, 3-year lags)
+trade_summary["Trade_Value_Lag1"] = trade_summary.groupby(["Partner", "Indicator Type"])["Trade_Value"].shift(1)
+trade_summary["Trade_Value_Lag2"] = trade_summary.groupby(["Partner", "Indicator Type"])["Trade_Value"].shift(2)
+trade_summary["Trade_Value_Lag3"] = trade_summary.groupby(["Partner", "Indicator Type"])["Trade_Value"].shift(3)
+
+# Drop rows with NaN values (since lags introduce missing values)
+trade_summary = trade_summary.dropna()
+
+# Display processed dataset
+print(trade_summary.head())
+
+# Define features (lagged trade values) and target variable
+X = trade_summary[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3"]]
+y = trade_summary["Trade_Value"]
+
+# Split data into training and test sets (80% train, 20% test)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
+
+
+# Train an XGBoost Regressor
+model = xgb.XGBRegressor(objective="reg:squarederror", n_estimators=100, learning_rate=0.1)
+model.fit(X_train, y_train)
+
+# Make predictions
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+mae = mean_absolute_error(y_test, y_pred)
+print(f"Mean Absolute Error: {mae}")
+
+print("Mean Trade Value:", y.mean())
+print("Median Trade Value:", y.median())
+print("Min Trade Value:", y.min())
+print("Max Trade Value:", y.max())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
