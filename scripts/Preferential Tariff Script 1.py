@@ -1,10 +1,12 @@
 import pandas as pd
 import numpy as np
 
+#author: jun lu
 # Load the data
-df = pd.read_csv("../DSE3101-Predictive-Modelling-of-Global-Trade-Flows/Data/Preferential Tariffs.csv")
+df = pd.read_csv("data/cleaned_trade_data.csv")
 
-# Strip any leading/trailing spaces from column names
+# Strip any leadin
+# g/trailing spaces from column names
 df.columns = df.columns.str.strip()
 
 #target countries
@@ -48,5 +50,4 @@ result = grouped.reset_index()
 # Now, display the result with 'reporteriso3' and 'partneriso3' included
 print(result)
 
-# Optionally, save this aggregated data to a new CSV file
-result.to_csv("/Users/junlu/dse rstudio/DSE3101-Predictive-Modelling-of-Global-Trade-Flows/aggregated_trade_data_log.csv", index=False)
+
