@@ -1,7 +1,7 @@
 import pandas as pd
 
-agree_sc = pd.read_csv("../data/AgreementScoresAll_Jun2024.csv")
-cow = pd.read_csv("../data/COW-country-codes.csv")
+agree_sc = pd.read_csv("data/AgreementScoresAll_Jun2024_combined.csv")
+cow = pd.read_csv("data/COW-country-codes.csv")
 
 agree_sc = agree_sc[["ccode1", "ccode2", "agree", "year", "IdealPointAll.x", "IdealPointAll.y", "IdealPointDistance"]]
 
@@ -52,3 +52,18 @@ df = df.dropna()
 #total entries
 print(len(df))
 #1818
+
+df['CountryPair'] = df[['Country1', 'Country2']].apply(lambda x: tuple(sorted(x)), axis=1)
+
+df = df.groupby('CountryPair').agg({
+    'agree': 'mean',
+    'IdealPointDistance': 'mean',
+    'year': 'min',
+    'IdealPointAll.x': 'mean',
+    'IdealPointAll.y': 'mean',
+}).reset_index()
+
+print(df)
+
+
+df.to_csv('unga_voting.csv', index=False)
