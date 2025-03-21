@@ -9,7 +9,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the CSV file
-sgp_trade_raw = "en_SGP_AllYears_WITS_Trade_Summary.CSV"
+sgp_trade_raw = "data/en_SGP_AllYears_WITS_Trade_Summary.CSV"
 
 sgp_trade_cleaned = pd.read_csv(sgp_trade_raw)
 
@@ -38,7 +38,7 @@ sgp_trade_cleaned = sgp_trade_cleaned[sgp_trade_cleaned["Indicator"].isin(releva
 sgp_trade_cleaned = sgp_trade_cleaned[sgp_trade_cleaned["Product categories"] == "All Products"]
 
 sgp_trade_cleaned = sgp_trade_cleaned[sgp_trade_cleaned["Partner"] != "World"]
-print(sgp_trade_cleaned.head())
+#print(sgp_trade_cleaned.head())
 
 trade_summary = sgp_trade_cleaned.groupby(["Year", "Partner", "Indicator Type"])["Trade_Value"].sum().reset_index()
 
@@ -62,7 +62,42 @@ plt.grid(True)
 # Show the plot
 plt.show()
 
+
 #%%
+'''
+
+Created on Sat Mar 22 02:17:44 2025
+@author: shannen
+
+'''
+import ast
+#integrate unga_voting script into model
+unga = pd.read_csv("data/unga_voting.csv")
+
+#split pait
+unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
+unga[['Country1', 'Country2']] = pd.DataFrame(unga['CountryPair'].tolist(), index=unga.index)
+unga = unga.drop(columns=['CountryPair'])
+
+#filter
+unga = unga[(unga['year'] >= 1989) & (unga['year'] <= 2021)]
+unga_sg = unga[(unga['Country1'] == 'Singapore') | (unga['Country2'] == 'Singapore')]
+unga_sg = unga_sg[['agree', 'year', 'IdealPointDistance', 'Country1', 'Country2']]
+
+#standardisation
+unga_sg['year'] = unga_sg['year'].astype(int)
+trade_summary['Year'] = trade_summary['Year'].astype(int)
+
+unga_sg['Partner'] = unga_sg.apply(lambda row: row['Country1'] if row['Country1'] != 'Singapore' else row['Country2'], axis=1)
+
+#join
+merged_df = pd.merge(unga_sg, trade_summary, how='left', left_on=['Partner', 'year'], right_on=['Partner', 'Year'])
+merged_df = merged_df.drop(columns=['Country1', 'Country2', 'Year'])
+print(merged_df.head())
+
+#integrate GDP script 1.py
+gdp = pd.read_csv("data/Processed_GDP.csv")
+
 
 # time-series training
 
@@ -72,7 +107,7 @@ from sklearn.metrics import mean_absolute_error
 
 
 # Sort by Year for time-series modeling
-trade_summary = trade_summary.sort_values(by=["Year"])
+trade_summary = merged_df.sort_values(by=["year"])
 
 # Create lag features (1-year, 2-year, 3-year lags)
 trade_summary["Trade_Value_Lag1"] = trade_summary.groupby(["Partner", "Indicator Type"])["Trade_Value"].shift(1)
