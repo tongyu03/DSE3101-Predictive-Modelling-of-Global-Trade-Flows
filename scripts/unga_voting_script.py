@@ -1,11 +1,12 @@
 import pandas as pd
 
-agree_sc = pd.read_csv("data/AgreementScoresAll_Jun2024_combined.csv")
+agree_sc = pd.read_csv("data/AgreementScoresAll_Jun2024.csv")
 cow = pd.read_csv("data/COW-country-codes.csv")
 
 agree_sc = agree_sc[["ccode1", "ccode2", "agree", "year", "IdealPointAll.x", "IdealPointAll.y", "IdealPointDistance"]]
 
 cow_dict = {row['CCode']: row['StateNme'] for index, row in cow.iterrows()}
+#no data for Hong Kong, China
 
 #left join
 result = []
@@ -21,7 +22,7 @@ columns = agree_sc.columns.tolist() + ['Country1', 'Country2']
 df = pd.DataFrame(result, columns=columns)
 
 #filter target countries
-target_countries = ["China", "Hongkong", "Japan", "Korea", "Malaysia", "Saudi Arabia", "Thailand", "USA", "Singapore"]
+target_countries = ["China", "Hong Kong", "Japan", "Korea", "Malaysia", "Saudi Arabia", "Thailand", "USA", "Singapore"]
 df = df[(df["Country1"].isin(target_countries)) & (df["Country2"].isin(target_countries))]
 
 #print("Unique Years in Filtered Data:", df["year"].unique())
@@ -53,17 +54,18 @@ df = df.dropna()
 print(len(df))
 #1818
 
-df['CountryPair'] = df[['Country1', 'Country2']].apply(lambda x: tuple(sorted(x)), axis=1)
-
-df = df.groupby('CountryPair').agg({
-    'agree': 'mean',
-    'IdealPointDistance': 'mean',
-    'year': 'min',
-    'IdealPointAll.x': 'mean',
-    'IdealPointAll.y': 'mean',
-}).reset_index()
-
 print(df)
 
+df['CountryPair'] = df.apply(
+    lambda row: tuple(sorted([row['Country1'], row['Country2']])), axis=1
+)
 
-df.to_csv('unga_voting.csv', index=False)
+# Group by
+df = df.groupby(['year', 'CountryPair']).agg({
+    'agree': 'mean',
+    'IdealPointAll.x': 'mean',
+    'IdealPointAll.y': 'mean',
+    'IdealPointDistance': 'mean'
+}).reset_index()
+
+df.to_csv('data/unga_voting.csv', index=False)
