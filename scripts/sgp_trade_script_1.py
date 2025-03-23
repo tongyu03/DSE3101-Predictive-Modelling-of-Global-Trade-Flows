@@ -102,8 +102,8 @@ gdp = pd.merge(gdp, countries[['alpha-3', 'name']], how='left', left_on='Country
 gdp = gdp.drop(columns=['alpha-3'])
 merged_df = pd.merge(merged_df, gdp, how='left', left_on =['year', 'Partner'], right_on=['Year', 'name'])
 merged_df = merged_df.drop(columns=['name'])
-# time-series training
 
+# time-series training
 import xgboost as xgb
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error

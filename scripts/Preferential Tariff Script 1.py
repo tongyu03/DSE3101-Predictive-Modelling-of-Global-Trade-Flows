@@ -50,4 +50,5 @@ result = grouped.reset_index()
 # Now, display the result with 'reporteriso3' and 'partneriso3' included
 print(result)
 
+df.to_csv('data/tariff.csv', index=False)
 
