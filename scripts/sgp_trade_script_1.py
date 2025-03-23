@@ -97,8 +97,11 @@ print(merged_df.head())
 
 #integrate GDP script 1.py
 gdp = pd.read_csv("data/Processed_GDP.csv")
-
-
+countries = pd.read_csv("data/countrylegend.csv")
+gdp = pd.merge(gdp, countries[['alpha-3', 'name']], how='left', left_on='Country Code', right_on='alpha-3')
+gdp = gdp.drop(columns=['alpha-3'])
+merged_df = pd.merge(merged_df, gdp, how='left', left_on =['year', 'Partner'], right_on=['Year', 'name'])
+merged_df = merged_df.drop(columns=['name'])
 # time-series training
 
 import xgboost as xgb
