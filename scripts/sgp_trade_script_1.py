@@ -64,12 +64,12 @@ plt.show()
 
 
 #%%
-'''
+"""
 
 Created on Sat Mar 22 02:17:44 2025
 @author: shannen
 
-'''
+"""
 import ast
 #integrate unga_voting script into model
 unga = pd.read_csv("data/unga_voting.csv")
@@ -101,7 +101,17 @@ countries = pd.read_csv("data/countrylegend.csv")
 gdp = pd.merge(gdp, countries[['alpha-3', 'name']], how='left', left_on='Country Code', right_on='alpha-3')
 gdp = gdp.drop(columns=['alpha-3'])
 merged_df = pd.merge(merged_df, gdp, how='left', left_on =['year', 'Partner'], right_on=['Year', 'name'])
-merged_df = merged_df.drop(columns=['name'])
+merged_df = merged_df.drop(columns=['name', 'GDP', 'year'])
+
+print(merged_df.head())
+
+#integrate exchange_rate_script_1.py
+exchange_rate = pd.read_csv("data/exchange_rate.csv")
+merged_df = pd.merge(merged_df, exchange_rate, how='left', left_on=['Partner','Year'], right_on=['Data Source', 'Year'])
+merged_df = merged_df.drop(columns=['Data Source', 'Country Code'])
+merged_df.rename(columns={"World Development Indicators": "Country Code"}, inplace=True)
+merged_df.rename(columns={"Value": "Exchange Rate"}, inplace=True)
+print(merged_df.head())
 
 # time-series training
 import xgboost as xgb
@@ -110,7 +120,7 @@ from sklearn.metrics import mean_absolute_error
 
 
 # Sort by Year for time-series modeling
-trade_summary = merged_df.sort_values(by=["year"])
+trade_summary = merged_df.sort_values(by=["Year"])
 
 # Create lag features (1-year, 2-year, 3-year lags)
 trade_summary["Trade_Value_Lag1"] = trade_summary.groupby(["Partner", "Indicator Type"])["Trade_Value"].shift(1)
@@ -148,6 +158,7 @@ print("Min Trade Value:", y.min())
 print("Max Trade Value:", y.max())
 
 
+#important datasets to be considered
 
 
 
