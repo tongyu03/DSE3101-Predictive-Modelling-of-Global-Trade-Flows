@@ -1,8 +1,8 @@
 import numpy as np
 import pandas as pd
 
-import_data = pd.read_csv('Import data_Sinapore.csv', skiprows = 10)
-export_data = pd.read_csv('Export data_Singapore.csv', skiprows = 10)
+import_data = pd.read_csv('../data/Import_data_Singapore.csv', skiprows = 10)
+export_data = pd.read_csv('../data/Export_data_Singapore.csv', skiprows = 10)
 import_data = import_data.melt(id_vars=["Data Series"], var_name="Dates", value_name="Imports")
 import_data = import_data.rename(columns={"Data Series": "Country"})
 #print(import_data.head(10))
@@ -27,4 +27,11 @@ data = data.sort_values(by = "Trade Volume", ascending = False)
 data = data.dropna()
 #print(data)
 data.to_csv('data.csv', index = False)
+
+data["Dates"] = pd.to_datetime(data["Dates"])
+data["Year"] = data["Dates"].dt.year  # Extract year
+data["Month"] = data["Dates"].dt.month  # Extract month (numeric)
+data = data.drop(columns=["Dates"])
+data = data[["Country", "Year", "Month", "Imports", "Exports", "Trade Volume"]]
+
 
