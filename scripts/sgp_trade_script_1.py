@@ -102,7 +102,6 @@ gdp = pd.merge(gdp, countries[['alpha-3', 'name']], how='left', left_on='Country
 gdp = gdp.drop(columns=['alpha-3'])
 merged_df = pd.merge(merged_df, gdp, how='left', left_on =['year', 'Partner'], right_on=['Year', 'name'])
 merged_df = merged_df.drop(columns=['name', 'GDP', 'year'])
-
 print(merged_df.head())
 
 #integrate exchange_rate_script_1.py
@@ -156,11 +155,13 @@ print("Mean Trade Value:", y.mean())
 print("Median Trade Value:", y.median())
 print("Min Trade Value:", y.min())
 print("Max Trade Value:", y.max())
+print("Variance:", y.var())
 
 
 #important datasets to be considered
-
-
+#relations between countries of interests that indirectly impact Singapore
+unga_others = unga[(unga['Country1'] != 'Singapore') & (unga['Country2'] != 'Singapore')]
+print(unga_others.head())
 
 
 
