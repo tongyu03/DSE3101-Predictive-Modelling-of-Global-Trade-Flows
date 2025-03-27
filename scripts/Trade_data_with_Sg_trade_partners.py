@@ -25,8 +25,6 @@ data["Dates"] = pd.to_datetime(data["Dates"], format="%Y %b")
 data["Trade Volume"] = data["Imports"] + data["Exports"]
 data = data.sort_values(by = "Trade Volume", ascending = False)
 data = data.dropna()
-#print(data)
-data.to_csv('data.csv', index = False)
 
 data["Dates"] = pd.to_datetime(data["Dates"])
 data["Year"] = data["Dates"].dt.year  # Extract year
@@ -34,4 +32,5 @@ data["Month"] = data["Dates"].dt.month  # Extract month (numeric)
 data = data.drop(columns=["Dates"])
 data = data[["Country", "Year", "Month", "Imports", "Exports", "Trade Volume"]]
 
+data.to_csv('cleaned_monthly_trade_data.csv', index = False)
 
