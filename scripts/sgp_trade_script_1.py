@@ -151,19 +151,19 @@ y_pred = model.predict(X_test)
 mae = mean_absolute_error(y_test, y_pred)
 print(f"Mean Absolute Error: {mae}")
 
+from sklearn.metrics import mean_squared_error
+
 print("Mean Trade Value:", y.mean())
 print("Median Trade Value:", y.median())
 print("Min Trade Value:", y.min())
 print("Max Trade Value:", y.max())
 print("Variance:", y.var())
-
+print("MSE:", mean_squared_error(y_test, y_pred))
 
 #important datasets to be considered
 #relations between countries of interests that indirectly impact Singapore
 unga_others = unga[(unga['Country1'] != 'Singapore') & (unga['Country2'] != 'Singapore')]
 print(unga_others.head())
-
-
 
 
 
