@@ -32,7 +32,9 @@ def generate_trade_graph(trade_df, country, year):
 
 app_ui = ui.page_fluid(
     ui.navset_pill_list(  
-        ui.nav_panel("Introduction", "Explain project + how to use"),
+        ui.nav_panel("Introduction", "Explain project + how to use"
+                     
+                     ),
         ui.nav_panel("Historical Trade", 
                      
                       ui.input_selectize(
@@ -50,14 +52,13 @@ app_ui = ui.page_fluid(
 
 
 def server(input, output, session):
-    # Define trade_plot as a reactive calculation
-    @reactive.calc
+    
+    @reactive
     def trade_plot():
         country = input.select_country()
         year = input.slide_year()
         return generate_trade_graph(trade_df, country, year)
-
-    # Render the plot
+    
     @output
     @render.plot
     def plot():
