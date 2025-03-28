@@ -33,7 +33,7 @@ app_ui = ui.page_fluid(
         ui.nav_panel("Historical Trade", 
                       ui.input_selectize(
                           "select_country", "Select a Trade Partner:", 
-                          choices=["China", "Hong Kong", "Japan", "Korea, Rep Of", "Malaysia", "Saudi Arabia", "Thailand", "United States"],  # Options for the user to select
+                          choices=["China", "Hong Kong", "Japan", "South Korea", "Malaysia", "Saudi Arabia", "Thailand", "United States"],  # Options for the user to select
                           selected="China"  # Default selected value
                       ),
                       ui.input_slider("slide_year", "Choose a Year", 2003, 2025, value = 2024),
