@@ -5,9 +5,49 @@ from shiny import App, ui, reactive, render
 from shinywidgets import render_plotly
 import matplotlib.pyplot as plt
 import tempfile
+import seaborn as sns
+import json
+# Import data for map
+import pathlib
+from ipyleaflet import Map, GeoData, basemaps, LayersControl, Marker, Popup
+from ipywidgets import HTML
+import shinywidgets
+from shinywidgets import render_widget
 
 ### Historical Trade Data
-trade_df = pd.read_csv("../data/cleaned_monthly_trade_data.csv")
+trade_df = pd.read_csv("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\cleaned_monthly_trade_data.csv")
+## Port location trade data
+with open(r'DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\ports.json', 'r', encoding='utf-8') as f:
+    ports = json.load(f)
+
+# Country coordinates
+countries_coords = {
+    "China": (35.8617, 104.1954),
+    "Hong Kong": (22.3193, 114.1694),
+    "Japan": (36.2048, 138.2529),
+    "South Korea": (35.9078, 127.7669),
+    "Malaysia": (4.2105, 101.9758),
+    "Saudi Arabia": (23.8859, 45.0792),
+    "Thailand": (15.8700, 100.9925),
+    "U.S.A": (37.09020, -95.7129)
+}
+
+# Get city coordinates for each country
+cities_coords = {}
+
+for port in ports:
+    country = port["COUNTRY"]
+    city = port["CITY"]
+    lat, lon = port["LATITUDE"], port["LONGITUDE"]
+
+    # Initialize country if not exists
+    if country not in cities_coords:
+        cities_coords[country] = {}
+
+    # Add city and its coordinates
+    cities_coords[country][city] = (lat, lon)
+
+
 
 # Function to generate the trade graph
 def generate_trade_graph(trade_df, country, year):
@@ -41,9 +81,13 @@ app_ui = ui.page_fluid(
                       ui.output_image("trade_image")  # New image output
                     ),
         ui.nav_panel("Predicted Trade Volume", "model"),
-        ui.nav_panel("Trading Ports", "interactive map"),
-    )
-)  
+        ui.nav_panel("Trading Ports", 
+                     ui.input_select("country", label = "Select country", choices = list(countries_coords.keys())),
+                     ui.input_select("city", label="Select city", choices=[]),
+                     shinywidgets.output_widget("map") # Output widget for the map
+                        )
+                     )
+                    )
 
 
 def server(input, output, session):
@@ -66,6 +110,41 @@ def server(input, output, session):
         temp_file.close()
 
         return {"src": temp_file.name, "width": "70%"}
+    
+    @reactive.effect
+    def update_cities():
+        country = input.country()
+        city_choices = list(cities_coords.get(country, {}).keys())
 
+        if city_choices:
+            ui.update_select("city", choices=city_choices)  
+        else:
+            ui.update_select("city", choices=[])
+    
+    @render_widget
+    def map():
+        # Initialize the map centered on Singapore
+        m = Map(center=(1.290270, 103.851959), zoom=12)
+
+        # Add port markers
+        for port in ports:
+            if port["COUNTRY"] in countries_coords:
+                marker = Marker(location=(port["LATITUDE"], port["LONGITUDE"]))
+                m.add(marker)
+
+        m.add(LayersControl())  # FIXED: Add control after markers
+        return m
+
+    @reactive.effect
+    def update_map():
+        city = input.city()
+        country = input.country()
+        if city and country:
+            coords = cities_coords.get(country, {}).get(city)
+        else:
+            coords = countries_coords.get(country)
+        
+        if coords:
+            map.widget.center = coords
 
 app = App(app_ui, server)
