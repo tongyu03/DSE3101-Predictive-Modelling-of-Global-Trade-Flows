@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import tempfile
 
 ### Historical Trade Data
-trade_df = pd.read_csv("../data/cleaned_monthly_trade_data.csv")
+trade_df = pd.read_csv("data/cleaned_monthly_trade_data.csv")
 
 # Function to generate the trade graph
 def generate_trade_graph(trade_df, country, year):
@@ -36,7 +36,7 @@ app_ui = ui.page_fluid(
                           choices=["China", "Hong Kong", "Japan", "South Korea", "Malaysia", "Saudi Arabia", "Thailand", "United States"],  # Options for the user to select
                           selected="China"  # Default selected value
                       ),
-                      ui.input_slider("slide_year", "Choose a Year", 2003, 2025, value = 2024),
+                      ui.input_slider("slide_year", "Choose a Year:", 2003, 2025, value = 2024),
                       ui.output_plot("trade_plot"),  # Output plot will be rendered here
                       ui.output_image("trade_image")  # New image output
                     ),
