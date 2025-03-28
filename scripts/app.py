@@ -15,8 +15,8 @@ import shinywidgets
 from shinywidgets import render_widget
 
 ### Historical Trade Data
-trade_df = pd.read_csv("data/cleaned_monthly_trade_data.csv")
-exchange_df = pd.read_csv("data/ER_sg.csv")
+trade_df = pd.read_csv("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\cleaned_monthly_trade_data.csv")
+exchange_df = pd.read_csv("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\ER_sg.csv")
 ## Port location trade data
 with open(r'DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\ports.json', 'r', encoding='utf-8') as f:
     ports = json.load(f)
