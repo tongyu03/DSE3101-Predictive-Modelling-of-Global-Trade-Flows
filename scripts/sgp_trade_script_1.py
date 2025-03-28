@@ -112,6 +112,15 @@ merged_df.rename(columns={"World Development Indicators": "Country Code"}, inpla
 merged_df.rename(columns={"Value": "Exchange Rate"}, inplace=True)
 print(merged_df.head())
 
+#integrate FTA data
+fta = pd.read_csv("data/adjusted_fta_data.csv")
+fta_sg = fta[(fta['Country'] == 'SGP') | (fta['Partner Country'] == 'SGP')]
+fta_sg['Country Code'] = fta_sg.apply(
+    lambda row: row['Country'] if row['Country'] != 'SGP' else row['Partner Country'],
+    axis=1
+)
+merged_df = pd.merge(merged_df, fta_sg, how='left', left_on=['Year', 'Country Code'], right_on=['Year', 'Country Code'])
+print(merged_df.head())
 
 """
 XGBOOST MODEL

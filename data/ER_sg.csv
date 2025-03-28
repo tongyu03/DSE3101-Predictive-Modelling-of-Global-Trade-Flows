@@ -1,0 +1,190 @@
+Data Source,Year,ER,Currency
+China,2003,4.75,CNY
+Hong Kong,2003,4.47,HKD
+Japan,2003,66.54,JPY
+South Korea,2003,684.0,KRW
+Malaysia,2003,2.18,MYR
+Saudi Arabia,2003,2.15,SAR
+Singapore,2003,1.0,SGD
+Thailand,2003,23.81,THB
+United States,2003,0.57,USD
+China,2004,4.9,CNY
+Hong Kong,2004,4.61,HKD
+Japan,2004,64.01,JPY
+South Korea,2004,678.16,KRW
+Malaysia,2004,2.25,MYR
+Saudi Arabia,2004,2.22,SAR
+Singapore,2004,1.0,SGD
+Thailand,2004,23.8,THB
+United States,2004,0.59,USD
+China,2005,4.92,CNY
+Hong Kong,2005,4.67,HKD
+Japan,2005,66.22,JPY
+South Korea,2005,615.43,KRW
+Malaysia,2005,2.28,MYR
+Saudi Arabia,2005,2.25,SAR
+Singapore,2005,1.0,SGD
+Thailand,2005,24.16,THB
+United States,2005,0.6,USD
+China,2006,5.02,CNY
+Hong Kong,2006,4.89,HKD
+Japan,2006,73.19,JPY
+South Korea,2006,601.25,KRW
+Malaysia,2006,2.31,MYR
+Saudi Arabia,2006,2.36,SAR
+Singapore,2006,1.0,SGD
+Thailand,2006,23.84,THB
+United States,2006,0.63,USD
+China,2007,5.05,CNY
+Hong Kong,2007,5.18,HKD
+Japan,2007,78.13,JPY
+South Korea,2007,616.66,KRW
+Malaysia,2007,2.28,MYR
+Saudi Arabia,2007,2.49,SAR
+Singapore,2007,1.0,SGD
+Thailand,2007,22.9,THB
+United States,2007,0.66,USD
+China,2008,4.91,CNY
+Hong Kong,2008,5.5,HKD
+Japan,2008,73.05,JPY
+South Korea,2008,777.55,KRW
+Malaysia,2008,2.36,MYR
+Saudi Arabia,2008,2.65,SAR
+Singapore,2008,1.0,SGD
+Thailand,2008,23.55,THB
+United States,2008,0.71,USD
+China,2009,4.7,CNY
+Hong Kong,2009,5.33,HKD
+Japan,2009,64.33,JPY
+South Korea,2009,878.13,KRW
+Malaysia,2009,2.42,MYR
+Saudi Arabia,2009,2.58,SAR
+Singapore,2009,1.0,SGD
+Thailand,2009,23.57,THB
+United States,2009,0.69,USD
+China,2010,4.97,CNY
+Hong Kong,2010,5.7,HKD
+Japan,2010,64.38,JPY
+South Korea,2010,848.15,KRW
+Malaysia,2010,2.36,MYR
+Saudi Arabia,2010,2.75,SAR
+Singapore,2010,1.0,SGD
+Thailand,2010,23.24,THB
+United States,2010,0.73,USD
+China,2011,5.14,CNY
+Hong Kong,2011,6.19,HKD
+Japan,2011,63.45,JPY
+South Korea,2011,881.11,KRW
+Malaysia,2011,2.43,MYR
+Saudi Arabia,2011,2.98,SAR
+Singapore,2011,1.0,SGD
+Thailand,2011,24.24,THB
+United States,2011,0.8,USD
+China,2012,5.05,CNY
+Hong Kong,2012,6.21,HKD
+Japan,2012,63.85,JPY
+South Korea,2012,901.68,KRW
+Malaysia,2012,2.47,MYR
+Saudi Arabia,2012,3.0,SAR
+Singapore,2012,1.0,SGD
+Thailand,2012,24.87,THB
+United States,2012,0.8,USD
+China,2013,4.95,CNY
+Hong Kong,2013,6.2,HKD
+Japan,2013,78.0,JPY
+South Korea,2013,875.08,KRW
+Malaysia,2013,2.52,MYR
+Saudi Arabia,2013,3.0,SAR
+Singapore,2013,1.0,SGD
+Thailand,2013,24.56,THB
+United States,2013,0.8,USD
+China,2014,4.85,CNY
+Hong Kong,2014,6.12,HKD
+Japan,2014,83.62,JPY
+South Korea,2014,830.94,KRW
+Malaysia,2014,2.58,MYR
+Saudi Arabia,2014,2.96,SAR
+Singapore,2014,1.0,SGD
+Thailand,2014,25.63,THB
+United States,2014,0.79,USD
+China,2015,4.53,CNY
+Hong Kong,2015,5.64,HKD
+Japan,2015,88.04,JPY
+South Korea,2015,822.62,KRW
+Malaysia,2015,2.84,MYR
+Saudi Arabia,2015,2.73,SAR
+Singapore,2015,1.0,SGD
+Thailand,2015,24.91,THB
+United States,2015,0.73,USD
+China,2016,4.81,CNY
+Hong Kong,2016,5.62,HKD
+Japan,2016,78.75,JPY
+South Korea,2016,840.19,KRW
+Malaysia,2016,3.0,MYR
+Saudi Arabia,2016,2.71,SAR
+Singapore,2016,1.0,SGD
+Thailand,2016,25.55,THB
+United States,2016,0.72,USD
+China,2017,4.89,CNY
+Hong Kong,2017,5.64,HKD
+Japan,2017,81.23,JPY
+South Korea,2017,819.02,KRW
+Malaysia,2017,3.11,MYR
+Saudi Arabia,2017,2.72,SAR
+Singapore,2017,1.0,SGD
+Thailand,2017,24.58,THB
+United States,2017,0.72,USD
+China,2018,4.9,CNY
+Hong Kong,2018,5.81,HKD
+Japan,2018,81.87,JPY
+South Korea,2018,815.64,KRW
+Malaysia,2018,2.99,MYR
+Saudi Arabia,2018,2.78,SAR
+Singapore,2018,1.0,SGD
+Thailand,2018,23.95,THB
+United States,2018,0.74,USD
+China,2019,5.06,CNY
+Hong Kong,2019,5.74,HKD
+Japan,2019,79.91,JPY
+South Korea,2019,854.27,KRW
+Malaysia,2019,3.04,MYR
+Saudi Arabia,2019,2.75,SAR
+Singapore,2019,1.0,SGD
+Thailand,2019,22.76,THB
+United States,2019,0.73,USD
+China,2020,5.0,CNY
+Hong Kong,2020,5.62,HKD
+Japan,2020,77.39,JPY
+South Korea,2020,855.43,KRW
+Malaysia,2020,3.05,MYR
+Saudi Arabia,2020,2.72,SAR
+Singapore,2020,1.0,SGD
+Thailand,2020,22.68,THB
+United States,2020,0.72,USD
+China,2021,4.8,CNY
+Hong Kong,2021,5.79,HKD
+Japan,2021,81.69,JPY
+South Korea,2021,851.48,KRW
+Malaysia,2021,3.08,MYR
+Saudi Arabia,2021,2.79,SAR
+Singapore,2021,1.0,SGD
+Thailand,2021,23.8,THB
+United States,2021,0.74,USD
+China,2022,4.89,CNY
+Hong Kong,2022,5.68,HKD
+Japan,2022,95.38,JPY
+South Korea,2022,936.74,KRW
+Malaysia,2022,3.19,MYR
+Saudi Arabia,2022,2.72,SAR
+Singapore,2022,1.0,SGD
+Thailand,2022,25.43,THB
+United States,2022,0.73,USD
+China,2023,5.28,CNY
+Hong Kong,2023,5.83,HKD
+Japan,2023,104.63,JPY
+South Korea,2023,972.37,KRW
+Malaysia,2023,3.4,MYR
+Saudi Arabia,2023,2.79,SAR
+Singapore,2023,1.0,SGD
+Thailand,2023,25.92,THB
+United States,2023,0.74,USD
