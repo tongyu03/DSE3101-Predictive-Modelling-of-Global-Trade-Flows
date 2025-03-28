@@ -15,15 +15,15 @@ def generate_trade_graph(trade_df, country, year):
     country_df = trade_df[trade_df["Country"] == country]
     df = country_df[country_df["Year"] == year]
     df = df.sort_values(by="Month")
-
+    month_names = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     fig, ax = plt.subplots(figsize=(10, 6))
     ax.plot(df["Month"], df["Exports"], label="Exports", color="blue")
     ax.plot(df["Month"], df["Imports"], label="Imports", color="red")
-
     ax.set_title(f"Trade Volume Between Singapore and {country}")
     ax.set_xlabel("Month")
     ax.set_ylabel("Trade Value (US$ Mil)")
     ax.set_xticks(range(1, 13))
+    ax.set_xticklabels(month_names)  # Replace numbers with month names
     ax.legend()
     return fig
 
