@@ -25,6 +25,7 @@ def generate_trade_graph(trade_df, country, year):
     ax.set_ylabel("Trade Value (US$ Mil)")
     ax.set_xticks(range(1, 13))
     ax.legend()
+    return fig
 
 # Function to generate ER text
 def get_ex_rate(exchange_df, country, year):
@@ -55,11 +56,10 @@ app_ui = ui.page_fluid(
                       ),
                       ui.input_slider("slide_year", "Choose a Year:", 2003, 2024, value = 2020),
                       ui.output_plot("trade_plot"),  # line graph
-                      ui.output_image("trade_image"),  # New image output
                       ui.value_box(
                           ui.output_text("er_value_title"),  # Dynamic title
                           ui.output_text("er_value_text"),  # Dynamic text for the value
-                          theme="bg-gradient-indigo-purple", 
+                          theme = "bg-gradient-indigo-purple"
                       ),
                     ),
         ui.nav_panel("Predicted Trade Volume", "model"),
@@ -76,18 +76,6 @@ def server(input, output, session):
         country = input.select_country()
         year = input.slide_year()
         return generate_trade_graph(trade_df, country, year)
-    
-    @output
-    @render.image
-    def trade_image():
-        country = input.select_country()
-        year = input.slide_year()
-        fig = generate_trade_graph(trade_df, country, year)  
-        temp_file = tempfile.NamedTemporaryFile(suffix=".png", delete=False)
-        fig.savefig(temp_file.name) 
-        temp_file.close()
-
-        return {"src": temp_file.name, "width": "70%"}
     
     # Reactive rendering of the title (Exchange Rate in {year})
     @output
