@@ -8,6 +8,7 @@ import tempfile
 
 ### Historical Trade Data
 trade_df = pd.read_csv("data/cleaned_monthly_trade_data.csv")
+exchange_df = pd.read_csv("data/ER_sg.csv")
 
 # Function to generate the trade graph
 def generate_trade_graph(trade_df, country, year):
@@ -25,6 +26,22 @@ def generate_trade_graph(trade_df, country, year):
     ax.set_xticks(range(1, 13))
     ax.legend()
 
+# Function to generate ER text
+def get_ex_rate(exchange_df, country, year):
+    ex_rate_row = exchange_df[(exchange_df["Data Source"] == country) & (exchange_df["Year"] == year)]
+    if not ex_rate_row.empty:
+        er = ex_rate_row["ER"].values[0]
+        currency = ex_rate_row["Currency"].values[0]
+        return f"{er} {currency} per SGD"
+    else:
+        return f"Exchange rate data not available for {country} in {year}"
+
+def get_title_text(year):
+    return f"Exchange Rate in {year}"
+
+
+
+### ui
 app_ui = ui.page_fluid(
     ui.navset_pill_list(  
         ui.nav_panel("Introduction", "Explain project + how to use"
@@ -36,16 +53,21 @@ app_ui = ui.page_fluid(
                           choices=["China", "Hong Kong", "Japan", "South Korea", "Malaysia", "Saudi Arabia", "Thailand", "United States"],  # Options for the user to select
                           selected="China"  # Default selected value
                       ),
-                      ui.input_slider("slide_year", "Choose a Year:", 2003, 2025, value = 2024),
-                      ui.output_plot("trade_plot"),  # Output plot will be rendered here
-                      ui.output_image("trade_image")  # New image output
+                      ui.input_slider("slide_year", "Choose a Year:", 2003, 2024, value = 2020),
+                      ui.output_plot("trade_plot"),  # line graph
+                      ui.output_image("trade_image"),  # New image output
+                      ui.value_box(
+                          ui.output_text("er_value_title"),  # Dynamic title
+                          ui.output_text("er_value_text"),  # Dynamic text for the value
+                          theme="bg-gradient-indigo-purple", 
+                      ),
                     ),
         ui.nav_panel("Predicted Trade Volume", "model"),
         ui.nav_panel("Trading Ports", "interactive map"),
     )
 )  
 
-
+### server
 def server(input, output, session):
 
     @output
@@ -66,6 +88,20 @@ def server(input, output, session):
         temp_file.close()
 
         return {"src": temp_file.name, "width": "70%"}
+    
+    # Reactive rendering of the title (Exchange Rate in {year})
+    @output
+    @render.text
+    def er_value_title():
+        year = input.slide_year()
+        return get_title_text(year)
 
+    # Reactive rendering of exchange rate text for the value box
+    @output
+    @render.text
+    def er_value_text():
+        country = input.select_country()
+        year = input.slide_year()
+        return get_ex_rate(exchange_df, country, year)
 
 app = App(app_ui, server)
