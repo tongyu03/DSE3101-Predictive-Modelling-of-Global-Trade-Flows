@@ -4,6 +4,7 @@ import plotly.express as px
 from shiny import App, ui, reactive, render
 from shinywidgets import render_plotly
 import matplotlib.pyplot as plt
+import tempfile
 
 ### Historical Trade Data
 trade_df = pd.read_csv("../data/cleaned_monthly_trade_data.csv")
@@ -14,21 +15,15 @@ def generate_trade_graph(trade_df, country, year):
     df = country_df[country_df["Year"] == year]
     df = df.sort_values(by="Month")
 
-    # Create the plot using Plotly
-    fig = px.line(
-        df, 
-        x="Month", 
-        y=["Exports", "Imports"], 
-        labels={"value": "Trade Value (US$ Mil)", "year": "Year"},
-        title=f"Trade Volume Between Singapore and {country}",
-        color_discrete_map={"Exports": "blue", "Imports": "red"}
-        )
-    fig.update_layout(
-        xaxis=dict(tickmode="array", tickvals=list(range(1, 13))),
-        template="plotly_white",
-        legend_title=None
-    )
-    return fig
+    fig, ax = plt.subplots(figsize=(10, 6))
+    ax.plot(df["Month"], df["Exports"], label="Exports", color="blue")
+    ax.plot(df["Month"], df["Imports"], label="Imports", color="red")
+
+    ax.set_title(f"Trade Volume Between Singapore and {country}")
+    ax.set_xlabel("Month")
+    ax.set_ylabel("Trade Value (US$ Mil)")
+    ax.set_xticks(range(1, 13))
+    ax.legend()
 
 app_ui = ui.page_fluid(
     ui.navset_pill_list(  
@@ -36,7 +31,6 @@ app_ui = ui.page_fluid(
                      
                      ),
         ui.nav_panel("Historical Trade", 
-                     
                       ui.input_selectize(
                           "select_country", "Select a Trade Partner:", 
                           choices=["China", "Hong Kong", "Japan", "Korea, Rep of", "Malaysia", "Saudi Arabia", "Thailand", "United States"],  # Options for the user to select
@@ -44,6 +38,7 @@ app_ui = ui.page_fluid(
                       ),
                       ui.input_slider("slide_year", "Choose a Year", 2003, 2025, value = 2024),
                       ui.output_plot("trade_plot"),  # Output plot will be rendered here
+                      ui.output_image("trade_image")  # New image output
                     ),
         ui.nav_panel("Predicted Trade Volume", "model"),
         ui.nav_panel("Trading Ports", "interactive map"),
@@ -52,17 +47,25 @@ app_ui = ui.page_fluid(
 
 
 def server(input, output, session):
-    
-    @reactive
+
+    @output
+    @render.plot
     def trade_plot():
         country = input.select_country()
         year = input.slide_year()
         return generate_trade_graph(trade_df, country, year)
     
     @output
-    @render.plot
-    def plot():
-        return trade_plot()
+    @render.image
+    def trade_image():
+        country = input.select_country()
+        year = input.slide_year()
+        fig = generate_trade_graph(trade_df, country, year)  
+        temp_file = tempfile.NamedTemporaryFile(suffix=".png", delete=False)
+        fig.savefig(temp_file.name) 
+        temp_file.close()
+
+        return {"src": temp_file.name, "width": "70%"}
 
 
 app = App(app_ui, server)
