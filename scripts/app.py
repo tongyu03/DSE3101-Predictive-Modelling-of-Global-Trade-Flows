@@ -15,10 +15,10 @@ import shinywidgets
 from shinywidgets import render_widget
 
 ### Historical Trade Data
-trade_df = pd.read_csv("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\cleaned_monthly_trade_data.csv")
-exchange_df = pd.read_csv("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\ER_sg.csv")
+trade_df = pd.read_csv("data\cleaned_monthly_trade_data.csv")
+exchange_df = pd.read_csv("data\ER_sg.csv")
 ## Port location trade data
-with open(r'DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\ports.json', 'r', encoding='utf-8') as f:
+with open(r'data\ports.json', 'r', encoding='utf-8') as f:
     ports = json.load(f)
 
 # Country coordinates
@@ -40,11 +40,9 @@ for port in ports:
     country = port["COUNTRY"]
     city = port["CITY"]
     lat, lon = port["LATITUDE"], port["LONGITUDE"]
-
     # Initialize country if not exists
     if country not in cities_coords:
         cities_coords[country] = {}
-
     # Add city and its coordinates
     cities_coords[country][city] = (lat, lon)
 
