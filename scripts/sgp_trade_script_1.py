@@ -128,7 +128,7 @@ XGBOOST MODEL
 # time-series training
 import xgboost as xgb
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 
 # Sort by Year for time-series modeling
@@ -162,7 +162,9 @@ y_pred = model.predict(X_test)
 
 # Evaluate the model
 mae = mean_absolute_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
 print(f"Mean Absolute Error: {mae}")
+print(f"R-squared (R²): {r2}")
 
 from sklearn.metrics import mean_squared_error
 
@@ -178,6 +180,8 @@ print("MSE:", mean_squared_error(y_test, y_pred))
 unga_others = unga[(unga['Country1'] != 'Singapore') & (unga['Country2'] != 'Singapore')]
 print(unga_others.head())
 
+#%%
+
 """
 Baseline Multiple Linear Regression Model
 """
@@ -185,7 +189,7 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_absolute_error, mean_squared_error
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 # Sort data by Year for time-series modeling
 trade_summary = merged_df.sort_values(by=["Year"])
@@ -222,9 +226,11 @@ y_pred = model.predict(X_test)
 # Evaluate model performance
 mae = mean_absolute_error(y_test, y_pred)
 mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
 
 print(f"Mean Absolute Error (MAE): {mae}")
 print(f"Mean Squared Error (MSE): {mse}")
+print(f"R-squared (R²): {r2}")
 
 # Display key statistics of trade values
 print("Mean Trade Value:", y.mean())
