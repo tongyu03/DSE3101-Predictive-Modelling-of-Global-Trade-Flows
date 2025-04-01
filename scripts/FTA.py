@@ -32,4 +32,4 @@ fta_data.rename(columns={'Country_x': 'Country'}, inplace=True)
 # Select only the relevant columns: Country, Partner Country, Adjusted_value
 final_data = fta_data[['Year', 'Country', 'Partner Country', 'Adjusted_value']]
 
-final_data.to_csv("data/adjusted_fta_data.csv", index=False)
+final_data.to_csv("data/cleaned data/adjusted_fta_data.csv", index=False)

@@ -15,8 +15,8 @@ import shinywidgets
 from shinywidgets import render_widget
 
 ### Historical Trade Data
-trade_df = pd.read_csv("data\cleaned_monthly_trade_data.csv")
-exchange_df = pd.read_csv("data\ER_sg.csv")
+trade_df = pd.read_csv("data/cleaned data/cleaned_monthly_trade_data.csv")
+exchange_df = pd.read_csv("data/cleaned data/ER_sg.csv")
 ## Port location trade data
 with open(r'data\ports.json', 'r', encoding='utf-8') as f:
     ports = json.load(f)

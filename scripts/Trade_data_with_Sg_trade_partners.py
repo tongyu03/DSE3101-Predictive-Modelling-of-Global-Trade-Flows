@@ -31,7 +31,7 @@ data = data.drop(columns=["Dates"])  # Drop the 'Dates' column
 data = data[["Country", "Year", "Month", "Imports", "Exports", "Trade Volume"]]  # Reorder columns
 data = data[(data["Year"] <= 2024)]
 
-data.to_csv('cleaned_monthly_trade_data.csv', index = False)
+data.to_csv('data/cleaned data/cleaned_monthly_trade_data.csv', index = False)
 
 
 

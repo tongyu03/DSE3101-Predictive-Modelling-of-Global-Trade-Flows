@@ -1,6 +1,6 @@
 import pandas as pd
 
-exchange_df = pd.read_csv("data/exchange_rate.csv")
+exchange_df = pd.read_csv("data/cleaned data/exchange_rate.csv")
 
 exchange_df["Data Source"] = exchange_df["Data Source"].replace({
     "Hong Kong SAR, China": "Hong Kong",

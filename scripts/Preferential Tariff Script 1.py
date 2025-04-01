@@ -3,7 +3,7 @@ import numpy as np
 
 #author: jun lu
 # Load the data
-df = pd.read_csv("data/cleaned_trade_data.csv")
+df = pd.read_csv("data/cleaned data/cleaned_trade_data.csv")
 
 # Strip any leadin
 # g/trailing spaces from column names
@@ -50,5 +50,4 @@ result = grouped.reset_index()
 # Now, display the result with 'reporteriso3' and 'partneriso3' included
 print(result)
 
-df.to_csv('data/tariff.csv', index=False)
 
