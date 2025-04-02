@@ -20,11 +20,13 @@ fta_data = fta_data.fillna(0)
 #formula
 fta_data['Adjusted_value'] = np.where(
     fta_data['Year'] < 2017,  
-    (fta_data['FTA Weight'] +fta_data['Other Agreements'] - 
+    (fta_data['FTA Weight']  - 
      (fta_data['Tariff %']/100 * fta_data['Weight in Exports']/100 * fta_data['tariff_weight_2016_Country']) -
      (fta_data['Tariff %']/100 * fta_data['Weight in Exports']/100 * fta_data['tariff_weight_2016_Partner'])),  # If True (Year < 2017)
-    fta_data['FTA Weight'] + fta_data['Other Agreements'] - (fta_data['Tariff %']/100 * fta_data['Weight in Exports']/100)  # If False (Year >= 2017), no tariff weight applied
+    fta_data['FTA Weight']  - (fta_data['Tariff %']/100 * fta_data['Weight in Exports']/100)  # If False (Year >= 2017), no tariff weight applied
 )
+# Ensure Adjusted_value is non-negative
+fta_data['Adjusted_value'] = fta_data['Adjusted_value'].clip(lower=0)
 
 #Cleaning
 fta_data.rename(columns={'Country_x': 'Country'}, inplace=True)
