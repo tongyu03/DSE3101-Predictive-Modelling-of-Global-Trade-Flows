@@ -49,7 +49,7 @@ for port in ports:
 
 
 # Function to generate trade graph across the years
-def generate_trade_graph(df, partner_country):
+def generate_trade_graph(df, partner_country, year):
     df_filtered = df[(df["Country"] == partner_country) & (df["Year"] >= 2009) & (df["Year"] <= 2024)]
     df_grouped = df_filtered.groupby(['Year'])[['Imports', 'Exports']].sum().reset_index()
     # Create a figure for plotting
@@ -72,6 +72,11 @@ def generate_trade_graph(df, partner_country):
         # For other countries, add a note under the graph
         fig.text(0.1, -0.0001, f"Singapore and {partner_country} have an FTA across all years", 
                  ha="left", fontsize=11, color='green')
+    year_data = df_grouped[df_grouped['Year'] == year]
+    imports_value = year_data['Imports'].values[0]
+    exports_value = year_data['Exports'].values[0]
+    ax.scatter(year, imports_value, color='red', s=50, zorder=5)
+    ax.scatter(year, exports_value, color='blue', s=50, zorder=5)
     ax.legend()
     return fig
 
@@ -175,7 +180,8 @@ def server(input, output, session):
     @render.plot
     def trade_plot_years():
         country = input.select_country()
-        return generate_trade_graph(trade_df, country)
+        year = input.slide_year()
+        return generate_trade_graph(trade_df, country, year)
 
     @output
     @render.plot
