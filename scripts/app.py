@@ -17,7 +17,6 @@ from scripts.shiny_functions import generate_trade_graph
 from scripts.shiny_functions import generate_yearly_trade_graph
 from scripts.shiny_functions import get_ex_rate
 from scripts.shiny_functions import get_title_text
-from scripts.shiny_functions import get_gdp_comparison
 
 
 ### Import Trade Data
@@ -25,7 +24,8 @@ trade_df = pd.read_csv("data/cleaned data/cleaned_monthly_trade_data.csv")
 exchange_df = pd.read_csv("data/cleaned data/ER_sg.csv")
 gdp_df = pd.read_csv("data/cleaned data/Processed_GDP.csv")
 ## Port location trade data
-with open(r'data\ports.json', 'r', encoding='utf-8') as f:
+ports_path = pathlib.Path("data") / "ports.json"
+with open(ports_path, 'r', encoding='utf-8') as f:
     ports = json.load(f)
 
 # Country coordinates
@@ -53,6 +53,31 @@ for port in ports:
     # Add city and its coordinates
     cities_coords[country][city] = (lat, lon)
 
+# Function to generate GDP text
+gdp_df["Country"] = gdp_df["Country Code"].replace({
+    "HKG": "Hong Kong",
+    "KOR": "South Korea",
+    "JPN": "Japan",
+    "CHN": "China",
+    "MYS": "Malaysia",
+    "SAU": "Saudi Arabia",
+    "SGP": "Singapore",
+    "THA": "Thailand"
+})
+gdp_df = gdp_df[(gdp_df["Year"] >= 2003)]
+
+def get_gdp_comparison(gdp_df, country, year):
+    gdp_row_sg = gdp_df[(gdp_df["Country"] == "Singapore") & (gdp_df["Year"] == year)]
+    gdp_row_ctry = gdp_df[(gdp_df["Country"] == country) & (gdp_df["Year"] == year)]
+
+    if not gdp_row_sg.empty and not gdp_row_ctry.empty:
+        sg_gdp = gdp_row_sg["GDP"].values[0] / 1e9  # Convert to billions
+        ctry_gdp = gdp_row_ctry["GDP"].values[0] / 1e9  # Convert to billions
+
+        value = f"Singapore GDP in {year}: {sg_gdp:,.2f}B USD<br>{country} GDP in {year}: {ctry_gdp:,.2f}B USD"
+        return value
+    else:
+        return f"GDP data not available for {country} in {year}"
 
 
 ### ui
