@@ -1,0 +1,21 @@
+Introduction
+
+Global trade is deeply influenced by geopolitical factors, making it a dynamic and often unpredictable sector. 
+Our TideTrackers website gives historical insight into import and export trends based in Singapore and selected countries and for selected years.
+We also provide a feature to predict the trade volume with the country of choice for the near future years based on the historical political trends.
+Finally, we have a map which shows the trading port in different cities to help trade operators know which ports are available in their country of choice
+
+Our aim is to provide Trade analysts, such as supply chain managers, or fleet operations managers to anticipate imports and exports on a grand scale, given the political situation, as this is a volatile sector easily shaken by political disruption. jobs are at stake. 
+
+This app helps you explore global trade trends, predict trade volumes, and analyze port locations. 
+
+Data Sources:
+- Monthly trade volume
+- Exchange rate
+- GDP
+- FTAs
+- UNGA voting records
+- another trade dataset
+
+
+ 

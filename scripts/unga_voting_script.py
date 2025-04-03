@@ -68,4 +68,4 @@ df = df.groupby(['year', 'CountryPair']).agg({
     'IdealPointDistance': 'mean'
 }).reset_index()
 
-df.to_csv('data/unga_voting.csv', index=False)
+df.to_csv('data/cleaned data/unga_voting.csv', index=False)

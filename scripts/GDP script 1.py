@@ -23,8 +23,9 @@ gdp_long["GDP_normalized"] = gdp_long["GDP"] / gdp_long["USA_GDP"]
 gdp_long = gdp_long.drop(columns=["USA_GDP"])
 
 gdp_long = gdp_long.dropna()  
+
 # Save the cleaned and processed GDP data to a new CSV
-gdp_long.to_csv("data/Processed_GDP.csv", index=False)
+gdp_long.to_csv("data/cleaned data/Processed_GDP.csv", index=False)
 
 
 print(gdp_long.head())
