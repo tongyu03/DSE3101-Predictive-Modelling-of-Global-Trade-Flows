@@ -84,6 +84,37 @@ def process_unga_data():
 
 process_unga_data()
 
+#reclean GDP data
+def process_gdp_data():
+    # Load the GDP data
+    gdp = pd.read_csv("data/GDP.csv", header = 2)
+    gdp = gdp.drop(gdp.columns[[1, 2, 3]], axis=1)
+
+    gdp_long = gdp.melt(id_vars=['Country Name'], var_name='Year', value_name='GDP')
+    gdp_long = gdp_long.dropna(subset=['GDP'])
+
+    countries = pd.read_csv("data/COW-country-codes.csv")
+
+    gdp_long = countries.merge(gdp_long, left_on='StateNme', right_on='Country Name', how='inner')
+    gdp_long = gdp_long.drop(gdp_long.columns[[0, 1, 2]], axis=1)
+    gdp_long['Year'] = gdp_long['Year'].astype(int)
+    gdp_long['Country Name'] = gdp_long['Country Name'].astype(str)
+    # Return the cleaned and reshaped GDP data
+    return gdp_long
+
+process_gdp_data()
+
+#%%
+
+# testing data merger
+
+trade_data = process_trade_data()
+unga_data = process_unga_data()
+gdp_data = process_gdp_data()
+
+merged_data = pd.merge(unga_data, trade_data, how='left', left_on=['year', 'Partner'], right_on=['Year', 'Partner'])
+merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
+
 #%%
 # reorganised updated script by grace
 # part2: XGBoost
@@ -99,13 +130,16 @@ def prepare_data_for_xgboost():
     # Load trade and UNGA data
     trade_data = process_trade_data()
     unga_data = process_unga_data()
+    gdp_data = process_gdp_data()
 
     # Merge the trade data with the UNGA voting data
-    # Merge on Partner and Year. Note that 'Partner' from trade_data matches either 'Country1' or 'Country2' in unga_data.
     merged_data = pd.merge(unga_data, trade_data, how='left', left_on=['year', 'Partner'], right_on=['Year', 'Partner'])
 
+    # Merge the GDP data with the merged data (based on Partner and Year)
+    merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
+
     # Drop any columns that won't be useful for modeling
-    merged_data = merged_data.drop(columns=['Country1', 'Country2', 'Year'])
+    merged_data = merged_data.drop(columns=['Country1', 'Country2', 'Year_x', 'Year_y', 'Country Name'])  # Drop 'Country Name' after merging
 
     # Handle missing values if any
     merged_data = merged_data.dropna()
@@ -119,7 +153,7 @@ def prepare_data_for_xgboost():
     merged_data = merged_data.dropna()
 
     # Define features (X) and target (y)
-    X = merged_data[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3", "IdealPointDistance", "agree"]]
+    X = merged_data[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3", "IdealPointDistance", "agree", "GDP"]]
     y = merged_data["Trade_Value"]
 
     # Return features and target
@@ -150,7 +184,7 @@ print(f"Mean Squared Error (MSE): {mse}")
 
 
 #%%
-##XGBoost
+##dump! (do not run this chunk; will return error)
 
 import ast
 #integrate unga_voting script into model
