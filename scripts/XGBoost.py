@@ -237,17 +237,4 @@ print(f"R-squared (R²): {r2}")
 print(f"Mean Squared Error (MSE): {mse}")
 
 
-#%%
-##dump! (do not run this chunk; will return error)
-
-#integrate FTA data
-fta = pd.read_csv("data/adjusted_fta_data.csv")
-fta_sg = fta[(fta['Country'] == 'SGP') | (fta['Partner Country'] == 'SGP')]
-fta_sg['Country Code'] = fta_sg.apply(
-    lambda row: row['Country'] if row['Country'] != 'SGP' else row['Partner Country'],
-    axis=1
-)
-merged_df = pd.merge(merged_df, fta_sg, how='left', left_on=['Year', 'Country Code'], right_on=['Year', 'Country Code'])
-print(merged_df.head())
-
 
