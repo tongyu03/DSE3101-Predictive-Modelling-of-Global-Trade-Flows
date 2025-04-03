@@ -261,3 +261,4 @@ print("MSE:", mean_squared_error(y_test, y_pred))
 #relations between countries of interests that indirectly impact Singapore
 unga_others = unga[(unga['Country1'] != 'Singapore') & (unga['Country2'] != 'Singapore')]
 print(unga_others.head())
+
