@@ -123,6 +123,32 @@ def process_exrate_data():
     
     return exrate_long
 
+
+fta = pd.read_csv("data/cleaned data/adjusted_fta_data.csv")
+fta_sg = fta[(fta['Country'] == 'SGP') | (fta['Partner Country'] == 'SGP')]
+fta_sg['Country Code'] = fta_sg.apply(
+    lambda row: row['Country'] if row['Country'] != 'SGP' else row['Partner Country'],
+    axis=1
+)
+fta_sg = fta_sg.drop(columns=["Country", "Country Code"])
+countries = pd.read_csv("data/COW-country-codes.csv")
+fta_sg = fta_sg.merge(countries, left_on='Partner Country', right_on='StateAbb', how='inner')
+
+
+#reclean FTA
+def process_FTA_data():
+    fta = pd.read_csv("data/cleaned data/adjusted_fta_data.csv")
+    fta_sg = fta[(fta['Country'] == 'SGP') | (fta['Partner Country'] == 'SGP')]
+    fta_sg['Country Code'] = fta_sg.apply(
+        lambda row: row['Country'] if row['Country'] != 'SGP' else row['Partner Country'],
+        axis=1
+    )
+    fta_sg = fta_sg.drop(columns=["Country", "Country Code"])
+    countries = pd.read_csv("data/COW-country-codes.csv")
+    fta_sg = fta_sg.merge(countries, left_on='Partner Country', right_on='StateAbb', how='inner')
+    
+    return fta_sg
+
 #%%
 
 # testing data merger
@@ -131,10 +157,12 @@ trade_data = process_trade_data()
 unga_data = process_unga_data()
 gdp_data = process_gdp_data()
 exrate_data = process_exrate_data()
+fta_data = process_FTA_data()
 
 merged_data = pd.merge(unga_data, trade_data, how='left', left_on=['year', 'Partner'], right_on=['Year', 'Partner'])
 merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
 merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
+merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['StateNme', 'Year'])
 #%%
 # reorganised updated script by grace
 # part2: XGBoost
@@ -151,6 +179,8 @@ def prepare_data_for_xgboost():
     trade_data = process_trade_data()
     unga_data = process_unga_data()
     gdp_data = process_gdp_data()
+    exrate_data = process_exrate_data()
+    fta_data = process_FTA_data()
 
     # Merge the trade data with the UNGA voting data
     merged_data = pd.merge(unga_data, trade_data, how='left', left_on=['year', 'Partner'], right_on=['Year', 'Partner'])
@@ -159,6 +189,8 @@ def prepare_data_for_xgboost():
     merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
     
     merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
+    
+    merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['StateNme', 'Year'])
 
     # Drop any columns that won't be useful for modeling
     merged_data = merged_data.drop(columns=['Country1', 'Country2', 'Year_x', 'Year_y', 'Country Name_x', 'Country Name_y'])  # Drop 'Country Name' after merging
@@ -175,7 +207,7 @@ def prepare_data_for_xgboost():
     merged_data = merged_data.dropna()
 
     # Define features (X) and target (y)
-    X = merged_data[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3", "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)']]
+    X = merged_data[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3", "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)', 'Adjusted_value']]
     y = merged_data["Trade_Value"]
 
     # Return features and target
