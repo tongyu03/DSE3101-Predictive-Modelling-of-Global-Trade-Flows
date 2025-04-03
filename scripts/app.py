@@ -18,6 +18,10 @@ from scripts.shiny_functions import generate_yearly_trade_graph
 from scripts.shiny_functions import get_ex_rate
 from scripts.shiny_functions import get_title_text
 
+# import intro text
+def read_intro():
+    with open("data/intro.txt", "r", encoding="utf-8") as f:
+        return f.read()
 
 ### Import Trade Data
 trade_df = pd.read_csv("data/cleaned data/cleaned_monthly_trade_data.csv")
@@ -83,8 +87,8 @@ def get_gdp_comparison(gdp_df, country, year):
 ### ui
 app_ui = ui.page_fluid(
     ui.navset_pill_list(  
-        ui.nav_panel("Introduction", "Explain project + how to use"
-                     
+        ui.nav_panel("Introduction",
+                     ui.output_ui("intro_text") 
                      ),
         ui.nav_panel("Historical Trade", 
                       ui.input_selectize(
@@ -118,6 +122,13 @@ app_ui = ui.page_fluid(
 
 ### server
 def server(input, output, session):
+
+    @output
+    @render.ui
+    def intro_text():
+        text_content = read_intro().replace("\n", "<br>")  # Preserve line breaks in HTML
+        return ui.HTML(f"<p>{text_content}</p>")  # Display formatted text
+
     
     @output
     @render.plot
