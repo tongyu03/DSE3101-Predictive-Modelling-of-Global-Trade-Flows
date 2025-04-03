@@ -65,3 +65,4 @@ print("Variance:", y.var())
 # Display model coefficients
 coefficients = pd.DataFrame({"Feature": features, "Coefficient": model.coef_})
 print(coefficients)
+
