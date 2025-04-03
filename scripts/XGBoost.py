@@ -104,6 +104,25 @@ def process_gdp_data():
 
 process_gdp_data()
 
+#dummy chunk
+exrate = pd.read_csv("data/exchange_rate.csv", header = 4)
+exrate = exrate.drop(exrate.columns[[1, 2, 3]], axis=1)
+exrate_long = exrate.melt(id_vars=['Country Name'], var_name='Year', value_name='Exchange Rate (per US$)')
+exrate_long = exrate_long.dropna()
+exrate_long['Year'] = exrate_long['Year'].astype(int)
+exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
+
+#reclean exchange rate data
+def process_exrate_data():
+    exrate = pd.read_csv("data/exchange_rate.csv", header = 4)
+    exrate = exrate.drop(exrate.columns[[1, 2, 3]], axis=1)
+    exrate_long = exrate.melt(id_vars=['Country Name'], var_name='Year', value_name='Exchange Rate (per US$)')
+    exrate_long = exrate_long.dropna()
+    exrate_long['Year'] = exrate_long['Year'].astype(int)
+    exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
+    
+    return exrate_long
+
 #%%
 
 # testing data merger
@@ -111,10 +130,11 @@ process_gdp_data()
 trade_data = process_trade_data()
 unga_data = process_unga_data()
 gdp_data = process_gdp_data()
+exrate_data = process_exrate_data()
 
 merged_data = pd.merge(unga_data, trade_data, how='left', left_on=['year', 'Partner'], right_on=['Year', 'Partner'])
 merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
-
+merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
 #%%
 # reorganised updated script by grace
 # part2: XGBoost
@@ -137,9 +157,11 @@ def prepare_data_for_xgboost():
 
     # Merge the GDP data with the merged data (based on Partner and Year)
     merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
+    
+    merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
 
     # Drop any columns that won't be useful for modeling
-    merged_data = merged_data.drop(columns=['Country1', 'Country2', 'Year_x', 'Year_y', 'Country Name'])  # Drop 'Country Name' after merging
+    merged_data = merged_data.drop(columns=['Country1', 'Country2', 'Year_x', 'Year_y', 'Country Name_x', 'Country Name_y'])  # Drop 'Country Name' after merging
 
     # Handle missing values if any
     merged_data = merged_data.dropna()
@@ -153,7 +175,7 @@ def prepare_data_for_xgboost():
     merged_data = merged_data.dropna()
 
     # Define features (X) and target (y)
-    X = merged_data[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3", "IdealPointDistance", "agree", "GDP"]]
+    X = merged_data[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3", "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)']]
     y = merged_data["Trade_Value"]
 
     # Return features and target
@@ -186,48 +208,6 @@ print(f"Mean Squared Error (MSE): {mse}")
 #%%
 ##dump! (do not run this chunk; will return error)
 
-import ast
-#integrate unga_voting script into model
-unga = pd.read_csv("data/unga_voting.csv")
-
-#split pait
-unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
-unga[['Country1', 'Country2']] = pd.DataFrame(unga['CountryPair'].tolist(), index=unga.index)
-unga = unga.drop(columns=['CountryPair'])
-
-#filter
-unga = unga[(unga['year'] >= 1989) & (unga['year'] <= 2021)]
-unga_sg = unga[(unga['Country1'] == 'Singapore') | (unga['Country2'] == 'Singapore')]
-unga_sg = unga_sg[['agree', 'year', 'IdealPointDistance', 'Country1', 'Country2']]
-
-#standardisation
-unga_sg['year'] = unga_sg['year'].astype(int)
-trade_summary['Year'] = trade_summary['Year'].astype(int)
-
-unga_sg['Partner'] = unga_sg.apply(lambda row: row['Country1'] if row['Country1'] != 'Singapore' else row['Country2'], axis=1)
-
-#join
-merged_df = pd.merge(unga_sg, trade_summary, how='left', left_on=['Partner', 'year'], right_on=['Partner', 'Year'])
-merged_df = merged_df.drop(columns=['Country1', 'Country2', 'Year'])
-print(merged_df.head())
-
-#integrate GDP script 1.py
-gdp = pd.read_csv("data/Processed_GDP.csv")
-countries = pd.read_csv("data/countrylegend.csv")
-gdp = pd.merge(gdp, countries[['alpha-3', 'name']], how='left', left_on='Country Code', right_on='alpha-3')
-gdp = gdp.drop(columns=['alpha-3'])
-merged_df = pd.merge(merged_df, gdp, how='left', left_on =['year', 'Partner'], right_on=['Year', 'name'])
-merged_df = merged_df.drop(columns=['name', 'GDP', 'year'])
-print(merged_df.head())
-
-#integrate exchange_rate_script_1.py
-exchange_rate = pd.read_csv("data/exchange_rate.csv")
-merged_df = pd.merge(merged_df, exchange_rate, how='left', left_on=['Partner','Year'], right_on=['Data Source', 'Year'])
-merged_df = merged_df.drop(columns=['Data Source', 'Country Code'])
-merged_df.rename(columns={"World Development Indicators": "Country Code"}, inplace=True)
-merged_df.rename(columns={"Value": "Exchange Rate"}, inplace=True)
-print(merged_df.head())
-
 #integrate FTA data
 fta = pd.read_csv("data/adjusted_fta_data.csv")
 fta_sg = fta[(fta['Country'] == 'SGP') | (fta['Partner Country'] == 'SGP')]
@@ -238,61 +218,4 @@ fta_sg['Country Code'] = fta_sg.apply(
 merged_df = pd.merge(merged_df, fta_sg, how='left', left_on=['Year', 'Country Code'], right_on=['Year', 'Country Code'])
 print(merged_df.head())
 
-"""
-XGBOOST MODEL
-"""
-# time-series training
-import xgboost as xgb
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-
-
-# Sort by Year for time-series modeling
-trade_summary = merged_df.sort_values(by=["Year"])
-
-# Create lag features (1-year, 2-year, 3-year lags)
-trade_summary["Trade_Value_Lag1"] = trade_summary.groupby(["Partner", "Indicator Type"])["Trade_Value"].shift(1)
-trade_summary["Trade_Value_Lag2"] = trade_summary.groupby(["Partner", "Indicator Type"])["Trade_Value"].shift(2)
-trade_summary["Trade_Value_Lag3"] = trade_summary.groupby(["Partner", "Indicator Type"])["Trade_Value"].shift(3)
-
-# Drop rows with NaN values (since lags introduce missing values)
-trade_summary = trade_summary.dropna()
-
-# Display processed dataset
-print(trade_summary.head())
-
-# Define features (lagged trade values) and target variable
-X = trade_summary[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3"]]
-y = trade_summary["Trade_Value"]
-
-# Split data into training and test sets (80% train, 20% test)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
-
-
-# Train an XGBoost Regressor
-model = xgb.XGBRegressor(objective="reg:squarederror", n_estimators=100, learning_rate=0.1)
-model.fit(X_train, y_train)
-
-# Make predictions
-y_pred = model.predict(X_test)
-
-# Evaluate the model
-mae = mean_absolute_error(y_test, y_pred)
-r2 = r2_score(y_test, y_pred)
-print(f"Mean Absolute Error: {mae}")
-print(f"R-squared (R²): {r2}")
-
-from sklearn.metrics import mean_squared_error
-
-print("Mean Trade Value:", y.mean())
-print("Median Trade Value:", y.median())
-print("Min Trade Value:", y.min())
-print("Max Trade Value:", y.max())
-print("Variance:", y.var())
-print("MSE:", mean_squared_error(y_test, y_pred))
-
-#important datasets to be considered
-#relations between countries of interests that indirectly impact Singapore
-unga_others = unga[(unga['Country1'] != 'Singapore') & (unga['Country2'] != 'Singapore')]
-print(unga_others.head())
 
