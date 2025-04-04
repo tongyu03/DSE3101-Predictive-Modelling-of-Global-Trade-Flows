@@ -44,7 +44,7 @@ swapped_data.rename(columns={'Country': 'Partner Country', 'Partner Country': 'C
 final_data = pd.concat([final_data, swapped_data], ignore_index=True)
 
 # Save the final data to a CSV
-final_data.to_csv("data/cleaned data/adjusted_fta_data.csv", index=False)
+final_data.to_csv("data/cleaned data/adjusted_fta_data_2.csv", index=False)
 
 unique_combinations = final_data[['Country', 'Partner Country']].drop_duplicates()
 print(unique_combinations)
