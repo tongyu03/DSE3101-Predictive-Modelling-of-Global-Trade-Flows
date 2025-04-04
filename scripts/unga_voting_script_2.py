@@ -22,7 +22,7 @@ columns = agree_sc.columns.tolist() + ['Country1', 'Country2']
 df = pd.DataFrame(result, columns=columns)
 
 #filter target countries
-target_countries = ["China", "Hong Kong", "Japan", "Korea", "Malaysia", "Saudi Arabia", "Thailand", "USA", "Singapore"]
+target_countries = ["China", "Hong Kong", "Japan", "Korea", "Malaysia", "Saudi Arabia", "Thailand", "United States of America", "Singapore", "Indonesia"]
 df = df[(df["Country1"].isin(target_countries)) & (df["Country2"].isin(target_countries))]
 
 #print("Unique Years in Filtered Data:", df["year"].unique())
