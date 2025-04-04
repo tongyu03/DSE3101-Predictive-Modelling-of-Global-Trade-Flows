@@ -286,6 +286,7 @@ def prepare_data_for_regression(log_transform=True):
 
     merged_data = merged_data.dropna()
 
+    print(merged_data.head())
     if log_transform:
         # Log-transform lag features and target
         merged_data["log_Lag1"] = np.log(merged_data["Trade_Value_Lag1"])

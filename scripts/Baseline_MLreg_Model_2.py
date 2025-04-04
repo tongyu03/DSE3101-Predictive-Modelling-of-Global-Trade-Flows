@@ -124,14 +124,6 @@ def prepare_data_for_regression(log_transform=True):
     merged_data = merged_data.dropna()
 
     # Lag features for Trade_Value
-    merged_data["Imports_Lag1"] = merged_data.groupby(["Partner"])['Imports'].shift(1)
-    merged_data["Imports_Lag2"] = merged_data.groupby(["Partner"])['Imports'].shift(2)
-    merged_data["Imports_Lag3"] = merged_data.groupby(["Partner"])['Imports'].shift(3)
-
-    merged_data["Exports_Lag1"] = merged_data.groupby(["Partner"])['Exports'].shift(1)
-    merged_data["Exports_Lag2"] = merged_data.groupby(["Partner"])['Exports'].shift(2)
-    merged_data["Exports_Lag3"] = merged_data.groupby(["Partner"])['Exports'].shift(3)
-
     merged_data["Trade_Volume_Lag1"] = merged_data.groupby(["Partner"])['Trade Volume'].shift(1)
     merged_data["Trade_Volume_Lag2"] = merged_data.groupby(["Partner"])['Trade Volume'].shift(2)
     merged_data["Trade_Volume_Lag3"] = merged_data.groupby(["Partner"])['Trade Volume'].shift(3)
@@ -140,29 +132,17 @@ def prepare_data_for_regression(log_transform=True):
 
     if log_transform:
         # Log-transform lag features and target
-        merged_data["log_Imports_Lag1"] = np.log(merged_data["Imports_Lag1"])
-        merged_data["log_Imports_Lag2"] = np.log(merged_data["Imports_Lag2"])
-        merged_data["log_Imports_Lag3"] = np.log(merged_data["Imports_Lag3"])
-
-        merged_data["log_Exports_Lag1"] = np.log(merged_data["Exports_Lag1"])
-        merged_data["log_Exports_Lag2"] = np.log(merged_data["Exports_Lag2"])
-        merged_data["log_Exports_Lag3"] = np.log(merged_data["Exports_Lag3"])
-
         merged_data["log_Trade_Volume_Lag1"] = np.log(merged_data["Trade_Volume_Lag1"])
         merged_data["log_Trade_Volume_Lag2"] = np.log(merged_data["Trade_Volume_Lag2"])
         merged_data["log_Trade_Volume_Lag3"] = np.log(merged_data["Trade_Volume_Lag3"])
 
         # Log-transform target (Trade_Value)
-        X = merged_data[["log_Imports_Lag1", "log_Imports_Lag2", "log_Imports_Lag3",
-                         "log_Exports_Lag1", "log_Exports_Lag2", "log_Exports_Lag3",
-                         "log_Trade_Volume_Lag1", "log_Trade_Volume_Lag2", "log_Trade_Volume_Lag3",
+        X = merged_data[["log_Trade_Volume_Lag1", "log_Trade_Volume_Lag2", "log_Trade_Volume_Lag3",
                          "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)', 'Adjusted_value']]
         y = np.log(merged_data["Trade Volume"])
 
     else:
-        X = merged_data[["Imports_Lag1", "Imports_Lag2", "Imports_Lag3",
-                         "Exports_Lag1", "Exports_Lag2", "Exports_Lag3",
-                         "Trade_Volume_Lag1", "Trade_Volume_Lag2", "Trade_Volume_Lag3",
+        X = merged_data[["Trade_Volume_Lag1", "Trade_Volume_Lag2", "Trade_Volume_Lag3",
                          "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)', 'Adjusted_value']]
         y = merged_data["Trade Volume"]
 
@@ -210,10 +190,10 @@ print(f"Average MSE: {np.mean(mse_scores):.2f}")
 
 # Trade stats
 print("\nTrade Value Statistics:")
-print(f"Mean Trade Value: {y.mean():.2f}")
-print(f"Median Trade Value: {y.median():.2f}")
-print(f"Min Trade Value: {y.min():.2f}")
-print(f"Max Trade Value: {y.max():.2f}")
+print(f"Mean Trade Volume: {y.mean():.2f}")
+print(f"Median Trade Volume: {y.median():.2f}")
+print(f"Min Trade Volume: {y.min():.2f}")
+print(f"Max Trade Volume: {y.max():.2f}")
 print(f"Variance: {y.var():.2f}")
 
 # Average Coefficients across folds
@@ -231,8 +211,8 @@ plt.plot([min(all_y_test), max(all_y_test)],
          [min(all_y_test), max(all_y_test)],
          color='red', linestyle='--')
 
-plt.xlabel("Actual Trade Value")
-plt.ylabel("Predicted Trade Value")
+plt.xlabel("Actual Trade Volume")
+plt.ylabel("Predicted Trade Volume")
 plt.title("Actual vs Predicted Trade Value (Linear Regression, K-Fold CV)")
 plt.grid(True)
 plt.tight_layout()
@@ -244,7 +224,7 @@ residuals = np.array(all_y_test) - np.array(all_y_pred)
 plt.figure(figsize=(8, 6))
 plt.scatter(all_y_pred, residuals, alpha=0.6)
 plt.axhline(y=0, color='red', linestyle='--')
-plt.xlabel("Predicted Trade Value")
+plt.xlabel("Predicted Trade Volume")
 plt.ylabel("Residuals (Actual - Predicted)")
 plt.title("Residuals vs Predicted (Linear Regression)")
 plt.grid(True)
