@@ -314,6 +314,18 @@ coefficients_list = []
 # Initialize lists before the loop
 all_y_test = []
 all_y_pred = []
+aic_values = []
+bic_values = []
+
+n_params = X.shape[1]
+
+def calculate_aic_bic(y_true, y_pred, n_params):
+    log_likelihood = -0.5 * np.sum((y_true - y_pred) ** 2)
+    n = len(y_true)
+    aic = 2 * n_params - 2 * log_likelihood
+    bic = np.log(n) * n_params - 2 * log_likelihood
+    
+    return aic, bic
 
 for train_index, test_index in kf.split(X):
     X_train, X_test = X.iloc[train_index], X.iloc[test_index]
@@ -333,6 +345,14 @@ for train_index, test_index in kf.split(X):
     all_y_test.extend(y_test)
     all_y_pred.extend(y_pred)
 
+    #Calc Aic and BIC
+    aic, bic = calculate_aic_bic(y_test, y_pred, n_params)
+    aic_values.append(aic)
+    bic_values.append(bic)
+average_aic = np.mean(aic_values)
+average_bic = np.mean(bic_values)
+print(f"Average AIC: {average_aic}")
+print(f"Average BIC: {average_bic}")
 # Output average metrics
 print(f"\nK-Fold Cross-Validation Results (k=5)")
 print(f"Average R²: {np.mean(r2_scores):.4f}")
