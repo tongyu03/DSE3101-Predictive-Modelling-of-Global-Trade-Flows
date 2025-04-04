@@ -21,7 +21,7 @@ import ast
 #cleaning
 def process_trade_data():
     # Load the CSV file
-    sgp_trade_raw = "data/en_SGP_AllYears_WITS_Trade_Summary.CSV"
+    sgp_trade_raw = "data/raw data/en_SGP_AllYears_WITS_Trade_Summary.CSV"
     sgp_trade_cleaned = pd.read_csv(sgp_trade_raw)
 
     # Convert to long format
@@ -63,7 +63,7 @@ def process_trade_data():
 
 # Function to load and preprocess UNGA data
 def process_unga_data():
-    unga = pd.read_csv("data/unga_voting.csv")
+    unga = pd.read_csv("data/raw data/unga_voting.csv")
     
     # Split the 'CountryPair' column into 'Country1' and 'Country2'
     unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
@@ -92,7 +92,7 @@ process_unga_data()
 #reclean GDP data
 def process_gdp_data():
     # Load the GDP data
-    gdp = pd.read_csv("data/GDP.csv", header = 2)
+    gdp = pd.read_csv("data/raw data/GDP.csv", header = 2)
     gdp = gdp.drop(gdp.columns[[1, 2, 3]], axis=1)
 
     gdp_long = gdp.melt(id_vars=['Country Name'], var_name='Year', value_name='GDP')
@@ -110,7 +110,7 @@ def process_gdp_data():
 process_gdp_data()
 
 #dummy chunk
-exrate = pd.read_csv("data/exchange_rate.csv", header = 4)
+exrate = pd.read_csv("data/raw data/exchange_rate.csv", header = 4)
 exrate = exrate.drop(exrate.columns[[1, 2, 3]], axis=1)
 exrate_long = exrate.melt(id_vars=['Country Name'], var_name='Year', value_name='Exchange Rate (per US$)')
 exrate_long = exrate_long.dropna()
@@ -119,7 +119,7 @@ exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
 
 #reclean exchange rate data
 def process_exrate_data():
-    exrate = pd.read_csv("data/exchange_rate.csv", header = 4)
+    exrate = pd.read_csv("data/raw data/exchange_rate.csv", header = 4)
     exrate = exrate.drop(exrate.columns[[1, 2, 3]], axis=1)
     exrate_long = exrate.melt(id_vars=['Country Name'], var_name='Year', value_name='Exchange Rate (per US$)')
     exrate_long = exrate_long.dropna()

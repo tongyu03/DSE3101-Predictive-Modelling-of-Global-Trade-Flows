@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 
 # Read files
-fta_data = pd.read_csv("data/Free Trade Agreement Dataset.csv")
-tariff_weights_2016 = pd.read_csv("data/tariff_weights_2016.csv")
+fta_data = pd.read_csv("data/raw data/Free Trade Agreement Dataset.csv")
+tariff_weights_2016 = pd.read_csv("data/raw data/tariff_weights_2016.csv")
 
 # Merge with tariff weights
 fta_data = pd.merge(fta_data, tariff_weights_2016[['Country', 'tariff_weight']], 

@@ -1,8 +1,8 @@
 import numpy as np
 import pandas as pd
 
-import_data = pd.read_csv('data/Import_data_Singapore.csv', skiprows = 10)
-export_data = pd.read_csv('data/Export_data_Singapore.csv', skiprows = 10)
+import_data = pd.read_csv('data/raw data/Import_data_Singapore.csv', skiprows = 10)
+export_data = pd.read_csv('data/raw data/Export_data_Singapore.csv', skiprows = 10)
 
 import_data = import_data.melt(id_vars=["Data Series"], var_name="Dates", value_name="Imports")
 import_data = import_data.rename(columns={"Data Series": "Country"})
