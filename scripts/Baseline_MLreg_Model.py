@@ -7,15 +7,14 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import pandas as pd
 import ast
 
-#cleaning
 def process_trade_data():
     # Load the CSV file
-    sgp_trade_raw = "data/raw data/en_SGP_AllYears_WITS_Trade_Summary.CSV"
+    sgp_trade_raw = "data/raw data/en_SGP_AllYears_WITS_Trade_Summary.csv"
     sgp_trade_cleaned = pd.read_csv(sgp_trade_raw)
 
     # Convert to long format
-    sgp_trade_cleaned = sgp_trade_cleaned.melt(id_vars=["Reporter", "Partner", "Product categories", "Indicator Type", "Indicator"],
-                                               var_name="Year", value_name="Trade_Value")
+    sgp_trade_cleaned = sgp_trade_cleaned.melt(id_vars=["Reporter", "Partner", "Product categories", "Indicator Type", "Indicator"], 
+                                              var_name="Year", value_name="Trade_Value")
 
     # Convert 'Year' to numeric and handle errors
     sgp_trade_cleaned["Year"] = pd.to_numeric(sgp_trade_cleaned["Year"], errors='coerce')
@@ -28,11 +27,11 @@ def process_trade_data():
 
     # Define the indicators to keep
     relevant_indicators = [
-        "Import(US$ Mil)",
-        "Export(US$ Mil)",
-        "Imports (in US$ Mil)",
-        "Exports (in US$ Mil)",
-        "Trade (US$ Mil)-Top 5 Export Partner",
+        "Import(US$ Mil)", 
+        "Export(US$ Mil)", 
+        "Imports (in US$ Mil)", 
+        "Exports (in US$ Mil)", 
+        "Trade (US$ Mil)-Top 5 Export Partner", 
         "Trade (US$ Mil)-Top 5 Import Partner"
     ]
 
@@ -53,30 +52,27 @@ def process_trade_data():
 # Function to load and preprocess UNGA data
 def process_unga_data():
     unga = pd.read_csv("data/cleaned data/unga_voting_2.csv")
-
+    
     # Split the 'CountryPair' column into 'Country1' and 'Country2'
     unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
     unga[['Country1', 'Country2']] = pd.DataFrame(unga['CountryPair'].tolist(), index=unga.index)
-
+    
     # Filter data for years 1989 to 2021
     unga = unga[(unga['year'] >= 1989) & (unga['year'] <= 2021)]
-
+    
     # Filter the data for Singapore-related pairs
     unga_sg = unga[(unga['Country1'] == 'Singapore') | (unga['Country2'] == 'Singapore')]
-
+    
     # Create 'Partner' column to identify the non-Singapore country
-    unga_sg = unga_sg.copy()  # Create an explicit copy
-    unga_sg.loc[:, 'Partner'] = unga_sg.apply(lambda row: row['Country1'] if row['Country1'] != 'Singapore' else row['Country2'], axis=1)
-
+    unga_sg['Partner'] = unga_sg.apply(lambda row: row['Country1'] if row['Country1'] != 'Singapore' else row['Country2'], axis=1)
+    
     # Select relevant columns
     unga_sg = unga_sg[['agree', 'year', 'IdealPointDistance', 'Country1', 'Country2', 'Partner']]
-
+    
     # Ensure 'year' is of integer type
     unga_sg['year'] = unga_sg['year'].astype(int)
-
+    
     return unga_sg
-
-process_unga_data()
 
 #reclean GDP data
 def process_gdp_data():
@@ -96,16 +92,6 @@ def process_gdp_data():
     # Return the cleaned and reshaped GDP data
     return gdp_long
 
-process_gdp_data()
-
-#dummy chunk
-exrate = pd.read_csv("data/raw data/exchange_rate.csv", header = 4)
-exrate = exrate.drop(exrate.columns[[1, 2, 3]], axis=1)
-exrate_long = exrate.melt(id_vars=['Country Name'], var_name='Year', value_name='Exchange Rate (per US$)')
-exrate_long = exrate_long.dropna()
-exrate_long['Year'] = exrate_long['Year'].astype(int)
-exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
-
 #reclean exchange rate data
 def process_exrate_data():
     exrate = pd.read_csv("data/raw data/exchange_rate.csv", header = 4)
@@ -114,39 +100,141 @@ def process_exrate_data():
     exrate_long = exrate_long.dropna()
     exrate_long['Year'] = exrate_long['Year'].astype(int)
     exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
-
+    
     return exrate_long
 
-
-fta = pd.read_csv("data/cleaned data/adjusted_fta_data_2.csv")
-fta_sg = fta[(fta['Country'] == 'SGP') | (fta['Partner Country'] == 'SGP')]
-fta_sg = fta_sg.copy()  # Create an explicit copy
-fta_sg.loc[:, 'Country Code'] = fta_sg.apply(
-    lambda row: row['Country'] if row['Country'] != 'SGP' else row['Partner Country'],
-    axis=1
-)
-fta_sg = fta_sg.drop(columns=["Country", "Country Code"])
-countries = pd.read_csv("data/raw data/COW-country-codes.csv")
-fta_sg = fta_sg.merge(countries, left_on='Partner Country', right_on='StateAbb', how='inner')
-
-
 #reclean FTA
+# def process_FTA_data():
+#     fta = pd.read_csv("data/cleaned data/adjusted_fta_data.csv")
+#     fta_sg = fta[(fta['Country'] == 'SGP') | (fta['Partner Country'] == 'SGP')]
+#     fta_sg['Country Code'] = fta_sg.apply(
+#         lambda row: row['Country'] if row['Country'] != 'SGP' else row['Partner Country'],
+#         axis=1
+#     )
+#     fta_sg = fta_sg.drop(columns=["Country", "Country Code"])
+#     countries = pd.read_csv("data/raw data/COW-country-codes.csv")
+#     fta_sg = fta_sg.merge(countries, left_on='Partner Country', right_on='StateAbb', how='inner')
+    
+#     return fta_sg
+
 def process_FTA_data():
     fta = pd.read_csv("data/cleaned data/adjusted_fta_data_2.csv")
     fta_sg = fta[(fta['Country'] == 'SGP') | (fta['Partner Country'] == 'SGP')]
-    fta_sg.loc[:, 'Country Code'] = fta_sg.apply(
+    fta_sg['Country Code'] = fta_sg.apply(
         lambda row: row['Country'] if row['Country'] != 'SGP' else row['Partner Country'],
         axis=1
     )
     fta_sg = fta_sg.drop(columns=["Country", "Country Code"])
-    countries = pd.read_csv("data/raw data/COW-country-codes.csv")
-    fta_sg = fta_sg.merge(countries, left_on='Partner Country', right_on='StateAbb', how='inner')
-
+    iso3_to_country = {
+        'CHN': 'China',
+        'HKG': 'Hong Kong',
+        'JPN': 'Japan',
+        'KOR': 'Korea',
+        'MYS': 'Malaysia',
+        'SAU': 'Saudi Arabia',
+        'THA': 'Thailand',
+        'USA': 'United States',
+        'IDN': 'Indonesia'
+    }
+    fta_sg['Country'] = fta_sg['Partner Country'].replace(iso3_to_country)
     return fta_sg
+
 
 #%%
 
-#same as XGBoost
+#test-train validation set
+
+# def prepare_data_for_regression():
+#     trade_data = process_trade_data()
+#     unga_data = process_unga_data()
+#     gdp_data = process_gdp_data()
+#     exrate_data = process_exrate_data()
+#     fta_data = process_FTA_data()
+#     trade_data = trade_data.rename(columns={"Year": "year"})
+#     gdp_data = gdp_data.rename(columns={"Year": "year"})
+#     exrate_data = exrate_data.rename(columns={"Year": "year"})
+#     fta_data = fta_data.rename(columns={"Year": "year"})
+#     # Merge datasets
+#     merged_data = pd.merge(unga_data, trade_data, how='left', left_on=['year', 'Partner'], right_on=['year', 'Partner'])
+#     merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
+#     merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
+#     merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['Country', 'year'])
+
+#     # Drop redundant columns
+#     cols_to_drop = ['Country1', 'Country2', 'Year_x', 'Year_y', 'Country Name_x', 'Country Name_y']
+#     existing_cols_to_drop = [col for col in cols_to_drop if col in merged_data.columns]
+#     merged_data = merged_data.drop(columns=existing_cols_to_drop)
+#     merged_data = merged_data.dropna()
+
+#     # Lag features for Trade_Value
+#     merged_data["Trade_Value_Lag1"] = merged_data.groupby(["Partner", "Indicator Type"])['Trade_Value'].shift(1)
+#     merged_data["Trade_Value_Lag2"] = merged_data.groupby(["Partner", "Indicator Type"])['Trade_Value'].shift(2)
+#     merged_data["Trade_Value_Lag3"] = merged_data.groupby(["Partner", "Indicator Type"])['Trade_Value'].shift(3)
+
+#     # Drop NaN values
+#     merged_data = merged_data.dropna()
+
+#     # Define features (X) and target (y)
+#     X = merged_data[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3", "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)', 'Adjusted_value']]
+#     y = merged_data["Trade_Value"]
+
+#     return X, y
+
+# # Prepare data
+# X, y = prepare_data_for_regression()
+
+# # Split data train-test
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
+
+# # Train multiple linear regression model
+# lin_reg = LinearRegression()
+# lin_reg.fit(X_train, y_train)
+
+# # Make predictions on validation set
+# y_pred = lin_reg.predict(X_test)
+
+# # Evaluate model performance on validation set
+# mae_val = mean_absolute_error(y_test, y_pred)
+# r2_val = r2_score(y_test, y_pred)
+# mse_val = mean_squared_error(y_test, y_pred)
+
+
+# # Make predictions on test set
+# y_test_pred = lin_reg.predict(X_test)
+
+# # Evaluate model performance on test set
+# mae_test = mean_absolute_error(y_test, y_test_pred)
+# r2_test = r2_score(y_test, y_test_pred)
+# mse_test = mean_squared_error(y_test, y_test_pred)
+
+
+# print(f"MAE: {mae_test}")
+# print(f"R-squared (R²): {r2_test}")
+# print(f"MSE: {mse_test}")
+
+# # Display key statistics of trade values
+# print("\nTrade Value Statistics:")
+# print(f"Mean Trade Value: {y.mean()}")
+# print(f"Median Trade Value: {y.median()}")
+# print(f"Min Trade Value: {y.min()}")
+# print(f"Max Trade Value: {y.max()}")
+# print(f"Variance: {y.var()}")
+
+# # Display model coefficients
+# coefficients = pd.DataFrame({"Feature": X.columns, "Coefficient": lin_reg.coef_})
+# print("\nModel Coefficients:")
+# print(coefficients)
+
+#%%
+
+#k fold cross validation
+
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import KFold
+from sklearn.metrics import mean_absolute_error, r2_score, mean_squared_error
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
 def prepare_data_for_regression():
     trade_data = process_trade_data()
@@ -158,11 +246,12 @@ def prepare_data_for_regression():
     gdp_data = gdp_data.rename(columns={"Year": "year"})
     exrate_data = exrate_data.rename(columns={"Year": "year"})
     fta_data = fta_data.rename(columns={"Year": "year"})
+
     # Merge datasets
     merged_data = pd.merge(unga_data, trade_data, how='left', left_on=['year', 'Partner'], right_on=['year', 'Partner'])
     merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
     merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
-    merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['StateNme', 'year'])
+    merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['Country', 'year'])
 
     # Drop redundant columns
     cols_to_drop = ['Country1', 'Country2', 'Year_x', 'Year_y', 'Country Name_x', 'Country Name_y']
@@ -175,10 +264,8 @@ def prepare_data_for_regression():
     merged_data["Trade_Value_Lag2"] = merged_data.groupby(["Partner", "Indicator Type"])['Trade_Value'].shift(2)
     merged_data["Trade_Value_Lag3"] = merged_data.groupby(["Partner", "Indicator Type"])['Trade_Value'].shift(3)
 
-    # Drop NaN values
     merged_data = merged_data.dropna()
 
-    # Define features (X) and target (y)
     X = merged_data[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3", "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)', 'Adjusted_value']]
     y = merged_data["Trade_Value"]
 
@@ -187,44 +274,69 @@ def prepare_data_for_regression():
 # Prepare data
 X, y = prepare_data_for_regression()
 
-# Split data train-test
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
+# K-Fold Cross Validation
+kf = KFold(n_splits=5, shuffle=True, random_state=42)
 
-# Train multiple linear regression model
-lin_reg = LinearRegression()
-lin_reg.fit(X_train, y_train)
+r2_scores = []
+mae_scores = []
+mse_scores = []
+coefficients_list = []
 
-# Make predictions on validation set
-y_pred = lin_reg.predict(X_test)
+# Initialize lists before the loop
+all_y_test = []
+all_y_pred = []
 
-# Evaluate model performance on validation set
-mae_val = mean_absolute_error(y_test, y_pred)
-r2_val = r2_score(y_test, y_pred)
-mse_val = mean_squared_error(y_test, y_pred)
+for train_index, test_index in kf.split(X):
+    X_train, X_test = X.iloc[train_index], X.iloc[test_index]
+    y_train, y_test = y.iloc[train_index], y.iloc[test_index]
 
+    model = LinearRegression()
+    model.fit(X_train, y_train)
 
-# Make predictions on test set
-y_test_pred = lin_reg.predict(X_test)
+    y_pred = model.predict(X_test)
 
-# Evaluate model performance on test set
-mae_test = mean_absolute_error(y_test, y_test_pred)
-r2_test = r2_score(y_test, y_test_pred)
-mse_test = mean_squared_error(y_test, y_test_pred)
+    r2_scores.append(r2_score(y_test, y_pred))
+    mae_scores.append(mean_absolute_error(y_test, y_pred))
+    mse_scores.append(mean_squared_error(y_test, y_pred))
+    coefficients_list.append(model.coef_)
 
+    # Collect for plotting
+    all_y_test.extend(y_test)
+    all_y_pred.extend(y_pred)
 
-print(f"MAE: {mae_test}")
-print(f"R-squared (R²): {r2_test}")
-print(f"MSE: {mse_test}")
+# Output average metrics
+print(f"\nK-Fold Cross-Validation Results (k=5)")
+print(f"Average R²: {np.mean(r2_scores):.4f}")
+print(f"Average MAE: {np.mean(mae_scores):.2f}")
+print(f"Average MSE: {np.mean(mse_scores):.2f}")
 
-# Display key statistics of trade values
+# Trade stats
 print("\nTrade Value Statistics:")
-print(f"Mean Trade Value: {y.mean()}")
-print(f"Median Trade Value: {y.median()}")
-print(f"Min Trade Value: {y.min()}")
-print(f"Max Trade Value: {y.max()}")
-print(f"Variance: {y.var()}")
+print(f"Mean Trade Value: {y.mean():.2f}")
+print(f"Median Trade Value: {y.median():.2f}")
+print(f"Min Trade Value: {y.min():.2f}")
+print(f"Max Trade Value: {y.max():.2f}")
+print(f"Variance: {y.var():.2f}")
 
-# Display model coefficients
-coefficients = pd.DataFrame({"Feature": X.columns, "Coefficient": lin_reg.coef_})
-print("\nModel Coefficients:")
-print(coefficients)
+# Average Coefficients across folds
+avg_coefficients = np.mean(coefficients_list, axis=0)
+coefficients_df = pd.DataFrame({
+    "Feature": X.columns,
+    "Average Coefficient": avg_coefficients
+})
+print("\nAverage Model Coefficients (across folds):")
+print(coefficients_df)
+
+plt.figure(figsize=(8, 6))
+plt.scatter(all_y_test, all_y_pred, alpha=0.6)
+plt.plot([min(all_y_test), max(all_y_test)],
+         [min(all_y_test), max(all_y_test)],
+         color='red', linestyle='--')
+
+plt.xlabel("Actual Trade Value")
+plt.ylabel("Predicted Trade Value")
+plt.title("Actual vs Predicted Trade Value (Linear Regression, K-Fold CV)")
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
