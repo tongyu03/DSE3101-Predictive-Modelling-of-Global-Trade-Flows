@@ -119,12 +119,19 @@ def process_exrate_data():
 
 def process_FTA_data():
     fta = pd.read_csv("data/cleaned data/adjusted_fta_data_2.csv")
-    fta_sg = fta[(fta['Country'] == 'SGP') | (fta['Partner Country'] == 'SGP')]
+
+    # Filter where either country or partner country is SG or SGP
+    fta_sg = fta[
+        (fta['Partner Country'].isin(['SG', 'SGP']))
+    ]
     fta_sg['Country Code'] = fta_sg.apply(
-        lambda row: row['Country'] if row['Country'] != 'SGP' else row['Partner Country'],
+        lambda row: row['Country'] if row['Country'] not in ['SG', 'SGP'] else row['Partner Country'],
         axis=1
     )
-    fta_sg = fta_sg.drop(columns=["Country", "Country Code"])
+
+    fta_sg = fta_sg.drop(columns=["Country", "Partner Country"])
+    
+    # ISO3 to country name mapping
     iso3_to_country = {
         'CHN': 'China',
         'HKG': 'Hong Kong',
@@ -136,8 +143,12 @@ def process_FTA_data():
         'USA': 'United States',
         'IDN': 'Indonesia'
     }
-    fta_sg['Country'] = fta_sg['Partner Country'].replace(iso3_to_country)
+
+    fta_sg['Country'] = fta_sg['Country Code'].replace(iso3_to_country)
+    fta_sg = fta_sg.sort_values(by='Year')
+
     return fta_sg
+
 
 
 #%%
