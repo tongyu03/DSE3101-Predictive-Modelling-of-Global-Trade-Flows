@@ -170,14 +170,67 @@ merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'y
 # reorganised updated script by grace
 # part2: XGBoost
 
+# import xgboost as xgb
+# import pandas as pd
+# from sklearn.model_selection import train_test_split
+# from sklearn.metrics import mean_absolute_error, r2_score, mean_squared_error
+
+# # Assuming process_trade_data and process_unga_data are already defined
+
+# def prepare_data_for_xgboost():
+#     # Load trade and UNGA data
+#     trade_data = process_trade_data()
+#     unga_data = process_unga_data()
+#     gdp_data = process_gdp_data()
+#     exrate_data = process_exrate_data()
+#     fta_data = process_FTA_data()
+
+#     # Merge the trade data with the UNGA voting data
+#     merged_data = pd.merge(unga_data, trade_data, how='left', left_on=['year', 'Partner'], right_on=['Year', 'Partner'])
+
+#     # Merge the GDP data with the merged data (based on Partner and Year)
+#     merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
+    
+#     merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
+    
+#     merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['Country', 'Year'])
+
+#     # Drop any columns that won't be useful for modeling
+#     merged_data = merged_data.drop(columns=['Country1', 'Country2', 'Year_x', 'Year_y', 'Country Name_x', 'Country Name_y'])  # Drop 'Country Name' after merging
+
+#     # Handle missing values if any
+#     merged_data = merged_data.dropna()
+
+#     # Feature Engineering: Create lag features for Trade_Value
+#     merged_data["Trade_Value_Lag1"] = merged_data.groupby(["Partner", "Indicator Type"])["Trade_Value"].shift(1)
+#     merged_data["Trade_Value_Lag2"] = merged_data.groupby(["Partner", "Indicator Type"])["Trade_Value"].shift(2)
+#     merged_data["Trade_Value_Lag3"] = merged_data.groupby(["Partner", "Indicator Type"])["Trade_Value"].shift(3)
+
+#     # Drop rows with NaN values (due to lagging)
+#     merged_data = merged_data.dropna()
+
+#     # Define features (X) and target (y)
+#     X = merged_data[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3", "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)', 'Adjusted_value']]
+#     y = merged_data["Trade_Value"]
+
+#     # Return features and target
+#     return X, y
+
+# # Prepare data
+# X, y = prepare_data_for_xgboost()
+
+#%%
+
+#taking log of trade values
 import xgboost as xgb
 import pandas as pd
+import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, r2_score, mean_squared_error
 
 # Assuming process_trade_data and process_unga_data are already defined
 
-def prepare_data_for_xgboost():
+def prepare_data_for_xgboost(log_transform=True):
     # Load trade and UNGA data
     trade_data = process_trade_data()
     unga_data = process_unga_data()
@@ -185,35 +238,49 @@ def prepare_data_for_xgboost():
     exrate_data = process_exrate_data()
     fta_data = process_FTA_data()
 
-    # Merge the trade data with the UNGA voting data
+    # Merge datasets
     merged_data = pd.merge(unga_data, trade_data, how='left', left_on=['year', 'Partner'], right_on=['Year', 'Partner'])
-
-    # Merge the GDP data with the merged data (based on Partner and Year)
     merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
-    
     merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
-    
     merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['Country', 'Year'])
 
-    # Drop any columns that won't be useful for modeling
-    merged_data = merged_data.drop(columns=['Country1', 'Country2', 'Year_x', 'Year_y', 'Country Name_x', 'Country Name_y'])  # Drop 'Country Name' after merging
+    # Drop unnecessary columns
+    merged_data = merged_data.drop(columns=['Country1', 'Country2', 'Year_x', 'Year_y', 'Country Name_x', 'Country Name_y'])
 
-    # Handle missing values if any
+    # Drop rows with any missing values
     merged_data = merged_data.dropna()
 
-    # Feature Engineering: Create lag features for Trade_Value
+    # Lag features (in original space first)
     merged_data["Trade_Value_Lag1"] = merged_data.groupby(["Partner", "Indicator Type"])["Trade_Value"].shift(1)
     merged_data["Trade_Value_Lag2"] = merged_data.groupby(["Partner", "Indicator Type"])["Trade_Value"].shift(2)
     merged_data["Trade_Value_Lag3"] = merged_data.groupby(["Partner", "Indicator Type"])["Trade_Value"].shift(3)
 
-    # Drop rows with NaN values (due to lagging)
+    # Drop rows with NaNs from lagging
     merged_data = merged_data.dropna()
 
-    # Define features (X) and target (y)
-    X = merged_data[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3", "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)', 'Adjusted_value']]
-    y = merged_data["Trade_Value"]
+    if log_transform:
+        # Apply log transformation to target and lags
+        merged_data["log_Trade_Value"] = np.log(merged_data["Trade_Value"])
+        merged_data["log_Lag1"] = np.log(merged_data["Trade_Value_Lag1"])
+        merged_data["log_Lag2"] = np.log(merged_data["Trade_Value_Lag2"])
+        merged_data["log_Lag3"] = np.log(merged_data["Trade_Value_Lag3"])
 
-    # Return features and target
+        # Define features and target
+        X = merged_data[[
+            "log_Lag1", "log_Lag2", "log_Lag3",
+            "IdealPointDistance", "agree", "GDP",
+            "Exchange Rate (per US$)", "Adjusted_value"
+        ]]
+        y = merged_data["log_Trade_Value"]
+    else:
+        # Use original scale if not transforming
+        X = merged_data[[
+            "Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3",
+            "IdealPointDistance", "agree", "GDP",
+            "Exchange Rate (per US$)", "Adjusted_value"
+        ]]
+        y = merged_data["Trade_Value"]
+
     return X, y
 
 # Prepare data
