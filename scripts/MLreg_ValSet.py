@@ -6,6 +6,10 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import pandas as pd
 import ast
+from sklearn.model_selection import KFold, cross_val_score
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 #cleaning
 def process_trade_data():
@@ -216,18 +220,34 @@ mae_test = mean_absolute_error(y_test, y_test_pred)
 r2_test = r2_score(y_test, y_test_pred)
 mse_test = mean_squared_error(y_test, y_test_pred)
 
-print("\nTest Set Performance:")
-print(f"Mean Absolute Error (MAE): {mae_test}")
-print(f"R-squared (R²): {r2_test}")
-print(f"Mean Squared Error (MSE): {mse_test}")
+# Perform K-Fold CV
+print("\nK-Fold Cross-Validation (k=5):")
+
+kf = KFold(n_splits=5, shuffle=True, random_state=42)
+
+mae_scores = -cross_val_score(lin_reg, X, y, scoring='neg_mean_absolute_error', cv=kf)
+r2_scores = cross_val_score(lin_reg, X, y, scoring='r2', cv=kf)
+mse_scores = -cross_val_score(lin_reg, X, y, scoring='neg_mean_squared_error', cv=kf)
+
+axes[1].scatter(y_val, y_val_pred, color='mediumseagreen', alpha=0.6)
+axes[1].plot([y_val.min(), y_val.max()], [y_val.min(), y_val.max()], 'r--', linewidth=2)
+axes[1].set_title('Validation Set: Actual vs Predicted')
+axes[1].set_xlabel('Actual Trade Value')
+axes[1].set_ylabel('Predicted Trade Value')
+axes[1].grid(True)
+
+
+print(f"Average MAE: {mae_scores.mean():.4f}")
+print(f"Average R²: {r2_scores.mean():.4f}")
+print(f"Average MSE: {mse_scores.mean():.4f}")
+
+print(f"\nAll MAE scores: {mae_scores}")
+print(f"All R² scores: {r2_scores}")
+print(f"All MSE scores: {mse_scores}")
 
 # Display key statistics of trade values
 print("\nTrade Value Statistics:")
-print(f"Mean Trade Value: {y.mean()}")
-print(f"Median Trade Value: {y.median()}")
-print(f"Min Trade Value: {y.min()}")
-print(f"Max Trade Value: {y.max()}")
-print(f"Variance: {y.var()}")
+print(y.describe())
 
 # Display model coefficients
 coefficients = pd.DataFrame({"Feature": X.columns, "Coefficient": lin_reg.coef_})
