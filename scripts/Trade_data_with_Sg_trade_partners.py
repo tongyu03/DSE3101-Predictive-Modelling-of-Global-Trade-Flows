@@ -17,7 +17,7 @@ data = data[data["Country"].isin(["    China",
                                 "    Saudi Arabia",
                                 "    Thailand",
                                 "    United States",
-                                  "Indonesia"
+                                  "    Indonesia"
         ])]
 data["Country"] = data["Country"].str.strip()  # Remove extra spaces
 data["Country"] = data["Country"].replace("Korea, Rep Of", "South Korea")
@@ -31,7 +31,7 @@ data["Month"] = data["Dates"].dt.month  # Extract month (numeric)
 data = data.drop(columns=["Dates"])  # Drop the 'Dates' column
 data = data[["Country", "Year", "Month", "Imports", "Exports", "Trade Volume"]]  # Reorder columns
 data = data[(data["Year"] <= 2024)]
-data = data.groupby(['Year'])[['Imports', 'Exports', 'Trade Volume']].sum().reset_index()
+data = data.groupby(['Country','Year'])[['Imports', 'Exports', 'Trade Volume']].sum().reset_index()
 
 data.to_csv('data/cleaned data/cleaned_yearly_trade_data.csv', index = False)
 
