@@ -82,8 +82,6 @@ def process_unga_data():
     
     return unga_sg
 
-process_unga_data()
-
 #reclean GDP data
 def process_gdp_data():
     # Load the GDP data
@@ -102,16 +100,6 @@ def process_gdp_data():
     # Return the cleaned and reshaped GDP data
     return gdp_long
 
-process_gdp_data()
-
-#dummy chunk
-exrate = pd.read_csv("data/exchange_rate.csv", header = 4)
-exrate = exrate.drop(exrate.columns[[1, 2, 3]], axis=1)
-exrate_long = exrate.melt(id_vars=['Country Name'], var_name='Year', value_name='Exchange Rate (per US$)')
-exrate_long = exrate_long.dropna()
-exrate_long['Year'] = exrate_long['Year'].astype(int)
-exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
-
 #reclean exchange rate data
 def process_exrate_data():
     exrate = pd.read_csv("data/exchange_rate.csv", header = 4)
@@ -122,18 +110,6 @@ def process_exrate_data():
     exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
     
     return exrate_long
-
-
-fta = pd.read_csv("data/cleaned data/adjusted_fta_data.csv")
-fta_sg = fta[(fta['Country'] == 'SGP') | (fta['Partner Country'] == 'SGP')]
-fta_sg['Country Code'] = fta_sg.apply(
-    lambda row: row['Country'] if row['Country'] != 'SGP' else row['Partner Country'],
-    axis=1
-)
-fta_sg = fta_sg.drop(columns=["Country", "Country Code"])
-countries = pd.read_csv("data/COW-country-codes.csv")
-fta_sg = fta_sg.merge(countries, left_on='Partner Country', right_on='StateAbb', how='inner')
-
 
 #reclean FTA
 def process_FTA_data():
