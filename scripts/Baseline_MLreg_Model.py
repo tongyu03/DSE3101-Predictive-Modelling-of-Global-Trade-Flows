@@ -1,5 +1,5 @@
 """
-@author: Shannen
+@author: grace
 """
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
@@ -152,6 +152,9 @@ def process_FTA_data():
 
 
 #%%
+"""
+@author: Shannen
+"""
 
 #test-train validation set
 
@@ -237,6 +240,10 @@ def process_FTA_data():
 # print(coefficients)
 
 #%%
+
+"""
+@author: grace
+"""
 
 #k fold cross validation
 
