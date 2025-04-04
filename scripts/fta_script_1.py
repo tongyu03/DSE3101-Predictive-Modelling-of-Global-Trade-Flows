@@ -43,6 +43,8 @@ swapped_data.rename(columns={'Country': 'Partner Country', 'Partner Country': 'C
 # Concatenate the original data with the swapped data
 final_data = pd.concat([final_data, swapped_data], ignore_index=True)
 
+final_data['FTA_binary'] = np.where(final_data['Adjusted_value'] > 0, 1, 0)
+
 # Save the final data to a CSV
 final_data.to_csv("data/cleaned data/adjusted_fta_data_2.csv", index=False)
 
