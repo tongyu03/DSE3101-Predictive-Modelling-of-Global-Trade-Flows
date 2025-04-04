@@ -202,10 +202,6 @@ mae_val = mean_absolute_error(y_test, y_pred)
 r2_val = r2_score(y_test, y_pred)
 mse_val = mean_squared_error(y_test, y_pred)
 
-print("Validation Set Performance:")
-print(f"Mean Absolute Error (MAE): {mae_val}")
-print(f"R-squared (R²): {r2_val}")
-print(f"Mean Squared Error (MSE): {mse_val}")
 
 # Make predictions on test set
 y_test_pred = lin_reg.predict(X_test)
@@ -215,10 +211,10 @@ mae_test = mean_absolute_error(y_test, y_test_pred)
 r2_test = r2_score(y_test, y_test_pred)
 mse_test = mean_squared_error(y_test, y_test_pred)
 
-print("\nTest Set Performance:")
-print(f"Mean Absolute Error (MAE): {mae_test}")
+
+print(f"MAE: {mae_test}")
 print(f"R-squared (R²): {r2_test}")
-print(f"Mean Squared Error (MSE): {mse_test}")
+print(f"MSE: {mse_test}")
 
 # Display key statistics of trade values
 print("\nTrade Value Statistics:")

@@ -59,7 +59,7 @@ def process_trade_data():
 
 # Function to load and preprocess UNGA data
 def process_unga_data():
-    unga = pd.read_csv("data/raw data/unga_voting.csv")
+    unga = pd.read_csv("data/cleaned data/unga_voting_2.csv")
     
     # Split the 'CountryPair' column into 'Country1' and 'Country2'
     unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
