@@ -1,7 +1,7 @@
 import pandas as pd
 #author: junlu
 # Load the GDP data
-gdp_df = pd.read_csv("data/GDP.csv", header=4)
+gdp_df = pd.read_csv("data/raw data/GDP.csv", header=4)
 
 # Clean the GDP data
 #Change the data to long format

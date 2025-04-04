@@ -8,7 +8,7 @@ Created on Thu Mar 20 22:28:07 2025
 import pandas as pd
 import matplotlib.pyplot as plt
 
-exchange_rate_raw = "data/key trade partners' exchange rates.csv"
+exchange_rate_raw = "data/raw data/key trade partners' exchange rates.csv"
 
 exchange_rate_raw = pd.read_csv(exchange_rate_raw)
 

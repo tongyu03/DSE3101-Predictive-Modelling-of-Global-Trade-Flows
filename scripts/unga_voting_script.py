@@ -1,7 +1,7 @@
 import pandas as pd
 
-agree_sc = pd.read_csv("data/AgreementScoresAll_Jun2024.csv")
-cow = pd.read_csv("data/COW-country-codes.csv")
+agree_sc = pd.read_csv("data/raw data/AgreementScoresAll_Jun2024.csv")
+cow = pd.read_csv("data/raw data/COW-country-codes.csv")
 
 agree_sc = agree_sc[["ccode1", "ccode2", "agree", "year", "IdealPointAll.x", "IdealPointAll.y", "IdealPointDistance"]]
 

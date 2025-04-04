@@ -9,7 +9,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the CSV file
-sgp_trade_raw = "data/en_SGP_AllYears_WITS_Trade_Summary.CSV"
+sgp_trade_raw = "data/raw data/en_SGP_AllYears_WITS_Trade_Summary.CSV"
 
 sgp_trade_cleaned = pd.read_csv(sgp_trade_raw)
 
