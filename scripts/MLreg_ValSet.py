@@ -118,7 +118,7 @@ def process_exrate_data():
     return exrate_long
 
 
-fta = pd.read_csv("data/cleaned data/adjusted_fta_data.csv")
+fta = pd.read_csv("data/cleaned data/adjusted_fta_data_2.csv")
 fta_sg = fta[(fta['Country'] == 'SGP') | (fta['Partner Country'] == 'SGP')]
 fta_sg = fta_sg.copy()  # Create an explicit copy
 fta_sg.loc[:, 'Country Code'] = fta_sg.apply(
@@ -132,9 +132,9 @@ fta_sg = fta_sg.merge(countries, left_on='Partner Country', right_on='StateAbb',
 
 #reclean FTA
 def process_FTA_data():
-    fta = pd.read_csv("data/cleaned data/adjusted_fta_data.csv")
+    fta = pd.read_csv("data/cleaned data/adjusted_fta_data_2.csv")
     fta_sg = fta[(fta['Country'] == 'SGP') | (fta['Partner Country'] == 'SGP')]
-    fta_sg['Country Code'] = fta_sg.apply(
+    fta_sg.loc[:, 'Country Code'] = fta_sg.apply(
         lambda row: row['Country'] if row['Country'] != 'SGP' else row['Partner Country'],
         axis=1
     )
@@ -159,13 +159,15 @@ def prepare_data_for_regression():
     exrate_data = exrate_data.rename(columns={"Year": "year"})
     fta_data = fta_data.rename(columns={"Year": "year"})
     # Merge datasets
-    merged_data = pd.merge(unga_data, trade_data, how='left', left_on=['year', 'Partner'], right_on=['Year', 'Partner'])
-    merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
-    merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
-    merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['StateNme', 'Year'])
+    merged_data = pd.merge(unga_data, trade_data, how='left', left_on=['year', 'Partner'], right_on=['year', 'Partner'])
+    merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
+    merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
+    merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['StateNme', 'year'])
 
     # Drop redundant columns
-    merged_data = merged_data.drop(columns=['Country1', 'Country2', 'Year_x', 'Year_y', 'Country Name_x', 'Country Name_y'])
+    cols_to_drop = ['Country1', 'Country2', 'Year_x', 'Year_y', 'Country Name_x', 'Country Name_y']
+    existing_cols_to_drop = [col for col in cols_to_drop if col in merged_data.columns]
+    merged_data = merged_data.drop(columns=existing_cols_to_drop)
     merged_data = merged_data.dropna()
 
     # Lag features for Trade_Value
