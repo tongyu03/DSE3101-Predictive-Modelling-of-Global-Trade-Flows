@@ -17,7 +17,7 @@ import ast
 
 def process_trade_data():
     # Load the CSV file
-    sgp_trade_raw = "data/raw data/en_SGP_AllYears_WITS_Trade_Summary.CSV"
+    sgp_trade_raw = "data/raw data/en_SGP_AllYears_WITS_Trade_Summary.csv"
     sgp_trade_cleaned = pd.read_csv(sgp_trade_raw)
 
     # Convert to long format
@@ -59,7 +59,7 @@ def process_trade_data():
 
 # Function to load and preprocess UNGA data
 def process_unga_data():
-    unga = pd.read_csv("data/raw data/unga_voting.csv")
+    unga = pd.read_csv("data/cleaned data/unga_voting_2.csv")
     
     # Split the 'CountryPair' column into 'Country1' and 'Country2'
     unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
@@ -112,17 +112,39 @@ def process_exrate_data():
     return exrate_long
 
 #reclean FTA
+# def process_FTA_data():
+#     fta = pd.read_csv("data/cleaned data/adjusted_fta_data.csv")
+#     fta_sg = fta[(fta['Country'] == 'SGP') | (fta['Partner Country'] == 'SGP')]
+#     fta_sg['Country Code'] = fta_sg.apply(
+#         lambda row: row['Country'] if row['Country'] != 'SGP' else row['Partner Country'],
+#         axis=1
+#     )
+#     fta_sg = fta_sg.drop(columns=["Country", "Country Code"])
+#     countries = pd.read_csv("data/raw data/COW-country-codes.csv")
+#     fta_sg = fta_sg.merge(countries, left_on='Partner Country', right_on='StateAbb', how='inner')
+    
+#     return fta_sg
+
 def process_FTA_data():
-    fta = pd.read_csv("data/cleaned data/adjusted_fta_data.csv")
+    fta = pd.read_csv("data/cleaned data/adjusted_fta_data_2.csv")
     fta_sg = fta[(fta['Country'] == 'SGP') | (fta['Partner Country'] == 'SGP')]
     fta_sg['Country Code'] = fta_sg.apply(
         lambda row: row['Country'] if row['Country'] != 'SGP' else row['Partner Country'],
         axis=1
     )
     fta_sg = fta_sg.drop(columns=["Country", "Country Code"])
-    countries = pd.read_csv("data/raw data/COW-country-codes.csv")
-    fta_sg = fta_sg.merge(countries, left_on='Partner Country', right_on='StateAbb', how='inner')
-    
+    iso3_to_country = {
+        'CHN': 'China',
+        'HKG': 'Hong Kong',
+        'JPN': 'Japan',
+        'KOR': 'Korea',
+        'MYS': 'Malaysia',
+        'SAU': 'Saudi Arabia',
+        'THA': 'Thailand',
+        'USA': 'United States',
+        'IDN': 'Indonesia'
+    }
+    fta_sg['Country'] = fta_sg['Partner Country'].replace(iso3_to_country)
     return fta_sg
 
 #%%
@@ -138,7 +160,7 @@ fta_data = process_FTA_data()
 merged_data = pd.merge(unga_data, trade_data, how='left', left_on=['year', 'Partner'], right_on=['Year', 'Partner'])
 merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
 merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
-merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['StateNme', 'Year'])
+merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['Country', 'Year'])
 #%%
 #todo:
     # take out exchange rate from the data
@@ -171,7 +193,7 @@ def prepare_data_for_xgboost():
     
     merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
     
-    merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['StateNme', 'Year'])
+    merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['Country', 'Year'])
 
     # Drop any columns that won't be useful for modeling
     merged_data = merged_data.drop(columns=['Country1', 'Country2', 'Year_x', 'Year_y', 'Country Name_x', 'Country Name_y'])  # Drop 'Country Name' after merging
