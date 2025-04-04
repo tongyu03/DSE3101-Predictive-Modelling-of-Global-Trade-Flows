@@ -164,6 +164,11 @@ merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'y
 merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'Year'])
 merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['StateNme', 'Year'])
 #%%
+#todo:
+    # take out exchange rate from the data
+    # change benchmark inputs based on chunk 1
+    #check XGBooost and prediction plots
+
 # reorganised updated script by grace
 # part2: XGBoost
 
@@ -235,6 +240,21 @@ mse = mean_squared_error(y_test, y_pred)
 print(f"Mean Absolute Error: {mae}")
 print(f"R-squared (R²): {r2}")
 print(f"Mean Squared Error (MSE): {mse}")
+
+#%%
+
+#extra
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(8, 6))
+plt.scatter(y_test, y_pred, alpha=0.6)
+plt.xlabel("Actual Trade Volume")
+plt.ylabel("Predicted Trade Volume")
+plt.title("Predicted vs Actual Trade Volume")
+plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--')  # identity line
+plt.grid(True)
+plt.tight_layout()
+plt.show()
 
 
 
