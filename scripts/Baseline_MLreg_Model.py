@@ -236,12 +236,14 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-def prepare_data_for_regression():
+
+def prepare_data_for_regression(log_transform=True):
     trade_data = process_trade_data()
     unga_data = process_unga_data()
     gdp_data = process_gdp_data()
     exrate_data = process_exrate_data()
     fta_data = process_FTA_data()
+
     trade_data = trade_data.rename(columns={"Year": "year"})
     gdp_data = gdp_data.rename(columns={"Year": "year"})
     exrate_data = exrate_data.rename(columns={"Year": "year"})
@@ -266,8 +268,16 @@ def prepare_data_for_regression():
 
     merged_data = merged_data.dropna()
 
-    X = merged_data[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3", "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)', 'Adjusted_value']]
-    y = merged_data["Trade_Value"]
+    if log_transform:
+        # Log-transform lag features and target
+        merged_data["log_Lag1"] = np.log(merged_data["Trade_Value_Lag1"])
+        merged_data["log_Lag2"] = np.log(merged_data["Trade_Value_Lag2"])
+        merged_data["log_Lag3"] = np.log(merged_data["Trade_Value_Lag3"])
+        X = merged_data[["log_Lag1", "log_Lag2", "log_Lag3", "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)', 'Adjusted_value']]
+        y = np.log(merged_data["Trade_Value"])
+    else:
+        X = merged_data[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3", "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)', 'Adjusted_value']]
+        y = merged_data["Trade_Value"]
 
     return X, y
 
@@ -340,3 +350,15 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 
+#residuals plot
+residuals = np.array(all_y_test) - np.array(all_y_pred)
+
+plt.figure(figsize=(8, 6))
+plt.scatter(all_y_pred, residuals, alpha=0.6)
+plt.axhline(y=0, color='red', linestyle='--')
+plt.xlabel("Predicted Trade Value")
+plt.ylabel("Residuals (Actual - Predicted)")
+plt.title("Residuals vs Predicted (Linear Regression)")
+plt.grid(True)
+plt.tight_layout()
+plt.show()
