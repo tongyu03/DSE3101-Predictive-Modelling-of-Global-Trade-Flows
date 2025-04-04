@@ -219,40 +219,95 @@ def prepare_data_for_xgboost():
 # Prepare data
 X, y = prepare_data_for_xgboost()
 
-# Split into training and test sets (80% train, 20% test)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
+#%%
 
-# Train the XGBoost model
-model = xgb.XGBRegressor(objective="reg:squarederror", n_estimators=100, learning_rate=0.1)
-model.fit(X_train, y_train)
+# # Split into training and test sets (80% train, 20% test)
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, shuffle=False)
 
-# Make predictions
-y_pred = model.predict(X_test)
+# # Train the XGBoost model
+# model = xgb.XGBRegressor(objective="reg:squarederror", n_estimators=100, learning_rate=0.1)
+# model.fit(X_train, y_train)
 
-# Evaluate the model
-mae = mean_absolute_error(y_test, y_pred)
-r2 = r2_score(y_test, y_pred)
-mse = mean_squared_error(y_test, y_pred)
+# # Make predictions
+# y_pred = model.predict(X_test)
 
-# Print the evaluation metrics
-print(f"Mean Absolute Error: {mae}")
-print(f"R-squared (R²): {r2}")
-print(f"Mean Squared Error (MSE): {mse}")
+# # Evaluate the model
+# mae = mean_absolute_error(y_test, y_pred)
+# r2 = r2_score(y_test, y_pred)
+# mse = mean_squared_error(y_test, y_pred)
+
+# # Print the evaluation metrics
+# print(f"Mean Absolute Error: {mae}")
+# print(f"R-squared (R²): {r2}")
+# print(f"Mean Squared Error (MSE): {mse}")
+
+# plot the prediction
+# import matplotlib.pyplot as plt
+
+# plt.figure(figsize=(8, 6))
+# plt.scatter(y_test, y_pred, alpha=0.6)
+# plt.xlabel("Actual Trade Volume")
+# plt.ylabel("Predicted Trade Volume")
+# plt.title("Predicted vs Actual Trade Volume")
+# plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--')  # identity line
+# plt.grid(True)
+# plt.tight_layout()
+# plt.show()
 
 #%%
 
-#extra
+# K Fold Cross Validation
+from sklearn.model_selection import KFold
+import numpy as np
 import matplotlib.pyplot as plt
 
+# Set up K-Fold
+kf = KFold(n_splits=5, shuffle=True, random_state=42)
+
+# For storing evaluation metrics and all predictions
+r2_scores = []
+mae_scores = []
+mse_scores = []
+all_y_test = []
+all_y_pred = []
+
+for train_index, test_index in kf.split(X):
+    X_train, X_test = X.iloc[train_index], X.iloc[test_index]
+    y_train, y_test = y.iloc[train_index], y.iloc[test_index]
+
+    # Train model
+    model = xgb.XGBRegressor(objective="reg:squarederror", n_estimators=100, learning_rate=0.1)
+    model.fit(X_train, y_train)
+
+    # Predict
+    y_pred = model.predict(X_test)
+
+    # Store metrics
+    r2_scores.append(r2_score(y_test, y_pred))
+    mae_scores.append(mean_absolute_error(y_test, y_pred))
+    mse_scores.append(mean_squared_error(y_test, y_pred))
+
+    # Accumulate all predictions and actuals
+    all_y_test.extend(y_test)
+    all_y_pred.extend(y_pred)
+
+# Print average scores
+print(f"Average R²: {np.mean(r2_scores):.4f}")
+print(f"Average MAE: {np.mean(mae_scores):.4f}")
+print(f"Average MSE: {np.mean(mse_scores):.4f}")
+
+# Plot predicted vs actual
 plt.figure(figsize=(8, 6))
-plt.scatter(y_test, y_pred, alpha=0.6)
-plt.xlabel("Actual Trade Volume")
-plt.ylabel("Predicted Trade Volume")
-plt.title("Predicted vs Actual Trade Volume")
-plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--')  # identity line
+plt.scatter(all_y_test, all_y_pred, alpha=0.6)
+plt.plot([min(all_y_test), max(all_y_test)], [min(all_y_test), max(all_y_test)], color='red', linestyle='--')
+plt.xlabel("Actual Trade Value")
+plt.ylabel("Predicted Trade Value")
+plt.title("Predicted vs Actual Trade Value (All Folds)")
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+
+
 
 
 
