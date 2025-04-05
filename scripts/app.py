@@ -1,14 +1,12 @@
 import pandas as pd
 import plotly.express as px
 from shiny import App, ui, reactive, render
-from shinywidgets import render_plotly
 import matplotlib.pyplot as plt
 import seaborn as sns
 import json
 # Import data for map
 import pathlib
-from ipyleaflet import Map, GeoData, basemaps, LayersControl, Marker, Popup
-from ipywidgets import HTML
+from ipyleaflet import Map, LayersControl, Marker
 import shinywidgets
 from shinywidgets import render_widget
 
@@ -17,6 +15,8 @@ from shiny_functions import generate_trade_graph
 from shiny_functions import generate_yearly_trade_graph
 from shiny_functions import get_ex_rate
 from shiny_functions import get_title_text
+
+# Import Machine Learning Model
 
 # import intro text
 def read_intro():
