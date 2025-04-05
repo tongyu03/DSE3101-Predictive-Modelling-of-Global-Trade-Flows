@@ -1,14 +1,12 @@
 import pandas as pd
 import plotly.express as px
 from shiny import App, ui, reactive, render
-from shinywidgets import render_plotly
 import matplotlib.pyplot as plt
 import seaborn as sns
 import json
 # Import data for map
 import pathlib
-from ipyleaflet import Map, GeoData, basemaps, LayersControl, Marker, Popup
-from ipywidgets import HTML
+from ipyleaflet import Map, LayersControl, Marker
 import shinywidgets
 from shinywidgets import render_widget
 
@@ -18,18 +16,20 @@ from shiny_functions import generate_yearly_trade_graph
 from shiny_functions import get_ex_rate
 from shiny_functions import get_title_text
 
+# Import Machine Learning Model
+
 # import intro text
 def read_intro():
-    with open("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\intro.txt", "r", encoding="utf-8") as f:
+    with open("data\intro.txt", "r", encoding="utf-8") as f:
         return f.read()
 
 ### Import Trade Data
-trade_df = pd.read_csv("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\cleaned data\cleaned_monthly_trade_data.csv")
-exchange_df = pd.read_csv("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\cleaned data\ER_sg.csv")
-gdp_df = pd.read_csv("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\cleaned data\Processed_GDP.csv")
+trade_df = pd.read_csv("data\cleaned data\cleaned_monthly_trade_data.csv")
+exchange_df = pd.read_csv("data\cleaned data\ER_sg.csv")
+gdp_df = pd.read_csv("data\cleaned data\Processed_GDP.csv")
 ## Port location trade data
 #ports_path = pathlib.Path("data") / "ports.json"
-with open("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\ports.json", 'r', encoding='utf-8') as f:
+with open("data\ports.json", 'r', encoding='utf-8') as f:
     ports = json.load(f)
 
 # Country coordinates

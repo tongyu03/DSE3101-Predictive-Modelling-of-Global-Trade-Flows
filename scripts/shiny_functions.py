@@ -6,9 +6,9 @@ import seaborn as sns
 
 
 ### Historical Trade Data
-trade_df = pd.read_csv("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\cleaned data\cleaned_monthly_trade_data.csv")
-exchange_df = pd.read_csv("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\cleaned data\ER_sg.csv")
-gdp_df = pd.read_csv("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\cleaned data\Processed_GDP.csv")
+trade_df = pd.read_csv("data\cleaned data\cleaned_monthly_trade_data.csv")
+exchange_df = pd.read_csv("data\cleaned data\ER_sg.csv")
+gdp_df = pd.read_csv("data\cleaned data\Processed_GDP.csv")
 
 # Function to generate trade graph across the years
 def generate_trade_graph(df, partner_country, year):
