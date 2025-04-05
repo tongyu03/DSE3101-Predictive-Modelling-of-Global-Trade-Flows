@@ -13,23 +13,23 @@ import shinywidgets
 from shinywidgets import render_widget
 
 # Import functions 
-from scripts.shiny_functions import generate_trade_graph
-from scripts.shiny_functions import generate_yearly_trade_graph
-from scripts.shiny_functions import get_ex_rate
-from scripts.shiny_functions import get_title_text
+from shiny_functions import generate_trade_graph
+from shiny_functions import generate_yearly_trade_graph
+from shiny_functions import get_ex_rate
+from shiny_functions import get_title_text
 
 # import intro text
 def read_intro():
-    with open("data/intro.txt", "r", encoding="utf-8") as f:
+    with open("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\intro.txt", "r", encoding="utf-8") as f:
         return f.read()
 
 ### Import Trade Data
-trade_df = pd.read_csv("data/cleaned data/cleaned_monthly_trade_data.csv")
-exchange_df = pd.read_csv("data/cleaned data/ER_sg.csv")
-gdp_df = pd.read_csv("data/cleaned data/Processed_GDP.csv")
+trade_df = pd.read_csv("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\cleaned data\cleaned_monthly_trade_data.csv")
+exchange_df = pd.read_csv("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\cleaned data\ER_sg.csv")
+gdp_df = pd.read_csv("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\cleaned data\Processed_GDP.csv")
 ## Port location trade data
-ports_path = pathlib.Path("data") / "ports.json"
-with open(ports_path, 'r', encoding='utf-8') as f:
+#ports_path = pathlib.Path("data") / "ports.json"
+with open("DSE3101-Predictive-Modelling-of-Global-Trade-Flows\data\ports.json", 'r', encoding='utf-8') as f:
     ports = json.load(f)
 
 # Country coordinates
