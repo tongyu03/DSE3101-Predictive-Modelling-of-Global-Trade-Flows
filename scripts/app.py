@@ -17,6 +17,11 @@ from shiny_functions import get_ex_rate
 from shiny_functions import get_title_text
 
 # Import Machine Learning Model
+from Baseline_MLreg_Model import model
+from Baseline_MLreg_Model import X, y
+
+print(X.head(10))
+print(y.head(10))
 
 # import intro text
 def read_intro():
