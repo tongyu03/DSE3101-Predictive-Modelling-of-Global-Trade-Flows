@@ -57,3 +57,4 @@ trade_data['totalTradeValue'] = trade_data['importValue'] + trade_data['exportVa
 
 print(trade_data)
 trade_data.to_csv('data/cleaned data/10 years Trade Product Data.csv', index=False)
+
