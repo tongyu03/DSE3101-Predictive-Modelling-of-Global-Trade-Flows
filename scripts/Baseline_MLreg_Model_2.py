@@ -1,6 +1,7 @@
 """
 
 @author: Shannen
+Updated trade data
 
 """
 from sklearn.model_selection import train_test_split
@@ -11,6 +12,9 @@ import ast
 import numpy as np
 from sklearn.model_selection import KFold
 import matplotlib.pyplot as plt
+from sklearn.model_selection import TimeSeriesSplit
+from sklearn.linear_model import Ridge, Lasso
+
 
 #new trade data
 
@@ -124,14 +128,6 @@ def prepare_data_for_regression(log_transform=True):
     merged_data = merged_data.dropna()
 
     # Lag features for Trade_Value
-    merged_data["Imports_Lag1"] = merged_data.groupby(["Partner"])['Imports'].shift(1)
-    merged_data["Imports_Lag2"] = merged_data.groupby(["Partner"])['Imports'].shift(2)
-    merged_data["Imports_Lag3"] = merged_data.groupby(["Partner"])['Imports'].shift(3)
-
-    merged_data["Exports_Lag1"] = merged_data.groupby(["Partner"])['Exports'].shift(1)
-    merged_data["Exports_Lag2"] = merged_data.groupby(["Partner"])['Exports'].shift(2)
-    merged_data["Exports_Lag3"] = merged_data.groupby(["Partner"])['Exports'].shift(3)
-
     merged_data["Trade_Volume_Lag1"] = merged_data.groupby(["Partner"])['Trade Volume'].shift(1)
     merged_data["Trade_Volume_Lag2"] = merged_data.groupby(["Partner"])['Trade Volume'].shift(2)
     merged_data["Trade_Volume_Lag3"] = merged_data.groupby(["Partner"])['Trade Volume'].shift(3)
@@ -140,29 +136,17 @@ def prepare_data_for_regression(log_transform=True):
 
     if log_transform:
         # Log-transform lag features and target
-        merged_data["log_Imports_Lag1"] = np.log(merged_data["Imports_Lag1"])
-        merged_data["log_Imports_Lag2"] = np.log(merged_data["Imports_Lag2"])
-        merged_data["log_Imports_Lag3"] = np.log(merged_data["Imports_Lag3"])
-
-        merged_data["log_Exports_Lag1"] = np.log(merged_data["Exports_Lag1"])
-        merged_data["log_Exports_Lag2"] = np.log(merged_data["Exports_Lag2"])
-        merged_data["log_Exports_Lag3"] = np.log(merged_data["Exports_Lag3"])
-
         merged_data["log_Trade_Volume_Lag1"] = np.log(merged_data["Trade_Volume_Lag1"])
         merged_data["log_Trade_Volume_Lag2"] = np.log(merged_data["Trade_Volume_Lag2"])
         merged_data["log_Trade_Volume_Lag3"] = np.log(merged_data["Trade_Volume_Lag3"])
 
         # Log-transform target (Trade_Value)
-        X = merged_data[["log_Imports_Lag1", "log_Imports_Lag2", "log_Imports_Lag3",
-                         "log_Exports_Lag1", "log_Exports_Lag2", "log_Exports_Lag3",
-                         "log_Trade_Volume_Lag1", "log_Trade_Volume_Lag2", "log_Trade_Volume_Lag3",
+        X = merged_data[["log_Trade_Volume_Lag1", "log_Trade_Volume_Lag2", "log_Trade_Volume_Lag3",
                          "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)', 'Adjusted_value']]
         y = np.log(merged_data["Trade Volume"])
 
     else:
-        X = merged_data[["Imports_Lag1", "Imports_Lag2", "Imports_Lag3",
-                         "Exports_Lag1", "Exports_Lag2", "Exports_Lag3",
-                         "Trade_Volume_Lag1", "Trade_Volume_Lag2", "Trade_Volume_Lag3",
+        X = merged_data[["Trade_Volume_Lag1", "Trade_Volume_Lag2", "Trade_Volume_Lag3",
                          "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)', 'Adjusted_value']]
         y = merged_data["Trade Volume"]
 
@@ -172,8 +156,8 @@ X, y = prepare_data_for_regression()
 print(f"Number of datapoints: {len(X)}")
 
 
-# K-Fold Cross Validation
-kf = KFold(n_splits=5, shuffle=True, random_state=42)
+# TimeSeriesSplit
+tscv = TimeSeriesSplit(n_splits=5)
 
 r2_scores = []
 mae_scores = []
@@ -183,8 +167,20 @@ coefficients_list = []
 # Initialize lists before the loop
 all_y_test = []
 all_y_pred = []
+aic_values = []
+bic_values = []
 
-for train_index, test_index in kf.split(X):
+n_params = X.shape[1]
+
+def calculate_aic_bic(y_true, y_pred, n_params):
+    log_likelihood = -0.5 * np.sum((y_true - y_pred) ** 2)
+    n = len(y_true)
+    aic = 2 * n_params - 2 * log_likelihood
+    bic = np.log(n) * n_params - 2 * log_likelihood
+    
+    return aic, bic
+
+for train_index, test_index in tscv.split(X):
     X_train, X_test = X.iloc[train_index], X.iloc[test_index]
     y_train, y_test = y.iloc[train_index], y.iloc[test_index]
 
@@ -201,6 +197,14 @@ for train_index, test_index in kf.split(X):
     # Collect for plotting
     all_y_test.extend(y_test)
     all_y_pred.extend(y_pred)
+    #Calc Aic and BIC
+    aic, bic = calculate_aic_bic(y_test, y_pred, n_params)
+    aic_values.append(aic)
+    bic_values.append(bic)
+average_aic = np.mean(aic_values)
+average_bic = np.mean(bic_values)
+print(f"Average AIC: {average_aic}")
+print(f"Average BIC: {average_bic}")
 
 # Output average metrics
 print(f"\nK-Fold Cross-Validation Results (k=5)")
@@ -210,10 +214,10 @@ print(f"Average MSE: {np.mean(mse_scores):.2f}")
 
 # Trade stats
 print("\nTrade Value Statistics:")
-print(f"Mean Trade Value: {y.mean():.2f}")
-print(f"Median Trade Value: {y.median():.2f}")
-print(f"Min Trade Value: {y.min():.2f}")
-print(f"Max Trade Value: {y.max():.2f}")
+print(f"Mean Trade Volume: {y.mean():.2f}")
+print(f"Median Trade Volume: {y.median():.2f}")
+print(f"Min Trade Volume: {y.min():.2f}")
+print(f"Max Trade Volume: {y.max():.2f}")
 print(f"Variance: {y.var():.2f}")
 
 # Average Coefficients across folds
@@ -231,8 +235,8 @@ plt.plot([min(all_y_test), max(all_y_test)],
          [min(all_y_test), max(all_y_test)],
          color='red', linestyle='--')
 
-plt.xlabel("Actual Trade Value")
-plt.ylabel("Predicted Trade Value")
+plt.xlabel("Actual Trade Volume")
+plt.ylabel("Predicted Trade Volume")
 plt.title("Actual vs Predicted Trade Value (Linear Regression, K-Fold CV)")
 plt.grid(True)
 plt.tight_layout()
@@ -244,9 +248,41 @@ residuals = np.array(all_y_test) - np.array(all_y_pred)
 plt.figure(figsize=(8, 6))
 plt.scatter(all_y_pred, residuals, alpha=0.6)
 plt.axhline(y=0, color='red', linestyle='--')
-plt.xlabel("Predicted Trade Value")
+plt.xlabel("Predicted Trade Volume")
 plt.ylabel("Residuals (Actual - Predicted)")
 plt.title("Residuals vs Predicted (Linear Regression)")
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+
+#check autocorrelation
+print(y.corr(y.shift(1)))
+print(y.corr(y.shift(2)))
+print(y.corr(y.shift(3)))
+
+# Initialize Ridge and Lasso models
+ridge_model = Ridge(alpha=1.0)
+lasso_model = Lasso(alpha=0.1)
+
+r2_scores_ridge = []
+r2_scores_lasso = []
+
+#Overly high R^2
+#Cross-validation for Ridge and Lasso
+for train_index, test_index in tscv.split(X):
+    X_train, X_test = X.iloc[train_index], X.iloc[test_index]
+    y_train, y_test = y.iloc[train_index], y.iloc[test_index]
+
+    # Ridge regression
+    ridge_model.fit(X_train, y_train)
+    y_pred_ridge = ridge_model.predict(X_test)
+    r2_scores_ridge.append(r2_score(y_test, y_pred_ridge))
+
+    # Lasso regression
+    lasso_model.fit(X_train, y_train)
+    y_pred_lasso = lasso_model.predict(X_test)
+    r2_scores_lasso.append(r2_score(y_test, y_pred_lasso))
+
+# Output average R² for Ridge and Lasso
+print(f"Average R² for Ridge Regression: {np.mean(r2_scores_ridge):.4f}")
+print(f"Average R² for Lasso Regression: {np.mean(r2_scores_lasso):.4f}")

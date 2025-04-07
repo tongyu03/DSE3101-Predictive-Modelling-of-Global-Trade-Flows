@@ -1,35 +1,40 @@
 import pandas as pd
 import plotly.express as px
 from shiny import App, ui, reactive, render
-from shinywidgets import render_plotly
 import matplotlib.pyplot as plt
 import seaborn as sns
 import json
 # Import data for map
 import pathlib
-from ipyleaflet import Map, GeoData, basemaps, LayersControl, Marker, Popup
-from ipywidgets import HTML
+from ipyleaflet import Map, LayersControl, Marker
 import shinywidgets
 from shinywidgets import render_widget
 
 # Import functions 
-from scripts.shiny_functions import generate_trade_graph
-from scripts.shiny_functions import generate_yearly_trade_graph
-from scripts.shiny_functions import get_ex_rate
-from scripts.shiny_functions import get_title_text
+from shiny_functions import generate_trade_graph
+from shiny_functions import generate_yearly_trade_graph
+from shiny_functions import get_ex_rate
+from shiny_functions import get_title_text
+
+# Import Machine Learning Model
+from Baseline_MLreg_Model import model
+from Baseline_MLreg_Model import X, y
+
+print(X.head(10))
+print(y.head(10))
 
 # import intro text
 def read_intro():
-    with open("data/intro.txt", "r", encoding="utf-8") as f:
+    with open("data\intro.txt", "r", encoding="utf-8") as f:
         return f.read()
 
 ### Import Trade Data
-trade_df = pd.read_csv("data/cleaned data/cleaned_monthly_trade_data.csv")
-exchange_df = pd.read_csv("data/cleaned data/ER_sg.csv")
-gdp_df = pd.read_csv("data/cleaned data/Processed_GDP.csv")
+trade_df = pd.read_csv("data\cleaned data\cleaned_monthly_trade_data.csv")
+exchange_df = pd.read_csv("data\cleaned data\ER_sg.csv")
+gdp_df = pd.read_csv("data\cleaned data\Processed_GDP.csv")
 ## Port location trade data
-ports_path = pathlib.Path("data") / "ports.json"
-with open(ports_path, 'r', encoding='utf-8') as f:
+#ports_path = pathlib.Path("data") / "ports.json"
+with open("data\ports.json", 'r', encoding='utf-8') as f:
     ports = json.load(f)
 
 # Country coordinates
@@ -111,7 +116,14 @@ app_ui = ui.page_fluid(
                           theme = "bg-gradient-indigo-purple"
                           ),
                     ),
-        ui.nav_panel("Predicted Trade Volume", "model"),
+        ui.nav_panel("Predicted Trade Volume",
+                     ui.input_selectize(
+                          "select_partner", "Select a Trade Partner:", 
+                          choices=["China", "Hong Kong", "Japan", "South Korea", "Malaysia", "Saudi Arabia", "Thailand", "United States"],  # Options for the user to select
+                          selected="China"  # Default selected value
+                      ),
+                      ui.output_text_verbatim("prediction", placeholder=True)
+                     ),
         ui.nav_panel("Trading Ports", 
                      ui.input_select("country", label = "Select country", choices = list(countries_coords.keys())),
                      ui.input_select("city", label="Select city", choices=[]),
@@ -128,7 +140,6 @@ def server(input, output, session):
     def intro_text():
         text_content = read_intro().replace("\n", "<br>")  # Preserve line breaks in HTML
         return ui.HTML(f"<p>{text_content}</p>")  # Display formatted text
-
     
     @output
     @render.plot
@@ -166,10 +177,12 @@ def server(input, output, session):
         country = input.select_country()
         year = input.slide_year()
         value = get_gdp_comparison(gdp_df, country, year)
-
-        # Return formatted text with line breaks
         return ui.HTML(f"<p>{value}</p>")
-
+    
+    @output()
+    @render.text
+    def prediction():
+        return "predicted yearly trade volume"
     
     @reactive.effect
     def update_cities():
