@@ -31,7 +31,7 @@ data = data.groupby(['Country','Year'])[['Imports', 'Exports', 'Trade Volume']].
 unwanted_entries = ['Total All Markets', 'Asia', 'Europe', 'America', 'Oceania', 'Other Markets Africa', 
                     'Other Markets Europe', 'Other Markets Asia', 'Other Markets America', 'Other Markets Oceania']  # Add other unwanted entries if needed
 partners = ['Saudi Arabia', 'Thailand', 'Malaysia', 'United States', 
-            'China', 'Hong Kong', 'Japan', "South Korea", 'Indonesia']
+            'China', 'Hong Kong', 'Japan', "South Korea", 'Indonesia', 'Taiwan']
 data = data[data['Year']>=2013]
 data = data[~data['Country'].isin(unwanted_entries)]
 total_trade_vol = data.groupby(['Country'])[['Trade Volume']].sum().reset_index()
@@ -42,5 +42,5 @@ partners_trade_vol = partners_trade.groupby(['Country'])[['Trade Volume']].sum()
 
 proportion = partners_trade_vol['Trade Volume'].sum() / total_trade_vol['Trade Volume'].sum()*100
 print(partners_trade_vol)
-print(total_trade_vol)
+print(total_trade_vol.head(15))
 print(proportion)

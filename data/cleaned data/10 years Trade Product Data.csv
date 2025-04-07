@@ -1,4 +1,4 @@
-refYear,cmdDesc,cmdCode,partnerDesc,partnerISO,importValue,exportValue,totalTradeValue
+Year,Product,HS Code,Country,Country ISO,Imports,Exports,Trade Volume
 2013,Chemical products n.e.c.,38,China,CHN,297608723.6,957377667.1,1254986390.7
 2013,Chemical products n.e.c.,38,"China, Hong Kong SAR",HKG,7250480.412,94270466.3,101520946.712
 2013,Chemical products n.e.c.,38,Indonesia,IDN,274812860.8,405363016.4,680175877.2

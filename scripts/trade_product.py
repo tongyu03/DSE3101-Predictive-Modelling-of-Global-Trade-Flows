@@ -1,7 +1,7 @@
 """
 Exploratory and Cleaning for Time Series Trading Data between 2013 and 2023 for 
 Singapore and its Top 10 Trading Partners and top 10 Industries
-
+Columns: Country, Year, Product, HS Code, Import, Export, Trade Volume
 @author: junlu
 """
 
@@ -54,6 +54,16 @@ export_agg = export_agg.rename(columns={'primaryValue': 'exportValue'})
 trade_data = pd.merge(import_agg, export_agg, on=['refYear', 'cmdDesc', 'cmdCode', 'partnerDesc', 'partnerISO'], how='outer')
 
 trade_data['totalTradeValue'] = trade_data['importValue'] + trade_data['exportValue']
+trade_data = trade_data.rename(columns={
+    'refYear': 'Year',
+    'cmdDesc': 'Product',
+    'cmdCode': 'HS Code',
+    'partnerDesc': 'Country',
+    'partnerISO': 'Country ISO',
+    'importValue': 'Imports',
+    'exportValue': 'Exports',
+    'totalTradeValue': 'Trade Volume'
+})
 
 print(trade_data)
 trade_data.to_csv('data/cleaned data/10 years Trade Product Data.csv', index=False)
