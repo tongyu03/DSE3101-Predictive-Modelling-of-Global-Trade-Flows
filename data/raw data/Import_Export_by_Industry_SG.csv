@@ -1,0 +1,3344 @@
+Nomenclature,ReporterISO3,ProductCode,ReporterName,PartnerISO3,PartnerName,Year,TradeFlowName,TradeFlowCode,TradeValue in 1000 USD
+H6,SGP,91,Singapore,MYS,Malaysia,2023,Export,6,477741.105
+H6,SGP,91,Singapore,MYS,Malaysia,2023,Import,5,150488.293
+H6,SGP,91,Singapore,SAU,Saudi Arabia,2022,Export,6,243.219
+H6,SGP,91,Singapore,SAU,Saudi Arabia,2022,Import,5,0.381
+H6,SGP,91,Singapore,SAU,Saudi Arabia,2023,Export,6,187.985
+H6,SGP,91,Singapore,SAU,Saudi Arabia,2023,Import,5,1.641
+H6,SGP,91,Singapore,THA,Thailand,2022,Export,6,298174.354
+H6,SGP,91,Singapore,THA,Thailand,2022,Import,5,7995.193
+H6,SGP,91,Singapore,THA,Thailand,2023,Export,6,338547.573
+H6,SGP,91,Singapore,THA,Thailand,2023,Import,5,7295.793
+H6,SGP,91,Singapore,USA,United States,2022,Export,6,62173.417
+H6,SGP,91,Singapore,USA,United States,2022,Import,5,10203.468
+H6,SGP,91,Singapore,USA,United States,2023,Export,6,63176.401
+H6,SGP,91,Singapore,USA,United States,2023,Import,5,10632.787
+H6,SGP,92,Singapore,CHN,China,2022,Export,6,2687.689
+H6,SGP,92,Singapore,CHN,China,2022,Import,5,13438.572
+H6,SGP,92,Singapore,CHN,China,2023,Export,6,1798.634
+H6,SGP,92,Singapore,CHN,China,2023,Import,5,13037.693
+H6,SGP,92,Singapore,HKG,"Hong Kong, China",2022,Export,6,746.75
+H6,SGP,92,Singapore,HKG,"Hong Kong, China",2022,Import,5,223.897
+H6,SGP,92,Singapore,HKG,"Hong Kong, China",2023,Export,6,1054.535
+H6,SGP,92,Singapore,HKG,"Hong Kong, China",2023,Import,5,41.252
+H6,SGP,92,Singapore,IDN,Indonesia,2022,Export,6,7512.512
+H6,SGP,92,Singapore,IDN,Indonesia,2022,Import,5,9801.791
+H6,SGP,92,Singapore,IDN,Indonesia,2023,Export,6,9229.477
+H6,SGP,92,Singapore,IDN,Indonesia,2023,Import,5,8121.137
+H6,SGP,92,Singapore,JPN,Japan,2022,Export,6,1456.548
+H6,SGP,92,Singapore,JPN,Japan,2022,Import,5,12354.984
+H6,SGP,92,Singapore,JPN,Japan,2023,Export,6,62.326
+H6,SGP,92,Singapore,JPN,Japan,2023,Import,5,12500.206
+H6,SGP,92,Singapore,KOR,"Korea, Rep.",2022,Export,6,3.103
+H6,SGP,92,Singapore,KOR,"Korea, Rep.",2022,Import,5,278.861
+H6,SGP,92,Singapore,KOR,"Korea, Rep.",2023,Export,6,178.001
+H6,SGP,92,Singapore,KOR,"Korea, Rep.",2023,Import,5,249.972
+H6,SGP,92,Singapore,MYS,Malaysia,2022,Export,6,5134.678
+H6,SGP,92,Singapore,MYS,Malaysia,2022,Import,5,2321.304
+H6,SGP,92,Singapore,MYS,Malaysia,2023,Export,6,5146.274
+H6,SGP,92,Singapore,MYS,Malaysia,2023,Import,5,1970.693
+H6,SGP,92,Singapore,SAU,Saudi Arabia,2023,Import,5,2.403
+H6,SGP,92,Singapore,THA,Thailand,2022,Export,6,263.503
+H6,SGP,92,Singapore,THA,Thailand,2022,Import,5,123.105
+H6,SGP,92,Singapore,THA,Thailand,2023,Export,6,539.878
+H6,SGP,92,Singapore,THA,Thailand,2023,Import,5,152.607
+H6,SGP,92,Singapore,USA,United States,2022,Export,6,900.305
+H6,SGP,92,Singapore,USA,United States,2022,Import,5,10509.491
+H6,SGP,92,Singapore,USA,United States,2023,Export,6,323.876
+H6,SGP,92,Singapore,USA,United States,2023,Import,5,13255.371
+H6,SGP,93,Singapore,CHN,China,2022,Import,5,14.932
+H6,SGP,93,Singapore,CHN,China,2023,Import,5,76.297
+H6,SGP,93,Singapore,IDN,Indonesia,2022,Export,6,42.561
+H6,SGP,93,Singapore,JPN,Japan,2022,Export,6,0.101
+H6,SGP,93,Singapore,JPN,Japan,2022,Import,5,11.79
+H6,SGP,93,Singapore,KOR,"Korea, Rep.",2022,Export,6,21.392
+H6,SGP,93,Singapore,KOR,"Korea, Rep.",2022,Import,5,4.192
+H6,SGP,93,Singapore,KOR,"Korea, Rep.",2023,Export,6,13.097
+H6,SGP,93,Singapore,MYS,Malaysia,2022,Export,6,65.938
+H6,SGP,93,Singapore,MYS,Malaysia,2023,Export,6,4.468
+H6,SGP,93,Singapore,THA,Thailand,2023,Export,6,0.946
+H6,SGP,93,Singapore,USA,United States,2022,Export,6,1508.972
+H6,SGP,93,Singapore,USA,United States,2022,Import,5,317.66
+H6,SGP,93,Singapore,USA,United States,2023,Export,6,43.389
+H6,SGP,93,Singapore,USA,United States,2023,Import,5,2276.255
+H6,SGP,94,Singapore,CHN,China,2022,Export,6,20573.048
+H6,SGP,94,Singapore,CHN,China,2022,Import,5,578521.872
+H6,SGP,94,Singapore,CHN,China,2023,Export,6,22301.807
+H6,SGP,94,Singapore,CHN,China,2023,Import,5,603697.23
+H6,SGP,94,Singapore,HKG,"Hong Kong, China",2022,Export,6,9828.894
+H6,SGP,94,Singapore,HKG,"Hong Kong, China",2022,Import,5,3659.552
+H6,SGP,94,Singapore,HKG,"Hong Kong, China",2023,Export,6,9135.74
+H6,SGP,94,Singapore,HKG,"Hong Kong, China",2023,Import,5,4547.886
+H6,SGP,94,Singapore,IDN,Indonesia,2022,Export,6,49133.227
+H6,SGP,94,Singapore,IDN,Indonesia,2022,Import,5,54661.816
+H6,SGP,94,Singapore,IDN,Indonesia,2023,Export,6,64631.365
+H6,SGP,94,Singapore,IDN,Indonesia,2023,Import,5,55107.84
+H6,SGP,94,Singapore,JPN,Japan,2022,Export,6,12717.413
+H6,SGP,94,Singapore,JPN,Japan,2022,Import,5,21773.271
+H6,SGP,94,Singapore,JPN,Japan,2023,Export,6,20957.002
+H6,SGP,94,Singapore,JPN,Japan,2023,Import,5,21715.274
+H6,SGP,94,Singapore,KOR,"Korea, Rep.",2022,Export,6,9080.663
+H6,SGP,94,Singapore,KOR,"Korea, Rep.",2022,Import,5,6701.433
+H6,SGP,94,Singapore,KOR,"Korea, Rep.",2023,Export,6,15757.408
+H6,SGP,94,Singapore,KOR,"Korea, Rep.",2023,Import,5,10683.845
+H6,SGP,94,Singapore,MYS,Malaysia,2022,Export,6,34506.949
+H6,SGP,94,Singapore,MYS,Malaysia,2022,Import,5,258506.328
+H6,SGP,94,Singapore,MYS,Malaysia,2023,Export,6,33089.256
+H6,SGP,94,Singapore,MYS,Malaysia,2023,Import,5,292976.785
+H6,SGP,94,Singapore,SAU,Saudi Arabia,2022,Export,6,1841.446
+H6,SGP,94,Singapore,SAU,Saudi Arabia,2022,Import,5,4.001
+H6,SGP,94,Singapore,SAU,Saudi Arabia,2023,Export,6,1628.147
+H6,SGP,94,Singapore,SAU,Saudi Arabia,2023,Import,5,1200.774
+H6,SGP,94,Singapore,THA,Thailand,2022,Export,6,12618.558
+H6,SGP,94,Singapore,THA,Thailand,2022,Import,5,14566.948
+H6,SGP,94,Singapore,THA,Thailand,2023,Export,6,16823.243
+H6,SGP,94,Singapore,THA,Thailand,2023,Import,5,14593.531
+H6,SGP,94,Singapore,USA,United States,2022,Export,6,54741.826
+H6,SGP,94,Singapore,USA,United States,2022,Import,5,77714.253
+H6,SGP,94,Singapore,USA,United States,2023,Export,6,71231.689
+H6,SGP,94,Singapore,USA,United States,2023,Import,5,76028.808
+H6,SGP,95,Singapore,CHN,China,2022,Export,6,33679.301
+H6,SGP,95,Singapore,CHN,China,2022,Import,5,422643.33
+H6,SGP,95,Singapore,CHN,China,2023,Export,6,27572.227
+H6,SGP,95,Singapore,CHN,China,2023,Import,5,547735.577
+H6,SGP,95,Singapore,HKG,"Hong Kong, China",2022,Export,6,37273.412
+H6,SGP,95,Singapore,HKG,"Hong Kong, China",2022,Import,5,7608.887
+H6,SGP,95,Singapore,HKG,"Hong Kong, China",2023,Export,6,41469.025
+H6,SGP,95,Singapore,HKG,"Hong Kong, China",2023,Import,5,7130.974
+H6,SGP,95,Singapore,IDN,Indonesia,2022,Export,6,141866.024
+H6,SGP,95,Singapore,IDN,Indonesia,2022,Import,5,53927.724
+H6,SGP,95,Singapore,IDN,Indonesia,2023,Export,6,150706.845
+H6,SGP,95,Singapore,IDN,Indonesia,2023,Import,5,48958.048
+H6,SGP,95,Singapore,JPN,Japan,2022,Export,6,15847.769
+H6,SGP,95,Singapore,JPN,Japan,2022,Import,5,125563.413
+H6,SGP,95,Singapore,JPN,Japan,2023,Export,6,13967.42
+H6,SGP,95,Singapore,JPN,Japan,2023,Import,5,208340.554
+H6,SGP,95,Singapore,KOR,"Korea, Rep.",2022,Export,6,1863.749
+H6,SGP,95,Singapore,KOR,"Korea, Rep.",2022,Import,5,10498.686
+H6,SGP,95,Singapore,KOR,"Korea, Rep.",2023,Export,6,3549.874
+H6,SGP,95,Singapore,KOR,"Korea, Rep.",2023,Import,5,10230.842
+H6,SGP,95,Singapore,MYS,Malaysia,2022,Export,6,107265.877
+H6,SGP,95,Singapore,MYS,Malaysia,2022,Import,5,84969.562
+H6,SGP,95,Singapore,MYS,Malaysia,2023,Export,6,129077.436
+H6,SGP,95,Singapore,MYS,Malaysia,2023,Import,5,85954.451
+H6,SGP,95,Singapore,SAU,Saudi Arabia,2022,Export,6,199.153
+H6,SGP,95,Singapore,SAU,Saudi Arabia,2022,Import,5,82.95
+H6,SGP,95,Singapore,SAU,Saudi Arabia,2023,Export,6,229.382
+H6,SGP,95,Singapore,SAU,Saudi Arabia,2023,Import,5,97.499
+H6,SGP,95,Singapore,THA,Thailand,2022,Export,6,30393.985
+H6,SGP,95,Singapore,THA,Thailand,2022,Import,5,15387.837
+H6,SGP,95,Singapore,THA,Thailand,2023,Export,6,58211.624
+H6,SGP,95,Singapore,THA,Thailand,2023,Import,5,13969.404
+H6,SGP,95,Singapore,USA,United States,2022,Export,6,56800.715
+H6,SGP,95,Singapore,USA,United States,2022,Import,5,62035.464
+H6,SGP,95,Singapore,USA,United States,2023,Export,6,97188.824
+H6,SGP,95,Singapore,USA,United States,2023,Import,5,89727.031
+H6,SGP,96,Singapore,CHN,China,2022,Export,6,14116.337
+H6,SGP,96,Singapore,CHN,China,2022,Import,5,100104.238
+H6,SGP,96,Singapore,CHN,China,2023,Export,6,8454.488
+H6,SGP,96,Singapore,CHN,China,2023,Import,5,97428.823
+H6,SGP,96,Singapore,HKG,"Hong Kong, China",2022,Export,6,10807.453
+H6,SGP,96,Singapore,HKG,"Hong Kong, China",2022,Import,5,1757.834
+H6,SGP,96,Singapore,HKG,"Hong Kong, China",2023,Export,6,8077.069
+H6,SGP,96,Singapore,HKG,"Hong Kong, China",2023,Import,5,2635.772
+H6,SGP,96,Singapore,IDN,Indonesia,2022,Export,6,28698.17
+H6,SGP,96,Singapore,IDN,Indonesia,2022,Import,5,19177.487
+H6,SGP,96,Singapore,IDN,Indonesia,2023,Export,6,36883.333
+H6,SGP,96,Singapore,IDN,Indonesia,2023,Import,5,18085.601
+H6,SGP,96,Singapore,JPN,Japan,2022,Export,6,5980.845
+H6,SGP,96,Singapore,JPN,Japan,2022,Import,5,53863.171
+H6,SGP,96,Singapore,JPN,Japan,2023,Export,6,5986.463
+H6,SGP,96,Singapore,JPN,Japan,2023,Import,5,45129.558
+H6,SGP,96,Singapore,KOR,"Korea, Rep.",2022,Export,6,19234.551
+H6,SGP,96,Singapore,KOR,"Korea, Rep.",2022,Import,5,5450.922
+H6,SGP,96,Singapore,KOR,"Korea, Rep.",2023,Export,6,16166.35
+H6,SGP,96,Singapore,KOR,"Korea, Rep.",2023,Import,5,3699.005
+H6,SGP,96,Singapore,MYS,Malaysia,2022,Export,6,42709.782
+H6,SGP,96,Singapore,MYS,Malaysia,2022,Import,5,58467.734
+H6,SGP,96,Singapore,MYS,Malaysia,2023,Export,6,20415.721
+H6,SGP,96,Singapore,MYS,Malaysia,2023,Import,5,56249.141
+H6,SGP,96,Singapore,SAU,Saudi Arabia,2022,Export,6,471.939
+H6,SGP,96,Singapore,SAU,Saudi Arabia,2022,Import,5,33.236
+H6,SGP,96,Singapore,SAU,Saudi Arabia,2023,Export,6,474.394
+H6,SGP,96,Singapore,SAU,Saudi Arabia,2023,Import,5,21.778
+H6,SGP,96,Singapore,THA,Thailand,2022,Export,6,13254.923
+H6,SGP,96,Singapore,THA,Thailand,2022,Import,5,13428.094
+H6,SGP,96,Singapore,THA,Thailand,2023,Export,6,10588.224
+H6,SGP,96,Singapore,THA,Thailand,2023,Import,5,12992.477
+H6,SGP,96,Singapore,USA,United States,2022,Export,6,7522.037
+H6,SGP,96,Singapore,USA,United States,2022,Import,5,25023.281
+H6,SGP,96,Singapore,USA,United States,2023,Export,6,4862.366
+H6,SGP,96,Singapore,USA,United States,2023,Import,5,20070.401
+H6,SGP,97,Singapore,CHN,China,2022,Export,6,22131.101
+H6,SGP,97,Singapore,CHN,China,2022,Import,5,37098.468
+H6,SGP,97,Singapore,CHN,China,2023,Export,6,251544.979
+H6,SGP,97,Singapore,CHN,China,2023,Import,5,40983.049
+H6,SGP,97,Singapore,HKG,"Hong Kong, China",2022,Export,6,210682.401
+H6,SGP,97,Singapore,HKG,"Hong Kong, China",2022,Import,5,62474.761
+H6,SGP,97,Singapore,HKG,"Hong Kong, China",2023,Export,6,334728.911
+H6,SGP,97,Singapore,HKG,"Hong Kong, China",2023,Import,5,158915.437
+H6,SGP,97,Singapore,IDN,Indonesia,2022,Export,6,6980.616
+H6,SGP,97,Singapore,IDN,Indonesia,2022,Import,5,17681.096
+H6,SGP,97,Singapore,IDN,Indonesia,2023,Export,6,10147.039
+H6,SGP,97,Singapore,IDN,Indonesia,2023,Import,5,8758.459
+H6,SGP,97,Singapore,JPN,Japan,2022,Export,6,2149.522
+H6,SGP,97,Singapore,JPN,Japan,2022,Import,5,80785.181
+H6,SGP,97,Singapore,JPN,Japan,2023,Export,6,18004.706
+H6,SGP,97,Singapore,JPN,Japan,2023,Import,5,77009.452
+H6,SGP,97,Singapore,KOR,"Korea, Rep.",2022,Export,6,12805.992
+H6,SGP,97,Singapore,KOR,"Korea, Rep.",2022,Import,5,12112.362
+H6,SGP,97,Singapore,KOR,"Korea, Rep.",2023,Export,6,29155.728
+H6,SGP,97,Singapore,KOR,"Korea, Rep.",2023,Import,5,11988.735
+H6,SGP,97,Singapore,MYS,Malaysia,2022,Export,6,5835.215
+H6,SGP,97,Singapore,MYS,Malaysia,2022,Import,5,2825.669
+H6,SGP,97,Singapore,MYS,Malaysia,2023,Export,6,4690.944
+H6,SGP,97,Singapore,MYS,Malaysia,2023,Import,5,3785.064
+H6,SGP,97,Singapore,SAU,Saudi Arabia,2022,Export,6,131.65
+H6,SGP,97,Singapore,SAU,Saudi Arabia,2023,Export,6,28.457
+H6,SGP,97,Singapore,THA,Thailand,2022,Export,6,1402.843
+H6,SGP,97,Singapore,THA,Thailand,2022,Import,5,2101.858
+H6,SGP,97,Singapore,THA,Thailand,2023,Export,6,1052.684
+H6,SGP,97,Singapore,THA,Thailand,2023,Import,5,4553.645
+H6,SGP,97,Singapore,USA,United States,2022,Export,6,105317.437
+H6,SGP,97,Singapore,USA,United States,2022,Import,5,420660.3
+H6,SGP,97,Singapore,USA,United States,2023,Export,6,416678.309
+H6,SGP,97,Singapore,USA,United States,2023,Import,5,280884.607
+H6,SGP,99,Singapore,CHN,China,2022,Export,6,1004770.659
+H6,SGP,99,Singapore,CHN,China,2022,Import,5,703266.53
+H6,SGP,99,Singapore,CHN,China,2023,Export,6,1191630.149
+H6,SGP,99,Singapore,CHN,China,2023,Import,5,486658.585
+H6,SGP,99,Singapore,HKG,"Hong Kong, China",2022,Export,6,4474878.498
+H6,SGP,99,Singapore,HKG,"Hong Kong, China",2022,Import,5,23312.726
+H6,SGP,99,Singapore,HKG,"Hong Kong, China",2023,Export,6,3775079.379
+H6,SGP,99,Singapore,HKG,"Hong Kong, China",2023,Import,5,13317.733
+H6,SGP,99,Singapore,IDN,Indonesia,2022,Export,6,1206225.731
+H6,SGP,99,Singapore,IDN,Indonesia,2022,Import,5,663428.786
+H6,SGP,99,Singapore,IDN,Indonesia,2023,Export,6,773929.154
+H6,SGP,99,Singapore,IDN,Indonesia,2023,Import,5,569232.969
+H6,SGP,99,Singapore,JPN,Japan,2022,Export,6,756170.416
+H6,SGP,99,Singapore,JPN,Japan,2022,Import,5,444381.43
+H6,SGP,99,Singapore,JPN,Japan,2023,Export,6,637306.634
+H6,SGP,99,Singapore,JPN,Japan,2023,Import,5,529749.607
+H6,SGP,99,Singapore,KOR,"Korea, Rep.",2022,Export,6,493519.686
+H6,SGP,99,Singapore,KOR,"Korea, Rep.",2022,Import,5,272549.935
+H6,SGP,99,Singapore,KOR,"Korea, Rep.",2023,Export,6,532560.324
+H6,SGP,99,Singapore,KOR,"Korea, Rep.",2023,Import,5,409612.091
+H6,SGP,99,Singapore,MYS,Malaysia,2022,Export,6,548367.634
+H6,SGP,99,Singapore,MYS,Malaysia,2022,Import,5,131590.911
+H6,SGP,99,Singapore,MYS,Malaysia,2023,Export,6,498579.423
+H6,SGP,99,Singapore,MYS,Malaysia,2023,Import,5,115180.539
+H6,SGP,99,Singapore,SAU,Saudi Arabia,2022,Export,6,144591.679
+H6,SGP,99,Singapore,SAU,Saudi Arabia,2022,Import,5,15475.219
+H6,SGP,99,Singapore,SAU,Saudi Arabia,2023,Export,6,117500.076
+H6,SGP,99,Singapore,SAU,Saudi Arabia,2023,Import,5,203.249
+H6,SGP,99,Singapore,THA,Thailand,2022,Export,6,154647.6
+H6,SGP,99,Singapore,THA,Thailand,2022,Import,5,14954.479
+H6,SGP,99,Singapore,THA,Thailand,2023,Export,6,329504.452
+H6,SGP,99,Singapore,THA,Thailand,2023,Import,5,20587.074
+H6,SGP,99,Singapore,USA,United States,2022,Export,6,219869.88
+H6,SGP,99,Singapore,USA,United States,2022,Import,5,236590.918
+H6,SGP,99,Singapore,USA,United States,2023,Export,6,200337.668
+H6,SGP,99,Singapore,USA,United States,2023,Import,5,255050.26
+H6,SGP,04,Singapore,THA,Thailand,2022,Export,6,35612.537
+H6,SGP,04,Singapore,THA,Thailand,2022,Import,5,82957.241
+H6,SGP,04,Singapore,THA,Thailand,2023,Export,6,44325.769
+H6,SGP,04,Singapore,THA,Thailand,2023,Import,5,108585.677
+H6,SGP,04,Singapore,USA,United States,2022,Export,6,180.194
+H6,SGP,04,Singapore,USA,United States,2022,Import,5,64966.482
+H6,SGP,04,Singapore,USA,United States,2023,Export,6,831.815
+H6,SGP,04,Singapore,USA,United States,2023,Import,5,46658.082
+H6,SGP,05,Singapore,CHN,China,2022,Import,5,6146.006
+H6,SGP,05,Singapore,CHN,China,2023,Export,6,73.982
+H6,SGP,05,Singapore,CHN,China,2023,Import,5,3136.935
+H6,SGP,05,Singapore,HKG,"Hong Kong, China",2022,Export,6,199.813
+H6,SGP,05,Singapore,HKG,"Hong Kong, China",2022,Import,5,0.083
+H6,SGP,05,Singapore,HKG,"Hong Kong, China",2023,Export,6,295.981
+H6,SGP,05,Singapore,HKG,"Hong Kong, China",2023,Import,5,0.544
+H6,SGP,05,Singapore,IDN,Indonesia,2022,Export,6,4124.437
+H6,SGP,05,Singapore,IDN,Indonesia,2022,Import,5,4930.219
+H6,SGP,05,Singapore,IDN,Indonesia,2023,Export,6,454.241
+H6,SGP,05,Singapore,IDN,Indonesia,2023,Import,5,4626.272
+H6,SGP,05,Singapore,JPN,Japan,2022,Export,6,0.017
+H6,SGP,05,Singapore,JPN,Japan,2022,Import,5,1374.141
+H6,SGP,05,Singapore,JPN,Japan,2023,Import,5,1806.736
+H6,SGP,05,Singapore,KOR,"Korea, Rep.",2022,Export,6,1.161
+H6,SGP,05,Singapore,KOR,"Korea, Rep.",2022,Import,5,134.712
+H6,SGP,05,Singapore,KOR,"Korea, Rep.",2023,Import,5,205.132
+H6,SGP,05,Singapore,MYS,Malaysia,2022,Export,6,600.36
+H6,SGP,05,Singapore,MYS,Malaysia,2022,Import,5,42.305
+H6,SGP,05,Singapore,MYS,Malaysia,2023,Export,6,684.11
+H6,SGP,05,Singapore,MYS,Malaysia,2023,Import,5,102.799
+H6,SGP,05,Singapore,THA,Thailand,2022,Export,6,1.537
+H6,SGP,05,Singapore,THA,Thailand,2022,Import,5,21.729
+H6,SGP,05,Singapore,THA,Thailand,2023,Export,6,0.426
+H6,SGP,05,Singapore,THA,Thailand,2023,Import,5,65.977
+H6,SGP,05,Singapore,USA,United States,2022,Export,6,8.471
+H6,SGP,05,Singapore,USA,United States,2022,Import,5,6134.579
+H6,SGP,05,Singapore,USA,United States,2023,Export,6,65.327
+H6,SGP,05,Singapore,USA,United States,2023,Import,5,6908.884
+H6,SGP,06,Singapore,CHN,China,2022,Export,6,60.756
+H6,SGP,06,Singapore,CHN,China,2022,Import,5,21167.819
+H6,SGP,06,Singapore,CHN,China,2023,Import,5,16687.131
+H6,SGP,06,Singapore,HKG,"Hong Kong, China",2022,Export,6,140.422
+H6,SGP,06,Singapore,HKG,"Hong Kong, China",2022,Import,5,0.291
+H6,SGP,06,Singapore,HKG,"Hong Kong, China",2023,Export,6,66.525
+H6,SGP,06,Singapore,HKG,"Hong Kong, China",2023,Import,5,1.421
+H6,SGP,06,Singapore,IDN,Indonesia,2022,Export,6,118.883
+H6,SGP,06,Singapore,IDN,Indonesia,2022,Import,5,2043.756
+H6,SGP,06,Singapore,IDN,Indonesia,2023,Export,6,97.32
+H6,SGP,06,Singapore,IDN,Indonesia,2023,Import,5,1846.28
+H6,SGP,06,Singapore,JPN,Japan,2022,Export,6,6014.135
+H6,SGP,06,Singapore,JPN,Japan,2022,Import,5,1028.39
+H6,SGP,06,Singapore,JPN,Japan,2023,Export,6,3099.74
+H6,SGP,06,Singapore,JPN,Japan,2023,Import,5,1050.582
+H6,SGP,06,Singapore,KOR,"Korea, Rep.",2022,Export,6,58.456
+H6,SGP,06,Singapore,KOR,"Korea, Rep.",2022,Import,5,50.293
+H6,SGP,06,Singapore,KOR,"Korea, Rep.",2023,Export,6,52.519
+H6,SGP,06,Singapore,KOR,"Korea, Rep.",2023,Import,5,34.065
+H6,SGP,06,Singapore,MYS,Malaysia,2022,Export,6,232.679
+H6,SGP,06,Singapore,MYS,Malaysia,2022,Import,5,43732.458
+H6,SGP,06,Singapore,MYS,Malaysia,2023,Export,6,180.471
+H6,SGP,06,Singapore,MYS,Malaysia,2023,Import,5,45951.728
+H6,SGP,06,Singapore,SAU,Saudi Arabia,2023,Export,6,39.028
+H6,SGP,06,Singapore,THA,Thailand,2022,Export,6,9.07
+H6,SGP,06,Singapore,THA,Thailand,2022,Import,5,3246.416
+H6,SGP,06,Singapore,THA,Thailand,2023,Export,6,27.297
+H6,SGP,06,Singapore,THA,Thailand,2023,Import,5,3216.782
+H6,SGP,06,Singapore,USA,United States,2022,Export,6,1494.05
+H6,SGP,06,Singapore,USA,United States,2022,Import,5,891.833
+H6,SGP,06,Singapore,USA,United States,2023,Export,6,1183.812
+H6,SGP,06,Singapore,USA,United States,2023,Import,5,971.674
+H6,SGP,07,Singapore,CHN,China,2022,Export,6,39.963
+H6,SGP,07,Singapore,CHN,China,2022,Import,5,190100.559
+H6,SGP,07,Singapore,CHN,China,2023,Export,6,8.483
+H6,SGP,07,Singapore,CHN,China,2023,Import,5,175789.986
+H6,SGP,07,Singapore,HKG,"Hong Kong, China",2022,Export,6,333.929
+H6,SGP,07,Singapore,HKG,"Hong Kong, China",2022,Import,5,617.038
+H6,SGP,07,Singapore,HKG,"Hong Kong, China",2023,Export,6,196.816
+H6,SGP,07,Singapore,HKG,"Hong Kong, China",2023,Import,5,1050.888
+H6,SGP,07,Singapore,IDN,Indonesia,2022,Export,6,11682.442
+H6,SGP,07,Singapore,IDN,Indonesia,2022,Import,5,19937.602
+H6,SGP,07,Singapore,IDN,Indonesia,2023,Export,6,10590.431
+H6,SGP,07,Singapore,IDN,Indonesia,2023,Import,5,19914.579
+H6,SGP,07,Singapore,JPN,Japan,2022,Export,6,0.001
+H6,SGP,07,Singapore,JPN,Japan,2022,Import,5,15761.377
+H6,SGP,07,Singapore,JPN,Japan,2023,Export,6,0.391
+H6,SGP,07,Singapore,JPN,Japan,2023,Import,5,15970.855
+H6,SGP,07,Singapore,KOR,"Korea, Rep.",2022,Export,6,78.553
+H6,SGP,07,Singapore,KOR,"Korea, Rep.",2022,Import,5,2082.102
+H6,SGP,07,Singapore,KOR,"Korea, Rep.",2023,Export,6,74.08
+H6,SGP,07,Singapore,KOR,"Korea, Rep.",2023,Import,5,1477.408
+H6,SGP,07,Singapore,MYS,Malaysia,2022,Export,6,9664.887
+H6,SGP,07,Singapore,MYS,Malaysia,2022,Import,5,213076.861
+H6,SGP,07,Singapore,MYS,Malaysia,2023,Export,6,10998.273
+H6,SGP,07,Singapore,MYS,Malaysia,2023,Import,5,228638.341
+H6,SGP,07,Singapore,SAU,Saudi Arabia,2023,Import,5,0.007
+H6,SGP,07,Singapore,THA,Thailand,2022,Export,6,98.946
+H6,SGP,07,Singapore,THA,Thailand,2022,Import,5,38802.884
+H6,SGP,07,Singapore,THA,Thailand,2023,Export,6,86.17
+H6,SGP,07,Singapore,THA,Thailand,2023,Import,5,33613.726
+H6,SGP,07,Singapore,USA,United States,2022,Export,6,7.336
+H6,SGP,07,Singapore,USA,United States,2022,Import,5,12159.21
+H6,SGP,07,Singapore,USA,United States,2023,Export,6,4.564
+H6,SGP,07,Singapore,USA,United States,2023,Import,5,11919.232
+H6,SGP,08,Singapore,CHN,China,2022,Export,6,8406.941
+H6,SGP,08,Singapore,CHN,China,2022,Import,5,97041.477
+H6,SGP,08,Singapore,CHN,China,2023,Export,6,13029.019
+H6,SGP,08,Singapore,CHN,China,2023,Import,5,107773.542
+H6,SGP,08,Singapore,HKG,"Hong Kong, China",2022,Export,6,2809.464
+H6,SGP,08,Singapore,HKG,"Hong Kong, China",2022,Import,5,346.981
+H6,SGP,08,Singapore,HKG,"Hong Kong, China",2023,Export,6,1541.44
+H6,SGP,08,Singapore,HKG,"Hong Kong, China",2023,Import,5,303.096
+H6,SGP,08,Singapore,IDN,Indonesia,2022,Export,6,11840.502
+H6,SGP,08,Singapore,IDN,Indonesia,2022,Import,5,37396.827
+H6,SGP,08,Singapore,IDN,Indonesia,2023,Export,6,19455.242
+H6,SGP,08,Singapore,IDN,Indonesia,2023,Import,5,34244.71
+H6,SGP,08,Singapore,JPN,Japan,2022,Export,6,15.602
+H6,SGP,08,Singapore,JPN,Japan,2022,Import,5,14275.336
+H6,SGP,08,Singapore,JPN,Japan,2023,Export,6,9.326
+H6,SGP,08,Singapore,JPN,Japan,2023,Import,5,14129.529
+H6,SGP,08,Singapore,KOR,"Korea, Rep.",2022,Export,6,177.359
+H6,SGP,08,Singapore,KOR,"Korea, Rep.",2022,Import,5,19200.351
+H6,SGP,08,Singapore,KOR,"Korea, Rep.",2023,Export,6,234.972
+H6,SGP,08,Singapore,KOR,"Korea, Rep.",2023,Import,5,25442.368
+H6,SGP,08,Singapore,MYS,Malaysia,2022,Export,6,41758.562
+H6,SGP,08,Singapore,MYS,Malaysia,2022,Import,5,92653.334
+H6,SGP,08,Singapore,MYS,Malaysia,2023,Export,6,36676.275
+H6,SGP,08,Singapore,MYS,Malaysia,2023,Import,5,93167.413
+H6,SGP,08,Singapore,SAU,Saudi Arabia,2022,Export,6,182.736
+H6,SGP,08,Singapore,SAU,Saudi Arabia,2022,Import,5,1879.091
+H6,SGP,08,Singapore,SAU,Saudi Arabia,2023,Import,5,1579.114
+H6,SGP,08,Singapore,THA,Thailand,2022,Export,6,462.907
+H6,SGP,08,Singapore,THA,Thailand,2022,Import,5,37699.709
+H6,SGP,08,Singapore,THA,Thailand,2023,Export,6,1134.364
+H6,SGP,08,Singapore,THA,Thailand,2023,Import,5,33795.404
+H6,SGP,08,Singapore,USA,United States,2022,Export,6,68.117
+H6,SGP,08,Singapore,USA,United States,2022,Import,5,87323.98
+H6,SGP,08,Singapore,USA,United States,2023,Export,6,15.534
+H6,SGP,08,Singapore,USA,United States,2023,Import,5,74085.728
+H6,SGP,09,Singapore,CHN,China,2022,Export,6,1691.323
+H6,SGP,09,Singapore,CHN,China,2022,Import,5,21154.386
+H6,SGP,09,Singapore,CHN,China,2023,Export,6,2518.893
+H6,SGP,09,Singapore,CHN,China,2023,Import,5,25934.053
+H6,SGP,09,Singapore,HKG,"Hong Kong, China",2022,Export,6,5593.917
+H6,SGP,09,Singapore,HKG,"Hong Kong, China",2022,Import,5,854.538
+H6,SGP,09,Singapore,HKG,"Hong Kong, China",2023,Export,6,6644.099
+H6,SGP,09,Singapore,HKG,"Hong Kong, China",2023,Import,5,1279.22
+H6,SGP,09,Singapore,IDN,Indonesia,2022,Export,6,88913.902
+H6,SGP,09,Singapore,IDN,Indonesia,2022,Import,5,34476.109
+H6,SGP,09,Singapore,IDN,Indonesia,2023,Export,6,57306.738
+H6,SGP,09,Singapore,IDN,Indonesia,2023,Import,5,30236.67
+H6,SGP,09,Singapore,JPN,Japan,2022,Export,6,6730.416
+H6,SGP,09,Singapore,JPN,Japan,2022,Import,5,13197.154
+H6,SGP,09,Singapore,JPN,Japan,2023,Export,6,6419.865
+H6,SGP,09,Singapore,JPN,Japan,2023,Import,5,8637.789
+H6,SGP,09,Singapore,KOR,"Korea, Rep.",2022,Export,6,6819.195
+H6,SGP,09,Singapore,KOR,"Korea, Rep.",2022,Import,5,1465.572
+H6,SGP,09,Singapore,KOR,"Korea, Rep.",2023,Export,6,10322.858
+H6,SGP,09,Singapore,KOR,"Korea, Rep.",2023,Import,5,1828.512
+H6,SGP,09,Singapore,MYS,Malaysia,2022,Export,6,27377.619
+H6,SGP,09,Singapore,MYS,Malaysia,2022,Import,5,35537.729
+H6,SGP,09,Singapore,MYS,Malaysia,2023,Export,6,24710.713
+H6,SGP,09,Singapore,MYS,Malaysia,2023,Import,5,45011.275
+H6,SGP,09,Singapore,SAU,Saudi Arabia,2022,Export,6,1138.406
+H6,SGP,09,Singapore,SAU,Saudi Arabia,2022,Import,5,0.532
+H6,SGP,09,Singapore,SAU,Saudi Arabia,2023,Export,6,306.8
+H6,SGP,09,Singapore,SAU,Saudi Arabia,2023,Import,5,3.197
+H6,SGP,09,Singapore,THA,Thailand,2022,Export,6,3318.951
+H6,SGP,09,Singapore,THA,Thailand,2022,Import,5,4690.103
+H6,SGP,09,Singapore,THA,Thailand,2023,Export,6,3648.317
+H6,SGP,09,Singapore,THA,Thailand,2023,Import,5,7124.895
+H6,SGP,09,Singapore,USA,United States,2022,Export,6,6072.204
+H6,SGP,09,Singapore,USA,United States,2022,Import,5,11796.284
+H6,SGP,09,Singapore,USA,United States,2023,Export,6,9631.585
+H6,SGP,09,Singapore,USA,United States,2023,Import,5,4752.366
+H6,SGP,10,Singapore,CHN,China,2022,Export,6,40.305
+H6,SGP,10,Singapore,CHN,China,2022,Import,5,1230.775
+H6,SGP,10,Singapore,CHN,China,2023,Import,5,1233.529
+H6,SGP,10,Singapore,HKG,"Hong Kong, China",2022,Export,6,42.459
+H6,SGP,10,Singapore,HKG,"Hong Kong, China",2022,Import,5,179.637
+H6,SGP,10,Singapore,HKG,"Hong Kong, China",2023,Export,6,30.116
+H6,SGP,10,Singapore,HKG,"Hong Kong, China",2023,Import,5,89.971
+H6,SGP,10,Singapore,IDN,Indonesia,2022,Export,6,53416.407
+H6,SGP,10,Singapore,IDN,Indonesia,2022,Import,5,467.595
+H6,SGP,10,Singapore,IDN,Indonesia,2023,Export,6,78245.612
+H6,SGP,10,Singapore,IDN,Indonesia,2023,Import,5,359.06
+H6,SGP,10,Singapore,JPN,Japan,2022,Export,6,1.118
+H6,SGP,10,Singapore,JPN,Japan,2022,Import,5,10352.471
+H6,SGP,10,Singapore,JPN,Japan,2023,Export,6,9.213
+H6,SGP,10,Singapore,JPN,Japan,2023,Import,5,9126.302
+H6,SGP,10,Singapore,KOR,"Korea, Rep.",2022,Export,6,37.978
+H6,SGP,10,Singapore,KOR,"Korea, Rep.",2022,Import,5,256.716
+H6,SGP,10,Singapore,KOR,"Korea, Rep.",2023,Export,6,105.42
+H6,SGP,10,Singapore,KOR,"Korea, Rep.",2023,Import,5,188.608
+H6,SGP,10,Singapore,MYS,Malaysia,2022,Export,6,416.316
+H6,SGP,10,Singapore,MYS,Malaysia,2022,Import,5,4975.835
+H6,SGP,10,Singapore,MYS,Malaysia,2023,Export,6,2039.446
+H6,SGP,10,Singapore,MYS,Malaysia,2023,Import,5,3896.266
+H6,SGP,10,Singapore,SAU,Saudi Arabia,2022,Import,5,0.004
+H6,SGP,10,Singapore,THA,Thailand,2022,Export,6,126.504
+H6,SGP,10,Singapore,THA,Thailand,2022,Import,5,82714.066
+H6,SGP,10,Singapore,THA,Thailand,2023,Export,6,44.564
+H6,SGP,10,Singapore,THA,Thailand,2023,Import,5,96906.686
+H6,SGP,10,Singapore,USA,United States,2022,Export,6,1.486
+H6,SGP,10,Singapore,USA,United States,2022,Import,5,26796.244
+H6,SGP,10,Singapore,USA,United States,2023,Export,6,0.155
+H6,SGP,10,Singapore,USA,United States,2023,Import,5,20060.407
+H6,SGP,11,Singapore,CHN,China,2022,Export,6,8179.471
+H6,SGP,11,Singapore,CHN,China,2022,Import,5,8928.184
+H6,SGP,11,Singapore,CHN,China,2023,Export,6,10093.216
+H6,SGP,11,Singapore,CHN,China,2023,Import,5,8295.11
+H6,SGP,11,Singapore,HKG,"Hong Kong, China",2022,Export,6,2462.819
+H6,SGP,11,Singapore,HKG,"Hong Kong, China",2022,Import,5,1139.408
+H6,SGP,11,Singapore,HKG,"Hong Kong, China",2023,Export,6,2404.103
+H6,SGP,11,Singapore,HKG,"Hong Kong, China",2023,Import,5,1038.081
+H6,SGP,11,Singapore,IDN,Indonesia,2022,Export,6,11414.253
+H6,SGP,11,Singapore,IDN,Indonesia,2022,Import,5,11602.48
+H6,SGP,11,Singapore,IDN,Indonesia,2023,Export,6,10740.526
+H6,SGP,11,Singapore,IDN,Indonesia,2023,Import,5,12757.698
+H6,SGP,11,Singapore,JPN,Japan,2022,Export,6,982.972
+H6,SGP,11,Singapore,JPN,Japan,2022,Import,5,11957.583
+H6,SGP,11,Singapore,JPN,Japan,2023,Export,6,732.554
+H6,SGP,11,Singapore,JPN,Japan,2023,Import,5,10376.328
+H6,SGP,11,Singapore,KOR,"Korea, Rep.",2022,Export,6,663.082
+H6,SGP,11,Singapore,KOR,"Korea, Rep.",2022,Import,5,3443.042
+H6,SGP,11,Singapore,KOR,"Korea, Rep.",2023,Export,6,639.894
+H6,SGP,11,Singapore,KOR,"Korea, Rep.",2023,Import,5,3171.056
+H6,SGP,11,Singapore,MYS,Malaysia,2022,Export,6,28125.845
+H6,SGP,11,Singapore,MYS,Malaysia,2022,Import,5,33315.669
+H6,SGP,11,Singapore,MYS,Malaysia,2023,Export,6,25290.153
+H6,SGP,11,Singapore,MYS,Malaysia,2023,Import,5,37130.12
+H6,SGP,11,Singapore,SAU,Saudi Arabia,2022,Import,5,0.728
+H6,SGP,11,Singapore,SAU,Saudi Arabia,2023,Import,5,0.106
+H6,SGP,11,Singapore,THA,Thailand,2022,Export,6,8255.497
+H6,SGP,11,Singapore,THA,Thailand,2022,Import,5,45975.806
+H6,SGP,11,Singapore,THA,Thailand,2023,Export,6,6986.186
+H6,SGP,11,Singapore,THA,Thailand,2023,Import,5,39357.908
+H6,SGP,11,Singapore,USA,United States,2022,Export,6,1392.624
+H6,SGP,11,Singapore,USA,United States,2022,Import,5,2687.526
+H6,SGP,11,Singapore,USA,United States,2023,Export,6,1808.124
+H6,SGP,11,Singapore,USA,United States,2023,Import,5,1862.46
+H6,SGP,12,Singapore,CHN,China,2022,Export,6,2624.872
+H6,SGP,12,Singapore,CHN,China,2022,Import,5,50826.092
+H6,SGP,12,Singapore,CHN,China,2023,Export,6,3017.64
+H6,SGP,12,Singapore,CHN,China,2023,Import,5,44500.742
+H6,SGP,12,Singapore,HKG,"Hong Kong, China",2022,Export,6,704.492
+H6,SGP,12,Singapore,HKG,"Hong Kong, China",2022,Import,5,4041.4
+H6,SGP,12,Singapore,HKG,"Hong Kong, China",2023,Export,6,1802.292
+H6,SGP,12,Singapore,HKG,"Hong Kong, China",2023,Import,5,4691.547
+H6,SGP,12,Singapore,IDN,Indonesia,2022,Export,6,6921.389
+H6,SGP,12,Singapore,IDN,Indonesia,2022,Import,5,33901.903
+H6,SGP,12,Singapore,IDN,Indonesia,2023,Export,6,5008.372
+H6,SGP,12,Singapore,IDN,Indonesia,2023,Import,5,27339.972
+H6,SGP,12,Singapore,JPN,Japan,2022,Export,6,1419.926
+H6,SGP,12,Singapore,JPN,Japan,2022,Import,5,2816.407
+H6,SGP,12,Singapore,JPN,Japan,2023,Export,6,2667.423
+H6,SGP,12,Singapore,JPN,Japan,2023,Import,5,2691.315
+H6,SGP,12,Singapore,KOR,"Korea, Rep.",2022,Export,6,184.657
+H6,SGP,12,Singapore,KOR,"Korea, Rep.",2022,Import,5,1286.133
+H6,SGP,12,Singapore,KOR,"Korea, Rep.",2023,Export,6,5.089
+H6,SGP,12,Singapore,KOR,"Korea, Rep.",2023,Import,5,838.458
+H6,SGP,12,Singapore,MYS,Malaysia,2022,Export,6,5433.78
+H6,SGP,12,Singapore,MYS,Malaysia,2022,Import,5,20215.296
+H6,SGP,12,Singapore,MYS,Malaysia,2023,Export,6,4153.019
+H6,SGP,12,Singapore,MYS,Malaysia,2023,Import,5,19385.851
+H6,SGP,12,Singapore,SAU,Saudi Arabia,2022,Export,6,4614.569
+H6,SGP,12,Singapore,SAU,Saudi Arabia,2023,Export,6,6917.009
+H6,SGP,12,Singapore,THA,Thailand,2022,Export,6,76.656
+H6,SGP,12,Singapore,THA,Thailand,2022,Import,5,3210.474
+H6,SGP,12,Singapore,THA,Thailand,2023,Export,6,208.577
+H6,SGP,12,Singapore,THA,Thailand,2023,Import,5,4733.865
+H6,SGP,12,Singapore,USA,United States,2022,Export,6,1.185
+H6,SGP,12,Singapore,USA,United States,2022,Import,5,7516.352
+H6,SGP,12,Singapore,USA,United States,2023,Export,6,6.692
+H6,SGP,12,Singapore,USA,United States,2023,Import,5,6839.583
+H6,SGP,13,Singapore,CHN,China,2022,Export,6,2006.85
+H6,SGP,13,Singapore,CHN,China,2022,Import,5,8970.455
+H6,SGP,13,Singapore,CHN,China,2023,Export,6,1767.384
+H6,SGP,13,Singapore,CHN,China,2023,Import,5,9018.091
+H6,SGP,13,Singapore,HKG,"Hong Kong, China",2022,Export,6,404.286
+H6,SGP,13,Singapore,HKG,"Hong Kong, China",2022,Import,5,42.929
+H6,SGP,13,Singapore,HKG,"Hong Kong, China",2023,Export,6,624.743
+H6,SGP,13,Singapore,HKG,"Hong Kong, China",2023,Import,5,15.885
+H6,SGP,13,Singapore,IDN,Indonesia,2022,Export,6,5537.666
+H6,SGP,13,Singapore,IDN,Indonesia,2022,Import,5,3324.322
+H6,SGP,13,Singapore,IDN,Indonesia,2023,Export,6,6262.185
+H6,SGP,13,Singapore,IDN,Indonesia,2023,Import,5,2576.607
+H6,SGP,13,Singapore,JPN,Japan,2022,Export,6,522.633
+H6,SGP,13,Singapore,JPN,Japan,2022,Import,5,368.502
+H6,SGP,13,Singapore,JPN,Japan,2023,Export,6,583.548
+H6,SGP,13,Singapore,JPN,Japan,2023,Import,5,416.126
+H6,SGP,13,Singapore,KOR,"Korea, Rep.",2022,Export,6,3294.722
+H6,SGP,13,Singapore,KOR,"Korea, Rep.",2022,Import,5,333.722
+H6,SGP,13,Singapore,KOR,"Korea, Rep.",2023,Export,6,2348.996
+H6,SGP,13,Singapore,KOR,"Korea, Rep.",2023,Import,5,920.726
+H6,SGP,13,Singapore,MYS,Malaysia,2022,Export,6,3605.964
+H6,SGP,13,Singapore,MYS,Malaysia,2022,Import,5,1329.893
+H6,SGP,13,Singapore,MYS,Malaysia,2023,Export,6,4412.308
+H6,SGP,13,Singapore,MYS,Malaysia,2023,Import,5,1851.285
+H6,SGP,13,Singapore,SAU,Saudi Arabia,2022,Export,6,1171.702
+H6,SGP,13,Singapore,SAU,Saudi Arabia,2023,Export,6,1191.659
+H6,SGP,13,Singapore,THA,Thailand,2022,Export,6,836.604
+H6,SGP,13,Singapore,THA,Thailand,2022,Import,5,305.853
+H6,SGP,13,Singapore,THA,Thailand,2023,Export,6,1340.38
+H6,SGP,13,Singapore,THA,Thailand,2023,Import,5,352.741
+H6,SGP,13,Singapore,USA,United States,2022,Export,6,2396.959
+H6,SGP,13,Singapore,USA,United States,2022,Import,5,8252.688
+H6,SGP,13,Singapore,USA,United States,2023,Export,6,3582.994
+H6,SGP,13,Singapore,USA,United States,2023,Import,5,8406.331
+H6,SGP,14,Singapore,CHN,China,2022,Export,6,1206.6
+H6,SGP,14,Singapore,CHN,China,2022,Import,5,2436.875
+H6,SGP,14,Singapore,CHN,China,2023,Export,6,461.229
+H6,SGP,14,Singapore,CHN,China,2023,Import,5,1348.618
+H6,SGP,14,Singapore,HKG,"Hong Kong, China",2022,Export,6,47.989
+H6,SGP,14,Singapore,HKG,"Hong Kong, China",2022,Import,5,0.342
+H6,SGP,14,Singapore,HKG,"Hong Kong, China",2023,Export,6,64.099
+H6,SGP,14,Singapore,HKG,"Hong Kong, China",2023,Import,5,0.034
+H6,SGP,14,Singapore,IDN,Indonesia,2022,Export,6,4.942
+H6,SGP,14,Singapore,IDN,Indonesia,2022,Import,5,31587.152
+H6,SGP,14,Singapore,IDN,Indonesia,2023,Export,6,2.177
+H6,SGP,14,Singapore,IDN,Indonesia,2023,Import,5,19997.119
+H6,SGP,14,Singapore,JPN,Japan,2022,Export,6,428.346
+H6,SGP,14,Singapore,JPN,Japan,2022,Import,5,19.966
+H6,SGP,14,Singapore,JPN,Japan,2023,Export,6,77.932
+H6,SGP,14,Singapore,JPN,Japan,2023,Import,5,16.86
+H6,SGP,14,Singapore,KOR,"Korea, Rep.",2022,Import,5,1.05
+H6,SGP,14,Singapore,KOR,"Korea, Rep.",2023,Export,6,9.401
+H6,SGP,14,Singapore,KOR,"Korea, Rep.",2023,Import,5,0.542
+H6,SGP,14,Singapore,MYS,Malaysia,2022,Export,6,99.619
+H6,SGP,14,Singapore,MYS,Malaysia,2022,Import,5,1491.058
+H6,SGP,14,Singapore,MYS,Malaysia,2023,Export,6,7.441
+H6,SGP,14,Singapore,MYS,Malaysia,2023,Import,5,1721.555
+H6,SGP,14,Singapore,THA,Thailand,2022,Export,6,233.19
+H6,SGP,14,Singapore,THA,Thailand,2022,Import,5,22.184
+H6,SGP,14,Singapore,THA,Thailand,2023,Export,6,169.622
+H6,SGP,14,Singapore,THA,Thailand,2023,Import,5,28.638
+H6,SGP,14,Singapore,USA,United States,2022,Export,6,144.432
+H6,SGP,14,Singapore,USA,United States,2022,Import,5,16.184
+H6,SGP,14,Singapore,USA,United States,2023,Export,6,270.172
+H6,SGP,14,Singapore,USA,United States,2023,Import,5,10.349
+H6,SGP,15,Singapore,CHN,China,2022,Export,6,58250.132
+H6,SGP,15,Singapore,CHN,China,2022,Import,5,500487.164
+H6,SGP,15,Singapore,CHN,China,2023,Export,6,17606.862
+H6,SGP,15,Singapore,CHN,China,2023,Import,5,471781.592
+H6,SGP,15,Singapore,HKG,"Hong Kong, China",2022,Export,6,3376.851
+H6,SGP,15,Singapore,HKG,"Hong Kong, China",2022,Import,5,494.259
+H6,SGP,15,Singapore,HKG,"Hong Kong, China",2023,Export,6,3038.531
+H6,SGP,15,Singapore,HKG,"Hong Kong, China",2023,Import,5,450.3
+H6,SGP,15,Singapore,IDN,Indonesia,2022,Export,6,28891.749
+H6,SGP,15,Singapore,IDN,Indonesia,2022,Import,5,316416.01
+H6,SGP,15,Singapore,IDN,Indonesia,2023,Export,6,28302.523
+H6,SGP,15,Singapore,IDN,Indonesia,2023,Import,5,247039.528
+H6,SGP,15,Singapore,JPN,Japan,2022,Export,6,28026.941
+H6,SGP,15,Singapore,JPN,Japan,2022,Import,5,69612.001
+H6,SGP,15,Singapore,JPN,Japan,2023,Export,6,24250.51
+H6,SGP,15,Singapore,JPN,Japan,2023,Import,5,70518.281
+H6,SGP,15,Singapore,KOR,"Korea, Rep.",2022,Export,6,50978.117
+H6,SGP,15,Singapore,KOR,"Korea, Rep.",2022,Import,5,28688.048
+H6,SGP,15,Singapore,KOR,"Korea, Rep.",2023,Export,6,18249.281
+H6,SGP,15,Singapore,KOR,"Korea, Rep.",2023,Import,5,25922.238
+H6,SGP,15,Singapore,MYS,Malaysia,2022,Export,6,68604.077
+H6,SGP,15,Singapore,MYS,Malaysia,2022,Import,5,771540.091
+H6,SGP,15,Singapore,MYS,Malaysia,2023,Export,6,49996.82
+H6,SGP,15,Singapore,MYS,Malaysia,2023,Import,5,968751.966
+H6,SGP,15,Singapore,SAU,Saudi Arabia,2022,Export,6,6314.65
+H6,SGP,15,Singapore,SAU,Saudi Arabia,2022,Import,5,0.081
+H6,SGP,15,Singapore,SAU,Saudi Arabia,2023,Export,6,7316.005
+H6,SGP,15,Singapore,SAU,Saudi Arabia,2023,Import,5,0.028
+H6,SGP,15,Singapore,THA,Thailand,2022,Export,6,15588.92
+H6,SGP,15,Singapore,THA,Thailand,2022,Import,5,4769.23
+H6,SGP,15,Singapore,THA,Thailand,2023,Export,6,10269.557
+H6,SGP,15,Singapore,THA,Thailand,2023,Import,5,3892.358
+H6,SGP,15,Singapore,USA,United States,2022,Export,6,1369.024
+H6,SGP,15,Singapore,USA,United States,2022,Import,5,629162.566
+H6,SGP,15,Singapore,USA,United States,2023,Export,6,1344.986
+H6,SGP,15,Singapore,USA,United States,2023,Import,5,270161.378
+H6,SGP,16,Singapore,CHN,China,2022,Export,6,632.373
+H6,SGP,16,Singapore,CHN,China,2022,Import,5,106494.12
+H6,SGP,16,Singapore,CHN,China,2023,Export,6,751.274
+H6,SGP,16,Singapore,CHN,China,2023,Import,5,96127.857
+H6,SGP,16,Singapore,HKG,"Hong Kong, China",2022,Export,6,8486.246
+H6,SGP,16,Singapore,HKG,"Hong Kong, China",2022,Import,5,2120.302
+H6,SGP,16,Singapore,HKG,"Hong Kong, China",2023,Export,6,6883.941
+H6,SGP,16,Singapore,HKG,"Hong Kong, China",2023,Import,5,1267.839
+H6,SGP,16,Singapore,IDN,Indonesia,2022,Export,6,10337.229
+H6,SGP,16,Singapore,IDN,Indonesia,2022,Import,5,10352.877
+H6,SGP,16,Singapore,IDN,Indonesia,2023,Export,6,12416.912
+H6,SGP,16,Singapore,IDN,Indonesia,2023,Import,5,8520.334
+H6,SGP,16,Singapore,JPN,Japan,2022,Export,6,1687.983
+H6,SGP,16,Singapore,JPN,Japan,2022,Import,5,14719.846
+H6,SGP,16,Singapore,JPN,Japan,2023,Export,6,281.79
+H6,SGP,16,Singapore,JPN,Japan,2023,Import,5,17122.431
+H6,SGP,16,Singapore,KOR,"Korea, Rep.",2022,Export,6,1860.448
+H6,SGP,16,Singapore,KOR,"Korea, Rep.",2022,Import,5,4720.188
+H6,SGP,16,Singapore,KOR,"Korea, Rep.",2023,Export,6,1939.603
+H6,SGP,16,Singapore,KOR,"Korea, Rep.",2023,Import,5,3919.052
+H6,SGP,16,Singapore,MYS,Malaysia,2022,Export,6,25259.987
+H6,SGP,16,Singapore,MYS,Malaysia,2022,Import,5,107982.017
+H6,SGP,16,Singapore,MYS,Malaysia,2023,Export,6,16471.445
+H6,SGP,16,Singapore,MYS,Malaysia,2023,Import,5,104839.979
+H6,SGP,16,Singapore,SAU,Saudi Arabia,2022,Export,6,40.905
+H6,SGP,16,Singapore,THA,Thailand,2022,Export,6,1274.231
+H6,SGP,16,Singapore,THA,Thailand,2022,Import,5,149033.304
+H6,SGP,16,Singapore,THA,Thailand,2023,Export,6,1265.24
+H6,SGP,16,Singapore,THA,Thailand,2023,Import,5,154885.572
+H6,SGP,16,Singapore,USA,United States,2022,Export,6,8321.673
+H6,SGP,16,Singapore,USA,United States,2022,Import,5,14204.242
+H6,SGP,16,Singapore,USA,United States,2023,Export,6,9646.075
+H6,SGP,16,Singapore,USA,United States,2023,Import,5,11391.262
+H6,SGP,17,Singapore,CHN,China,2022,Export,6,7166.512
+H6,SGP,17,Singapore,CHN,China,2022,Import,5,53748.062
+H6,SGP,17,Singapore,CHN,China,2023,Export,6,6763.013
+H6,SGP,17,Singapore,CHN,China,2023,Import,5,48485.148
+H6,SGP,17,Singapore,HKG,"Hong Kong, China",2022,Export,6,1941.622
+H6,SGP,17,Singapore,HKG,"Hong Kong, China",2022,Import,5,1678.083
+H6,SGP,17,Singapore,HKG,"Hong Kong, China",2023,Export,6,1885.974
+H6,SGP,17,Singapore,HKG,"Hong Kong, China",2023,Import,5,1900.016
+H6,SGP,17,Singapore,IDN,Indonesia,2022,Export,6,20511.395
+H6,SGP,17,Singapore,IDN,Indonesia,2022,Import,5,5225.596
+H6,SGP,17,Singapore,IDN,Indonesia,2023,Export,6,16255.205
+H6,SGP,17,Singapore,IDN,Indonesia,2023,Import,5,8716.175
+H6,SGP,17,Singapore,JPN,Japan,2022,Export,6,2211.07
+H6,SGP,17,Singapore,JPN,Japan,2022,Import,5,4008.39
+H6,SGP,17,Singapore,JPN,Japan,2023,Export,6,2426.963
+H6,SGP,17,Singapore,JPN,Japan,2023,Import,5,3976.048
+H6,SGP,17,Singapore,KOR,"Korea, Rep.",2022,Export,6,3216.771
+H6,SGP,17,Singapore,KOR,"Korea, Rep.",2022,Import,5,2262.242
+H6,SGP,17,Singapore,KOR,"Korea, Rep.",2023,Export,6,3859.174
+H6,SGP,17,Singapore,KOR,"Korea, Rep.",2023,Import,5,3533.627
+H6,SGP,17,Singapore,MYS,Malaysia,2022,Export,6,12500.606
+H6,SGP,17,Singapore,MYS,Malaysia,2022,Import,5,50373.041
+H6,SGP,17,Singapore,MYS,Malaysia,2023,Export,6,13236.942
+H6,SGP,17,Singapore,MYS,Malaysia,2023,Import,5,54751.868
+H6,SGP,17,Singapore,SAU,Saudi Arabia,2022,Export,6,3352.076
+H6,SGP,17,Singapore,SAU,Saudi Arabia,2022,Import,5,9.721
+H6,SGP,17,Singapore,SAU,Saudi Arabia,2023,Export,6,2207.727
+H6,SGP,17,Singapore,SAU,Saudi Arabia,2023,Import,5,1.966
+H6,SGP,17,Singapore,THA,Thailand,2022,Export,6,6598.403
+H6,SGP,17,Singapore,THA,Thailand,2022,Import,5,72399.853
+H6,SGP,17,Singapore,THA,Thailand,2023,Export,6,7256.838
+H6,SGP,17,Singapore,THA,Thailand,2023,Import,5,111777.609
+H6,SGP,17,Singapore,USA,United States,2022,Export,6,3310.015
+H6,SGP,17,Singapore,USA,United States,2022,Import,5,46274.386
+H6,SGP,17,Singapore,USA,United States,2023,Export,6,6264.535
+H6,SGP,17,Singapore,USA,United States,2023,Import,5,34780.072
+H6,SGP,18,Singapore,CHN,China,2022,Export,6,81820.604
+H6,SGP,18,Singapore,CHN,China,2022,Import,5,7508.154
+H6,SGP,18,Singapore,CHN,China,2023,Export,6,85700.504
+H6,SGP,18,Singapore,CHN,China,2023,Import,5,10928.915
+H6,SGP,18,Singapore,HKG,"Hong Kong, China",2022,Export,6,19875.233
+H6,SGP,18,Singapore,HKG,"Hong Kong, China",2022,Import,5,63.741
+H6,SGP,18,Singapore,HKG,"Hong Kong, China",2023,Export,6,22519.258
+H6,SGP,18,Singapore,HKG,"Hong Kong, China",2023,Import,5,1439.194
+H6,SGP,18,Singapore,IDN,Indonesia,2022,Export,6,80159.802
+H6,SGP,18,Singapore,IDN,Indonesia,2022,Import,5,68245.469
+H6,SGP,18,Singapore,IDN,Indonesia,2023,Export,6,58833.356
+H6,SGP,18,Singapore,IDN,Indonesia,2023,Import,5,45710.748
+H6,SGP,18,Singapore,JPN,Japan,2022,Export,6,179364.29
+H6,SGP,18,Singapore,JPN,Japan,2022,Import,5,6401.023
+H6,SGP,18,Singapore,JPN,Japan,2023,Export,6,156400.81
+H6,SGP,18,Singapore,JPN,Japan,2023,Import,5,4528.485
+H6,SGP,18,Singapore,KOR,"Korea, Rep.",2022,Export,6,42339.919
+H6,SGP,18,Singapore,KOR,"Korea, Rep.",2022,Import,5,307.415
+H6,SGP,18,Singapore,KOR,"Korea, Rep.",2023,Export,6,48257.57
+H6,SGP,18,Singapore,KOR,"Korea, Rep.",2023,Import,5,398.512
+H6,SGP,18,Singapore,MYS,Malaysia,2022,Export,6,111162.974
+H6,SGP,18,Singapore,MYS,Malaysia,2022,Import,5,114265.45
+H6,SGP,18,Singapore,MYS,Malaysia,2023,Export,6,96631.153
+H6,SGP,18,Singapore,MYS,Malaysia,2023,Import,5,107910.44
+H6,SGP,18,Singapore,SAU,Saudi Arabia,2022,Export,6,11300.423
+H6,SGP,18,Singapore,SAU,Saudi Arabia,2022,Import,5,3.104
+H6,SGP,18,Singapore,SAU,Saudi Arabia,2023,Export,6,11582.432
+H6,SGP,18,Singapore,SAU,Saudi Arabia,2023,Import,5,3.48
+H6,SGP,18,Singapore,THA,Thailand,2022,Export,6,17488.624
+H6,SGP,18,Singapore,THA,Thailand,2022,Import,5,618.666
+H6,SGP,18,Singapore,THA,Thailand,2023,Export,6,21255.553
+H6,SGP,18,Singapore,THA,Thailand,2023,Import,5,512.602
+H6,SGP,18,Singapore,USA,United States,2022,Export,6,22840.705
+H6,SGP,18,Singapore,USA,United States,2022,Import,5,31668.62
+H6,SGP,18,Singapore,USA,United States,2023,Export,6,31672.296
+H6,SGP,18,Singapore,USA,United States,2023,Import,5,44497.734
+H6,SGP,19,Singapore,CHN,China,2022,Export,6,25231.274
+H6,SGP,19,Singapore,CHN,China,2022,Import,5,42483.52
+H6,SGP,19,Singapore,CHN,China,2023,Export,6,18928.957
+H6,SGP,19,Singapore,CHN,China,2023,Import,5,47153.349
+H6,SGP,19,Singapore,HKG,"Hong Kong, China",2022,Export,6,14683.624
+H6,SGP,19,Singapore,HKG,"Hong Kong, China",2022,Import,5,10196.805
+H6,SGP,19,Singapore,HKG,"Hong Kong, China",2023,Export,6,13442.928
+H6,SGP,19,Singapore,HKG,"Hong Kong, China",2023,Import,5,8159.325
+H6,SGP,19,Singapore,IDN,Indonesia,2022,Export,6,67619.637
+H6,SGP,19,Singapore,IDN,Indonesia,2022,Import,5,31159.855
+H6,SGP,19,Singapore,IDN,Indonesia,2023,Export,6,73315.332
+H6,SGP,19,Singapore,IDN,Indonesia,2023,Import,5,31227.571
+H6,SGP,19,Singapore,JPN,Japan,2022,Export,6,135876.802
+H6,SGP,19,Singapore,JPN,Japan,2022,Import,5,50840.883
+H6,SGP,19,Singapore,JPN,Japan,2023,Export,6,128527.686
+H6,SGP,19,Singapore,JPN,Japan,2023,Import,5,43411.276
+H6,SGP,19,Singapore,KOR,"Korea, Rep.",2022,Export,6,1524.316
+H6,SGP,19,Singapore,KOR,"Korea, Rep.",2022,Import,5,26562.907
+H6,SGP,19,Singapore,KOR,"Korea, Rep.",2023,Export,6,1729.711
+H6,SGP,19,Singapore,KOR,"Korea, Rep.",2023,Import,5,28551.307
+H6,SGP,19,Singapore,MYS,Malaysia,2022,Export,6,121096.26
+H6,SGP,19,Singapore,MYS,Malaysia,2022,Import,5,232572.763
+H6,SGP,19,Singapore,MYS,Malaysia,2023,Export,6,116771.461
+H6,SGP,19,Singapore,MYS,Malaysia,2023,Import,5,241745.827
+H6,SGP,19,Singapore,SAU,Saudi Arabia,2022,Export,6,4294.37
+H6,SGP,19,Singapore,SAU,Saudi Arabia,2022,Import,5,1.145
+H6,SGP,19,Singapore,SAU,Saudi Arabia,2023,Export,6,3865.067
+H6,SGP,19,Singapore,SAU,Saudi Arabia,2023,Import,5,12.788
+H6,SGP,19,Singapore,THA,Thailand,2022,Export,6,178797.124
+H6,SGP,19,Singapore,THA,Thailand,2022,Import,5,38705.259
+H6,SGP,19,Singapore,THA,Thailand,2023,Export,6,121533.466
+H6,SGP,19,Singapore,THA,Thailand,2023,Import,5,43532.631
+H6,SGP,19,Singapore,USA,United States,2022,Export,6,35178.702
+H6,SGP,19,Singapore,USA,United States,2022,Import,5,26841.203
+H6,SGP,19,Singapore,USA,United States,2023,Export,6,82777.469
+H6,SGP,19,Singapore,USA,United States,2023,Import,5,30846.098
+H6,SGP,20,Singapore,CHN,China,2022,Export,6,8435.586
+H6,SGP,20,Singapore,CHN,China,2022,Import,5,83790.388
+H6,SGP,20,Singapore,CHN,China,2023,Export,6,9428.621
+H6,SGP,20,Singapore,CHN,China,2023,Import,5,91331.151
+H6,SGP,20,Singapore,HKG,"Hong Kong, China",2022,Export,6,4659.759
+H6,SGP,20,Singapore,HKG,"Hong Kong, China",2022,Import,5,1036.615
+H6,SGP,20,Singapore,HKG,"Hong Kong, China",2023,Export,6,2856.889
+H6,SGP,20,Singapore,HKG,"Hong Kong, China",2023,Import,5,976.777
+H6,SGP,20,Singapore,IDN,Indonesia,2022,Export,6,9435.994
+H6,SGP,20,Singapore,IDN,Indonesia,2022,Import,5,35453.747
+H6,SGP,20,Singapore,IDN,Indonesia,2023,Export,6,9051.839
+H6,SGP,20,Singapore,IDN,Indonesia,2023,Import,5,30765.081
+H6,SGP,20,Singapore,JPN,Japan,2022,Export,6,2192.868
+H6,SGP,20,Singapore,JPN,Japan,2022,Import,5,8503.234
+H6,SGP,20,Singapore,JPN,Japan,2023,Export,6,1677.024
+H6,SGP,20,Singapore,JPN,Japan,2023,Import,5,7601.19
+H6,SGP,20,Singapore,KOR,"Korea, Rep.",2022,Export,6,473.629
+H6,SGP,20,Singapore,KOR,"Korea, Rep.",2022,Import,5,12418.974
+H6,SGP,20,Singapore,KOR,"Korea, Rep.",2023,Export,6,268.126
+H6,SGP,20,Singapore,KOR,"Korea, Rep.",2023,Import,5,11896.934
+H6,SGP,20,Singapore,MYS,Malaysia,2022,Export,6,16810.151
+H6,SGP,20,Singapore,MYS,Malaysia,2022,Import,5,66104.28
+H6,SGP,20,Singapore,MYS,Malaysia,2023,Export,6,12421.506
+H6,SGP,20,Singapore,MYS,Malaysia,2023,Import,5,60695.295
+H6,SGP,20,Singapore,SAU,Saudi Arabia,2022,Export,6,1347.861
+H6,SGP,20,Singapore,SAU,Saudi Arabia,2022,Import,5,3.696
+H6,SGP,20,Singapore,SAU,Saudi Arabia,2023,Export,6,47.249
+H6,SGP,20,Singapore,SAU,Saudi Arabia,2023,Import,5,5.441
+H6,SGP,20,Singapore,THA,Thailand,2022,Export,6,3205.133
+H6,SGP,20,Singapore,THA,Thailand,2022,Import,5,33463.716
+H6,SGP,20,Singapore,THA,Thailand,2023,Export,6,3365.947
+H6,SGP,20,Singapore,THA,Thailand,2023,Import,5,28565.213
+H6,SGP,20,Singapore,USA,United States,2022,Export,6,22451.166
+H6,SGP,20,Singapore,USA,United States,2022,Import,5,78419.012
+H6,SGP,20,Singapore,USA,United States,2023,Export,6,15610.643
+H6,SGP,20,Singapore,USA,United States,2023,Import,5,58621.797
+H6,SGP,21,Singapore,CHN,China,2022,Export,6,130598.123
+H6,SGP,21,Singapore,CHN,China,2022,Import,5,121748.303
+H6,SGP,21,Singapore,CHN,China,2023,Export,6,112865.968
+H6,SGP,21,Singapore,CHN,China,2023,Import,5,112371.186
+H6,SGP,21,Singapore,HKG,"Hong Kong, China",2022,Export,6,105002.046
+H6,SGP,21,Singapore,HKG,"Hong Kong, China",2022,Import,5,3872.805
+H6,SGP,21,Singapore,HKG,"Hong Kong, China",2023,Export,6,109719.34
+H6,SGP,21,Singapore,HKG,"Hong Kong, China",2023,Import,5,3524.91
+H6,SGP,21,Singapore,IDN,Indonesia,2022,Export,6,197682.239
+H6,SGP,21,Singapore,IDN,Indonesia,2022,Import,5,187693.234
+H6,SGP,21,Singapore,IDN,Indonesia,2023,Export,6,180834.603
+H6,SGP,21,Singapore,IDN,Indonesia,2023,Import,5,190487.943
+H6,SGP,21,Singapore,JPN,Japan,2022,Export,6,167088.17
+H6,SGP,21,Singapore,JPN,Japan,2022,Import,5,69228.885
+H6,SGP,21,Singapore,JPN,Japan,2023,Export,6,125640.998
+H6,SGP,21,Singapore,JPN,Japan,2023,Import,5,60602.931
+H6,SGP,21,Singapore,KOR,"Korea, Rep.",2022,Export,6,32795.249
+H6,SGP,21,Singapore,KOR,"Korea, Rep.",2022,Import,5,34414.653
+H6,SGP,21,Singapore,KOR,"Korea, Rep.",2023,Export,6,34058.21
+H6,SGP,21,Singapore,KOR,"Korea, Rep.",2023,Import,5,33685.448
+H6,SGP,21,Singapore,MYS,Malaysia,2022,Export,6,299403.55
+H6,SGP,21,Singapore,MYS,Malaysia,2022,Import,5,222698.806
+H6,SGP,21,Singapore,MYS,Malaysia,2023,Export,6,270108.169
+H6,SGP,21,Singapore,MYS,Malaysia,2023,Import,5,222019.79
+H6,SGP,21,Singapore,SAU,Saudi Arabia,2022,Export,6,21048.346
+H6,SGP,21,Singapore,SAU,Saudi Arabia,2022,Import,5,14.333
+H6,SGP,21,Singapore,SAU,Saudi Arabia,2023,Export,6,18577.479
+H6,SGP,21,Singapore,SAU,Saudi Arabia,2023,Import,5,21.688
+H6,SGP,21,Singapore,THA,Thailand,2022,Export,6,284731.774
+H6,SGP,21,Singapore,THA,Thailand,2022,Import,5,56662.273
+H6,SGP,21,Singapore,THA,Thailand,2023,Export,6,302745.939
+H6,SGP,21,Singapore,THA,Thailand,2023,Import,5,51393.266
+H6,SGP,21,Singapore,USA,United States,2022,Export,6,3972850.547
+H6,SGP,21,Singapore,USA,United States,2022,Import,5,163736.826
+H6,SGP,21,Singapore,USA,United States,2023,Export,6,2795832.517
+H6,SGP,21,Singapore,USA,United States,2023,Import,5,151582.476
+H6,SGP,22,Singapore,CHN,China,2022,Export,6,652431.121
+H6,SGP,22,Singapore,CHN,China,2022,Import,5,215872.344
+H6,SGP,22,Singapore,CHN,China,2023,Export,6,619166.205
+H6,SGP,22,Singapore,CHN,China,2023,Import,5,181052.834
+H6,SGP,22,Singapore,HKG,"Hong Kong, China",2022,Export,6,232638.055
+H6,SGP,22,Singapore,HKG,"Hong Kong, China",2022,Import,5,10756.703
+H6,SGP,22,Singapore,HKG,"Hong Kong, China",2023,Export,6,392018.148
+H6,SGP,22,Singapore,HKG,"Hong Kong, China",2023,Import,5,78041.877
+H6,SGP,22,Singapore,IDN,Indonesia,2022,Export,6,98244.249
+H6,SGP,22,Singapore,IDN,Indonesia,2022,Import,5,10734.49
+H6,SGP,22,Singapore,IDN,Indonesia,2023,Export,6,79981.96
+H6,SGP,22,Singapore,IDN,Indonesia,2023,Import,5,14862.237
+H6,SGP,22,Singapore,JPN,Japan,2022,Export,6,265964.905
+H6,SGP,22,Singapore,JPN,Japan,2022,Import,5,98203.074
+H6,SGP,22,Singapore,JPN,Japan,2023,Export,6,328965.616
+H6,SGP,22,Singapore,JPN,Japan,2023,Import,5,89646.952
+H6,SGP,22,Singapore,KOR,"Korea, Rep.",2022,Export,6,86423.528
+H6,SGP,22,Singapore,KOR,"Korea, Rep.",2022,Import,5,62579.051
+H6,SGP,22,Singapore,KOR,"Korea, Rep.",2023,Export,6,149406.538
+H6,SGP,22,Singapore,KOR,"Korea, Rep.",2023,Import,5,32632.742
+H6,SGP,22,Singapore,MYS,Malaysia,2022,Export,6,261888.035
+H6,SGP,22,Singapore,MYS,Malaysia,2022,Import,5,231381.788
+H6,SGP,22,Singapore,MYS,Malaysia,2023,Export,6,258667.993
+H6,SGP,22,Singapore,MYS,Malaysia,2023,Import,5,258540.613
+H6,SGP,22,Singapore,SAU,Saudi Arabia,2022,Export,6,0.01
+H6,SGP,22,Singapore,SAU,Saudi Arabia,2022,Import,5,120.297
+H6,SGP,22,Singapore,SAU,Saudi Arabia,2023,Export,6,648.038
+H6,SGP,22,Singapore,SAU,Saudi Arabia,2023,Import,5,51.129
+H6,SGP,22,Singapore,THA,Thailand,2022,Export,6,258981.836
+H6,SGP,22,Singapore,THA,Thailand,2022,Import,5,25833.032
+H6,SGP,22,Singapore,THA,Thailand,2023,Export,6,284968.678
+H6,SGP,22,Singapore,THA,Thailand,2023,Import,5,31201.271
+H6,SGP,22,Singapore,USA,United States,2022,Export,6,3731.005
+H6,SGP,22,Singapore,USA,United States,2022,Import,5,148546.265
+H6,SGP,22,Singapore,USA,United States,2023,Export,6,5810.341
+H6,SGP,22,Singapore,USA,United States,2023,Import,5,105835.08
+H6,SGP,23,Singapore,CHN,China,2022,Export,6,9148.173
+H6,SGP,23,Singapore,CHN,China,2022,Import,5,10809.54
+H6,SGP,23,Singapore,CHN,China,2023,Export,6,12242.156
+H6,SGP,23,Singapore,CHN,China,2023,Import,5,9947.47
+H6,SGP,23,Singapore,HKG,"Hong Kong, China",2022,Export,6,3622.536
+H6,SGP,23,Singapore,HKG,"Hong Kong, China",2022,Import,5,100.937
+H6,SGP,23,Singapore,HKG,"Hong Kong, China",2023,Export,6,2902.764
+H6,SGP,23,Singapore,HKG,"Hong Kong, China",2023,Import,5,23.342
+H6,SGP,23,Singapore,IDN,Indonesia,2022,Export,6,104705.651
+H6,SGP,23,Singapore,IDN,Indonesia,2022,Import,5,38679.041
+H6,SGP,23,Singapore,IDN,Indonesia,2023,Export,6,55696.458
+H6,SGP,23,Singapore,IDN,Indonesia,2023,Import,5,34796.354
+H6,SGP,23,Singapore,JPN,Japan,2022,Export,6,8199.58
+H6,SGP,23,Singapore,JPN,Japan,2022,Import,5,7376.939
+H6,SGP,23,Singapore,JPN,Japan,2023,Export,6,8767.206
+H6,SGP,23,Singapore,JPN,Japan,2023,Import,5,2815.061
+H6,SGP,23,Singapore,KOR,"Korea, Rep.",2022,Export,6,17760.939
+H6,SGP,23,Singapore,KOR,"Korea, Rep.",2022,Import,5,765.986
+H6,SGP,23,Singapore,KOR,"Korea, Rep.",2023,Export,6,18396.9
+H6,SGP,23,Singapore,KOR,"Korea, Rep.",2023,Import,5,493.126
+H6,SGP,23,Singapore,MYS,Malaysia,2022,Export,6,28159.419
+H6,SGP,23,Singapore,MYS,Malaysia,2022,Import,5,100814.275
+H6,SGP,23,Singapore,MYS,Malaysia,2023,Export,6,28389.695
+H6,SGP,23,Singapore,MYS,Malaysia,2023,Import,5,69897.221
+H6,SGP,23,Singapore,SAU,Saudi Arabia,2022,Export,6,146.424
+H6,SGP,23,Singapore,SAU,Saudi Arabia,2023,Export,6,102.189
+H6,SGP,23,Singapore,THA,Thailand,2022,Export,6,25787.858
+H6,SGP,23,Singapore,THA,Thailand,2022,Import,5,25654.005
+H6,SGP,23,Singapore,THA,Thailand,2023,Export,6,27058.749
+H6,SGP,23,Singapore,THA,Thailand,2023,Import,5,24081.642
+H6,SGP,23,Singapore,USA,United States,2022,Export,6,3130.752
+H6,SGP,23,Singapore,USA,United States,2022,Import,5,25483.177
+H6,SGP,23,Singapore,USA,United States,2023,Export,6,8.675
+H6,SGP,23,Singapore,USA,United States,2023,Import,5,24205.757
+H6,SGP,24,Singapore,CHN,China,2022,Export,6,14378.178
+H6,SGP,24,Singapore,CHN,China,2022,Import,5,36179.963
+H6,SGP,24,Singapore,CHN,China,2023,Export,6,16967.935
+H6,SGP,24,Singapore,CHN,China,2023,Import,5,51294.784
+H6,SGP,24,Singapore,HKG,"Hong Kong, China",2022,Export,6,15989.808
+H6,SGP,24,Singapore,HKG,"Hong Kong, China",2022,Import,5,20905.871
+H6,SGP,24,Singapore,HKG,"Hong Kong, China",2023,Export,6,17132.104
+H6,SGP,24,Singapore,HKG,"Hong Kong, China",2023,Import,5,31595.512
+H6,SGP,24,Singapore,IDN,Indonesia,2022,Export,6,36778.298
+H6,SGP,24,Singapore,IDN,Indonesia,2022,Import,5,191918.636
+H6,SGP,24,Singapore,IDN,Indonesia,2023,Export,6,86359.441
+H6,SGP,24,Singapore,IDN,Indonesia,2023,Import,5,255940.539
+H6,SGP,24,Singapore,JPN,Japan,2022,Export,6,12961.339
+H6,SGP,24,Singapore,JPN,Japan,2022,Import,5,3945.118
+H6,SGP,24,Singapore,JPN,Japan,2023,Export,6,2469.45
+H6,SGP,24,Singapore,JPN,Japan,2023,Import,5,4192.383
+H6,SGP,24,Singapore,KOR,"Korea, Rep.",2022,Export,6,4919.881
+H6,SGP,24,Singapore,KOR,"Korea, Rep.",2022,Import,5,19483.256
+H6,SGP,24,Singapore,KOR,"Korea, Rep.",2023,Export,6,9035.975
+H6,SGP,24,Singapore,KOR,"Korea, Rep.",2023,Import,5,33101.208
+H6,SGP,24,Singapore,MYS,Malaysia,2022,Export,6,9448.022
+H6,SGP,24,Singapore,MYS,Malaysia,2022,Import,5,84.302
+H6,SGP,24,Singapore,MYS,Malaysia,2023,Export,6,14344.002
+H6,SGP,24,Singapore,MYS,Malaysia,2023,Import,5,538.96
+H6,SGP,24,Singapore,THA,Thailand,2022,Export,6,61810.748
+H6,SGP,24,Singapore,THA,Thailand,2022,Import,5,491.974
+H6,SGP,24,Singapore,THA,Thailand,2023,Export,6,77285.952
+H6,SGP,24,Singapore,THA,Thailand,2023,Import,5,54.025
+H6,SGP,24,Singapore,USA,United States,2022,Export,6,925.098
+H6,SGP,24,Singapore,USA,United States,2022,Import,5,7241.064
+H6,SGP,24,Singapore,USA,United States,2023,Export,6,595.883
+H6,SGP,24,Singapore,USA,United States,2023,Import,5,3756.462
+H6,SGP,25,Singapore,CHN,China,2022,Export,6,1562.049
+H6,SGP,25,Singapore,CHN,China,2022,Import,5,64780.002
+H6,SGP,25,Singapore,CHN,China,2023,Export,6,246.427
+H6,SGP,25,Singapore,CHN,China,2023,Import,5,34887.453
+H6,SGP,25,Singapore,HKG,"Hong Kong, China",2022,Export,6,345.801
+H6,SGP,25,Singapore,HKG,"Hong Kong, China",2022,Import,5,21.361
+H6,SGP,25,Singapore,HKG,"Hong Kong, China",2023,Export,6,134.56
+H6,SGP,25,Singapore,HKG,"Hong Kong, China",2023,Import,5,37.124
+H6,SGP,25,Singapore,IDN,Indonesia,2022,Export,6,29526.989
+H6,SGP,25,Singapore,IDN,Indonesia,2022,Import,5,77529.411
+H6,SGP,25,Singapore,IDN,Indonesia,2023,Export,6,14368.505
+H6,SGP,25,Singapore,IDN,Indonesia,2023,Import,5,78763.736
+H6,SGP,25,Singapore,JPN,Japan,2022,Export,6,236.606
+H6,SGP,25,Singapore,JPN,Japan,2022,Import,5,143175.474
+H6,SGP,25,Singapore,JPN,Japan,2023,Export,6,85.629
+H6,SGP,25,Singapore,JPN,Japan,2023,Import,5,88240.571
+H6,SGP,25,Singapore,KOR,"Korea, Rep.",2022,Export,6,405.95
+H6,SGP,25,Singapore,KOR,"Korea, Rep.",2022,Import,5,3984.228
+H6,SGP,25,Singapore,KOR,"Korea, Rep.",2023,Export,6,1257.588
+H6,SGP,25,Singapore,KOR,"Korea, Rep.",2023,Import,5,2294.387
+H6,SGP,25,Singapore,MYS,Malaysia,2022,Export,6,15549.558
+H6,SGP,25,Singapore,MYS,Malaysia,2022,Import,5,504496.157
+H6,SGP,25,Singapore,MYS,Malaysia,2023,Export,6,9793.01
+H6,SGP,25,Singapore,MYS,Malaysia,2023,Import,5,396032.21
+H6,SGP,25,Singapore,SAU,Saudi Arabia,2022,Export,6,15.176
+H6,SGP,25,Singapore,SAU,Saudi Arabia,2022,Import,5,5423.824
+H6,SGP,25,Singapore,SAU,Saudi Arabia,2023,Export,6,1.746
+H6,SGP,25,Singapore,SAU,Saudi Arabia,2023,Import,5,0.002
+H6,SGP,25,Singapore,THA,Thailand,2022,Export,6,3254.537
+H6,SGP,25,Singapore,THA,Thailand,2022,Import,5,42233.703
+H6,SGP,25,Singapore,THA,Thailand,2023,Export,6,4499.313
+H6,SGP,25,Singapore,THA,Thailand,2023,Import,5,34161.88
+H6,SGP,25,Singapore,USA,United States,2022,Export,6,9188.453
+H6,SGP,25,Singapore,USA,United States,2022,Import,5,13999.719
+H6,SGP,25,Singapore,USA,United States,2023,Export,6,6009.736
+H6,SGP,25,Singapore,USA,United States,2023,Import,5,13704.872
+H6,SGP,26,Singapore,CHN,China,2022,Export,6,3970.386
+H6,SGP,26,Singapore,CHN,China,2022,Import,5,15469.743
+H6,SGP,26,Singapore,CHN,China,2023,Export,6,795.313
+H6,SGP,26,Singapore,CHN,China,2023,Import,5,34174.238
+H6,SGP,26,Singapore,HKG,"Hong Kong, China",2022,Export,6,7.467
+H6,SGP,26,Singapore,HKG,"Hong Kong, China",2023,Export,6,221.35
+H6,SGP,26,Singapore,HKG,"Hong Kong, China",2023,Import,5,0.063
+H6,SGP,26,Singapore,IDN,Indonesia,2022,Export,6,5710.862
+H6,SGP,26,Singapore,IDN,Indonesia,2022,Import,5,12471.087
+H6,SGP,26,Singapore,IDN,Indonesia,2023,Export,6,1104.564
+H6,SGP,26,Singapore,IDN,Indonesia,2023,Import,5,3300.837
+H6,SGP,26,Singapore,JPN,Japan,2022,Export,6,250.213
+H6,SGP,26,Singapore,JPN,Japan,2022,Import,5,17969.988
+H6,SGP,26,Singapore,JPN,Japan,2023,Export,6,118.731
+H6,SGP,26,Singapore,JPN,Japan,2023,Import,5,23127.049
+H6,SGP,26,Singapore,KOR,"Korea, Rep.",2022,Export,6,2477.119
+H6,SGP,26,Singapore,KOR,"Korea, Rep.",2022,Import,5,7439.214
+H6,SGP,26,Singapore,KOR,"Korea, Rep.",2023,Export,6,500.744
+H6,SGP,26,Singapore,KOR,"Korea, Rep.",2023,Import,5,7.883
+H6,SGP,26,Singapore,MYS,Malaysia,2022,Export,6,769.892
+H6,SGP,26,Singapore,MYS,Malaysia,2022,Import,5,24842.116
+H6,SGP,26,Singapore,MYS,Malaysia,2023,Export,6,3078.668
+H6,SGP,26,Singapore,MYS,Malaysia,2023,Import,5,29473.613
+H6,SGP,26,Singapore,SAU,Saudi Arabia,2022,Export,6,2.261
+H6,SGP,26,Singapore,SAU,Saudi Arabia,2022,Import,5,0.887
+H6,SGP,26,Singapore,THA,Thailand,2022,Export,6,364.856
+H6,SGP,26,Singapore,THA,Thailand,2022,Import,5,314.504
+H6,SGP,26,Singapore,THA,Thailand,2023,Export,6,393.854
+H6,SGP,26,Singapore,THA,Thailand,2023,Import,5,277.176
+H6,SGP,26,Singapore,USA,United States,2022,Export,6,22.182
+H6,SGP,26,Singapore,USA,United States,2022,Import,5,159.714
+H6,SGP,26,Singapore,USA,United States,2023,Export,6,78.317
+H6,SGP,26,Singapore,USA,United States,2023,Import,5,88.017
+H6,SGP,27,Singapore,CHN,China,2022,Export,6,2930320.845
+H6,SGP,27,Singapore,CHN,China,2022,Import,5,7524462.747
+H6,SGP,27,Singapore,CHN,China,2023,Export,6,3583269.6
+H6,SGP,27,Singapore,CHN,China,2023,Import,5,7502120.576
+H6,SGP,27,Singapore,HKG,"Hong Kong, China",2022,Export,6,1351518.298
+H6,SGP,27,Singapore,HKG,"Hong Kong, China",2022,Import,5,13304.18
+H6,SGP,27,Singapore,HKG,"Hong Kong, China",2023,Export,6,935163.936
+H6,SGP,27,Singapore,HKG,"Hong Kong, China",2023,Import,5,39314.388
+H6,SGP,27,Singapore,IDN,Indonesia,2022,Export,6,10239691.91
+H6,SGP,27,Singapore,IDN,Indonesia,2022,Import,5,4772573.698
+H6,SGP,27,Singapore,IDN,Indonesia,2023,Export,6,10109034.69
+H6,SGP,27,Singapore,IDN,Indonesia,2023,Import,5,3876675.873
+H6,SGP,27,Singapore,JPN,Japan,2022,Export,6,997644.703
+H6,SGP,27,Singapore,JPN,Japan,2022,Import,5,2389108.135
+H6,SGP,27,Singapore,JPN,Japan,2023,Export,6,340083.403
+H6,SGP,27,Singapore,JPN,Japan,2023,Import,5,1714657.782
+H6,SGP,27,Singapore,KOR,"Korea, Rep.",2022,Export,6,567050.116
+H6,SGP,27,Singapore,KOR,"Korea, Rep.",2022,Import,5,6802129.888
+H6,SGP,27,Singapore,KOR,"Korea, Rep.",2023,Export,6,1774433.06
+H6,SGP,27,Singapore,KOR,"Korea, Rep.",2023,Import,5,4664061.103
+H6,SGP,27,Singapore,MYS,Malaysia,2022,Export,6,13228565.77
+H6,SGP,27,Singapore,MYS,Malaysia,2022,Import,5,16128468.26
+H6,SGP,27,Singapore,MYS,Malaysia,2023,Export,6,11571587.11
+H6,SGP,27,Singapore,MYS,Malaysia,2023,Import,5,10537128.22
+H6,SGP,27,Singapore,SAU,Saudi Arabia,2022,Export,6,173256.378
+H6,SGP,27,Singapore,SAU,Saudi Arabia,2022,Import,5,5887247.149
+H6,SGP,27,Singapore,SAU,Saudi Arabia,2023,Export,6,98388.185
+H6,SGP,27,Singapore,SAU,Saudi Arabia,2023,Import,5,4719169.806
+H6,SGP,27,Singapore,THA,Thailand,2022,Export,6,1110312.706
+H6,SGP,27,Singapore,THA,Thailand,2022,Import,5,1905143.887
+H6,SGP,27,Singapore,THA,Thailand,2023,Export,6,1065658.328
+H6,SGP,27,Singapore,THA,Thailand,2023,Import,5,1737981.31
+H6,SGP,27,Singapore,USA,United States,2022,Export,6,3182572.045
+H6,SGP,27,Singapore,USA,United States,2022,Import,5,9910769.554
+H6,SGP,27,Singapore,USA,United States,2023,Export,6,2807536.194
+H6,SGP,27,Singapore,USA,United States,2023,Import,5,8762034.551
+H6,SGP,28,Singapore,CHN,China,2022,Export,6,63826.271
+H6,SGP,28,Singapore,CHN,China,2022,Import,5,301834.308
+H6,SGP,28,Singapore,CHN,China,2023,Export,6,55476.48
+H6,SGP,28,Singapore,CHN,China,2023,Import,5,234267.075
+H6,SGP,28,Singapore,HKG,"Hong Kong, China",2022,Export,6,6047.444
+H6,SGP,28,Singapore,HKG,"Hong Kong, China",2022,Import,5,57722.158
+H6,SGP,28,Singapore,HKG,"Hong Kong, China",2023,Export,6,10977.7
+H6,SGP,28,Singapore,HKG,"Hong Kong, China",2023,Import,5,44817.423
+H6,SGP,28,Singapore,IDN,Indonesia,2022,Export,6,47675.415
+H6,SGP,28,Singapore,IDN,Indonesia,2022,Import,5,66903.617
+H6,SGP,28,Singapore,IDN,Indonesia,2023,Export,6,50793.007
+H6,SGP,28,Singapore,IDN,Indonesia,2023,Import,5,32925.429
+H6,SGP,28,Singapore,JPN,Japan,2022,Export,6,66442.027
+H6,SGP,28,Singapore,JPN,Japan,2022,Import,5,176744.411
+H6,SGP,28,Singapore,JPN,Japan,2023,Export,6,39884.926
+H6,SGP,28,Singapore,JPN,Japan,2023,Import,5,140709.342
+H6,SGP,28,Singapore,KOR,"Korea, Rep.",2022,Export,6,19724.605
+H6,SGP,28,Singapore,KOR,"Korea, Rep.",2022,Import,5,106936.424
+H6,SGP,28,Singapore,KOR,"Korea, Rep.",2023,Export,6,56172.454
+H6,SGP,28,Singapore,KOR,"Korea, Rep.",2023,Import,5,120935.676
+H6,SGP,28,Singapore,MYS,Malaysia,2022,Export,6,209189.892
+H6,SGP,28,Singapore,MYS,Malaysia,2022,Import,5,86515.555
+H6,SGP,28,Singapore,MYS,Malaysia,2023,Export,6,173410.521
+H6,SGP,28,Singapore,MYS,Malaysia,2023,Import,5,101167.95
+H6,SGP,28,Singapore,SAU,Saudi Arabia,2022,Export,6,1613.655
+H6,SGP,28,Singapore,SAU,Saudi Arabia,2022,Import,5,167.758
+H6,SGP,28,Singapore,SAU,Saudi Arabia,2023,Export,6,12350.881
+H6,SGP,28,Singapore,SAU,Saudi Arabia,2023,Import,5,208.337
+H6,SGP,28,Singapore,THA,Thailand,2022,Export,6,23915.41
+H6,SGP,28,Singapore,THA,Thailand,2022,Import,5,22249.394
+H6,SGP,28,Singapore,THA,Thailand,2023,Export,6,20066.827
+H6,SGP,28,Singapore,THA,Thailand,2023,Import,5,20757.324
+H6,SGP,28,Singapore,USA,United States,2022,Export,6,29734.267
+H6,SGP,28,Singapore,USA,United States,2022,Import,5,260502.221
+H6,SGP,28,Singapore,USA,United States,2023,Export,6,22445.37
+H6,SGP,28,Singapore,USA,United States,2023,Import,5,251987.398
+H6,SGP,29,Singapore,CHN,China,2022,Export,6,2134208.039
+H6,SGP,29,Singapore,CHN,China,2022,Import,5,4182214.485
+H6,SGP,29,Singapore,CHN,China,2023,Export,6,1310287.669
+H6,SGP,29,Singapore,CHN,China,2023,Import,5,6281752.602
+H6,SGP,29,Singapore,HKG,"Hong Kong, China",2022,Export,6,14845.704
+H6,SGP,29,Singapore,HKG,"Hong Kong, China",2022,Import,5,3075.423
+H6,SGP,29,Singapore,HKG,"Hong Kong, China",2023,Export,6,233316.986
+H6,SGP,29,Singapore,HKG,"Hong Kong, China",2023,Import,5,3430.98
+H6,SGP,29,Singapore,IDN,Indonesia,2022,Export,6,1106622.287
+H6,SGP,29,Singapore,IDN,Indonesia,2022,Import,5,81943.62
+H6,SGP,29,Singapore,IDN,Indonesia,2023,Export,6,1066803.589
+H6,SGP,29,Singapore,IDN,Indonesia,2023,Import,5,68193.135
+H6,SGP,29,Singapore,JPN,Japan,2022,Export,6,307314.338
+H6,SGP,29,Singapore,JPN,Japan,2022,Import,5,340861.137
+H6,SGP,29,Singapore,JPN,Japan,2023,Export,6,163503.574
+H6,SGP,29,Singapore,JPN,Japan,2023,Import,5,306466.14
+H6,SGP,29,Singapore,KOR,"Korea, Rep.",2022,Export,6,302701.417
+H6,SGP,29,Singapore,KOR,"Korea, Rep.",2022,Import,5,278161.016
+H6,SGP,29,Singapore,KOR,"Korea, Rep.",2023,Export,6,277749.201
+H6,SGP,29,Singapore,KOR,"Korea, Rep.",2023,Import,5,200431.073
+H6,SGP,29,Singapore,MYS,Malaysia,2022,Export,6,768640.997
+H6,SGP,29,Singapore,MYS,Malaysia,2022,Import,5,397233.21
+H6,SGP,29,Singapore,MYS,Malaysia,2023,Export,6,722809.408
+H6,SGP,29,Singapore,MYS,Malaysia,2023,Import,5,353294.849
+H6,SGP,29,Singapore,SAU,Saudi Arabia,2022,Export,6,20841.094
+H6,SGP,29,Singapore,SAU,Saudi Arabia,2022,Import,5,859641.341
+H6,SGP,29,Singapore,SAU,Saudi Arabia,2023,Export,6,18962.928
+H6,SGP,29,Singapore,SAU,Saudi Arabia,2023,Import,5,429050.831
+H6,SGP,29,Singapore,THA,Thailand,2022,Export,6,708313.682
+H6,SGP,29,Singapore,THA,Thailand,2022,Import,5,148551.849
+H6,SGP,29,Singapore,THA,Thailand,2023,Export,6,647079.673
+H6,SGP,29,Singapore,THA,Thailand,2023,Import,5,111031.874
+H6,SGP,29,Singapore,USA,United States,2022,Export,6,303904.215
+H6,SGP,29,Singapore,USA,United States,2022,Import,5,741304.755
+H6,SGP,29,Singapore,USA,United States,2023,Export,6,3640702.66
+H6,SGP,29,Singapore,USA,United States,2023,Import,5,608170.356
+H6,SGP,30,Singapore,CHN,China,2022,Export,6,1092745.077
+H6,SGP,30,Singapore,CHN,China,2022,Import,5,154464.382
+H6,SGP,30,Singapore,CHN,China,2023,Export,6,2319950.659
+H6,SGP,30,Singapore,CHN,China,2023,Import,5,102663.563
+H6,SGP,30,Singapore,HKG,"Hong Kong, China",2022,Export,6,264547.341
+H6,SGP,30,Singapore,HKG,"Hong Kong, China",2022,Import,5,8383.44
+H6,SGP,30,Singapore,HKG,"Hong Kong, China",2023,Export,6,270213.912
+H6,SGP,30,Singapore,HKG,"Hong Kong, China",2023,Import,5,9078.514
+H6,SGP,30,Singapore,IDN,Indonesia,2022,Export,6,88118.796
+H6,SGP,30,Singapore,IDN,Indonesia,2022,Import,5,34576.496
+H6,SGP,30,Singapore,IDN,Indonesia,2023,Export,6,80779.557
+H6,SGP,30,Singapore,IDN,Indonesia,2023,Import,5,26223.734
+H6,SGP,30,Singapore,JPN,Japan,2022,Export,6,992117.868
+H6,SGP,30,Singapore,JPN,Japan,2022,Import,5,114292.885
+H6,SGP,30,Singapore,JPN,Japan,2023,Export,6,1109013.239
+H6,SGP,30,Singapore,JPN,Japan,2023,Import,5,100298.465
+H6,SGP,30,Singapore,KOR,"Korea, Rep.",2022,Export,6,355586.333
+H6,SGP,30,Singapore,KOR,"Korea, Rep.",2022,Import,5,82630.958
+H6,SGP,30,Singapore,KOR,"Korea, Rep.",2023,Export,6,286582.046
+H6,SGP,30,Singapore,KOR,"Korea, Rep.",2023,Import,5,37662.172
+H6,SGP,30,Singapore,MYS,Malaysia,2022,Export,6,219362.341
+H6,SGP,30,Singapore,MYS,Malaysia,2022,Import,5,94364.769
+H6,SGP,30,Singapore,MYS,Malaysia,2023,Export,6,221657.606
+H6,SGP,30,Singapore,MYS,Malaysia,2023,Import,5,100887.827
+H6,SGP,30,Singapore,SAU,Saudi Arabia,2022,Export,6,5434.696
+H6,SGP,30,Singapore,SAU,Saudi Arabia,2022,Import,5,53.462
+H6,SGP,30,Singapore,SAU,Saudi Arabia,2023,Export,6,4796.21
+H6,SGP,30,Singapore,SAU,Saudi Arabia,2023,Import,5,144.08
+H6,SGP,30,Singapore,THA,Thailand,2022,Export,6,169164.431
+H6,SGP,30,Singapore,THA,Thailand,2022,Import,5,16573.419
+H6,SGP,30,Singapore,THA,Thailand,2023,Export,6,205629.243
+H6,SGP,30,Singapore,THA,Thailand,2023,Import,5,15444.815
+H6,SGP,30,Singapore,USA,United States,2022,Export,6,1569345.445
+H6,SGP,30,Singapore,USA,United States,2022,Import,5,808703.32
+H6,SGP,30,Singapore,USA,United States,2023,Export,6,1296501.233
+H6,SGP,30,Singapore,USA,United States,2023,Import,5,714458.626
+H6,SGP,31,Singapore,CHN,China,2022,Export,6,530.576
+H6,SGP,31,Singapore,CHN,China,2022,Import,5,5579.114
+H6,SGP,31,Singapore,CHN,China,2023,Export,6,234.465
+H6,SGP,31,Singapore,CHN,China,2023,Import,5,4017.116
+H6,SGP,31,Singapore,HKG,"Hong Kong, China",2022,Export,6,36.896
+H6,SGP,31,Singapore,HKG,"Hong Kong, China",2022,Import,5,22.968
+H6,SGP,31,Singapore,HKG,"Hong Kong, China",2023,Export,6,106.126
+H6,SGP,31,Singapore,HKG,"Hong Kong, China",2023,Import,5,17.572
+H6,SGP,31,Singapore,IDN,Indonesia,2022,Export,6,5385.705
+H6,SGP,31,Singapore,IDN,Indonesia,2022,Import,5,825.675
+H6,SGP,31,Singapore,IDN,Indonesia,2023,Export,6,3836.314
+H6,SGP,31,Singapore,IDN,Indonesia,2023,Import,5,173.411
+H6,SGP,31,Singapore,JPN,Japan,2022,Export,6,544.924
+H6,SGP,31,Singapore,JPN,Japan,2022,Import,5,227.52
+H6,SGP,31,Singapore,JPN,Japan,2023,Export,6,131.56
+H6,SGP,31,Singapore,JPN,Japan,2023,Import,5,258.535
+H6,SGP,31,Singapore,KOR,"Korea, Rep.",2022,Export,6,14.04
+H6,SGP,31,Singapore,KOR,"Korea, Rep.",2022,Import,5,1992.106
+H6,SGP,31,Singapore,KOR,"Korea, Rep.",2023,Export,6,10.567
+H6,SGP,31,Singapore,KOR,"Korea, Rep.",2023,Import,5,1032.427
+H6,SGP,31,Singapore,MYS,Malaysia,2022,Export,6,10919.394
+H6,SGP,31,Singapore,MYS,Malaysia,2022,Import,5,4095.978
+H6,SGP,31,Singapore,MYS,Malaysia,2023,Export,6,7619.589
+H6,SGP,31,Singapore,MYS,Malaysia,2023,Import,5,3296.463
+H6,SGP,31,Singapore,SAU,Saudi Arabia,2022,Import,5,1845.548
+H6,SGP,31,Singapore,SAU,Saudi Arabia,2023,Import,5,967.43
+H6,SGP,31,Singapore,THA,Thailand,2022,Export,6,1030.887
+H6,SGP,31,Singapore,THA,Thailand,2022,Import,5,440.095
+H6,SGP,31,Singapore,THA,Thailand,2023,Export,6,1856.643
+H6,SGP,31,Singapore,THA,Thailand,2023,Import,5,56.189
+H6,SGP,31,Singapore,USA,United States,2022,Export,6,110.397
+H6,SGP,31,Singapore,USA,United States,2022,Import,5,4118.47
+H6,SGP,31,Singapore,USA,United States,2023,Export,6,6.141
+H6,SGP,31,Singapore,USA,United States,2023,Import,5,4424.435
+H6,SGP,32,Singapore,CHN,China,2022,Export,6,132600.085
+H6,SGP,32,Singapore,CHN,China,2022,Import,5,115781.303
+H6,SGP,32,Singapore,CHN,China,2023,Export,6,110228.198
+H6,SGP,32,Singapore,CHN,China,2023,Import,5,96260.815
+H6,SGP,32,Singapore,HKG,"Hong Kong, China",2022,Export,6,62031.031
+H6,SGP,32,Singapore,HKG,"Hong Kong, China",2022,Import,5,555.891
+H6,SGP,32,Singapore,HKG,"Hong Kong, China",2023,Export,6,37759.174
+H6,SGP,32,Singapore,HKG,"Hong Kong, China",2023,Import,5,540.727
+H6,SGP,32,Singapore,IDN,Indonesia,2022,Export,6,102786.813
+H6,SGP,32,Singapore,IDN,Indonesia,2022,Import,5,101270.583
+H6,SGP,32,Singapore,IDN,Indonesia,2023,Export,6,117195.819
+H6,SGP,32,Singapore,IDN,Indonesia,2023,Import,5,102517.531
+H6,SGP,32,Singapore,JPN,Japan,2022,Export,6,21082.56
+H6,SGP,32,Singapore,JPN,Japan,2022,Import,5,1009814.844
+H6,SGP,32,Singapore,JPN,Japan,2023,Export,6,19817.544
+H6,SGP,32,Singapore,JPN,Japan,2023,Import,5,92565.588
+H6,SGP,32,Singapore,KOR,"Korea, Rep.",2022,Export,6,74078.023
+H6,SGP,32,Singapore,KOR,"Korea, Rep.",2022,Import,5,15811.863
+H6,SGP,32,Singapore,KOR,"Korea, Rep.",2023,Export,6,64334.763
+H6,SGP,32,Singapore,KOR,"Korea, Rep.",2023,Import,5,14625.026
+H6,SGP,32,Singapore,MYS,Malaysia,2022,Export,6,191471.467
+H6,SGP,32,Singapore,MYS,Malaysia,2022,Import,5,269161.563
+H6,SGP,32,Singapore,MYS,Malaysia,2023,Export,6,169242.732
+H6,SGP,32,Singapore,MYS,Malaysia,2023,Import,5,277150.863
+H6,SGP,32,Singapore,SAU,Saudi Arabia,2022,Export,6,1015.199
+H6,SGP,32,Singapore,SAU,Saudi Arabia,2022,Import,5,1112.592
+H6,SGP,32,Singapore,SAU,Saudi Arabia,2023,Export,6,589.031
+H6,SGP,32,Singapore,SAU,Saudi Arabia,2023,Import,5,397.548
+H6,SGP,32,Singapore,THA,Thailand,2022,Export,6,70053.096
+H6,SGP,32,Singapore,THA,Thailand,2022,Import,5,28069.449
+H6,SGP,32,Singapore,THA,Thailand,2023,Export,6,89545.408
+H6,SGP,32,Singapore,THA,Thailand,2023,Import,5,23072.475
+H6,SGP,32,Singapore,USA,United States,2022,Export,6,81693.229
+H6,SGP,32,Singapore,USA,United States,2022,Import,5,321359.879
+H6,SGP,32,Singapore,USA,United States,2023,Export,6,40722.416
+H6,SGP,32,Singapore,USA,United States,2023,Import,5,105960.247
+H6,SGP,33,Singapore,CHN,China,2022,Export,6,3161984.251
+H6,SGP,33,Singapore,CHN,China,2022,Import,5,123358.302
+H6,SGP,33,Singapore,CHN,China,2023,Export,6,2570940.567
+H6,SGP,33,Singapore,CHN,China,2023,Import,5,111403.667
+H6,SGP,33,Singapore,HKG,"Hong Kong, China",2022,Export,6,698427.319
+H6,SGP,33,Singapore,HKG,"Hong Kong, China",2022,Import,5,25701.192
+H6,SGP,33,Singapore,HKG,"Hong Kong, China",2023,Export,6,910078.547
+H6,SGP,33,Singapore,HKG,"Hong Kong, China",2023,Import,5,24299.482
+H6,SGP,33,Singapore,IDN,Indonesia,2022,Export,6,542405.851
+H6,SGP,33,Singapore,IDN,Indonesia,2022,Import,5,69872.593
+H6,SGP,33,Singapore,IDN,Indonesia,2023,Export,6,563075.537
+H6,SGP,33,Singapore,IDN,Indonesia,2023,Import,5,74321.755
+H6,SGP,33,Singapore,JPN,Japan,2022,Export,6,353021.437
+H6,SGP,33,Singapore,JPN,Japan,2022,Import,5,786920.559
+H6,SGP,33,Singapore,JPN,Japan,2023,Export,6,402090.941
+H6,SGP,33,Singapore,JPN,Japan,2023,Import,5,570434.79
+H6,SGP,33,Singapore,KOR,"Korea, Rep.",2022,Export,6,2164267.663
+H6,SGP,33,Singapore,KOR,"Korea, Rep.",2022,Import,5,220130.173
+H6,SGP,33,Singapore,KOR,"Korea, Rep.",2023,Export,6,1494381.277
+H6,SGP,33,Singapore,KOR,"Korea, Rep.",2023,Import,5,236343.424
+H6,SGP,33,Singapore,MYS,Malaysia,2022,Export,6,361984.383
+H6,SGP,33,Singapore,MYS,Malaysia,2022,Import,5,74677.804
+H6,SGP,33,Singapore,MYS,Malaysia,2023,Export,6,373424.886
+H6,SGP,33,Singapore,MYS,Malaysia,2023,Import,5,82348.398
+H6,SGP,33,Singapore,SAU,Saudi Arabia,2022,Export,6,1499.844
+H6,SGP,33,Singapore,SAU,Saudi Arabia,2022,Import,5,2943.287
+H6,SGP,33,Singapore,SAU,Saudi Arabia,2023,Export,6,1999.41
+H6,SGP,33,Singapore,SAU,Saudi Arabia,2023,Import,5,471.823
+H6,SGP,33,Singapore,THA,Thailand,2022,Export,6,586211.503
+H6,SGP,33,Singapore,THA,Thailand,2022,Import,5,111621.855
+H6,SGP,33,Singapore,THA,Thailand,2023,Export,6,686170.096
+H6,SGP,33,Singapore,THA,Thailand,2023,Import,5,84729.813
+H6,SGP,33,Singapore,USA,United States,2022,Export,6,349655.299
+H6,SGP,33,Singapore,USA,United States,2022,Import,5,454371.748
+H6,SGP,33,Singapore,USA,United States,2023,Export,6,370102.28
+H6,SGP,33,Singapore,USA,United States,2023,Import,5,480502.707
+H6,SGP,34,Singapore,CHN,China,2022,Export,6,368669.881
+H6,SGP,34,Singapore,CHN,China,2022,Import,5,68536.452
+H6,SGP,34,Singapore,CHN,China,2023,Export,6,256697.191
+H6,SGP,34,Singapore,CHN,China,2023,Import,5,58862.702
+H6,SGP,34,Singapore,HKG,"Hong Kong, China",2022,Export,6,27344.962
+H6,SGP,34,Singapore,HKG,"Hong Kong, China",2022,Import,5,2040.403
+H6,SGP,34,Singapore,HKG,"Hong Kong, China",2023,Export,6,37349.707
+H6,SGP,34,Singapore,HKG,"Hong Kong, China",2023,Import,5,1063.111
+H6,SGP,34,Singapore,IDN,Indonesia,2022,Export,6,123203.608
+H6,SGP,34,Singapore,IDN,Indonesia,2022,Import,5,50716.553
+H6,SGP,34,Singapore,IDN,Indonesia,2023,Export,6,102653.615
+H6,SGP,34,Singapore,IDN,Indonesia,2023,Import,5,55853.499
+H6,SGP,34,Singapore,JPN,Japan,2022,Export,6,41586.382
+H6,SGP,34,Singapore,JPN,Japan,2022,Import,5,107578.51
+H6,SGP,34,Singapore,JPN,Japan,2023,Export,6,40962.686
+H6,SGP,34,Singapore,JPN,Japan,2023,Import,5,86112.939
+H6,SGP,34,Singapore,KOR,"Korea, Rep.",2022,Export,6,93150.688
+H6,SGP,34,Singapore,KOR,"Korea, Rep.",2022,Import,5,28261.889
+H6,SGP,34,Singapore,KOR,"Korea, Rep.",2023,Export,6,39586.168
+H6,SGP,34,Singapore,KOR,"Korea, Rep.",2023,Import,5,25802.069
+H6,SGP,34,Singapore,MYS,Malaysia,2022,Export,6,135393.74
+H6,SGP,34,Singapore,MYS,Malaysia,2022,Import,5,71550.443
+H6,SGP,34,Singapore,MYS,Malaysia,2023,Export,6,137433.365
+H6,SGP,34,Singapore,MYS,Malaysia,2023,Import,5,73338.062
+H6,SGP,34,Singapore,SAU,Saudi Arabia,2022,Export,6,9955.454
+H6,SGP,34,Singapore,SAU,Saudi Arabia,2022,Import,5,674.353
+H6,SGP,34,Singapore,SAU,Saudi Arabia,2023,Export,6,5239.122
+H6,SGP,34,Singapore,SAU,Saudi Arabia,2023,Import,5,218.429
+H6,SGP,34,Singapore,THA,Thailand,2022,Export,6,70019.403
+H6,SGP,34,Singapore,THA,Thailand,2022,Import,5,30772.646
+H6,SGP,34,Singapore,THA,Thailand,2023,Export,6,59592.188
+H6,SGP,34,Singapore,THA,Thailand,2023,Import,5,25992.804
+H6,SGP,34,Singapore,USA,United States,2022,Export,6,22593.125
+H6,SGP,34,Singapore,USA,United States,2022,Import,5,249429.915
+H6,SGP,34,Singapore,USA,United States,2023,Export,6,47101.671
+H6,SGP,34,Singapore,USA,United States,2023,Import,5,235454.424
+H6,SGP,35,Singapore,CHN,China,2022,Export,6,63086.12
+H6,SGP,35,Singapore,CHN,China,2022,Import,5,51886.311
+H6,SGP,35,Singapore,CHN,China,2023,Export,6,55086.166
+H6,SGP,35,Singapore,CHN,China,2023,Import,5,47630.605
+H6,SGP,35,Singapore,HKG,"Hong Kong, China",2022,Export,6,13612.601
+H6,SGP,35,Singapore,HKG,"Hong Kong, China",2022,Import,5,464.301
+H6,SGP,35,Singapore,HKG,"Hong Kong, China",2023,Export,6,7794.851
+H6,SGP,35,Singapore,HKG,"Hong Kong, China",2023,Import,5,188.219
+H6,SGP,35,Singapore,IDN,Indonesia,2022,Export,6,48533.536
+H6,SGP,35,Singapore,IDN,Indonesia,2022,Import,5,2489.293
+H6,SGP,35,Singapore,IDN,Indonesia,2023,Export,6,46061.378
+H6,SGP,35,Singapore,IDN,Indonesia,2023,Import,5,3874.704
+H6,SGP,35,Singapore,JPN,Japan,2022,Export,6,15021.791
+H6,SGP,35,Singapore,JPN,Japan,2022,Import,5,10045.617
+H6,SGP,35,Singapore,JPN,Japan,2023,Export,6,14735.41
+H6,SGP,35,Singapore,JPN,Japan,2023,Import,5,9262.587
+H6,SGP,35,Singapore,KOR,"Korea, Rep.",2022,Export,6,9722.779
+H6,SGP,35,Singapore,KOR,"Korea, Rep.",2022,Import,5,5014.22
+H6,SGP,35,Singapore,KOR,"Korea, Rep.",2023,Export,6,13009.415
+H6,SGP,35,Singapore,KOR,"Korea, Rep.",2023,Import,5,5148.544
+H6,SGP,35,Singapore,MYS,Malaysia,2022,Export,6,51726.618
+H6,SGP,35,Singapore,MYS,Malaysia,2022,Import,5,14827.825
+H6,SGP,35,Singapore,MYS,Malaysia,2023,Export,6,43278.752
+H6,SGP,35,Singapore,MYS,Malaysia,2023,Import,5,14333.223
+H6,SGP,35,Singapore,SAU,Saudi Arabia,2022,Export,6,2465.727
+H6,SGP,35,Singapore,SAU,Saudi Arabia,2022,Import,5,0.022
+H6,SGP,35,Singapore,SAU,Saudi Arabia,2023,Export,6,1789.903
+H6,SGP,35,Singapore,SAU,Saudi Arabia,2023,Import,5,0.02
+H6,SGP,35,Singapore,THA,Thailand,2022,Export,6,22761.334
+H6,SGP,35,Singapore,THA,Thailand,2022,Import,5,7711.802
+H6,SGP,35,Singapore,THA,Thailand,2023,Export,6,20916.632
+H6,SGP,35,Singapore,THA,Thailand,2023,Import,5,9768.73
+H6,SGP,35,Singapore,USA,United States,2022,Export,6,3461.692
+H6,SGP,35,Singapore,USA,United States,2022,Import,5,150244.635
+H6,SGP,35,Singapore,USA,United States,2023,Export,6,10744.124
+H6,SGP,35,Singapore,USA,United States,2023,Import,5,103332.461
+H6,SGP,36,Singapore,CHN,China,2022,Export,6,2639.024
+H6,SGP,36,Singapore,CHN,China,2022,Import,5,3867.212
+H6,SGP,36,Singapore,CHN,China,2023,Export,6,2492.083
+H6,SGP,36,Singapore,CHN,China,2023,Import,5,4352.785
+H6,SGP,36,Singapore,HKG,"Hong Kong, China",2022,Export,6,224.831
+H6,SGP,36,Singapore,HKG,"Hong Kong, China",2022,Import,5,11.478
+H6,SGP,36,Singapore,HKG,"Hong Kong, China",2023,Export,6,361.949
+H6,SGP,36,Singapore,HKG,"Hong Kong, China",2023,Import,5,2.957
+H6,SGP,36,Singapore,IDN,Indonesia,2022,Export,6,715.176
+H6,SGP,36,Singapore,IDN,Indonesia,2022,Import,5,59.616
+H6,SGP,36,Singapore,IDN,Indonesia,2023,Export,6,579.516
+H6,SGP,36,Singapore,IDN,Indonesia,2023,Import,5,58.232
+H6,SGP,36,Singapore,JPN,Japan,2022,Export,6,725.37
+H6,SGP,36,Singapore,JPN,Japan,2022,Import,5,386.4
+H6,SGP,36,Singapore,JPN,Japan,2023,Export,6,1311.011
+H6,SGP,36,Singapore,JPN,Japan,2023,Import,5,317.072
+H6,SGP,36,Singapore,KOR,"Korea, Rep.",2022,Export,6,4630.495
+H6,SGP,36,Singapore,KOR,"Korea, Rep.",2022,Import,5,411.513
+H6,SGP,36,Singapore,KOR,"Korea, Rep.",2023,Export,6,1434.203
+H6,SGP,36,Singapore,KOR,"Korea, Rep.",2023,Import,5,367.474
+H6,SGP,36,Singapore,MYS,Malaysia,2022,Export,6,2065.603
+H6,SGP,36,Singapore,MYS,Malaysia,2022,Import,5,810.606
+H6,SGP,36,Singapore,MYS,Malaysia,2023,Export,6,1761.72
+H6,SGP,36,Singapore,MYS,Malaysia,2023,Import,5,1278.434
+H6,SGP,36,Singapore,SAU,Saudi Arabia,2022,Export,6,0.206
+H6,SGP,36,Singapore,SAU,Saudi Arabia,2023,Export,6,0.503
+H6,SGP,36,Singapore,THA,Thailand,2022,Export,6,38.404
+H6,SGP,36,Singapore,THA,Thailand,2022,Import,5,1569.338
+H6,SGP,36,Singapore,THA,Thailand,2023,Export,6,132.97
+H6,SGP,36,Singapore,THA,Thailand,2023,Import,5,1814.752
+H6,SGP,36,Singapore,USA,United States,2022,Export,6,615.831
+H6,SGP,36,Singapore,USA,United States,2022,Import,5,7970.014
+H6,SGP,36,Singapore,USA,United States,2023,Export,6,288.629
+H6,SGP,36,Singapore,USA,United States,2023,Import,5,13633.389
+H6,SGP,37,Singapore,CHN,China,2022,Export,6,12922.5
+H6,SGP,37,Singapore,CHN,China,2022,Import,5,21874.464
+H6,SGP,37,Singapore,CHN,China,2023,Export,6,15202.7
+H6,SGP,37,Singapore,CHN,China,2023,Import,5,19387.755
+H6,SGP,37,Singapore,HKG,"Hong Kong, China",2022,Export,6,10948.388
+H6,SGP,37,Singapore,HKG,"Hong Kong, China",2022,Import,5,230.316
+H6,SGP,37,Singapore,HKG,"Hong Kong, China",2023,Export,6,16012.378
+H6,SGP,37,Singapore,HKG,"Hong Kong, China",2023,Import,5,107.628
+H6,SGP,37,Singapore,IDN,Indonesia,2022,Export,6,16176.778
+H6,SGP,37,Singapore,IDN,Indonesia,2022,Import,5,10830.453
+H6,SGP,37,Singapore,IDN,Indonesia,2023,Export,6,16458.22
+H6,SGP,37,Singapore,IDN,Indonesia,2023,Import,5,686.557
+H6,SGP,37,Singapore,JPN,Japan,2022,Export,6,21757.503
+H6,SGP,37,Singapore,JPN,Japan,2022,Import,5,146422.803
+H6,SGP,37,Singapore,JPN,Japan,2023,Export,6,18756.1
+H6,SGP,37,Singapore,JPN,Japan,2023,Import,5,132085.592
+H6,SGP,37,Singapore,KOR,"Korea, Rep.",2022,Export,6,5360.83
+H6,SGP,37,Singapore,KOR,"Korea, Rep.",2022,Import,5,17352.53
+H6,SGP,37,Singapore,KOR,"Korea, Rep.",2023,Export,6,5258.306
+H6,SGP,37,Singapore,KOR,"Korea, Rep.",2023,Import,5,13761.941
+H6,SGP,37,Singapore,MYS,Malaysia,2022,Export,6,16501.423
+H6,SGP,37,Singapore,MYS,Malaysia,2022,Import,5,8168.567
+H6,SGP,37,Singapore,MYS,Malaysia,2023,Export,6,13760.588
+H6,SGP,37,Singapore,MYS,Malaysia,2023,Import,5,6863.172
+H6,SGP,37,Singapore,SAU,Saudi Arabia,2022,Export,6,9.115
+H6,SGP,37,Singapore,SAU,Saudi Arabia,2023,Export,6,20.95
+H6,SGP,37,Singapore,THA,Thailand,2022,Export,6,6667.532
+H6,SGP,37,Singapore,THA,Thailand,2022,Import,5,126.852
+H6,SGP,37,Singapore,THA,Thailand,2023,Export,6,6549.632
+H6,SGP,37,Singapore,THA,Thailand,2023,Import,5,235.553
+H6,SGP,37,Singapore,USA,United States,2022,Export,6,10638.725
+H6,SGP,37,Singapore,USA,United States,2022,Import,5,112517.202
+H6,SGP,37,Singapore,USA,United States,2023,Export,6,5909.044
+H6,SGP,37,Singapore,USA,United States,2023,Import,5,95705.429
+H6,SGP,38,Singapore,CHN,China,2022,Export,6,1286386.914
+H6,SGP,38,Singapore,CHN,China,2022,Import,5,666651.61
+H6,SGP,38,Singapore,CHN,China,2023,Export,6,1251111.794
+H6,SGP,38,Singapore,CHN,China,2023,Import,5,579373.531
+H6,SGP,38,Singapore,HKG,"Hong Kong, China",2022,Export,6,68175.05
+H6,SGP,38,Singapore,HKG,"Hong Kong, China",2022,Import,5,6218.782
+H6,SGP,38,Singapore,HKG,"Hong Kong, China",2023,Export,6,64364.984
+H6,SGP,38,Singapore,HKG,"Hong Kong, China",2023,Import,5,15625.508
+H6,SGP,38,Singapore,IDN,Indonesia,2022,Export,6,520561.173
+H6,SGP,38,Singapore,IDN,Indonesia,2022,Import,5,315279.762
+H6,SGP,38,Singapore,IDN,Indonesia,2023,Export,6,440925.167
+H6,SGP,38,Singapore,IDN,Indonesia,2023,Import,5,164374.445
+H6,SGP,38,Singapore,JPN,Japan,2022,Export,6,571604.039
+H6,SGP,38,Singapore,JPN,Japan,2022,Import,5,558518.18
+H6,SGP,38,Singapore,JPN,Japan,2023,Export,6,394408.815
+H6,SGP,38,Singapore,JPN,Japan,2023,Import,5,539915.017
+H6,SGP,38,Singapore,KOR,"Korea, Rep.",2022,Export,6,953069.021
+H6,SGP,38,Singapore,KOR,"Korea, Rep.",2022,Import,5,297461.579
+H6,SGP,38,Singapore,KOR,"Korea, Rep.",2023,Export,6,830977.894
+H6,SGP,38,Singapore,KOR,"Korea, Rep.",2023,Import,5,227028.788
+H6,SGP,38,Singapore,MYS,Malaysia,2022,Export,6,348720.091
+H6,SGP,38,Singapore,MYS,Malaysia,2022,Import,5,457622.788
+H6,SGP,38,Singapore,MYS,Malaysia,2023,Export,6,337962.912
+H6,SGP,38,Singapore,MYS,Malaysia,2023,Import,5,348723.441
+H6,SGP,38,Singapore,SAU,Saudi Arabia,2022,Export,6,32547.773
+H6,SGP,38,Singapore,SAU,Saudi Arabia,2022,Import,5,30979.044
+H6,SGP,38,Singapore,SAU,Saudi Arabia,2023,Export,6,30720.816
+H6,SGP,38,Singapore,SAU,Saudi Arabia,2023,Import,5,22771.904
+H6,SGP,38,Singapore,THA,Thailand,2022,Export,6,336615.001
+H6,SGP,38,Singapore,THA,Thailand,2022,Import,5,46417.702
+H6,SGP,38,Singapore,THA,Thailand,2023,Export,6,304365.337
+H6,SGP,38,Singapore,THA,Thailand,2023,Import,5,39632.583
+H6,SGP,38,Singapore,USA,United States,2022,Export,6,767709.938
+H6,SGP,38,Singapore,USA,United States,2022,Import,5,1596933.532
+H6,SGP,38,Singapore,USA,United States,2023,Export,6,701666.49
+H6,SGP,38,Singapore,USA,United States,2023,Import,5,1140831.315
+H6,SGP,39,Singapore,CHN,China,2022,Export,6,5445782.081
+H6,SGP,39,Singapore,CHN,China,2022,Import,5,1028622.356
+H6,SGP,39,Singapore,CHN,China,2023,Export,6,4080469.16
+H6,SGP,39,Singapore,CHN,China,2023,Import,5,883925.745
+H6,SGP,39,Singapore,HKG,"Hong Kong, China",2022,Export,6,109951.184
+H6,SGP,39,Singapore,HKG,"Hong Kong, China",2022,Import,5,10452.912
+H6,SGP,39,Singapore,HKG,"Hong Kong, China",2023,Export,6,75291.011
+H6,SGP,39,Singapore,HKG,"Hong Kong, China",2023,Import,5,10059.858
+H6,SGP,39,Singapore,IDN,Indonesia,2022,Export,6,1694021.18
+H6,SGP,39,Singapore,IDN,Indonesia,2022,Import,5,158360.997
+H6,SGP,39,Singapore,IDN,Indonesia,2023,Export,6,1389844.733
+H6,SGP,39,Singapore,IDN,Indonesia,2023,Import,5,125126.157
+H6,SGP,39,Singapore,JPN,Japan,2022,Export,6,424200.015
+H6,SGP,39,Singapore,JPN,Japan,2022,Import,5,518457.21
+H6,SGP,39,Singapore,JPN,Japan,2023,Export,6,343928.223
+H6,SGP,39,Singapore,JPN,Japan,2023,Import,5,362001.853
+H6,SGP,39,Singapore,KOR,"Korea, Rep.",2022,Export,6,279946.791
+H6,SGP,39,Singapore,KOR,"Korea, Rep.",2022,Import,5,224289.281
+H6,SGP,39,Singapore,KOR,"Korea, Rep.",2023,Export,6,239057.245
+H6,SGP,39,Singapore,KOR,"Korea, Rep.",2023,Import,5,189509.758
+H6,SGP,39,Singapore,MYS,Malaysia,2022,Export,6,1517374.663
+H6,SGP,39,Singapore,MYS,Malaysia,2022,Import,5,1004840.19
+H6,SGP,39,Singapore,MYS,Malaysia,2023,Export,6,1181721.886
+H6,SGP,39,Singapore,MYS,Malaysia,2023,Import,5,982337.369
+H6,SGP,39,Singapore,SAU,Saudi Arabia,2022,Export,6,76344.052
+H6,SGP,39,Singapore,SAU,Saudi Arabia,2022,Import,5,2195287.696
+H6,SGP,39,Singapore,SAU,Saudi Arabia,2023,Export,6,47849.124
+H6,SGP,39,Singapore,SAU,Saudi Arabia,2023,Import,5,1477344.491
+H6,SGP,39,Singapore,THA,Thailand,2022,Export,6,693899.319
+H6,SGP,39,Singapore,THA,Thailand,2022,Import,5,151908.975
+H6,SGP,39,Singapore,THA,Thailand,2023,Export,6,580464.754
+H6,SGP,39,Singapore,THA,Thailand,2023,Import,5,124714.321
+H6,SGP,39,Singapore,USA,United States,2022,Export,6,588381.061
+H6,SGP,39,Singapore,USA,United States,2022,Import,5,1551899.299
+H6,SGP,39,Singapore,USA,United States,2023,Export,6,439941.05
+H6,SGP,39,Singapore,USA,United States,2023,Import,5,1376072.231
+H6,SGP,40,Singapore,CHN,China,2022,Export,6,416466.133
+H6,SGP,40,Singapore,CHN,China,2022,Import,5,171528.872
+H6,SGP,40,Singapore,CHN,China,2023,Export,6,329577.92
+H6,SGP,40,Singapore,CHN,China,2023,Import,5,146659.777
+H6,SGP,40,Singapore,HKG,"Hong Kong, China",2022,Export,6,19654.705
+H6,SGP,40,Singapore,HKG,"Hong Kong, China",2022,Import,5,1793.434
+H6,SGP,40,Singapore,HKG,"Hong Kong, China",2023,Export,6,21222.345
+H6,SGP,40,Singapore,HKG,"Hong Kong, China",2023,Import,5,2217.662
+H6,SGP,40,Singapore,IDN,Indonesia,2022,Export,6,175656.23
+H6,SGP,40,Singapore,IDN,Indonesia,2022,Import,5,112564.168
+H6,SGP,40,Singapore,IDN,Indonesia,2023,Export,6,205727.097
+H6,SGP,40,Singapore,IDN,Indonesia,2023,Import,5,77362.667
+H6,SGP,40,Singapore,JPN,Japan,2022,Export,6,117351.938
+H6,SGP,40,Singapore,JPN,Japan,2022,Import,5,104606.06
+H6,SGP,40,Singapore,JPN,Japan,2023,Export,6,90930.645
+H6,SGP,40,Singapore,JPN,Japan,2023,Import,5,105987.443
+H6,SGP,40,Singapore,KOR,"Korea, Rep.",2022,Export,6,103086.069
+H6,SGP,40,Singapore,KOR,"Korea, Rep.",2022,Import,5,25315.739
+H6,SGP,40,Singapore,KOR,"Korea, Rep.",2023,Export,6,72733.725
+H6,SGP,40,Singapore,KOR,"Korea, Rep.",2023,Import,5,30825.08
+H6,SGP,40,Singapore,MYS,Malaysia,2022,Export,6,154778.163
+H6,SGP,40,Singapore,MYS,Malaysia,2022,Import,5,165449.931
+H6,SGP,40,Singapore,MYS,Malaysia,2023,Export,6,123514.999
+H6,SGP,40,Singapore,MYS,Malaysia,2023,Import,5,127706.476
+H6,SGP,40,Singapore,SAU,Saudi Arabia,2022,Export,6,6927.13
+H6,SGP,40,Singapore,SAU,Saudi Arabia,2022,Import,5,42698.108
+H6,SGP,40,Singapore,SAU,Saudi Arabia,2023,Export,6,9046.984
+H6,SGP,40,Singapore,SAU,Saudi Arabia,2023,Import,5,21647.345
+H6,SGP,40,Singapore,THA,Thailand,2022,Export,6,180167.466
+H6,SGP,40,Singapore,THA,Thailand,2022,Import,5,68482.831
+H6,SGP,40,Singapore,THA,Thailand,2023,Export,6,141107.546
+H6,SGP,40,Singapore,THA,Thailand,2023,Import,5,58284.43
+H6,SGP,40,Singapore,USA,United States,2022,Export,6,133574.232
+H6,SGP,40,Singapore,USA,United States,2022,Import,5,243525.445
+H6,SGP,40,Singapore,USA,United States,2023,Export,6,93376.969
+H6,SGP,40,Singapore,USA,United States,2023,Import,5,187055.043
+H6,SGP,41,Singapore,CHN,China,2022,Export,6,3086.656
+H6,SGP,41,Singapore,CHN,China,2022,Import,5,233.65
+H6,SGP,41,Singapore,CHN,China,2023,Export,6,7074.824
+H6,SGP,41,Singapore,CHN,China,2023,Import,5,248.773
+H6,SGP,41,Singapore,HKG,"Hong Kong, China",2022,Export,6,114.094
+H6,SGP,41,Singapore,HKG,"Hong Kong, China",2022,Import,5,14.985
+H6,SGP,41,Singapore,HKG,"Hong Kong, China",2023,Export,6,265.049
+H6,SGP,41,Singapore,HKG,"Hong Kong, China",2023,Import,5,14.037
+H6,SGP,41,Singapore,IDN,Indonesia,2022,Export,6,1151.899
+H6,SGP,41,Singapore,IDN,Indonesia,2022,Import,5,8223.432
+H6,SGP,41,Singapore,IDN,Indonesia,2023,Export,6,1400.749
+H6,SGP,41,Singapore,IDN,Indonesia,2023,Import,5,9744.558
+H6,SGP,41,Singapore,JPN,Japan,2022,Export,6,194.597
+H6,SGP,41,Singapore,JPN,Japan,2022,Import,5,20.238
+H6,SGP,41,Singapore,JPN,Japan,2023,Export,6,125.617
+H6,SGP,41,Singapore,JPN,Japan,2023,Import,5,25.084
+H6,SGP,41,Singapore,KOR,"Korea, Rep.",2022,Export,6,2317.662
+H6,SGP,41,Singapore,KOR,"Korea, Rep.",2022,Import,5,99.641
+H6,SGP,41,Singapore,KOR,"Korea, Rep.",2023,Export,6,1562.807
+H6,SGP,41,Singapore,KOR,"Korea, Rep.",2023,Import,5,134.582
+H6,SGP,41,Singapore,MYS,Malaysia,2022,Export,6,1207.438
+H6,SGP,41,Singapore,MYS,Malaysia,2022,Import,5,3075.965
+H6,SGP,41,Singapore,MYS,Malaysia,2023,Export,6,1011.053
+H6,SGP,41,Singapore,MYS,Malaysia,2023,Import,5,1348.991
+H6,SGP,41,Singapore,THA,Thailand,2022,Export,6,1150.137
+H6,SGP,41,Singapore,THA,Thailand,2022,Import,5,1095.294
+H6,SGP,41,Singapore,THA,Thailand,2023,Export,6,526.797
+H6,SGP,41,Singapore,THA,Thailand,2023,Import,5,640.06
+H6,SGP,41,Singapore,USA,United States,2022,Export,6,1115.458
+H6,SGP,41,Singapore,USA,United States,2022,Import,5,23890.387
+H6,SGP,41,Singapore,USA,United States,2023,Export,6,335.592
+H6,SGP,41,Singapore,USA,United States,2023,Import,5,18785.416
+H6,SGP,42,Singapore,CHN,China,2022,Export,6,23168.699
+H6,SGP,42,Singapore,CHN,China,2022,Import,5,267260.054
+H6,SGP,42,Singapore,CHN,China,2023,Export,6,23207.114
+H6,SGP,42,Singapore,CHN,China,2023,Import,5,291875.006
+H6,SGP,42,Singapore,HKG,"Hong Kong, China",2022,Export,6,28498.535
+H6,SGP,42,Singapore,HKG,"Hong Kong, China",2022,Import,5,12398.512
+H6,SGP,42,Singapore,HKG,"Hong Kong, China",2023,Export,6,34754.727
+H6,SGP,42,Singapore,HKG,"Hong Kong, China",2023,Import,5,10544.404
+H6,SGP,42,Singapore,IDN,Indonesia,2022,Export,6,193955.268
+H6,SGP,42,Singapore,IDN,Indonesia,2022,Import,5,25135.597
+H6,SGP,42,Singapore,IDN,Indonesia,2023,Export,6,198226.896
+H6,SGP,42,Singapore,IDN,Indonesia,2023,Import,5,19927.233
+H6,SGP,42,Singapore,JPN,Japan,2022,Export,6,636710.409
+H6,SGP,42,Singapore,JPN,Japan,2022,Import,5,15999.166
+H6,SGP,42,Singapore,JPN,Japan,2023,Export,6,823875.942
+H6,SGP,42,Singapore,JPN,Japan,2023,Import,5,14818.208
+H6,SGP,42,Singapore,KOR,"Korea, Rep.",2022,Export,6,6641.864
+H6,SGP,42,Singapore,KOR,"Korea, Rep.",2022,Import,5,5778.899
+H6,SGP,42,Singapore,KOR,"Korea, Rep.",2023,Export,6,10171.821
+H6,SGP,42,Singapore,KOR,"Korea, Rep.",2023,Import,5,6921.167
+H6,SGP,42,Singapore,MYS,Malaysia,2022,Export,6,161124.51
+H6,SGP,42,Singapore,MYS,Malaysia,2022,Import,5,10911.047
+H6,SGP,42,Singapore,MYS,Malaysia,2023,Export,6,178350.679
+H6,SGP,42,Singapore,MYS,Malaysia,2023,Import,5,9311.478
+H6,SGP,42,Singapore,SAU,Saudi Arabia,2022,Export,6,1276.717
+H6,SGP,42,Singapore,SAU,Saudi Arabia,2022,Import,5,10.407
+H6,SGP,42,Singapore,SAU,Saudi Arabia,2023,Export,6,3041.061
+H6,SGP,42,Singapore,SAU,Saudi Arabia,2023,Import,5,82.581
+H6,SGP,42,Singapore,THA,Thailand,2022,Export,6,160917.814
+H6,SGP,42,Singapore,THA,Thailand,2022,Import,5,31924.563
+H6,SGP,42,Singapore,THA,Thailand,2023,Export,6,198566.064
+H6,SGP,42,Singapore,THA,Thailand,2023,Import,5,31599.371
+H6,SGP,42,Singapore,USA,United States,2022,Export,6,19767.538
+H6,SGP,42,Singapore,USA,United States,2022,Import,5,17050.165
+H6,SGP,42,Singapore,USA,United States,2023,Export,6,14847.483
+H6,SGP,42,Singapore,USA,United States,2023,Import,5,23845.487
+H6,SGP,43,Singapore,CHN,China,2022,Export,6,97.252
+H6,SGP,43,Singapore,CHN,China,2022,Import,5,599.935
+H6,SGP,43,Singapore,CHN,China,2023,Export,6,54.486
+H6,SGP,43,Singapore,CHN,China,2023,Import,5,4095.663
+H6,SGP,43,Singapore,HKG,"Hong Kong, China",2022,Export,6,269.391
+H6,SGP,43,Singapore,HKG,"Hong Kong, China",2022,Import,5,327.509
+H6,SGP,43,Singapore,HKG,"Hong Kong, China",2023,Export,6,677.045
+H6,SGP,43,Singapore,HKG,"Hong Kong, China",2023,Import,5,851.566
+H6,SGP,43,Singapore,IDN,Indonesia,2022,Export,6,895.132
+H6,SGP,43,Singapore,IDN,Indonesia,2022,Import,5,0.54
+H6,SGP,43,Singapore,IDN,Indonesia,2023,Export,6,4679.712
+H6,SGP,43,Singapore,IDN,Indonesia,2023,Import,5,5.78
+H6,SGP,43,Singapore,JPN,Japan,2022,Export,6,3481.603
+H6,SGP,43,Singapore,JPN,Japan,2022,Import,5,3.14
+H6,SGP,43,Singapore,JPN,Japan,2023,Export,6,4515.238
+H6,SGP,43,Singapore,JPN,Japan,2023,Import,5,5.563
+H6,SGP,43,Singapore,KOR,"Korea, Rep.",2022,Export,6,292.438
+H6,SGP,43,Singapore,KOR,"Korea, Rep.",2022,Import,5,23.296
+H6,SGP,43,Singapore,KOR,"Korea, Rep.",2023,Export,6,368.401
+H6,SGP,43,Singapore,KOR,"Korea, Rep.",2023,Import,5,21.904
+H6,SGP,43,Singapore,MYS,Malaysia,2022,Export,6,292.551
+H6,SGP,43,Singapore,MYS,Malaysia,2022,Import,5,26.25
+H6,SGP,43,Singapore,MYS,Malaysia,2023,Export,6,804.34
+H6,SGP,43,Singapore,MYS,Malaysia,2023,Import,5,119.08
+H6,SGP,43,Singapore,SAU,Saudi Arabia,2022,Export,6,1.172
+H6,SGP,43,Singapore,SAU,Saudi Arabia,2023,Export,6,2.555
+H6,SGP,43,Singapore,SAU,Saudi Arabia,2023,Import,5,0.074
+H6,SGP,43,Singapore,THA,Thailand,2022,Export,6,540.919
+H6,SGP,43,Singapore,THA,Thailand,2022,Import,5,15.208
+H6,SGP,43,Singapore,THA,Thailand,2023,Export,6,973.112
+H6,SGP,43,Singapore,THA,Thailand,2023,Import,5,284.158
+H6,SGP,43,Singapore,USA,United States,2022,Export,6,50.905
+H6,SGP,43,Singapore,USA,United States,2022,Import,5,320.893
+H6,SGP,43,Singapore,USA,United States,2023,Export,6,482.451
+H6,SGP,43,Singapore,USA,United States,2023,Import,5,399.624
+H6,SGP,44,Singapore,CHN,China,2022,Export,6,1480.085
+H6,SGP,44,Singapore,CHN,China,2022,Import,5,124386.883
+H6,SGP,44,Singapore,CHN,China,2023,Export,6,1426.093
+H6,SGP,44,Singapore,CHN,China,2023,Import,5,117823.216
+H6,SGP,44,Singapore,HKG,"Hong Kong, China",2022,Export,6,498.213
+H6,SGP,44,Singapore,HKG,"Hong Kong, China",2022,Import,5,247.895
+H6,SGP,44,Singapore,HKG,"Hong Kong, China",2023,Export,6,588.697
+H6,SGP,44,Singapore,HKG,"Hong Kong, China",2023,Import,5,819.686
+H6,SGP,44,Singapore,IDN,Indonesia,2022,Export,6,3800.357
+H6,SGP,44,Singapore,IDN,Indonesia,2022,Import,5,67201.169
+H6,SGP,44,Singapore,IDN,Indonesia,2023,Export,6,4415.217
+H6,SGP,44,Singapore,IDN,Indonesia,2023,Import,5,61632.713
+H6,SGP,44,Singapore,JPN,Japan,2022,Export,6,1622.331
+H6,SGP,44,Singapore,JPN,Japan,2022,Import,5,2940.025
+H6,SGP,44,Singapore,JPN,Japan,2023,Export,6,2384.626
+H6,SGP,44,Singapore,JPN,Japan,2023,Import,5,2669.74
+H6,SGP,44,Singapore,KOR,"Korea, Rep.",2022,Export,6,610.86
+H6,SGP,44,Singapore,KOR,"Korea, Rep.",2022,Import,5,421.197
+H6,SGP,44,Singapore,KOR,"Korea, Rep.",2023,Export,6,252.306
+H6,SGP,44,Singapore,KOR,"Korea, Rep.",2023,Import,5,590.363
+H6,SGP,44,Singapore,MYS,Malaysia,2022,Export,6,16726.402
+H6,SGP,44,Singapore,MYS,Malaysia,2022,Import,5,186515.988
+H6,SGP,44,Singapore,MYS,Malaysia,2023,Export,6,13988.42
+H6,SGP,44,Singapore,MYS,Malaysia,2023,Import,5,171289.153
+H6,SGP,44,Singapore,SAU,Saudi Arabia,2022,Export,6,157.074
+H6,SGP,44,Singapore,SAU,Saudi Arabia,2022,Import,5,0.003
+H6,SGP,44,Singapore,SAU,Saudi Arabia,2023,Export,6,5.954
+H6,SGP,44,Singapore,SAU,Saudi Arabia,2023,Import,5,2.878
+H6,SGP,44,Singapore,THA,Thailand,2022,Export,6,3806.143
+H6,SGP,44,Singapore,THA,Thailand,2022,Import,5,5785.449
+H6,SGP,44,Singapore,THA,Thailand,2023,Export,6,3161.95
+H6,SGP,44,Singapore,THA,Thailand,2023,Import,5,5718.756
+H6,SGP,44,Singapore,USA,United States,2022,Export,6,1919.017
+H6,SGP,44,Singapore,USA,United States,2022,Import,5,7224.764
+H6,SGP,44,Singapore,USA,United States,2023,Export,6,2198.777
+H6,SGP,44,Singapore,USA,United States,2023,Import,5,6186.945
+H6,SGP,45,Singapore,CHN,China,2022,Export,6,27.381
+H6,SGP,45,Singapore,CHN,China,2022,Import,5,441.098
+H6,SGP,45,Singapore,CHN,China,2023,Export,6,1.442
+H6,SGP,45,Singapore,CHN,China,2023,Import,5,784.642
+H6,SGP,45,Singapore,HKG,"Hong Kong, China",2022,Export,6,0.093
+H6,SGP,45,Singapore,HKG,"Hong Kong, China",2022,Import,5,0.645
+H6,SGP,45,Singapore,HKG,"Hong Kong, China",2023,Export,6,0.181
+H6,SGP,45,Singapore,HKG,"Hong Kong, China",2023,Import,5,1.058
+H6,SGP,45,Singapore,IDN,Indonesia,2022,Export,6,124.886
+H6,SGP,45,Singapore,IDN,Indonesia,2022,Import,5,6.156
+H6,SGP,45,Singapore,IDN,Indonesia,2023,Export,6,209.271
+H6,SGP,45,Singapore,IDN,Indonesia,2023,Import,5,0.754
+H6,SGP,45,Singapore,JPN,Japan,2022,Export,6,0.031
+H6,SGP,45,Singapore,JPN,Japan,2022,Import,5,23.214
+H6,SGP,45,Singapore,JPN,Japan,2023,Export,6,0.101
+H6,SGP,45,Singapore,JPN,Japan,2023,Import,5,299.262
+H6,SGP,45,Singapore,KOR,"Korea, Rep.",2022,Export,6,11.846
+H6,SGP,45,Singapore,KOR,"Korea, Rep.",2022,Import,5,1.806
+H6,SGP,45,Singapore,KOR,"Korea, Rep.",2023,Export,6,0.257
+H6,SGP,45,Singapore,KOR,"Korea, Rep.",2023,Import,5,2.746
+H6,SGP,45,Singapore,MYS,Malaysia,2022,Export,6,478.841
+H6,SGP,45,Singapore,MYS,Malaysia,2022,Import,5,56.629
+H6,SGP,45,Singapore,MYS,Malaysia,2023,Export,6,256.352
+H6,SGP,45,Singapore,MYS,Malaysia,2023,Import,5,28.647
+H6,SGP,45,Singapore,SAU,Saudi Arabia,2022,Export,6,0.069
+H6,SGP,45,Singapore,THA,Thailand,2022,Export,6,77.213
+H6,SGP,45,Singapore,THA,Thailand,2022,Import,5,5.077
+H6,SGP,45,Singapore,THA,Thailand,2023,Export,6,47.92
+H6,SGP,45,Singapore,THA,Thailand,2023,Import,5,76.972
+H6,SGP,45,Singapore,USA,United States,2022,Export,6,3.274
+H6,SGP,45,Singapore,USA,United States,2022,Import,5,84.994
+H6,SGP,45,Singapore,USA,United States,2023,Export,6,9.843
+H6,SGP,45,Singapore,USA,United States,2023,Import,5,118.502
+H6,SGP,46,Singapore,CHN,China,2022,Export,6,164.733
+H6,SGP,46,Singapore,CHN,China,2022,Import,5,2564.921
+H6,SGP,46,Singapore,CHN,China,2023,Export,6,11.625
+H6,SGP,46,Singapore,CHN,China,2023,Import,5,2728.919
+H6,SGP,46,Singapore,HKG,"Hong Kong, China",2022,Export,6,49.905
+H6,SGP,46,Singapore,HKG,"Hong Kong, China",2022,Import,5,11.63
+H6,SGP,46,Singapore,HKG,"Hong Kong, China",2023,Export,6,58.336
+H6,SGP,46,Singapore,HKG,"Hong Kong, China",2023,Import,5,22.874
+H6,SGP,46,Singapore,IDN,Indonesia,2022,Export,6,238.5
+H6,SGP,46,Singapore,IDN,Indonesia,2022,Import,5,581.341
+H6,SGP,46,Singapore,IDN,Indonesia,2023,Export,6,420.635
+H6,SGP,46,Singapore,IDN,Indonesia,2023,Import,5,640.832
+H6,SGP,46,Singapore,JPN,Japan,2022,Export,6,26.242
+H6,SGP,46,Singapore,JPN,Japan,2022,Import,5,174.573
+H6,SGP,46,Singapore,JPN,Japan,2023,Export,6,22.359
+H6,SGP,46,Singapore,JPN,Japan,2023,Import,5,121.072
+H6,SGP,46,Singapore,KOR,"Korea, Rep.",2022,Export,6,2.501
+H6,SGP,46,Singapore,KOR,"Korea, Rep.",2022,Import,5,1.479
+H6,SGP,46,Singapore,KOR,"Korea, Rep.",2023,Export,6,2.5
+H6,SGP,46,Singapore,KOR,"Korea, Rep.",2023,Import,5,5.546
+H6,SGP,46,Singapore,MYS,Malaysia,2022,Export,6,140.401
+H6,SGP,46,Singapore,MYS,Malaysia,2022,Import,5,250.116
+H6,SGP,46,Singapore,MYS,Malaysia,2023,Export,6,212.096
+H6,SGP,46,Singapore,MYS,Malaysia,2023,Import,5,153.508
+H6,SGP,46,Singapore,SAU,Saudi Arabia,2023,Export,6,0.861
+H6,SGP,46,Singapore,THA,Thailand,2022,Export,6,10.108
+H6,SGP,46,Singapore,THA,Thailand,2022,Import,5,108.222
+H6,SGP,46,Singapore,THA,Thailand,2023,Export,6,31.644
+H6,SGP,46,Singapore,THA,Thailand,2023,Import,5,146.256
+H6,SGP,46,Singapore,USA,United States,2022,Export,6,198.731
+H6,SGP,46,Singapore,USA,United States,2022,Import,5,26.943
+H6,SGP,46,Singapore,USA,United States,2023,Export,6,11.312
+H6,SGP,46,Singapore,USA,United States,2023,Import,5,79.777
+H6,SGP,47,Singapore,CHN,China,2022,Export,6,182143.947
+H6,SGP,47,Singapore,CHN,China,2022,Import,5,559.887
+H6,SGP,47,Singapore,CHN,China,2023,Export,6,312575.355
+H6,SGP,47,Singapore,CHN,China,2023,Import,5,324.342
+H6,SGP,47,Singapore,HKG,"Hong Kong, China",2022,Export,6,132.426
+H6,SGP,47,Singapore,HKG,"Hong Kong, China",2022,Import,5,668.094
+H6,SGP,47,Singapore,HKG,"Hong Kong, China",2023,Export,6,6.329
+H6,SGP,47,Singapore,HKG,"Hong Kong, China",2023,Import,5,459.547
+H6,SGP,47,Singapore,IDN,Indonesia,2022,Export,6,118247.11
+H6,SGP,47,Singapore,IDN,Indonesia,2022,Import,5,58168.295
+H6,SGP,47,Singapore,IDN,Indonesia,2023,Export,6,102696.668
+H6,SGP,47,Singapore,IDN,Indonesia,2023,Import,5,127416.911
+H6,SGP,47,Singapore,JPN,Japan,2022,Export,6,1136.043
+H6,SGP,47,Singapore,JPN,Japan,2022,Import,5,35.873
+H6,SGP,47,Singapore,JPN,Japan,2023,Export,6,110.837
+H6,SGP,47,Singapore,JPN,Japan,2023,Import,5,45.765
+H6,SGP,47,Singapore,KOR,"Korea, Rep.",2022,Export,6,3092.746
+H6,SGP,47,Singapore,KOR,"Korea, Rep.",2022,Import,5,80.66
+H6,SGP,47,Singapore,KOR,"Korea, Rep.",2023,Export,6,2432.358
+H6,SGP,47,Singapore,KOR,"Korea, Rep.",2023,Import,5,81.326
+H6,SGP,47,Singapore,MYS,Malaysia,2022,Export,6,23387.314
+H6,SGP,47,Singapore,MYS,Malaysia,2022,Import,5,4530.831
+H6,SGP,47,Singapore,MYS,Malaysia,2023,Export,6,13882.953
+H6,SGP,47,Singapore,MYS,Malaysia,2023,Import,5,5545.927
+H6,SGP,47,Singapore,SAU,Saudi Arabia,2023,Export,6,5150.482
+H6,SGP,47,Singapore,THA,Thailand,2022,Export,6,8990.421
+H6,SGP,47,Singapore,THA,Thailand,2022,Import,5,0.037
+H6,SGP,47,Singapore,THA,Thailand,2023,Export,6,7138.872
+H6,SGP,47,Singapore,THA,Thailand,2023,Import,5,2.063
+H6,SGP,47,Singapore,USA,United States,2022,Export,6,95.121
+H6,SGP,47,Singapore,USA,United States,2022,Import,5,20821.467
+H6,SGP,47,Singapore,USA,United States,2023,Export,6,10.421
+H6,SGP,47,Singapore,USA,United States,2023,Import,5,10489.398
+H6,SGP,48,Singapore,CHN,China,2022,Export,6,24945.691
+H6,SGP,48,Singapore,CHN,China,2022,Import,5,336842.84
+H6,SGP,48,Singapore,CHN,China,2023,Export,6,20044.351
+H6,SGP,48,Singapore,CHN,China,2023,Import,5,278110.815
+H6,SGP,48,Singapore,HKG,"Hong Kong, China",2022,Export,6,18202.109
+H6,SGP,48,Singapore,HKG,"Hong Kong, China",2022,Import,5,6795.983
+H6,SGP,48,Singapore,HKG,"Hong Kong, China",2023,Export,6,17166.793
+H6,SGP,48,Singapore,HKG,"Hong Kong, China",2023,Import,5,5139.009
+H6,SGP,48,Singapore,IDN,Indonesia,2022,Export,6,164593.279
+H6,SGP,48,Singapore,IDN,Indonesia,2022,Import,5,106096.828
+H6,SGP,48,Singapore,IDN,Indonesia,2023,Export,6,167323.018
+H6,SGP,48,Singapore,IDN,Indonesia,2023,Import,5,80935.7
+H6,SGP,48,Singapore,JPN,Japan,2022,Export,6,13210.246
+H6,SGP,48,Singapore,JPN,Japan,2022,Import,5,48676.546
+H6,SGP,48,Singapore,JPN,Japan,2023,Export,6,16690.905
+H6,SGP,48,Singapore,JPN,Japan,2023,Import,5,48175.079
+H6,SGP,48,Singapore,KOR,"Korea, Rep.",2022,Export,6,17293.65
+H6,SGP,48,Singapore,KOR,"Korea, Rep.",2022,Import,5,23760.228
+H6,SGP,48,Singapore,KOR,"Korea, Rep.",2023,Export,6,42798.013
+H6,SGP,48,Singapore,KOR,"Korea, Rep.",2023,Import,5,20922.363
+H6,SGP,48,Singapore,MYS,Malaysia,2022,Export,6,100811.775
+H6,SGP,48,Singapore,MYS,Malaysia,2022,Import,5,314268.939
+H6,SGP,48,Singapore,MYS,Malaysia,2023,Export,6,100431.482
+H6,SGP,48,Singapore,MYS,Malaysia,2023,Import,5,295374.362
+H6,SGP,48,Singapore,SAU,Saudi Arabia,2022,Export,6,1027.229
+H6,SGP,48,Singapore,SAU,Saudi Arabia,2022,Import,5,16.604
+H6,SGP,48,Singapore,SAU,Saudi Arabia,2023,Export,6,2006.646
+H6,SGP,48,Singapore,SAU,Saudi Arabia,2023,Import,5,22.458
+H6,SGP,48,Singapore,THA,Thailand,2022,Export,6,125980.693
+H6,SGP,48,Singapore,THA,Thailand,2022,Import,5,32221.478
+H6,SGP,48,Singapore,THA,Thailand,2023,Export,6,122679.521
+H6,SGP,48,Singapore,THA,Thailand,2023,Import,5,22785.365
+H6,SGP,48,Singapore,USA,United States,2022,Export,6,22901.67
+H6,SGP,48,Singapore,USA,United States,2022,Import,5,57497.822
+H6,SGP,48,Singapore,USA,United States,2023,Export,6,35780.743
+H6,SGP,48,Singapore,USA,United States,2023,Import,5,43488.34
+H6,SGP,49,Singapore,CHN,China,2022,Export,6,56227.746
+H6,SGP,49,Singapore,CHN,China,2022,Import,5,70761.181
+H6,SGP,49,Singapore,CHN,China,2023,Export,6,40895.936
+H6,SGP,49,Singapore,CHN,China,2023,Import,5,74478.508
+H6,SGP,49,Singapore,HKG,"Hong Kong, China",2022,Export,6,20123.177
+H6,SGP,49,Singapore,HKG,"Hong Kong, China",2022,Import,5,3684.083
+H6,SGP,49,Singapore,HKG,"Hong Kong, China",2023,Export,6,22101.314
+H6,SGP,49,Singapore,HKG,"Hong Kong, China",2023,Import,5,6676.017
+H6,SGP,49,Singapore,IDN,Indonesia,2022,Export,6,27451.058
+H6,SGP,49,Singapore,IDN,Indonesia,2022,Import,5,7234.757
+H6,SGP,49,Singapore,IDN,Indonesia,2023,Export,6,28519.872
+H6,SGP,49,Singapore,IDN,Indonesia,2023,Import,5,10764.08
+H6,SGP,49,Singapore,JPN,Japan,2022,Export,6,64030.473
+H6,SGP,49,Singapore,JPN,Japan,2022,Import,5,6661.629
+H6,SGP,49,Singapore,JPN,Japan,2023,Export,6,59741.051
+H6,SGP,49,Singapore,JPN,Japan,2023,Import,5,6224.134
+H6,SGP,49,Singapore,KOR,"Korea, Rep.",2022,Export,6,21904.629
+H6,SGP,49,Singapore,KOR,"Korea, Rep.",2022,Import,5,1364.259
+H6,SGP,49,Singapore,KOR,"Korea, Rep.",2023,Export,6,20158.518
+H6,SGP,49,Singapore,KOR,"Korea, Rep.",2023,Import,5,1567.729
+H6,SGP,49,Singapore,MYS,Malaysia,2022,Export,6,42108.287
+H6,SGP,49,Singapore,MYS,Malaysia,2022,Import,5,59464.056
+H6,SGP,49,Singapore,MYS,Malaysia,2023,Export,6,37154.193
+H6,SGP,49,Singapore,MYS,Malaysia,2023,Import,5,69117.558
+H6,SGP,49,Singapore,SAU,Saudi Arabia,2022,Export,6,1583.584
+H6,SGP,49,Singapore,SAU,Saudi Arabia,2022,Import,5,19.8
+H6,SGP,49,Singapore,SAU,Saudi Arabia,2023,Export,6,4588.502
+H6,SGP,49,Singapore,SAU,Saudi Arabia,2023,Import,5,9.985
+H6,SGP,49,Singapore,THA,Thailand,2022,Export,6,25693.508
+H6,SGP,49,Singapore,THA,Thailand,2022,Import,5,1145.098
+H6,SGP,49,Singapore,THA,Thailand,2023,Export,6,29894.378
+H6,SGP,49,Singapore,THA,Thailand,2023,Import,5,938.43
+H6,SGP,49,Singapore,USA,United States,2022,Export,6,29128.525
+H6,SGP,49,Singapore,USA,United States,2022,Import,5,59145.654
+H6,SGP,49,Singapore,USA,United States,2023,Export,6,25921.223
+H6,SGP,49,Singapore,USA,United States,2023,Import,5,73650.491
+H6,SGP,50,Singapore,CHN,China,2022,Export,6,242.959
+H6,SGP,50,Singapore,CHN,China,2022,Import,5,442.71
+H6,SGP,50,Singapore,CHN,China,2023,Export,6,39.807
+H6,SGP,50,Singapore,CHN,China,2023,Import,5,599.403
+H6,SGP,50,Singapore,HKG,"Hong Kong, China",2022,Export,6,1.989
+H6,SGP,50,Singapore,HKG,"Hong Kong, China",2022,Import,5,21.677
+H6,SGP,50,Singapore,HKG,"Hong Kong, China",2023,Export,6,21.751
+H6,SGP,50,Singapore,HKG,"Hong Kong, China",2023,Import,5,49.826
+H6,SGP,50,Singapore,IDN,Indonesia,2022,Export,6,900.708
+H6,SGP,50,Singapore,IDN,Indonesia,2022,Import,5,81.734
+H6,SGP,50,Singapore,IDN,Indonesia,2023,Export,6,1000.185
+H6,SGP,50,Singapore,IDN,Indonesia,2023,Import,5,61.345
+H6,SGP,50,Singapore,JPN,Japan,2022,Export,6,327.22
+H6,SGP,50,Singapore,JPN,Japan,2022,Import,5,55.649
+H6,SGP,50,Singapore,JPN,Japan,2023,Export,6,7.505
+H6,SGP,50,Singapore,JPN,Japan,2023,Import,5,22.717
+H6,SGP,50,Singapore,KOR,"Korea, Rep.",2022,Import,5,218.45
+H6,SGP,50,Singapore,KOR,"Korea, Rep.",2023,Export,6,72.948
+H6,SGP,50,Singapore,KOR,"Korea, Rep.",2023,Import,5,162.175
+H6,SGP,50,Singapore,MYS,Malaysia,2022,Export,6,1281.797
+H6,SGP,50,Singapore,MYS,Malaysia,2022,Import,5,1124.237
+H6,SGP,50,Singapore,MYS,Malaysia,2023,Export,6,850.117
+H6,SGP,50,Singapore,MYS,Malaysia,2023,Import,5,965.681
+H6,SGP,50,Singapore,THA,Thailand,2022,Export,6,12.456
+H6,SGP,50,Singapore,THA,Thailand,2022,Import,5,173.796
+H6,SGP,50,Singapore,THA,Thailand,2023,Export,6,35.274
+H6,SGP,50,Singapore,THA,Thailand,2023,Import,5,64.035
+H6,SGP,50,Singapore,USA,United States,2022,Import,5,204.376
+H6,SGP,50,Singapore,USA,United States,2023,Export,6,5.45
+H6,SGP,50,Singapore,USA,United States,2023,Import,5,45.067
+H6,SGP,51,Singapore,CHN,China,2022,Export,6,324.596
+H6,SGP,51,Singapore,CHN,China,2022,Import,5,2506.031
+H6,SGP,51,Singapore,CHN,China,2023,Export,6,5.591
+H6,SGP,51,Singapore,CHN,China,2023,Import,5,2197.632
+H6,SGP,51,Singapore,HKG,"Hong Kong, China",2022,Export,6,84.78
+H6,SGP,51,Singapore,HKG,"Hong Kong, China",2022,Import,5,120.132
+H6,SGP,51,Singapore,HKG,"Hong Kong, China",2023,Export,6,260.213
+H6,SGP,51,Singapore,HKG,"Hong Kong, China",2023,Import,5,4.463
+H6,SGP,51,Singapore,IDN,Indonesia,2022,Export,6,251.74
+H6,SGP,51,Singapore,IDN,Indonesia,2022,Import,5,6.284
+H6,SGP,51,Singapore,IDN,Indonesia,2023,Export,6,286.444
+H6,SGP,51,Singapore,IDN,Indonesia,2023,Import,5,1.315
+H6,SGP,51,Singapore,JPN,Japan,2022,Export,6,2.6
+H6,SGP,51,Singapore,JPN,Japan,2022,Import,5,20.868
+H6,SGP,51,Singapore,JPN,Japan,2023,Export,6,29.233
+H6,SGP,51,Singapore,JPN,Japan,2023,Import,5,28.95
+H6,SGP,51,Singapore,KOR,"Korea, Rep.",2022,Export,6,5.559
+H6,SGP,51,Singapore,KOR,"Korea, Rep.",2022,Import,5,58.299
+H6,SGP,51,Singapore,KOR,"Korea, Rep.",2023,Import,5,1.022
+H6,SGP,51,Singapore,MYS,Malaysia,2022,Export,6,127.633
+H6,SGP,51,Singapore,MYS,Malaysia,2022,Import,5,12.945
+H6,SGP,51,Singapore,MYS,Malaysia,2023,Export,6,255.22
+H6,SGP,51,Singapore,MYS,Malaysia,2023,Import,5,29.975
+H6,SGP,51,Singapore,SAU,Saudi Arabia,2022,Import,5,0.201
+H6,SGP,51,Singapore,THA,Thailand,2022,Export,6,518.397
+H6,SGP,51,Singapore,THA,Thailand,2022,Import,5,10.462
+H6,SGP,51,Singapore,THA,Thailand,2023,Export,6,960.835
+H6,SGP,51,Singapore,THA,Thailand,2023,Import,5,3.588
+H6,SGP,51,Singapore,USA,United States,2022,Export,6,0.878
+H6,SGP,51,Singapore,USA,United States,2022,Import,5,253.802
+H6,SGP,51,Singapore,USA,United States,2023,Import,5,40.326
+H6,SGP,52,Singapore,CHN,China,2022,Export,6,87.854
+H6,SGP,52,Singapore,CHN,China,2022,Import,5,3278.631
+H6,SGP,52,Singapore,CHN,China,2023,Export,6,48.136
+H6,SGP,52,Singapore,CHN,China,2023,Import,5,2894.76
+H6,SGP,52,Singapore,HKG,"Hong Kong, China",2022,Export,6,51.434
+H6,SGP,52,Singapore,HKG,"Hong Kong, China",2022,Import,5,217.113
+H6,SGP,52,Singapore,HKG,"Hong Kong, China",2023,Export,6,73.743
+H6,SGP,52,Singapore,HKG,"Hong Kong, China",2023,Import,5,293.076
+H6,SGP,52,Singapore,IDN,Indonesia,2022,Export,6,3941.659
+H6,SGP,52,Singapore,IDN,Indonesia,2022,Import,5,1579.694
+H6,SGP,52,Singapore,IDN,Indonesia,2023,Export,6,4529.449
+H6,SGP,52,Singapore,IDN,Indonesia,2023,Import,5,1679.247
+H6,SGP,52,Singapore,JPN,Japan,2022,Export,6,71.108
+H6,SGP,52,Singapore,JPN,Japan,2022,Import,5,611.756
+H6,SGP,52,Singapore,JPN,Japan,2023,Export,6,14.834
+H6,SGP,52,Singapore,JPN,Japan,2023,Import,5,1025.636
+H6,SGP,52,Singapore,KOR,"Korea, Rep.",2022,Export,6,2.671
+H6,SGP,52,Singapore,KOR,"Korea, Rep.",2022,Import,5,146
+H6,SGP,52,Singapore,KOR,"Korea, Rep.",2023,Export,6,23.1
+H6,SGP,52,Singapore,KOR,"Korea, Rep.",2023,Import,5,232.448
+H6,SGP,52,Singapore,MYS,Malaysia,2022,Export,6,927.069
+H6,SGP,52,Singapore,MYS,Malaysia,2022,Import,5,4344.128
+H6,SGP,52,Singapore,MYS,Malaysia,2023,Export,6,2555.556
+H6,SGP,52,Singapore,MYS,Malaysia,2023,Import,5,4508.119
+H6,SGP,52,Singapore,SAU,Saudi Arabia,2023,Export,6,1.191
+H6,SGP,52,Singapore,THA,Thailand,2022,Export,6,1689.129
+H6,SGP,52,Singapore,THA,Thailand,2022,Import,5,2552.227
+H6,SGP,52,Singapore,THA,Thailand,2023,Export,6,2729.973
+H6,SGP,52,Singapore,THA,Thailand,2023,Import,5,3927.687
+H6,SGP,52,Singapore,USA,United States,2022,Export,6,74.609
+H6,SGP,52,Singapore,USA,United States,2022,Import,5,1985.228
+H6,SGP,52,Singapore,USA,United States,2023,Export,6,53.058
+H6,SGP,52,Singapore,USA,United States,2023,Import,5,1814.763
+H6,SGP,53,Singapore,CHN,China,2022,Export,6,20.867
+H6,SGP,53,Singapore,CHN,China,2022,Import,5,229.852
+H6,SGP,53,Singapore,CHN,China,2023,Export,6,7.148
+H6,SGP,53,Singapore,CHN,China,2023,Import,5,392.644
+H6,SGP,53,Singapore,HKG,"Hong Kong, China",2022,Export,6,0.779
+H6,SGP,53,Singapore,HKG,"Hong Kong, China",2022,Import,5,0.955
+H6,SGP,53,Singapore,HKG,"Hong Kong, China",2023,Export,6,2.008
+H6,SGP,53,Singapore,HKG,"Hong Kong, China",2023,Import,5,17.805
+H6,SGP,53,Singapore,IDN,Indonesia,2022,Export,6,250.947
+H6,SGP,53,Singapore,IDN,Indonesia,2022,Import,5,1275.297
+H6,SGP,53,Singapore,IDN,Indonesia,2023,Export,6,342.287
+H6,SGP,53,Singapore,IDN,Indonesia,2023,Import,5,16.551
+H6,SGP,53,Singapore,JPN,Japan,2022,Import,5,18.728
+H6,SGP,53,Singapore,JPN,Japan,2023,Import,5,6.768
+H6,SGP,53,Singapore,KOR,"Korea, Rep.",2022,Import,5,0.696
+H6,SGP,53,Singapore,KOR,"Korea, Rep.",2023,Export,6,11.555
+H6,SGP,53,Singapore,KOR,"Korea, Rep.",2023,Import,5,4.308
+H6,SGP,53,Singapore,MYS,Malaysia,2022,Export,6,56.279
+H6,SGP,53,Singapore,MYS,Malaysia,2022,Import,5,83.792
+H6,SGP,53,Singapore,MYS,Malaysia,2023,Export,6,235.617
+H6,SGP,53,Singapore,MYS,Malaysia,2023,Import,5,60.68
+H6,SGP,53,Singapore,SAU,Saudi Arabia,2022,Import,5,14.246
+H6,SGP,53,Singapore,SAU,Saudi Arabia,2023,Import,5,20.703
+H6,SGP,53,Singapore,THA,Thailand,2022,Export,6,2.08
+H6,SGP,53,Singapore,THA,Thailand,2022,Import,5,42.057
+H6,SGP,53,Singapore,THA,Thailand,2023,Export,6,1.024
+H6,SGP,53,Singapore,THA,Thailand,2023,Import,5,36.423
+H6,SGP,53,Singapore,USA,United States,2022,Import,5,51.387
+H6,SGP,53,Singapore,USA,United States,2023,Export,6,33.449
+H6,SGP,53,Singapore,USA,United States,2023,Import,5,41.708
+H6,SGP,54,Singapore,CHN,China,2022,Export,6,47965.615
+H6,SGP,54,Singapore,CHN,China,2022,Import,5,10476.114
+H6,SGP,54,Singapore,CHN,China,2023,Export,6,40158.858
+H6,SGP,54,Singapore,CHN,China,2023,Import,5,9143.069
+H6,SGP,54,Singapore,HKG,"Hong Kong, China",2022,Export,6,508.017
+H6,SGP,54,Singapore,HKG,"Hong Kong, China",2022,Import,5,206.78
+H6,SGP,54,Singapore,HKG,"Hong Kong, China",2023,Export,6,251.223
+H6,SGP,54,Singapore,HKG,"Hong Kong, China",2023,Import,5,814.261
+H6,SGP,54,Singapore,IDN,Indonesia,2022,Export,6,33381.42
+H6,SGP,54,Singapore,IDN,Indonesia,2022,Import,5,1702.151
+H6,SGP,54,Singapore,IDN,Indonesia,2023,Export,6,23518.913
+H6,SGP,54,Singapore,IDN,Indonesia,2023,Import,5,1444.205
+H6,SGP,54,Singapore,JPN,Japan,2022,Export,6,40.203
+H6,SGP,54,Singapore,JPN,Japan,2022,Import,5,7113.114
+H6,SGP,54,Singapore,JPN,Japan,2023,Export,6,4.567
+H6,SGP,54,Singapore,JPN,Japan,2023,Import,5,8097.703
+H6,SGP,54,Singapore,KOR,"Korea, Rep.",2022,Export,6,1505.271
+H6,SGP,54,Singapore,KOR,"Korea, Rep.",2022,Import,5,1179.11
+H6,SGP,54,Singapore,KOR,"Korea, Rep.",2023,Export,6,1290.508
+H6,SGP,54,Singapore,KOR,"Korea, Rep.",2023,Import,5,1772.893
+H6,SGP,54,Singapore,MYS,Malaysia,2022,Export,6,6207.708
+H6,SGP,54,Singapore,MYS,Malaysia,2022,Import,5,7478.853
+H6,SGP,54,Singapore,MYS,Malaysia,2023,Export,6,6977.078
+H6,SGP,54,Singapore,MYS,Malaysia,2023,Import,5,4838.873
+H6,SGP,54,Singapore,SAU,Saudi Arabia,2022,Export,6,1777.62
+H6,SGP,54,Singapore,SAU,Saudi Arabia,2023,Export,6,1356.164
+H6,SGP,54,Singapore,THA,Thailand,2022,Export,6,9826.34
+H6,SGP,54,Singapore,THA,Thailand,2022,Import,5,11534.985
+H6,SGP,54,Singapore,THA,Thailand,2023,Export,6,12411.175
+H6,SGP,54,Singapore,THA,Thailand,2023,Import,5,11232.624
+H6,SGP,54,Singapore,USA,United States,2022,Export,6,294.144
+H6,SGP,54,Singapore,USA,United States,2022,Import,5,3910.367
+H6,SGP,54,Singapore,USA,United States,2023,Export,6,519.335
+H6,SGP,54,Singapore,USA,United States,2023,Import,5,4858.278
+H6,SGP,55,Singapore,CHN,China,2022,Export,6,4477.223
+H6,SGP,55,Singapore,CHN,China,2022,Import,5,5843.222
+H6,SGP,55,Singapore,CHN,China,2023,Export,6,1267.025
+H6,SGP,55,Singapore,CHN,China,2023,Import,5,6567.877
+H6,SGP,55,Singapore,HKG,"Hong Kong, China",2022,Export,6,310.069
+H6,SGP,55,Singapore,HKG,"Hong Kong, China",2022,Import,5,131.415
+H6,SGP,55,Singapore,HKG,"Hong Kong, China",2023,Export,6,474.928
+H6,SGP,55,Singapore,HKG,"Hong Kong, China",2023,Import,5,55.04
+H6,SGP,55,Singapore,IDN,Indonesia,2022,Export,6,10659.302
+H6,SGP,55,Singapore,IDN,Indonesia,2022,Import,5,133724.774
+H6,SGP,55,Singapore,IDN,Indonesia,2023,Export,6,14975.574
+H6,SGP,55,Singapore,IDN,Indonesia,2023,Import,5,67814.948
+H6,SGP,55,Singapore,JPN,Japan,2022,Export,6,0.725
+H6,SGP,55,Singapore,JPN,Japan,2022,Import,5,17679.566
+H6,SGP,55,Singapore,JPN,Japan,2023,Export,6,42.073
+H6,SGP,55,Singapore,JPN,Japan,2023,Import,5,18119.382
+H6,SGP,55,Singapore,KOR,"Korea, Rep.",2022,Export,6,301.903
+H6,SGP,55,Singapore,KOR,"Korea, Rep.",2022,Import,5,213.529
+H6,SGP,55,Singapore,KOR,"Korea, Rep.",2023,Export,6,24.763
+H6,SGP,55,Singapore,KOR,"Korea, Rep.",2023,Import,5,4273.622
+H6,SGP,55,Singapore,MYS,Malaysia,2022,Export,6,3074.457
+H6,SGP,55,Singapore,MYS,Malaysia,2022,Import,5,11746.93
+H6,SGP,55,Singapore,MYS,Malaysia,2023,Export,6,2764.634
+H6,SGP,55,Singapore,MYS,Malaysia,2023,Import,5,6415.884
+H6,SGP,55,Singapore,THA,Thailand,2022,Export,6,1379.991
+H6,SGP,55,Singapore,THA,Thailand,2022,Import,5,4196.811
+H6,SGP,55,Singapore,THA,Thailand,2023,Export,6,241.922
+H6,SGP,55,Singapore,THA,Thailand,2023,Import,5,3382.956
+H6,SGP,55,Singapore,USA,United States,2022,Export,6,618.21
+H6,SGP,55,Singapore,USA,United States,2022,Import,5,12051.241
+H6,SGP,55,Singapore,USA,United States,2023,Export,6,109.642
+H6,SGP,55,Singapore,USA,United States,2023,Import,5,11279.482
+H6,SGP,56,Singapore,CHN,China,2022,Export,6,1961.347
+H6,SGP,56,Singapore,CHN,China,2022,Import,5,29933.69
+H6,SGP,56,Singapore,CHN,China,2023,Export,6,858.582
+H6,SGP,56,Singapore,CHN,China,2023,Import,5,27495.589
+H6,SGP,56,Singapore,HKG,"Hong Kong, China",2022,Export,6,398.076
+H6,SGP,56,Singapore,HKG,"Hong Kong, China",2022,Import,5,372.556
+H6,SGP,56,Singapore,HKG,"Hong Kong, China",2023,Export,6,441.271
+H6,SGP,56,Singapore,HKG,"Hong Kong, China",2023,Import,5,126.699
+H6,SGP,56,Singapore,IDN,Indonesia,2022,Export,6,25880.732
+H6,SGP,56,Singapore,IDN,Indonesia,2022,Import,5,3257.329
+H6,SGP,56,Singapore,IDN,Indonesia,2023,Export,6,30482.25
+H6,SGP,56,Singapore,IDN,Indonesia,2023,Import,5,7901.95
+H6,SGP,56,Singapore,JPN,Japan,2022,Export,6,787.468
+H6,SGP,56,Singapore,JPN,Japan,2022,Import,5,7117.852
+H6,SGP,56,Singapore,JPN,Japan,2023,Export,6,616.397
+H6,SGP,56,Singapore,JPN,Japan,2023,Import,5,4702.81
+H6,SGP,56,Singapore,KOR,"Korea, Rep.",2022,Export,6,661.645
+H6,SGP,56,Singapore,KOR,"Korea, Rep.",2022,Import,5,15686.922
+H6,SGP,56,Singapore,KOR,"Korea, Rep.",2023,Export,6,1721.312
+H6,SGP,56,Singapore,KOR,"Korea, Rep.",2023,Import,5,9970.637
+H6,SGP,56,Singapore,MYS,Malaysia,2022,Export,6,4755.172
+H6,SGP,56,Singapore,MYS,Malaysia,2022,Import,5,12680.544
+H6,SGP,56,Singapore,MYS,Malaysia,2023,Export,6,4038.732
+H6,SGP,56,Singapore,MYS,Malaysia,2023,Import,5,10487.338
+H6,SGP,56,Singapore,SAU,Saudi Arabia,2022,Export,6,3.44
+H6,SGP,56,Singapore,SAU,Saudi Arabia,2022,Import,5,0.31
+H6,SGP,56,Singapore,SAU,Saudi Arabia,2023,Export,6,55.549
+H6,SGP,56,Singapore,SAU,Saudi Arabia,2023,Import,5,15.616
+H6,SGP,56,Singapore,THA,Thailand,2022,Export,6,978.722
+H6,SGP,56,Singapore,THA,Thailand,2022,Import,5,6764.654
+H6,SGP,56,Singapore,THA,Thailand,2023,Export,6,841.922
+H6,SGP,56,Singapore,THA,Thailand,2023,Import,5,7535.934
+H6,SGP,56,Singapore,USA,United States,2022,Export,6,466.969
+H6,SGP,56,Singapore,USA,United States,2022,Import,5,16005.607
+H6,SGP,56,Singapore,USA,United States,2023,Export,6,1672.287
+H6,SGP,56,Singapore,USA,United States,2023,Import,5,13156.641
+H6,SGP,57,Singapore,CHN,China,2022,Export,6,53.684
+H6,SGP,57,Singapore,CHN,China,2022,Import,5,25281.628
+H6,SGP,57,Singapore,CHN,China,2023,Export,6,165.212
+H6,SGP,57,Singapore,CHN,China,2023,Import,5,25860.784
+H6,SGP,57,Singapore,HKG,"Hong Kong, China",2022,Export,6,172.501
+H6,SGP,57,Singapore,HKG,"Hong Kong, China",2022,Import,5,75.579
+H6,SGP,57,Singapore,HKG,"Hong Kong, China",2023,Export,6,208.427
+H6,SGP,57,Singapore,HKG,"Hong Kong, China",2023,Import,5,1736.22
+H6,SGP,57,Singapore,IDN,Indonesia,2022,Export,6,2878.43
+H6,SGP,57,Singapore,IDN,Indonesia,2022,Import,5,245.838
+H6,SGP,57,Singapore,IDN,Indonesia,2023,Export,6,3238.811
+H6,SGP,57,Singapore,IDN,Indonesia,2023,Import,5,189.487
+H6,SGP,57,Singapore,JPN,Japan,2022,Export,6,238.234
+H6,SGP,57,Singapore,JPN,Japan,2022,Import,5,239.216
+H6,SGP,57,Singapore,JPN,Japan,2023,Export,6,258.593
+H6,SGP,57,Singapore,JPN,Japan,2023,Import,5,194.564
+H6,SGP,57,Singapore,KOR,"Korea, Rep.",2022,Export,6,70.264
+H6,SGP,57,Singapore,KOR,"Korea, Rep.",2022,Import,5,264.258
+H6,SGP,57,Singapore,KOR,"Korea, Rep.",2023,Export,6,55.74
+H6,SGP,57,Singapore,KOR,"Korea, Rep.",2023,Import,5,105.627
+H6,SGP,57,Singapore,MYS,Malaysia,2022,Export,6,1041.868
+H6,SGP,57,Singapore,MYS,Malaysia,2022,Import,5,1832.441
+H6,SGP,57,Singapore,MYS,Malaysia,2023,Export,6,1383.533
+H6,SGP,57,Singapore,MYS,Malaysia,2023,Import,5,1485.61
+H6,SGP,57,Singapore,SAU,Saudi Arabia,2022,Export,6,77.643
+H6,SGP,57,Singapore,SAU,Saudi Arabia,2022,Import,5,10.742
+H6,SGP,57,Singapore,SAU,Saudi Arabia,2023,Export,6,198.896
+H6,SGP,57,Singapore,SAU,Saudi Arabia,2023,Import,5,19.281
+H6,SGP,57,Singapore,THA,Thailand,2022,Export,6,163.3
+H6,SGP,57,Singapore,THA,Thailand,2022,Import,5,5289.892
+H6,SGP,57,Singapore,THA,Thailand,2023,Export,6,205.555
+H6,SGP,57,Singapore,THA,Thailand,2023,Import,5,2241.698
+H6,SGP,57,Singapore,USA,United States,2022,Export,6,27.16
+H6,SGP,57,Singapore,USA,United States,2022,Import,5,1667.984
+H6,SGP,57,Singapore,USA,United States,2023,Export,6,409.781
+H6,SGP,57,Singapore,USA,United States,2023,Import,5,2154.992
+H6,SGP,58,Singapore,CHN,China,2022,Export,6,742.747
+H6,SGP,58,Singapore,CHN,China,2022,Import,5,8544.115
+H6,SGP,58,Singapore,CHN,China,2023,Export,6,957.785
+H6,SGP,58,Singapore,CHN,China,2023,Import,5,12484.243
+H6,SGP,58,Singapore,HKG,"Hong Kong, China",2022,Export,6,333.05
+H6,SGP,58,Singapore,HKG,"Hong Kong, China",2022,Import,5,1073.565
+H6,SGP,58,Singapore,HKG,"Hong Kong, China",2023,Export,6,515.925
+H6,SGP,58,Singapore,HKG,"Hong Kong, China",2023,Import,5,582.927
+H6,SGP,58,Singapore,IDN,Indonesia,2022,Export,6,6239.274
+H6,SGP,58,Singapore,IDN,Indonesia,2022,Import,5,243.915
+H6,SGP,58,Singapore,IDN,Indonesia,2023,Export,6,6545.601
+H6,SGP,58,Singapore,IDN,Indonesia,2023,Import,5,335.668
+H6,SGP,58,Singapore,JPN,Japan,2022,Export,6,537.235
+H6,SGP,58,Singapore,JPN,Japan,2022,Import,5,495.491
+H6,SGP,58,Singapore,JPN,Japan,2023,Export,6,955.454
+H6,SGP,58,Singapore,JPN,Japan,2023,Import,5,473.992
+H6,SGP,58,Singapore,KOR,"Korea, Rep.",2022,Export,6,340.553
+H6,SGP,58,Singapore,KOR,"Korea, Rep.",2022,Import,5,903.724
+H6,SGP,58,Singapore,KOR,"Korea, Rep.",2023,Export,6,377.211
+H6,SGP,58,Singapore,KOR,"Korea, Rep.",2023,Import,5,984.426
+H6,SGP,58,Singapore,MYS,Malaysia,2022,Export,6,2729.402
+H6,SGP,58,Singapore,MYS,Malaysia,2022,Import,5,4363.608
+H6,SGP,58,Singapore,MYS,Malaysia,2023,Export,6,2667.123
+H6,SGP,58,Singapore,MYS,Malaysia,2023,Import,5,2940.419
+H6,SGP,58,Singapore,SAU,Saudi Arabia,2022,Export,6,9.774
+H6,SGP,58,Singapore,SAU,Saudi Arabia,2023,Export,6,13.483
+H6,SGP,58,Singapore,THA,Thailand,2022,Export,6,633.851
+H6,SGP,58,Singapore,THA,Thailand,2022,Import,5,117.62
+H6,SGP,58,Singapore,THA,Thailand,2023,Export,6,1297.795
+H6,SGP,58,Singapore,THA,Thailand,2023,Import,5,130.762
+H6,SGP,58,Singapore,USA,United States,2022,Export,6,156.201
+H6,SGP,58,Singapore,USA,United States,2022,Import,5,4594.535
+H6,SGP,58,Singapore,USA,United States,2023,Export,6,245.718
+H6,SGP,58,Singapore,USA,United States,2023,Import,5,30162.583
+H6,SGP,59,Singapore,CHN,China,2022,Export,6,7141.75
+H6,SGP,59,Singapore,CHN,China,2022,Import,5,23277.579
+H6,SGP,59,Singapore,CHN,China,2023,Export,6,7229.086
+H6,SGP,59,Singapore,CHN,China,2023,Import,5,25107.491
+H6,SGP,59,Singapore,HKG,"Hong Kong, China",2022,Export,6,1032.878
+H6,SGP,59,Singapore,HKG,"Hong Kong, China",2022,Import,5,236.214
+H6,SGP,59,Singapore,HKG,"Hong Kong, China",2023,Export,6,1586.672
+H6,SGP,59,Singapore,HKG,"Hong Kong, China",2023,Import,5,326.602
+H6,SGP,59,Singapore,IDN,Indonesia,2022,Export,6,29876.644
+H6,SGP,59,Singapore,IDN,Indonesia,2022,Import,5,1639.971
+H6,SGP,59,Singapore,IDN,Indonesia,2023,Export,6,36397.072
+H6,SGP,59,Singapore,IDN,Indonesia,2023,Import,5,1471.796
+H6,SGP,59,Singapore,JPN,Japan,2022,Export,6,819.445
+H6,SGP,59,Singapore,JPN,Japan,2022,Import,5,20881.58
+H6,SGP,59,Singapore,JPN,Japan,2023,Export,6,1267.064
+H6,SGP,59,Singapore,JPN,Japan,2023,Import,5,9902.347
+H6,SGP,59,Singapore,KOR,"Korea, Rep.",2022,Export,6,458.074
+H6,SGP,59,Singapore,KOR,"Korea, Rep.",2022,Import,5,5662.092
+H6,SGP,59,Singapore,KOR,"Korea, Rep.",2023,Export,6,653.283
+H6,SGP,59,Singapore,KOR,"Korea, Rep.",2023,Import,5,4077.25
+H6,SGP,59,Singapore,MYS,Malaysia,2022,Export,6,12360.313
+H6,SGP,59,Singapore,MYS,Malaysia,2022,Import,5,10565.526
+H6,SGP,59,Singapore,MYS,Malaysia,2023,Export,6,10948.685
+H6,SGP,59,Singapore,MYS,Malaysia,2023,Import,5,9035.513
+H6,SGP,59,Singapore,SAU,Saudi Arabia,2022,Export,6,17.644
+H6,SGP,59,Singapore,SAU,Saudi Arabia,2022,Import,5,13.298
+H6,SGP,59,Singapore,SAU,Saudi Arabia,2023,Export,6,128.96
+H6,SGP,59,Singapore,SAU,Saudi Arabia,2023,Import,5,54.378
+H6,SGP,59,Singapore,THA,Thailand,2022,Export,6,6813.057
+H6,SGP,59,Singapore,THA,Thailand,2022,Import,5,2951.716
+H6,SGP,59,Singapore,THA,Thailand,2023,Export,6,5953.383
+H6,SGP,59,Singapore,THA,Thailand,2023,Import,5,4144.93
+H6,SGP,59,Singapore,USA,United States,2022,Export,6,7019.258
+H6,SGP,59,Singapore,USA,United States,2022,Import,5,19882.58
+H6,SGP,59,Singapore,USA,United States,2023,Export,6,6111.839
+H6,SGP,59,Singapore,USA,United States,2023,Import,5,8664.837
+H6,SGP,60,Singapore,CHN,China,2022,Export,6,77.357
+H6,SGP,60,Singapore,CHN,China,2022,Import,5,18187.784
+H6,SGP,60,Singapore,CHN,China,2023,Export,6,39.841
+H6,SGP,60,Singapore,CHN,China,2023,Import,5,10869.626
+H6,SGP,60,Singapore,HKG,"Hong Kong, China",2022,Export,6,4.074
+H6,SGP,60,Singapore,HKG,"Hong Kong, China",2022,Import,5,1503.617
+H6,SGP,60,Singapore,HKG,"Hong Kong, China",2023,Export,6,17.948
+H6,SGP,60,Singapore,HKG,"Hong Kong, China",2023,Import,5,659.129
+H6,SGP,60,Singapore,IDN,Indonesia,2022,Export,6,68389.466
+H6,SGP,60,Singapore,IDN,Indonesia,2022,Import,5,1937.287
+H6,SGP,60,Singapore,IDN,Indonesia,2023,Export,6,34121.969
+H6,SGP,60,Singapore,IDN,Indonesia,2023,Import,5,1969.353
+H6,SGP,60,Singapore,JPN,Japan,2022,Export,6,3.186
+H6,SGP,60,Singapore,JPN,Japan,2022,Import,5,134.196
+H6,SGP,60,Singapore,JPN,Japan,2023,Export,6,30.71
+H6,SGP,60,Singapore,JPN,Japan,2023,Import,5,234.258
+H6,SGP,60,Singapore,KOR,"Korea, Rep.",2022,Export,6,38.418
+H6,SGP,60,Singapore,KOR,"Korea, Rep.",2022,Import,5,3201.573
+H6,SGP,60,Singapore,KOR,"Korea, Rep.",2023,Export,6,5.891
+H6,SGP,60,Singapore,KOR,"Korea, Rep.",2023,Import,5,2310.434
+H6,SGP,60,Singapore,MYS,Malaysia,2022,Export,6,1447.958
+H6,SGP,60,Singapore,MYS,Malaysia,2022,Import,5,45651.858
+H6,SGP,60,Singapore,MYS,Malaysia,2023,Export,6,769.5
+H6,SGP,60,Singapore,MYS,Malaysia,2023,Import,5,61889.979
+H6,SGP,60,Singapore,THA,Thailand,2022,Export,6,189.004
+H6,SGP,60,Singapore,THA,Thailand,2022,Import,5,188.353
+H6,SGP,60,Singapore,THA,Thailand,2023,Export,6,22.624
+H6,SGP,60,Singapore,THA,Thailand,2023,Import,5,164.181
+H6,SGP,60,Singapore,USA,United States,2022,Export,6,78.899
+H6,SGP,60,Singapore,USA,United States,2022,Import,5,387.912
+H6,SGP,60,Singapore,USA,United States,2023,Export,6,4.629
+H6,SGP,60,Singapore,USA,United States,2023,Import,5,365.312
+H6,SGP,61,Singapore,CHN,China,2022,Export,6,13145.449
+H6,SGP,61,Singapore,CHN,China,2022,Import,5,343645.212
+H6,SGP,61,Singapore,CHN,China,2023,Export,6,11668.339
+H6,SGP,61,Singapore,CHN,China,2023,Import,5,340469.873
+H6,SGP,61,Singapore,HKG,"Hong Kong, China",2022,Export,6,28358.692
+H6,SGP,61,Singapore,HKG,"Hong Kong, China",2022,Import,5,7443.453
+H6,SGP,61,Singapore,HKG,"Hong Kong, China",2023,Export,6,30820.359
+H6,SGP,61,Singapore,HKG,"Hong Kong, China",2023,Import,5,8955.84
+H6,SGP,61,Singapore,IDN,Indonesia,2022,Export,6,86555.227
+H6,SGP,61,Singapore,IDN,Indonesia,2022,Import,5,174834.225
+H6,SGP,61,Singapore,IDN,Indonesia,2023,Export,6,108701.156
+H6,SGP,61,Singapore,IDN,Indonesia,2023,Import,5,103434.407
+H6,SGP,61,Singapore,JPN,Japan,2022,Export,6,51934.628
+H6,SGP,61,Singapore,JPN,Japan,2022,Import,5,12876.228
+H6,SGP,61,Singapore,JPN,Japan,2023,Export,6,59463.488
+H6,SGP,61,Singapore,JPN,Japan,2023,Import,5,14079.525
+H6,SGP,61,Singapore,KOR,"Korea, Rep.",2022,Export,6,12325.033
+H6,SGP,61,Singapore,KOR,"Korea, Rep.",2022,Import,5,7791.61
+H6,SGP,61,Singapore,KOR,"Korea, Rep.",2023,Export,6,11834.389
+H6,SGP,61,Singapore,KOR,"Korea, Rep.",2023,Import,5,9603.004
+H6,SGP,61,Singapore,MYS,Malaysia,2022,Export,6,62672.133
+H6,SGP,61,Singapore,MYS,Malaysia,2022,Import,5,63458.329
+H6,SGP,61,Singapore,MYS,Malaysia,2023,Export,6,60651.373
+H6,SGP,61,Singapore,MYS,Malaysia,2023,Import,5,49245.534
+H6,SGP,61,Singapore,SAU,Saudi Arabia,2022,Export,6,1472.4
+H6,SGP,61,Singapore,SAU,Saudi Arabia,2022,Import,5,3.012
+H6,SGP,61,Singapore,SAU,Saudi Arabia,2023,Export,6,8129.481
+H6,SGP,61,Singapore,SAU,Saudi Arabia,2023,Import,5,6.479
+H6,SGP,61,Singapore,THA,Thailand,2022,Export,6,23163.804
+H6,SGP,61,Singapore,THA,Thailand,2022,Import,5,19693.173
+H6,SGP,61,Singapore,THA,Thailand,2023,Export,6,54083.904
+H6,SGP,61,Singapore,THA,Thailand,2023,Import,5,29155.544
+H6,SGP,61,Singapore,USA,United States,2022,Export,6,107340.931
+H6,SGP,61,Singapore,USA,United States,2022,Import,5,16590.795
+H6,SGP,61,Singapore,USA,United States,2023,Export,6,55417.252
+H6,SGP,61,Singapore,USA,United States,2023,Import,5,19573.913
+H6,SGP,62,Singapore,CHN,China,2022,Export,6,6237.46
+H6,SGP,62,Singapore,CHN,China,2022,Import,5,280257.942
+H6,SGP,62,Singapore,CHN,China,2023,Export,6,6526.289
+H6,SGP,62,Singapore,CHN,China,2023,Import,5,251727.196
+H6,SGP,62,Singapore,HKG,"Hong Kong, China",2022,Export,6,22791.991
+H6,SGP,62,Singapore,HKG,"Hong Kong, China",2022,Import,5,6859.979
+H6,SGP,62,Singapore,HKG,"Hong Kong, China",2023,Export,6,27384.226
+H6,SGP,62,Singapore,HKG,"Hong Kong, China",2023,Import,5,6912.944
+H6,SGP,62,Singapore,IDN,Indonesia,2022,Export,6,51577.433
+H6,SGP,62,Singapore,IDN,Indonesia,2022,Import,5,44101.236
+H6,SGP,62,Singapore,IDN,Indonesia,2023,Export,6,53302.241
+H6,SGP,62,Singapore,IDN,Indonesia,2023,Import,5,36548.218
+H6,SGP,62,Singapore,JPN,Japan,2022,Export,6,94552.4
+H6,SGP,62,Singapore,JPN,Japan,2022,Import,5,9077.761
+H6,SGP,62,Singapore,JPN,Japan,2023,Export,6,116948.136
+H6,SGP,62,Singapore,JPN,Japan,2023,Import,5,10867.37
+H6,SGP,62,Singapore,KOR,"Korea, Rep.",2022,Export,6,10377.572
+H6,SGP,62,Singapore,KOR,"Korea, Rep.",2022,Import,5,3193.564
+H6,SGP,62,Singapore,KOR,"Korea, Rep.",2023,Export,6,7162.203
+H6,SGP,62,Singapore,KOR,"Korea, Rep.",2023,Import,5,5392.931
+H6,SGP,62,Singapore,MYS,Malaysia,2022,Export,6,103744.869
+H6,SGP,62,Singapore,MYS,Malaysia,2022,Import,5,33028.367
+H6,SGP,62,Singapore,MYS,Malaysia,2023,Export,6,101722.346
+H6,SGP,62,Singapore,MYS,Malaysia,2023,Import,5,71463.435
+H6,SGP,62,Singapore,SAU,Saudi Arabia,2022,Export,6,1742.291
+H6,SGP,62,Singapore,SAU,Saudi Arabia,2022,Import,5,20.747
+H6,SGP,62,Singapore,SAU,Saudi Arabia,2023,Export,6,9414.162
+H6,SGP,62,Singapore,SAU,Saudi Arabia,2023,Import,5,21.05
+H6,SGP,62,Singapore,THA,Thailand,2022,Export,6,29680.562
+H6,SGP,62,Singapore,THA,Thailand,2022,Import,5,11380.827
+H6,SGP,62,Singapore,THA,Thailand,2023,Export,6,41854.621
+H6,SGP,62,Singapore,THA,Thailand,2023,Import,5,9690.438
+H6,SGP,62,Singapore,USA,United States,2022,Export,6,6946.46
+H6,SGP,62,Singapore,USA,United States,2022,Import,5,10669.109
+H6,SGP,62,Singapore,USA,United States,2023,Export,6,5587.444
+H6,SGP,62,Singapore,USA,United States,2023,Import,5,16044.877
+H6,SGP,63,Singapore,CHN,China,2022,Export,6,10918.526
+H6,SGP,63,Singapore,CHN,China,2022,Import,5,142185.232
+H6,SGP,63,Singapore,CHN,China,2023,Export,6,16876.897
+H6,SGP,63,Singapore,CHN,China,2023,Import,5,118294.04
+H6,SGP,63,Singapore,HKG,"Hong Kong, China",2022,Export,6,23507.489
+H6,SGP,63,Singapore,HKG,"Hong Kong, China",2022,Import,5,2394.057
+H6,SGP,63,Singapore,HKG,"Hong Kong, China",2023,Export,6,5581.427
+H6,SGP,63,Singapore,HKG,"Hong Kong, China",2023,Import,5,1152.733
+H6,SGP,63,Singapore,IDN,Indonesia,2022,Export,6,18398.175
+H6,SGP,63,Singapore,IDN,Indonesia,2022,Import,5,4198.739
+H6,SGP,63,Singapore,IDN,Indonesia,2023,Export,6,20606.537
+H6,SGP,63,Singapore,IDN,Indonesia,2023,Import,5,3018.591
+H6,SGP,63,Singapore,JPN,Japan,2022,Export,6,17567.634
+H6,SGP,63,Singapore,JPN,Japan,2022,Import,5,5030.922
+H6,SGP,63,Singapore,JPN,Japan,2023,Export,6,12292.783
+H6,SGP,63,Singapore,JPN,Japan,2023,Import,5,4832.253
+H6,SGP,63,Singapore,KOR,"Korea, Rep.",2022,Export,6,5371.961
+H6,SGP,63,Singapore,KOR,"Korea, Rep.",2022,Import,5,8478.773
+H6,SGP,63,Singapore,KOR,"Korea, Rep.",2023,Export,6,4317.024
+H6,SGP,63,Singapore,KOR,"Korea, Rep.",2023,Import,5,5485.08
+H6,SGP,63,Singapore,MYS,Malaysia,2022,Export,6,25030.075
+H6,SGP,63,Singapore,MYS,Malaysia,2022,Import,5,16985.485
+H6,SGP,63,Singapore,MYS,Malaysia,2023,Export,6,14265.773
+H6,SGP,63,Singapore,MYS,Malaysia,2023,Import,5,17386.135
+H6,SGP,63,Singapore,SAU,Saudi Arabia,2022,Export,6,717.935
+H6,SGP,63,Singapore,SAU,Saudi Arabia,2022,Import,5,1.394
+H6,SGP,63,Singapore,SAU,Saudi Arabia,2023,Export,6,361.964
+H6,SGP,63,Singapore,SAU,Saudi Arabia,2023,Import,5,0.789
+H6,SGP,63,Singapore,THA,Thailand,2022,Export,6,11337.999
+H6,SGP,63,Singapore,THA,Thailand,2022,Import,5,2293.612
+H6,SGP,63,Singapore,THA,Thailand,2023,Export,6,6805.402
+H6,SGP,63,Singapore,THA,Thailand,2023,Import,5,1837.148
+H6,SGP,63,Singapore,USA,United States,2022,Export,6,4506.274
+H6,SGP,63,Singapore,USA,United States,2022,Import,5,29959.534
+H6,SGP,63,Singapore,USA,United States,2023,Export,6,4836.648
+H6,SGP,63,Singapore,USA,United States,2023,Import,5,29403.113
+H6,SGP,64,Singapore,CHN,China,2022,Export,6,4572.251
+H6,SGP,64,Singapore,CHN,China,2022,Import,5,295867.608
+H6,SGP,64,Singapore,CHN,China,2023,Export,6,3583.041
+H6,SGP,64,Singapore,CHN,China,2023,Import,5,257422.214
+H6,SGP,64,Singapore,HKG,"Hong Kong, China",2022,Export,6,26410.344
+H6,SGP,64,Singapore,HKG,"Hong Kong, China",2022,Import,5,6531.949
+H6,SGP,64,Singapore,HKG,"Hong Kong, China",2023,Export,6,18578.813
+H6,SGP,64,Singapore,HKG,"Hong Kong, China",2023,Import,5,4990.784
+H6,SGP,64,Singapore,IDN,Indonesia,2022,Export,6,65942.444
+H6,SGP,64,Singapore,IDN,Indonesia,2022,Import,5,54207.893
+H6,SGP,64,Singapore,IDN,Indonesia,2023,Export,6,72877.523
+H6,SGP,64,Singapore,IDN,Indonesia,2023,Import,5,65996.279
+H6,SGP,64,Singapore,JPN,Japan,2022,Export,6,71063.775
+H6,SGP,64,Singapore,JPN,Japan,2022,Import,5,3468.051
+H6,SGP,64,Singapore,JPN,Japan,2023,Export,6,76665.345
+H6,SGP,64,Singapore,JPN,Japan,2023,Import,5,4863.43
+H6,SGP,64,Singapore,KOR,"Korea, Rep.",2022,Export,6,7071.377
+H6,SGP,64,Singapore,KOR,"Korea, Rep.",2022,Import,5,1357.877
+H6,SGP,64,Singapore,KOR,"Korea, Rep.",2023,Export,6,9292.846
+H6,SGP,64,Singapore,KOR,"Korea, Rep.",2023,Import,5,1705.638
+H6,SGP,64,Singapore,MYS,Malaysia,2022,Export,6,118946.029
+H6,SGP,64,Singapore,MYS,Malaysia,2022,Import,5,18750.039
+H6,SGP,64,Singapore,MYS,Malaysia,2023,Export,6,128070.939
+H6,SGP,64,Singapore,MYS,Malaysia,2023,Import,5,23561.707
+H6,SGP,64,Singapore,SAU,Saudi Arabia,2022,Export,6,1218.205
+H6,SGP,64,Singapore,SAU,Saudi Arabia,2022,Import,5,10.644
+H6,SGP,64,Singapore,SAU,Saudi Arabia,2023,Export,6,2040.009
+H6,SGP,64,Singapore,SAU,Saudi Arabia,2023,Import,5,4.796
+H6,SGP,64,Singapore,THA,Thailand,2022,Export,6,59724.138
+H6,SGP,64,Singapore,THA,Thailand,2022,Import,5,3490.816
+H6,SGP,64,Singapore,THA,Thailand,2023,Export,6,73422.701
+H6,SGP,64,Singapore,THA,Thailand,2023,Import,5,5936.878
+H6,SGP,64,Singapore,USA,United States,2022,Export,6,29333.313
+H6,SGP,64,Singapore,USA,United States,2022,Import,5,12903.127
+H6,SGP,64,Singapore,USA,United States,2023,Export,6,23433.477
+H6,SGP,64,Singapore,USA,United States,2023,Import,5,17079.075
+H6,SGP,65,Singapore,CHN,China,2022,Export,6,1101.979
+H6,SGP,65,Singapore,CHN,China,2022,Import,5,28681.13
+H6,SGP,65,Singapore,CHN,China,2023,Export,6,645.294
+H6,SGP,65,Singapore,CHN,China,2023,Import,5,23775.763
+H6,SGP,65,Singapore,HKG,"Hong Kong, China",2022,Export,6,2237.326
+H6,SGP,65,Singapore,HKG,"Hong Kong, China",2022,Import,5,507.871
+H6,SGP,65,Singapore,HKG,"Hong Kong, China",2023,Export,6,1037.954
+H6,SGP,65,Singapore,HKG,"Hong Kong, China",2023,Import,5,511.574
+H6,SGP,65,Singapore,IDN,Indonesia,2022,Export,6,6188.2
+H6,SGP,65,Singapore,IDN,Indonesia,2022,Import,5,2436.669
+H6,SGP,65,Singapore,IDN,Indonesia,2023,Export,6,7105.449
+H6,SGP,65,Singapore,IDN,Indonesia,2023,Import,5,1766.618
+H6,SGP,65,Singapore,JPN,Japan,2022,Export,6,7626.22
+H6,SGP,65,Singapore,JPN,Japan,2022,Import,5,2243.267
+H6,SGP,65,Singapore,JPN,Japan,2023,Export,6,9072.233
+H6,SGP,65,Singapore,JPN,Japan,2023,Import,5,2359.129
+H6,SGP,65,Singapore,KOR,"Korea, Rep.",2022,Export,6,1135.702
+H6,SGP,65,Singapore,KOR,"Korea, Rep.",2022,Import,5,662.934
+H6,SGP,65,Singapore,KOR,"Korea, Rep.",2023,Export,6,1475.313
+H6,SGP,65,Singapore,KOR,"Korea, Rep.",2023,Import,5,1063.016
+H6,SGP,65,Singapore,MYS,Malaysia,2022,Export,6,4301.098
+H6,SGP,65,Singapore,MYS,Malaysia,2022,Import,5,40127.489
+H6,SGP,65,Singapore,MYS,Malaysia,2023,Export,6,4371.671
+H6,SGP,65,Singapore,MYS,Malaysia,2023,Import,5,37868.72
+H6,SGP,65,Singapore,SAU,Saudi Arabia,2022,Export,6,57.001
+H6,SGP,65,Singapore,SAU,Saudi Arabia,2023,Export,6,67.714
+H6,SGP,65,Singapore,THA,Thailand,2022,Export,6,1998.981
+H6,SGP,65,Singapore,THA,Thailand,2022,Import,5,997.831
+H6,SGP,65,Singapore,THA,Thailand,2023,Export,6,2937.036
+H6,SGP,65,Singapore,THA,Thailand,2023,Import,5,628.244
+H6,SGP,65,Singapore,USA,United States,2022,Export,6,3525.986
+H6,SGP,65,Singapore,USA,United States,2022,Import,5,2617.167
+H6,SGP,65,Singapore,USA,United States,2023,Export,6,800.032
+H6,SGP,65,Singapore,USA,United States,2023,Import,5,2841.083
+H6,SGP,66,Singapore,CHN,China,2022,Export,6,2.841
+H6,SGP,66,Singapore,CHN,China,2022,Import,5,7376.844
+H6,SGP,66,Singapore,CHN,China,2023,Export,6,18.649
+H6,SGP,66,Singapore,CHN,China,2023,Import,5,9084.006
+H6,SGP,66,Singapore,HKG,"Hong Kong, China",2022,Export,6,159.403
+H6,SGP,66,Singapore,HKG,"Hong Kong, China",2022,Import,5,37.448
+H6,SGP,66,Singapore,HKG,"Hong Kong, China",2023,Export,6,39.572
+H6,SGP,66,Singapore,HKG,"Hong Kong, China",2023,Import,5,74.057
+H6,SGP,66,Singapore,IDN,Indonesia,2022,Export,6,157.528
+H6,SGP,66,Singapore,IDN,Indonesia,2022,Import,5,4
+H6,SGP,66,Singapore,IDN,Indonesia,2023,Export,6,177.72
+H6,SGP,66,Singapore,IDN,Indonesia,2023,Import,5,2.995
+H6,SGP,66,Singapore,JPN,Japan,2022,Export,6,39.495
+H6,SGP,66,Singapore,JPN,Japan,2022,Import,5,342.958
+H6,SGP,66,Singapore,JPN,Japan,2023,Export,6,17.14
+H6,SGP,66,Singapore,JPN,Japan,2023,Import,5,124.593
+H6,SGP,66,Singapore,KOR,"Korea, Rep.",2022,Export,6,1.205
+H6,SGP,66,Singapore,KOR,"Korea, Rep.",2022,Import,5,27.301
+H6,SGP,66,Singapore,KOR,"Korea, Rep.",2023,Export,6,11.533
+H6,SGP,66,Singapore,KOR,"Korea, Rep.",2023,Import,5,136.935
+H6,SGP,66,Singapore,MYS,Malaysia,2022,Export,6,96.314
+H6,SGP,66,Singapore,MYS,Malaysia,2022,Import,5,684.11
+H6,SGP,66,Singapore,MYS,Malaysia,2023,Export,6,134.161
+H6,SGP,66,Singapore,MYS,Malaysia,2023,Import,5,411.709
+H6,SGP,66,Singapore,THA,Thailand,2022,Export,6,50.003
+H6,SGP,66,Singapore,THA,Thailand,2022,Import,5,23.787
+H6,SGP,66,Singapore,THA,Thailand,2023,Export,6,50.041
+H6,SGP,66,Singapore,THA,Thailand,2023,Import,5,33.21
+H6,SGP,66,Singapore,USA,United States,2022,Export,6,11.294
+H6,SGP,66,Singapore,USA,United States,2022,Import,5,106.919
+H6,SGP,66,Singapore,USA,United States,2023,Export,6,5.804
+H6,SGP,66,Singapore,USA,United States,2023,Import,5,250.957
+H6,SGP,67,Singapore,CHN,China,2022,Export,6,280.916
+H6,SGP,67,Singapore,CHN,China,2022,Import,5,6866.371
+H6,SGP,67,Singapore,CHN,China,2023,Export,6,125.201
+H6,SGP,67,Singapore,CHN,China,2023,Import,5,6259.712
+H6,SGP,67,Singapore,HKG,"Hong Kong, China",2022,Export,6,27.107
+H6,SGP,67,Singapore,HKG,"Hong Kong, China",2022,Import,5,128.778
+H6,SGP,67,Singapore,HKG,"Hong Kong, China",2023,Export,6,122.003
+H6,SGP,67,Singapore,HKG,"Hong Kong, China",2023,Import,5,22.268
+H6,SGP,67,Singapore,IDN,Indonesia,2022,Export,6,1228.205
+H6,SGP,67,Singapore,IDN,Indonesia,2022,Import,5,331.565
+H6,SGP,67,Singapore,IDN,Indonesia,2023,Export,6,1388.803
+H6,SGP,67,Singapore,IDN,Indonesia,2023,Import,5,308.55
+H6,SGP,67,Singapore,JPN,Japan,2022,Export,6,149.864
+H6,SGP,67,Singapore,JPN,Japan,2022,Import,5,137.632
+H6,SGP,67,Singapore,JPN,Japan,2023,Export,6,153.758
+H6,SGP,67,Singapore,JPN,Japan,2023,Import,5,101.602
+H6,SGP,67,Singapore,KOR,"Korea, Rep.",2022,Export,6,7.086
+H6,SGP,67,Singapore,KOR,"Korea, Rep.",2022,Import,5,77.274
+H6,SGP,67,Singapore,KOR,"Korea, Rep.",2023,Export,6,14.872
+H6,SGP,67,Singapore,KOR,"Korea, Rep.",2023,Import,5,38.98
+H6,SGP,67,Singapore,MYS,Malaysia,2022,Export,6,211.427
+H6,SGP,67,Singapore,MYS,Malaysia,2022,Import,5,183.207
+H6,SGP,67,Singapore,MYS,Malaysia,2023,Export,6,51.24
+H6,SGP,67,Singapore,MYS,Malaysia,2023,Import,5,92.91
+H6,SGP,67,Singapore,SAU,Saudi Arabia,2023,Import,5,0.052
+H6,SGP,67,Singapore,THA,Thailand,2022,Export,6,9.426
+H6,SGP,67,Singapore,THA,Thailand,2022,Import,5,189.125
+H6,SGP,67,Singapore,THA,Thailand,2023,Export,6,21.751
+H6,SGP,67,Singapore,THA,Thailand,2023,Import,5,135.27
+H6,SGP,67,Singapore,USA,United States,2022,Export,6,1587.313
+H6,SGP,67,Singapore,USA,United States,2022,Import,5,551.809
+H6,SGP,67,Singapore,USA,United States,2023,Export,6,868.436
+H6,SGP,67,Singapore,USA,United States,2023,Import,5,364.287
+H6,SGP,68,Singapore,CHN,China,2022,Export,6,14089.325
+H6,SGP,68,Singapore,CHN,China,2022,Import,5,83307.637
+H6,SGP,68,Singapore,CHN,China,2023,Export,6,11015.395
+H6,SGP,68,Singapore,CHN,China,2023,Import,5,104146.847
+H6,SGP,68,Singapore,HKG,"Hong Kong, China",2022,Export,6,2277.495
+H6,SGP,68,Singapore,HKG,"Hong Kong, China",2022,Import,5,321.686
+H6,SGP,68,Singapore,HKG,"Hong Kong, China",2023,Export,6,2597.468
+H6,SGP,68,Singapore,HKG,"Hong Kong, China",2023,Import,5,813.918
+H6,SGP,68,Singapore,IDN,Indonesia,2022,Export,6,19285.173
+H6,SGP,68,Singapore,IDN,Indonesia,2022,Import,5,5404.062
+H6,SGP,68,Singapore,IDN,Indonesia,2023,Export,6,25197.107
+H6,SGP,68,Singapore,IDN,Indonesia,2023,Import,5,11369.284
+H6,SGP,68,Singapore,JPN,Japan,2022,Export,6,6262.687
+H6,SGP,68,Singapore,JPN,Japan,2022,Import,5,34230.665
+H6,SGP,68,Singapore,JPN,Japan,2023,Export,6,8703.86
+H6,SGP,68,Singapore,JPN,Japan,2023,Import,5,28168.81
+H6,SGP,68,Singapore,KOR,"Korea, Rep.",2022,Export,6,4207.292
+H6,SGP,68,Singapore,KOR,"Korea, Rep.",2022,Import,5,6601.778
+H6,SGP,68,Singapore,KOR,"Korea, Rep.",2023,Export,6,4636.549
+H6,SGP,68,Singapore,KOR,"Korea, Rep.",2023,Import,5,6837.519
+H6,SGP,68,Singapore,MYS,Malaysia,2022,Export,6,28392.973
+H6,SGP,68,Singapore,MYS,Malaysia,2022,Import,5,556332.851
+H6,SGP,68,Singapore,MYS,Malaysia,2023,Export,6,24889.046
+H6,SGP,68,Singapore,MYS,Malaysia,2023,Import,5,713056.868
+H6,SGP,68,Singapore,SAU,Saudi Arabia,2022,Export,6,107.885
+H6,SGP,68,Singapore,SAU,Saudi Arabia,2022,Import,5,206.98
+H6,SGP,68,Singapore,SAU,Saudi Arabia,2023,Export,6,258.12
+H6,SGP,68,Singapore,SAU,Saudi Arabia,2023,Import,5,82.642
+H6,SGP,68,Singapore,THA,Thailand,2022,Export,6,7800.007
+H6,SGP,68,Singapore,THA,Thailand,2022,Import,5,11306.796
+H6,SGP,68,Singapore,THA,Thailand,2023,Export,6,6030.163
+H6,SGP,68,Singapore,THA,Thailand,2023,Import,5,17984.356
+H6,SGP,68,Singapore,USA,United States,2022,Export,6,3147.329
+H6,SGP,68,Singapore,USA,United States,2022,Import,5,39271.411
+H6,SGP,68,Singapore,USA,United States,2023,Export,6,5002.439
+H6,SGP,68,Singapore,USA,United States,2023,Import,5,39659.082
+H6,SGP,69,Singapore,CHN,China,2022,Export,6,9332.965
+H6,SGP,69,Singapore,CHN,China,2022,Import,5,160395.244
+H6,SGP,69,Singapore,CHN,China,2023,Export,6,4960.908
+H6,SGP,69,Singapore,CHN,China,2023,Import,5,145593.225
+H6,SGP,69,Singapore,HKG,"Hong Kong, China",2022,Export,6,2864.009
+H6,SGP,69,Singapore,HKG,"Hong Kong, China",2022,Import,5,2209.199
+H6,SGP,69,Singapore,HKG,"Hong Kong, China",2023,Export,6,4882.237
+H6,SGP,69,Singapore,HKG,"Hong Kong, China",2023,Import,5,2010.561
+H6,SGP,69,Singapore,IDN,Indonesia,2022,Export,6,9688.308
+H6,SGP,69,Singapore,IDN,Indonesia,2022,Import,5,4352.457
+H6,SGP,69,Singapore,IDN,Indonesia,2023,Export,6,11219.608
+H6,SGP,69,Singapore,IDN,Indonesia,2023,Import,5,4815.639
+H6,SGP,69,Singapore,JPN,Japan,2022,Export,6,3457.586
+H6,SGP,69,Singapore,JPN,Japan,2022,Import,5,47113.688
+H6,SGP,69,Singapore,JPN,Japan,2023,Export,6,3434.845
+H6,SGP,69,Singapore,JPN,Japan,2023,Import,5,35573.256
+H6,SGP,69,Singapore,KOR,"Korea, Rep.",2022,Export,6,2356.829
+H6,SGP,69,Singapore,KOR,"Korea, Rep.",2022,Import,5,11006.164
+H6,SGP,69,Singapore,KOR,"Korea, Rep.",2023,Export,6,4116.585
+H6,SGP,69,Singapore,KOR,"Korea, Rep.",2023,Import,5,10471.264
+H6,SGP,69,Singapore,MYS,Malaysia,2022,Export,6,8264.815
+H6,SGP,69,Singapore,MYS,Malaysia,2022,Import,5,27704.946
+H6,SGP,69,Singapore,MYS,Malaysia,2023,Export,6,8191.26
+H6,SGP,69,Singapore,MYS,Malaysia,2023,Import,5,32435.34
+H6,SGP,69,Singapore,SAU,Saudi Arabia,2022,Export,6,1832.393
+H6,SGP,69,Singapore,SAU,Saudi Arabia,2022,Import,5,44.824
+H6,SGP,69,Singapore,SAU,Saudi Arabia,2023,Export,6,4354.689
+H6,SGP,69,Singapore,THA,Thailand,2022,Export,6,1403.816
+H6,SGP,69,Singapore,THA,Thailand,2022,Import,5,5779.973
+H6,SGP,69,Singapore,THA,Thailand,2023,Export,6,1352.765
+H6,SGP,69,Singapore,THA,Thailand,2023,Import,5,6861.99
+H6,SGP,69,Singapore,USA,United States,2022,Export,6,9585.734
+H6,SGP,69,Singapore,USA,United States,2022,Import,5,39123.717
+H6,SGP,69,Singapore,USA,United States,2023,Export,6,6537.509
+H6,SGP,69,Singapore,USA,United States,2023,Import,5,33975.511
+H6,SGP,70,Singapore,CHN,China,2022,Export,6,34942.915
+H6,SGP,70,Singapore,CHN,China,2022,Import,5,156793.528
+H6,SGP,70,Singapore,CHN,China,2023,Export,6,28076.188
+H6,SGP,70,Singapore,CHN,China,2023,Import,5,162775.498
+H6,SGP,70,Singapore,HKG,"Hong Kong, China",2022,Export,6,5101.066
+H6,SGP,70,Singapore,HKG,"Hong Kong, China",2022,Import,5,2607.635
+H6,SGP,70,Singapore,HKG,"Hong Kong, China",2023,Export,6,4944.667
+H6,SGP,70,Singapore,HKG,"Hong Kong, China",2023,Import,5,1394.525
+H6,SGP,70,Singapore,IDN,Indonesia,2022,Export,6,21034.461
+H6,SGP,70,Singapore,IDN,Indonesia,2022,Import,5,5740.2
+H6,SGP,70,Singapore,IDN,Indonesia,2023,Export,6,28951.16
+H6,SGP,70,Singapore,IDN,Indonesia,2023,Import,5,5053.803
+H6,SGP,70,Singapore,JPN,Japan,2022,Export,6,88392.397
+H6,SGP,70,Singapore,JPN,Japan,2022,Import,5,164344.421
+H6,SGP,70,Singapore,JPN,Japan,2023,Export,6,87390.635
+H6,SGP,70,Singapore,JPN,Japan,2023,Import,5,164012.527
+H6,SGP,70,Singapore,KOR,"Korea, Rep.",2022,Export,6,135164.75
+H6,SGP,70,Singapore,KOR,"Korea, Rep.",2022,Import,5,12671.269
+H6,SGP,70,Singapore,KOR,"Korea, Rep.",2023,Export,6,119712.409
+H6,SGP,70,Singapore,KOR,"Korea, Rep.",2023,Import,5,16300.05
+H6,SGP,70,Singapore,MYS,Malaysia,2022,Export,6,22612.37
+H6,SGP,70,Singapore,MYS,Malaysia,2022,Import,5,85293.723
+H6,SGP,70,Singapore,MYS,Malaysia,2023,Export,6,20733.778
+H6,SGP,70,Singapore,MYS,Malaysia,2023,Import,5,85507.92
+H6,SGP,70,Singapore,SAU,Saudi Arabia,2022,Export,6,22.311
+H6,SGP,70,Singapore,SAU,Saudi Arabia,2022,Import,5,218.143
+H6,SGP,70,Singapore,SAU,Saudi Arabia,2023,Export,6,68.332
+H6,SGP,70,Singapore,SAU,Saudi Arabia,2023,Import,5,54.032
+H6,SGP,70,Singapore,THA,Thailand,2022,Export,6,4133.089
+H6,SGP,70,Singapore,THA,Thailand,2022,Import,5,4527.542
+H6,SGP,70,Singapore,THA,Thailand,2023,Export,6,5185.29
+H6,SGP,70,Singapore,THA,Thailand,2023,Import,5,3842.929
+H6,SGP,70,Singapore,USA,United States,2022,Export,6,57435.748
+H6,SGP,70,Singapore,USA,United States,2022,Import,5,83290.387
+H6,SGP,70,Singapore,USA,United States,2023,Export,6,72383.503
+H6,SGP,70,Singapore,USA,United States,2023,Import,5,79778.905
+H6,SGP,71,Singapore,CHN,China,2022,Export,6,1230869.144
+H6,SGP,71,Singapore,CHN,China,2022,Import,5,609696.888
+H6,SGP,71,Singapore,CHN,China,2023,Export,6,4858616.563
+H6,SGP,71,Singapore,CHN,China,2023,Import,5,372702.971
+H6,SGP,71,Singapore,HKG,"Hong Kong, China",2022,Export,6,1071476.596
+H6,SGP,71,Singapore,HKG,"Hong Kong, China",2022,Import,5,1635457.417
+H6,SGP,71,Singapore,HKG,"Hong Kong, China",2023,Export,6,2539414.519
+H6,SGP,71,Singapore,HKG,"Hong Kong, China",2023,Import,5,1070744.98
+H6,SGP,71,Singapore,IDN,Indonesia,2022,Export,6,1962833.751
+H6,SGP,71,Singapore,IDN,Indonesia,2022,Import,5,1259300.068
+H6,SGP,71,Singapore,IDN,Indonesia,2023,Export,6,1016738.575
+H6,SGP,71,Singapore,IDN,Indonesia,2023,Import,5,1305519.307
+H6,SGP,71,Singapore,JPN,Japan,2022,Export,6,473753.638
+H6,SGP,71,Singapore,JPN,Japan,2022,Import,5,3093855.325
+H6,SGP,71,Singapore,JPN,Japan,2023,Export,6,446094.085
+H6,SGP,71,Singapore,JPN,Japan,2023,Import,5,2358592.395
+H6,SGP,71,Singapore,KOR,"Korea, Rep.",2022,Export,6,66302.352
+H6,SGP,71,Singapore,KOR,"Korea, Rep.",2022,Import,5,448215.236
+H6,SGP,71,Singapore,KOR,"Korea, Rep.",2023,Export,6,45101.559
+H6,SGP,71,Singapore,KOR,"Korea, Rep.",2023,Import,5,481553.643
+H6,SGP,71,Singapore,MYS,Malaysia,2022,Export,6,3069058.96
+H6,SGP,71,Singapore,MYS,Malaysia,2022,Import,5,917397.347
+H6,SGP,71,Singapore,MYS,Malaysia,2023,Export,6,2133986.244
+H6,SGP,71,Singapore,MYS,Malaysia,2023,Import,5,1254620.153
+H6,SGP,71,Singapore,SAU,Saudi Arabia,2022,Export,6,2018.646
+H6,SGP,71,Singapore,SAU,Saudi Arabia,2022,Import,5,31897.327
+H6,SGP,71,Singapore,SAU,Saudi Arabia,2023,Export,6,2445.892
+H6,SGP,71,Singapore,SAU,Saudi Arabia,2023,Import,5,4767.068
+H6,SGP,71,Singapore,THA,Thailand,2022,Export,6,1196763.109
+H6,SGP,71,Singapore,THA,Thailand,2022,Import,5,1290887.274
+H6,SGP,71,Singapore,THA,Thailand,2023,Export,6,1669857.133
+H6,SGP,71,Singapore,THA,Thailand,2023,Import,5,1338762.155
+H6,SGP,71,Singapore,USA,United States,2022,Export,6,1899661.252
+H6,SGP,71,Singapore,USA,United States,2022,Import,5,1543040.981
+H6,SGP,71,Singapore,USA,United States,2023,Export,6,600513.507
+H6,SGP,71,Singapore,USA,United States,2023,Import,5,931835.114
+H6,SGP,72,Singapore,CHN,China,2022,Export,6,119382.149
+H6,SGP,72,Singapore,CHN,China,2022,Import,5,700589.735
+H6,SGP,72,Singapore,CHN,China,2023,Export,6,102060.454
+H6,SGP,72,Singapore,CHN,China,2023,Import,5,634061.14
+H6,SGP,72,Singapore,HKG,"Hong Kong, China",2022,Export,6,119116.239
+H6,SGP,72,Singapore,HKG,"Hong Kong, China",2022,Import,5,1843.3
+H6,SGP,72,Singapore,HKG,"Hong Kong, China",2023,Export,6,27501.798
+H6,SGP,72,Singapore,HKG,"Hong Kong, China",2023,Import,5,978.136
+H6,SGP,72,Singapore,IDN,Indonesia,2022,Export,6,746475.741
+H6,SGP,72,Singapore,IDN,Indonesia,2022,Import,5,68668.432
+H6,SGP,72,Singapore,IDN,Indonesia,2023,Export,6,620249.474
+H6,SGP,72,Singapore,IDN,Indonesia,2023,Import,5,50120.924
+H6,SGP,72,Singapore,JPN,Japan,2022,Export,6,65631.239
+H6,SGP,72,Singapore,JPN,Japan,2022,Import,5,515354.688
+H6,SGP,72,Singapore,JPN,Japan,2023,Export,6,32342.131
+H6,SGP,72,Singapore,JPN,Japan,2023,Import,5,390362.454
+H6,SGP,72,Singapore,KOR,"Korea, Rep.",2022,Export,6,31223.39
+H6,SGP,72,Singapore,KOR,"Korea, Rep.",2022,Import,5,122326.21
+H6,SGP,72,Singapore,KOR,"Korea, Rep.",2023,Export,6,38966.601
+H6,SGP,72,Singapore,KOR,"Korea, Rep.",2023,Import,5,104865.518
+H6,SGP,72,Singapore,MYS,Malaysia,2022,Export,6,522574.957
+H6,SGP,72,Singapore,MYS,Malaysia,2022,Import,5,503383.558
+H6,SGP,72,Singapore,MYS,Malaysia,2023,Export,6,440226.181
+H6,SGP,72,Singapore,MYS,Malaysia,2023,Import,5,542211.622
+H6,SGP,72,Singapore,SAU,Saudi Arabia,2022,Export,6,331.137
+H6,SGP,72,Singapore,SAU,Saudi Arabia,2022,Import,5,373.52
+H6,SGP,72,Singapore,SAU,Saudi Arabia,2023,Export,6,359.401
+H6,SGP,72,Singapore,SAU,Saudi Arabia,2023,Import,5,338.084
+H6,SGP,72,Singapore,THA,Thailand,2022,Export,6,47884.56
+H6,SGP,72,Singapore,THA,Thailand,2022,Import,5,71433.265
+H6,SGP,72,Singapore,THA,Thailand,2023,Export,6,30129.663
+H6,SGP,72,Singapore,THA,Thailand,2023,Import,5,41332.622
+H6,SGP,72,Singapore,USA,United States,2022,Export,6,5242.318
+H6,SGP,72,Singapore,USA,United States,2022,Import,5,52203.243
+H6,SGP,72,Singapore,USA,United States,2023,Export,6,3561.308
+H6,SGP,72,Singapore,USA,United States,2023,Import,5,51616.94
+H6,SGP,73,Singapore,CHN,China,2022,Export,6,91807.059
+H6,SGP,73,Singapore,CHN,China,2022,Import,5,1278859.484
+H6,SGP,73,Singapore,CHN,China,2023,Export,6,104790.292
+H6,SGP,73,Singapore,CHN,China,2023,Import,5,1186383.041
+H6,SGP,73,Singapore,HKG,"Hong Kong, China",2022,Export,6,35978.354
+H6,SGP,73,Singapore,HKG,"Hong Kong, China",2022,Import,5,5437.982
+H6,SGP,73,Singapore,HKG,"Hong Kong, China",2023,Export,6,46484.18
+H6,SGP,73,Singapore,HKG,"Hong Kong, China",2023,Import,5,4097.921
+H6,SGP,73,Singapore,IDN,Indonesia,2022,Export,6,772688.729
+H6,SGP,73,Singapore,IDN,Indonesia,2022,Import,5,136304.994
+H6,SGP,73,Singapore,IDN,Indonesia,2023,Export,6,798497.378
+H6,SGP,73,Singapore,IDN,Indonesia,2023,Import,5,145485.411
+H6,SGP,73,Singapore,JPN,Japan,2022,Export,6,60164.763
+H6,SGP,73,Singapore,JPN,Japan,2022,Import,5,335586.63
+H6,SGP,73,Singapore,JPN,Japan,2023,Export,6,41289.723
+H6,SGP,73,Singapore,JPN,Japan,2023,Import,5,371786.282
+H6,SGP,73,Singapore,KOR,"Korea, Rep.",2022,Export,6,33869.12
+H6,SGP,73,Singapore,KOR,"Korea, Rep.",2022,Import,5,169005.406
+H6,SGP,73,Singapore,KOR,"Korea, Rep.",2023,Export,6,36082.737
+H6,SGP,73,Singapore,KOR,"Korea, Rep.",2023,Import,5,153985.808
+H6,SGP,73,Singapore,MYS,Malaysia,2022,Export,6,458893.18
+H6,SGP,73,Singapore,MYS,Malaysia,2022,Import,5,706993.938
+H6,SGP,73,Singapore,MYS,Malaysia,2023,Export,6,461269.19
+H6,SGP,73,Singapore,MYS,Malaysia,2023,Import,5,750140.157
+H6,SGP,73,Singapore,SAU,Saudi Arabia,2022,Export,6,74666.251
+H6,SGP,73,Singapore,SAU,Saudi Arabia,2022,Import,5,3121.582
+H6,SGP,73,Singapore,SAU,Saudi Arabia,2023,Export,6,53112.742
+H6,SGP,73,Singapore,SAU,Saudi Arabia,2023,Import,5,12380.255
+H6,SGP,73,Singapore,THA,Thailand,2022,Export,6,104235.551
+H6,SGP,73,Singapore,THA,Thailand,2022,Import,5,67703.029
+H6,SGP,73,Singapore,THA,Thailand,2023,Export,6,87600.867
+H6,SGP,73,Singapore,THA,Thailand,2023,Import,5,315344.165
+H6,SGP,73,Singapore,USA,United States,2022,Export,6,91392.117
+H6,SGP,73,Singapore,USA,United States,2022,Import,5,364271.219
+H6,SGP,73,Singapore,USA,United States,2023,Export,6,94316.421
+H6,SGP,73,Singapore,USA,United States,2023,Import,5,352649.046
+H6,SGP,74,Singapore,CHN,China,2022,Export,6,393477.342
+H6,SGP,74,Singapore,CHN,China,2022,Import,5,126962.87
+H6,SGP,74,Singapore,CHN,China,2023,Export,6,344867.302
+H6,SGP,74,Singapore,CHN,China,2023,Import,5,342939.098
+H6,SGP,74,Singapore,HKG,"Hong Kong, China",2022,Export,6,25059.664
+H6,SGP,74,Singapore,HKG,"Hong Kong, China",2022,Import,5,3558.968
+H6,SGP,74,Singapore,HKG,"Hong Kong, China",2023,Export,6,10003.614
+H6,SGP,74,Singapore,HKG,"Hong Kong, China",2023,Import,5,1860.937
+H6,SGP,74,Singapore,IDN,Indonesia,2022,Export,6,66972.772
+H6,SGP,74,Singapore,IDN,Indonesia,2022,Import,5,35696.418
+H6,SGP,74,Singapore,IDN,Indonesia,2023,Export,6,52997.721
+H6,SGP,74,Singapore,IDN,Indonesia,2023,Import,5,26148.237
+H6,SGP,74,Singapore,JPN,Japan,2022,Export,6,118889.756
+H6,SGP,74,Singapore,JPN,Japan,2022,Import,5,131852.517
+H6,SGP,74,Singapore,JPN,Japan,2023,Export,6,72062.887
+H6,SGP,74,Singapore,JPN,Japan,2023,Import,5,135245.805
+H6,SGP,74,Singapore,KOR,"Korea, Rep.",2022,Export,6,66005.228
+H6,SGP,74,Singapore,KOR,"Korea, Rep.",2022,Import,5,37641.574
+H6,SGP,74,Singapore,KOR,"Korea, Rep.",2023,Export,6,29433.669
+H6,SGP,74,Singapore,KOR,"Korea, Rep.",2023,Import,5,47673.047
+H6,SGP,74,Singapore,MYS,Malaysia,2022,Export,6,173476.926
+H6,SGP,74,Singapore,MYS,Malaysia,2022,Import,5,240684.4
+H6,SGP,74,Singapore,MYS,Malaysia,2023,Export,6,199445.688
+H6,SGP,74,Singapore,MYS,Malaysia,2023,Import,5,193270.316
+H6,SGP,74,Singapore,SAU,Saudi Arabia,2022,Export,6,274.683
+H6,SGP,74,Singapore,SAU,Saudi Arabia,2022,Import,5,67.661
+H6,SGP,74,Singapore,SAU,Saudi Arabia,2023,Export,6,279.908
+H6,SGP,74,Singapore,SAU,Saudi Arabia,2023,Import,5,2312.246
+H6,SGP,74,Singapore,THA,Thailand,2022,Export,6,14697.773
+H6,SGP,74,Singapore,THA,Thailand,2022,Import,5,20964.939
+H6,SGP,74,Singapore,THA,Thailand,2023,Export,6,16035.783
+H6,SGP,74,Singapore,THA,Thailand,2023,Import,5,19223.269
+H6,SGP,74,Singapore,USA,United States,2022,Export,6,31940.885
+H6,SGP,74,Singapore,USA,United States,2022,Import,5,29334.775
+H6,SGP,74,Singapore,USA,United States,2023,Export,6,31205.16
+H6,SGP,74,Singapore,USA,United States,2023,Import,5,39218.699
+H6,SGP,75,Singapore,CHN,China,2022,Export,6,165758.274
+H6,SGP,75,Singapore,CHN,China,2022,Import,5,29831.4
+H6,SGP,75,Singapore,CHN,China,2023,Export,6,69801.334
+H6,SGP,75,Singapore,CHN,China,2023,Import,5,105000.896
+H6,SGP,75,Singapore,HKG,"Hong Kong, China",2022,Export,6,1283.101
+H6,SGP,75,Singapore,HKG,"Hong Kong, China",2022,Import,5,10.493
+H6,SGP,75,Singapore,HKG,"Hong Kong, China",2023,Export,6,1533.298
+H6,SGP,75,Singapore,HKG,"Hong Kong, China",2023,Import,5,142.579
+H6,SGP,75,Singapore,IDN,Indonesia,2022,Export,6,34895.674
+H6,SGP,75,Singapore,IDN,Indonesia,2022,Import,5,6027.816
+H6,SGP,75,Singapore,IDN,Indonesia,2023,Export,6,38188.174
+H6,SGP,75,Singapore,IDN,Indonesia,2023,Import,5,4406.225
+H6,SGP,75,Singapore,JPN,Japan,2022,Export,6,11992.877
+H6,SGP,75,Singapore,JPN,Japan,2022,Import,5,5960.384
+H6,SGP,75,Singapore,JPN,Japan,2023,Export,6,7490.975
+H6,SGP,75,Singapore,JPN,Japan,2023,Import,5,12621.004
+H6,SGP,75,Singapore,KOR,"Korea, Rep.",2022,Export,6,21480.19
+H6,SGP,75,Singapore,KOR,"Korea, Rep.",2022,Import,5,1427.79
+H6,SGP,75,Singapore,KOR,"Korea, Rep.",2023,Export,6,1279.278
+H6,SGP,75,Singapore,KOR,"Korea, Rep.",2023,Import,5,2397.465
+H6,SGP,75,Singapore,MYS,Malaysia,2022,Export,6,14421.511
+H6,SGP,75,Singapore,MYS,Malaysia,2022,Import,5,8955.482
+H6,SGP,75,Singapore,MYS,Malaysia,2023,Export,6,23033.974
+H6,SGP,75,Singapore,MYS,Malaysia,2023,Import,5,10469.095
+H6,SGP,75,Singapore,SAU,Saudi Arabia,2022,Export,6,2965.667
+H6,SGP,75,Singapore,SAU,Saudi Arabia,2022,Import,5,241.343
+H6,SGP,75,Singapore,SAU,Saudi Arabia,2023,Export,6,3155.151
+H6,SGP,75,Singapore,SAU,Saudi Arabia,2023,Import,5,292.905
+H6,SGP,75,Singapore,THA,Thailand,2022,Export,6,13189.038
+H6,SGP,75,Singapore,THA,Thailand,2022,Import,5,462.824
+H6,SGP,75,Singapore,THA,Thailand,2023,Export,6,3728.541
+H6,SGP,75,Singapore,THA,Thailand,2023,Import,5,348.245
+H6,SGP,75,Singapore,USA,United States,2022,Export,6,49374.854
+H6,SGP,75,Singapore,USA,United States,2022,Import,5,70908.511
+H6,SGP,75,Singapore,USA,United States,2023,Export,6,108091.898
+H6,SGP,75,Singapore,USA,United States,2023,Import,5,87327.534
+H6,SGP,76,Singapore,CHN,China,2022,Export,6,36533.531
+H6,SGP,76,Singapore,CHN,China,2022,Import,5,623225.583
+H6,SGP,76,Singapore,CHN,China,2023,Export,6,79457.764
+H6,SGP,76,Singapore,CHN,China,2023,Import,5,498762.932
+H6,SGP,76,Singapore,HKG,"Hong Kong, China",2022,Export,6,15404.661
+H6,SGP,76,Singapore,HKG,"Hong Kong, China",2022,Import,5,4374.852
+H6,SGP,76,Singapore,HKG,"Hong Kong, China",2023,Export,6,4780.93
+H6,SGP,76,Singapore,HKG,"Hong Kong, China",2023,Import,5,5590.079
+H6,SGP,76,Singapore,IDN,Indonesia,2022,Export,6,166486.133
+H6,SGP,76,Singapore,IDN,Indonesia,2022,Import,5,20578.446
+H6,SGP,76,Singapore,IDN,Indonesia,2023,Export,6,140578.518
+H6,SGP,76,Singapore,IDN,Indonesia,2023,Import,5,21552.472
+H6,SGP,76,Singapore,JPN,Japan,2022,Export,6,103495.53
+H6,SGP,76,Singapore,JPN,Japan,2022,Import,5,84790.826
+H6,SGP,76,Singapore,JPN,Japan,2023,Export,6,31679.873
+H6,SGP,76,Singapore,JPN,Japan,2023,Import,5,29861.916
+H6,SGP,76,Singapore,KOR,"Korea, Rep.",2022,Export,6,23159.504
+H6,SGP,76,Singapore,KOR,"Korea, Rep.",2022,Import,5,27067.826
+H6,SGP,76,Singapore,KOR,"Korea, Rep.",2023,Export,6,22808.841
+H6,SGP,76,Singapore,KOR,"Korea, Rep.",2023,Import,5,15329.519
+H6,SGP,76,Singapore,MYS,Malaysia,2022,Export,6,261965.073
+H6,SGP,76,Singapore,MYS,Malaysia,2022,Import,5,325979.96
+H6,SGP,76,Singapore,MYS,Malaysia,2023,Export,6,193129.209
+H6,SGP,76,Singapore,MYS,Malaysia,2023,Import,5,237578.885
+H6,SGP,76,Singapore,SAU,Saudi Arabia,2022,Export,6,849.218
+H6,SGP,76,Singapore,SAU,Saudi Arabia,2022,Import,5,23.518
+H6,SGP,76,Singapore,SAU,Saudi Arabia,2023,Export,6,256.934
+H6,SGP,76,Singapore,SAU,Saudi Arabia,2023,Import,5,151.579
+H6,SGP,76,Singapore,THA,Thailand,2022,Export,6,104082.537
+H6,SGP,76,Singapore,THA,Thailand,2022,Import,5,6983.44
+H6,SGP,76,Singapore,THA,Thailand,2023,Export,6,31953.688
+H6,SGP,76,Singapore,THA,Thailand,2023,Import,5,4325.351
+H6,SGP,76,Singapore,USA,United States,2022,Export,6,29983.58
+H6,SGP,76,Singapore,USA,United States,2022,Import,5,121107.272
+H6,SGP,76,Singapore,USA,United States,2023,Export,6,22028.582
+H6,SGP,76,Singapore,USA,United States,2023,Import,5,117851.708
+H6,SGP,78,Singapore,CHN,China,2022,Export,6,1085.016
+H6,SGP,78,Singapore,CHN,China,2022,Import,5,1431.414
+H6,SGP,78,Singapore,CHN,China,2023,Export,6,56.245
+H6,SGP,78,Singapore,CHN,China,2023,Import,5,93853.554
+H6,SGP,78,Singapore,HKG,"Hong Kong, China",2022,Export,6,280.356
+H6,SGP,78,Singapore,HKG,"Hong Kong, China",2022,Import,5,10.436
+H6,SGP,78,Singapore,HKG,"Hong Kong, China",2023,Export,6,134.651
+H6,SGP,78,Singapore,HKG,"Hong Kong, China",2023,Import,5,535.968
+H6,SGP,78,Singapore,IDN,Indonesia,2022,Export,6,974.22
+H6,SGP,78,Singapore,IDN,Indonesia,2022,Import,5,1745.151
+H6,SGP,78,Singapore,IDN,Indonesia,2023,Export,6,468.484
+H6,SGP,78,Singapore,IDN,Indonesia,2023,Import,5,1.392
+H6,SGP,78,Singapore,JPN,Japan,2022,Export,6,58.561
+H6,SGP,78,Singapore,JPN,Japan,2022,Import,5,1161.5
+H6,SGP,78,Singapore,JPN,Japan,2023,Export,6,60.792
+H6,SGP,78,Singapore,JPN,Japan,2023,Import,5,983.612
+H6,SGP,78,Singapore,KOR,"Korea, Rep.",2022,Export,6,576.287
+H6,SGP,78,Singapore,KOR,"Korea, Rep.",2022,Import,5,12.979
+H6,SGP,78,Singapore,KOR,"Korea, Rep.",2023,Export,6,404.944
+H6,SGP,78,Singapore,KOR,"Korea, Rep.",2023,Import,5,17297.084
+H6,SGP,78,Singapore,MYS,Malaysia,2022,Export,6,12820.947
+H6,SGP,78,Singapore,MYS,Malaysia,2022,Import,5,4200.835
+H6,SGP,78,Singapore,MYS,Malaysia,2023,Export,6,6362.623
+H6,SGP,78,Singapore,MYS,Malaysia,2023,Import,5,3138.889
+H6,SGP,78,Singapore,THA,Thailand,2022,Export,6,580.382
+H6,SGP,78,Singapore,THA,Thailand,2022,Import,5,7.045
+H6,SGP,78,Singapore,THA,Thailand,2023,Export,6,60.7
+H6,SGP,78,Singapore,THA,Thailand,2023,Import,5,454.539
+H6,SGP,78,Singapore,USA,United States,2022,Export,6,77.333
+H6,SGP,78,Singapore,USA,United States,2022,Import,5,829.013
+H6,SGP,78,Singapore,USA,United States,2023,Export,6,27.743
+H6,SGP,78,Singapore,USA,United States,2023,Import,5,809.39
+H6,SGP,79,Singapore,CHN,China,2022,Export,6,4536.997
+H6,SGP,79,Singapore,CHN,China,2022,Import,5,22790.762
+H6,SGP,79,Singapore,CHN,China,2023,Export,6,40992.129
+H6,SGP,79,Singapore,CHN,China,2023,Import,5,5505.242
+H6,SGP,79,Singapore,HKG,"Hong Kong, China",2022,Export,6,1355.259
+H6,SGP,79,Singapore,HKG,"Hong Kong, China",2022,Import,5,9.662
+H6,SGP,79,Singapore,HKG,"Hong Kong, China",2023,Export,6,4010.881
+H6,SGP,79,Singapore,HKG,"Hong Kong, China",2023,Import,5,4.568
+H6,SGP,79,Singapore,IDN,Indonesia,2022,Export,6,14192.627
+H6,SGP,79,Singapore,IDN,Indonesia,2022,Import,5,3190.771
+H6,SGP,79,Singapore,IDN,Indonesia,2023,Export,6,18572.559
+H6,SGP,79,Singapore,IDN,Indonesia,2023,Import,5,2080.054
+H6,SGP,79,Singapore,JPN,Japan,2022,Export,6,3013.673
+H6,SGP,79,Singapore,JPN,Japan,2022,Import,5,7174.562
+H6,SGP,79,Singapore,JPN,Japan,2023,Export,6,3192.039
+H6,SGP,79,Singapore,JPN,Japan,2023,Import,5,4032.646
+H6,SGP,79,Singapore,KOR,"Korea, Rep.",2022,Export,6,1748.329
+H6,SGP,79,Singapore,KOR,"Korea, Rep.",2022,Import,5,6858.584
+H6,SGP,79,Singapore,KOR,"Korea, Rep.",2023,Export,6,491.318
+H6,SGP,79,Singapore,KOR,"Korea, Rep.",2023,Import,5,137836.494
+H6,SGP,79,Singapore,MYS,Malaysia,2022,Export,6,30049.198
+H6,SGP,79,Singapore,MYS,Malaysia,2022,Import,5,6658.577
+H6,SGP,79,Singapore,MYS,Malaysia,2023,Export,6,22896.269
+H6,SGP,79,Singapore,MYS,Malaysia,2023,Import,5,7515.645
+H6,SGP,79,Singapore,SAU,Saudi Arabia,2022,Export,6,42.3
+H6,SGP,79,Singapore,SAU,Saudi Arabia,2022,Import,5,0.073
+H6,SGP,79,Singapore,SAU,Saudi Arabia,2023,Export,6,7288.936
+H6,SGP,79,Singapore,THA,Thailand,2022,Export,6,3209.507
+H6,SGP,79,Singapore,THA,Thailand,2022,Import,5,1144.263
+H6,SGP,79,Singapore,THA,Thailand,2023,Export,6,11737.867
+H6,SGP,79,Singapore,THA,Thailand,2023,Import,5,1332.397
+H6,SGP,79,Singapore,USA,United States,2022,Export,6,7617.544
+H6,SGP,79,Singapore,USA,United States,2022,Import,5,179.176
+H6,SGP,79,Singapore,USA,United States,2023,Export,6,9292.584
+H6,SGP,79,Singapore,USA,United States,2023,Import,5,563.624
+H6,SGP,80,Singapore,CHN,China,2022,Export,6,28798.311
+H6,SGP,80,Singapore,CHN,China,2022,Import,5,5296.237
+H6,SGP,80,Singapore,CHN,China,2023,Export,6,22175.602
+H6,SGP,80,Singapore,CHN,China,2023,Import,5,17037.44
+H6,SGP,80,Singapore,HKG,"Hong Kong, China",2022,Export,6,2168.626
+H6,SGP,80,Singapore,HKG,"Hong Kong, China",2022,Import,5,10.813
+H6,SGP,80,Singapore,HKG,"Hong Kong, China",2023,Export,6,3454.855
+H6,SGP,80,Singapore,HKG,"Hong Kong, China",2023,Import,5,1.004
+H6,SGP,80,Singapore,IDN,Indonesia,2022,Export,6,23345.965
+H6,SGP,80,Singapore,IDN,Indonesia,2022,Import,5,429319.382
+H6,SGP,80,Singapore,IDN,Indonesia,2023,Export,6,23709.457
+H6,SGP,80,Singapore,IDN,Indonesia,2023,Import,5,262307.619
+H6,SGP,80,Singapore,JPN,Japan,2022,Export,6,65694.633
+H6,SGP,80,Singapore,JPN,Japan,2022,Import,5,2508.37
+H6,SGP,80,Singapore,JPN,Japan,2023,Export,6,27421.861
+H6,SGP,80,Singapore,JPN,Japan,2023,Import,5,1087.023
+H6,SGP,80,Singapore,KOR,"Korea, Rep.",2022,Export,6,53501.351
+H6,SGP,80,Singapore,KOR,"Korea, Rep.",2022,Import,5,22.608
+H6,SGP,80,Singapore,KOR,"Korea, Rep.",2023,Export,6,9413.031
+H6,SGP,80,Singapore,KOR,"Korea, Rep.",2023,Import,5,2383.524
+H6,SGP,80,Singapore,MYS,Malaysia,2022,Export,6,46940.414
+H6,SGP,80,Singapore,MYS,Malaysia,2022,Import,5,19493.188
+H6,SGP,80,Singapore,MYS,Malaysia,2023,Export,6,29465.409
+H6,SGP,80,Singapore,MYS,Malaysia,2023,Import,5,15713.545
+H6,SGP,80,Singapore,SAU,Saudi Arabia,2022,Export,6,614.872
+H6,SGP,80,Singapore,SAU,Saudi Arabia,2023,Export,6,4.017
+H6,SGP,80,Singapore,THA,Thailand,2022,Export,6,16280.328
+H6,SGP,80,Singapore,THA,Thailand,2022,Import,5,135.268
+H6,SGP,80,Singapore,THA,Thailand,2023,Export,6,6515.253
+H6,SGP,80,Singapore,THA,Thailand,2023,Import,5,97.433
+H6,SGP,80,Singapore,USA,United States,2022,Export,6,42475.727
+H6,SGP,80,Singapore,USA,United States,2022,Import,5,10154.755
+H6,SGP,80,Singapore,USA,United States,2023,Export,6,58121.919
+H6,SGP,80,Singapore,USA,United States,2023,Import,5,2649.64
+H6,SGP,81,Singapore,CHN,China,2022,Export,6,20310.202
+H6,SGP,81,Singapore,CHN,China,2022,Import,5,47205.17
+H6,SGP,81,Singapore,CHN,China,2023,Export,6,56327.837
+H6,SGP,81,Singapore,CHN,China,2023,Import,5,101774.903
+H6,SGP,81,Singapore,HKG,"Hong Kong, China",2022,Export,6,304.57
+H6,SGP,81,Singapore,HKG,"Hong Kong, China",2022,Import,5,79.765
+H6,SGP,81,Singapore,HKG,"Hong Kong, China",2023,Export,6,15736.125
+H6,SGP,81,Singapore,HKG,"Hong Kong, China",2023,Import,5,104.161
+H6,SGP,81,Singapore,IDN,Indonesia,2022,Export,6,3728.184
+H6,SGP,81,Singapore,IDN,Indonesia,2022,Import,5,2155.258
+H6,SGP,81,Singapore,IDN,Indonesia,2023,Export,6,3022.566
+H6,SGP,81,Singapore,IDN,Indonesia,2023,Import,5,1830.164
+H6,SGP,81,Singapore,JPN,Japan,2022,Export,6,12994.617
+H6,SGP,81,Singapore,JPN,Japan,2022,Import,5,37065.997
+H6,SGP,81,Singapore,JPN,Japan,2023,Export,6,17500.64
+H6,SGP,81,Singapore,JPN,Japan,2023,Import,5,61059.165
+H6,SGP,81,Singapore,KOR,"Korea, Rep.",2022,Export,6,2870.156
+H6,SGP,81,Singapore,KOR,"Korea, Rep.",2022,Import,5,4850.916
+H6,SGP,81,Singapore,KOR,"Korea, Rep.",2023,Export,6,3272.388
+H6,SGP,81,Singapore,KOR,"Korea, Rep.",2023,Import,5,2393.907
+H6,SGP,81,Singapore,MYS,Malaysia,2022,Export,6,7362.296
+H6,SGP,81,Singapore,MYS,Malaysia,2022,Import,5,4876.028
+H6,SGP,81,Singapore,MYS,Malaysia,2023,Export,6,4588.502
+H6,SGP,81,Singapore,MYS,Malaysia,2023,Import,5,5225.473
+H6,SGP,81,Singapore,SAU,Saudi Arabia,2022,Export,6,86.954
+H6,SGP,81,Singapore,SAU,Saudi Arabia,2022,Import,5,272.471
+H6,SGP,81,Singapore,SAU,Saudi Arabia,2023,Export,6,37.353
+H6,SGP,81,Singapore,SAU,Saudi Arabia,2023,Import,5,2.29
+H6,SGP,81,Singapore,THA,Thailand,2022,Export,6,2677.367
+H6,SGP,81,Singapore,THA,Thailand,2022,Import,5,409.36
+H6,SGP,81,Singapore,THA,Thailand,2023,Export,6,2835.991
+H6,SGP,81,Singapore,THA,Thailand,2023,Import,5,1379.114
+H6,SGP,81,Singapore,USA,United States,2022,Export,6,9565.324
+H6,SGP,81,Singapore,USA,United States,2022,Import,5,47028.648
+H6,SGP,81,Singapore,USA,United States,2023,Export,6,15795.382
+H6,SGP,81,Singapore,USA,United States,2023,Import,5,53872.729
+H6,SGP,82,Singapore,CHN,China,2022,Export,6,61939.271
+H6,SGP,82,Singapore,CHN,China,2022,Import,5,175615.271
+H6,SGP,82,Singapore,CHN,China,2023,Export,6,51565.976
+H6,SGP,82,Singapore,CHN,China,2023,Import,5,152768.112
+H6,SGP,82,Singapore,HKG,"Hong Kong, China",2022,Export,6,16524.511
+H6,SGP,82,Singapore,HKG,"Hong Kong, China",2022,Import,5,2021.879
+H6,SGP,82,Singapore,HKG,"Hong Kong, China",2023,Export,6,14352.179
+H6,SGP,82,Singapore,HKG,"Hong Kong, China",2023,Import,5,2351.064
+H6,SGP,82,Singapore,IDN,Indonesia,2022,Export,6,145385.451
+H6,SGP,82,Singapore,IDN,Indonesia,2022,Import,5,4126.626
+H6,SGP,82,Singapore,IDN,Indonesia,2023,Export,6,134536.61
+H6,SGP,82,Singapore,IDN,Indonesia,2023,Import,5,2632.236
+H6,SGP,82,Singapore,JPN,Japan,2022,Export,6,75817.161
+H6,SGP,82,Singapore,JPN,Japan,2022,Import,5,129039.878
+H6,SGP,82,Singapore,JPN,Japan,2023,Export,6,70018.419
+H6,SGP,82,Singapore,JPN,Japan,2023,Import,5,114034.744
+H6,SGP,82,Singapore,KOR,"Korea, Rep.",2022,Export,6,35562.13
+H6,SGP,82,Singapore,KOR,"Korea, Rep.",2022,Import,5,9637.493
+H6,SGP,82,Singapore,KOR,"Korea, Rep.",2023,Export,6,30556.115
+H6,SGP,82,Singapore,KOR,"Korea, Rep.",2023,Import,5,7949.792
+H6,SGP,82,Singapore,MYS,Malaysia,2022,Export,6,116288.583
+H6,SGP,82,Singapore,MYS,Malaysia,2022,Import,5,18237.296
+H6,SGP,82,Singapore,MYS,Malaysia,2023,Export,6,100363.377
+H6,SGP,82,Singapore,MYS,Malaysia,2023,Import,5,13190.021
+H6,SGP,82,Singapore,SAU,Saudi Arabia,2022,Export,6,2213.503
+H6,SGP,82,Singapore,SAU,Saudi Arabia,2022,Import,5,467.951
+H6,SGP,82,Singapore,SAU,Saudi Arabia,2023,Export,6,2215.525
+H6,SGP,82,Singapore,SAU,Saudi Arabia,2023,Import,5,162.219
+H6,SGP,82,Singapore,THA,Thailand,2022,Export,6,48571.1
+H6,SGP,82,Singapore,THA,Thailand,2022,Import,5,17152.116
+H6,SGP,82,Singapore,THA,Thailand,2023,Export,6,49330.094
+H6,SGP,82,Singapore,THA,Thailand,2023,Import,5,7959.548
+H6,SGP,82,Singapore,USA,United States,2022,Export,6,84378.701
+H6,SGP,82,Singapore,USA,United States,2022,Import,5,84538.728
+H6,SGP,82,Singapore,USA,United States,2023,Export,6,74442.297
+H6,SGP,82,Singapore,USA,United States,2023,Import,5,95862.264
+H6,SGP,83,Singapore,CHN,China,2022,Export,6,17316.264
+H6,SGP,83,Singapore,CHN,China,2022,Import,5,164885.034
+H6,SGP,83,Singapore,CHN,China,2023,Export,6,17237.755
+H6,SGP,83,Singapore,CHN,China,2023,Import,5,148774.612
+H6,SGP,83,Singapore,HKG,"Hong Kong, China",2022,Export,6,9450.385
+H6,SGP,83,Singapore,HKG,"Hong Kong, China",2022,Import,5,4179.081
+H6,SGP,83,Singapore,HKG,"Hong Kong, China",2023,Export,6,9140.214
+H6,SGP,83,Singapore,HKG,"Hong Kong, China",2023,Import,5,2082.295
+H6,SGP,83,Singapore,IDN,Indonesia,2022,Export,6,77125.119
+H6,SGP,83,Singapore,IDN,Indonesia,2022,Import,5,8191.345
+H6,SGP,83,Singapore,IDN,Indonesia,2023,Export,6,89821.777
+H6,SGP,83,Singapore,IDN,Indonesia,2023,Import,5,9763.632
+H6,SGP,83,Singapore,JPN,Japan,2022,Export,6,19443.019
+H6,SGP,83,Singapore,JPN,Japan,2022,Import,5,15513.788
+H6,SGP,83,Singapore,JPN,Japan,2023,Export,6,16506.161
+H6,SGP,83,Singapore,JPN,Japan,2023,Import,5,14739.312
+H6,SGP,83,Singapore,KOR,"Korea, Rep.",2022,Export,6,5923.635
+H6,SGP,83,Singapore,KOR,"Korea, Rep.",2022,Import,5,13456.985
+H6,SGP,83,Singapore,KOR,"Korea, Rep.",2023,Export,6,6768.453
+H6,SGP,83,Singapore,KOR,"Korea, Rep.",2023,Import,5,13400.039
+H6,SGP,83,Singapore,MYS,Malaysia,2022,Export,6,75105.339
+H6,SGP,83,Singapore,MYS,Malaysia,2022,Import,5,63098.209
+H6,SGP,83,Singapore,MYS,Malaysia,2023,Export,6,65194.512
+H6,SGP,83,Singapore,MYS,Malaysia,2023,Import,5,64718.357
+H6,SGP,83,Singapore,SAU,Saudi Arabia,2022,Export,6,952.273
+H6,SGP,83,Singapore,SAU,Saudi Arabia,2022,Import,5,60.134
+H6,SGP,83,Singapore,SAU,Saudi Arabia,2023,Export,6,1926.033
+H6,SGP,83,Singapore,SAU,Saudi Arabia,2023,Import,5,86.8
+H6,SGP,83,Singapore,THA,Thailand,2022,Export,6,13676.655
+H6,SGP,83,Singapore,THA,Thailand,2022,Import,5,8852.415
+H6,SGP,83,Singapore,THA,Thailand,2023,Export,6,11938.164
+H6,SGP,83,Singapore,THA,Thailand,2023,Import,5,10868.672
+H6,SGP,83,Singapore,USA,United States,2022,Export,6,22987.975
+H6,SGP,83,Singapore,USA,United States,2022,Import,5,82193.236
+H6,SGP,83,Singapore,USA,United States,2023,Export,6,30881.08
+H6,SGP,83,Singapore,USA,United States,2023,Import,5,61979.726
+H6,SGP,84,Singapore,CHN,China,2022,Export,6,10288201.96
+H6,SGP,84,Singapore,CHN,China,2022,Import,5,12330550.21
+H6,SGP,84,Singapore,CHN,China,2023,Export,6,11859959.78
+H6,SGP,84,Singapore,CHN,China,2023,Import,5,10192943.71
+H6,SGP,84,Singapore,HKG,"Hong Kong, China",2022,Export,6,3221589.59
+H6,SGP,84,Singapore,HKG,"Hong Kong, China",2022,Import,5,174159.882
+H6,SGP,84,Singapore,HKG,"Hong Kong, China",2023,Export,6,4092009.531
+H6,SGP,84,Singapore,HKG,"Hong Kong, China",2023,Import,5,146720.422
+H6,SGP,84,Singapore,IDN,Indonesia,2022,Export,6,5126663.068
+H6,SGP,84,Singapore,IDN,Indonesia,2022,Import,5,1609132.388
+H6,SGP,84,Singapore,IDN,Indonesia,2023,Export,6,5370496.999
+H6,SGP,84,Singapore,IDN,Indonesia,2023,Import,5,1517455.624
+H6,SGP,84,Singapore,JPN,Japan,2022,Export,6,4702424.107
+H6,SGP,84,Singapore,JPN,Japan,2022,Import,5,4578714.871
+H6,SGP,84,Singapore,JPN,Japan,2023,Export,6,4695236.461
+H6,SGP,84,Singapore,JPN,Japan,2023,Import,5,3437048.001
+H6,SGP,84,Singapore,KOR,"Korea, Rep.",2022,Export,6,4738265.702
+H6,SGP,84,Singapore,KOR,"Korea, Rep.",2022,Import,5,2188725.141
+H6,SGP,84,Singapore,KOR,"Korea, Rep.",2023,Export,6,4659711.365
+H6,SGP,84,Singapore,KOR,"Korea, Rep.",2023,Import,5,1647564.004
+H6,SGP,84,Singapore,MYS,Malaysia,2022,Export,6,5330547.033
+H6,SGP,84,Singapore,MYS,Malaysia,2022,Import,5,6947099.23
+H6,SGP,84,Singapore,MYS,Malaysia,2023,Export,6,5559159.483
+H6,SGP,84,Singapore,MYS,Malaysia,2023,Import,5,5789620.176
+H6,SGP,84,Singapore,SAU,Saudi Arabia,2022,Export,6,385579.001
+H6,SGP,84,Singapore,SAU,Saudi Arabia,2022,Import,5,6901.565
+H6,SGP,84,Singapore,SAU,Saudi Arabia,2023,Export,6,442833.169
+H6,SGP,84,Singapore,SAU,Saudi Arabia,2023,Import,5,15865.389
+H6,SGP,84,Singapore,THA,Thailand,2022,Export,6,2005431.104
+H6,SGP,84,Singapore,THA,Thailand,2022,Import,5,1456797.137
+H6,SGP,84,Singapore,THA,Thailand,2023,Export,6,1958264.155
+H6,SGP,84,Singapore,THA,Thailand,2023,Import,5,1894618.805
+H6,SGP,84,Singapore,USA,United States,2022,Export,6,9203177.804
+H6,SGP,84,Singapore,USA,United States,2022,Import,5,17141366.15
+H6,SGP,84,Singapore,USA,United States,2023,Export,6,9378960.385
+H6,SGP,84,Singapore,USA,United States,2023,Import,5,18238845.27
+H6,SGP,85,Singapore,CHN,China,2022,Export,6,27050335.75
+H6,SGP,85,Singapore,CHN,China,2022,Import,5,23953994.13
+H6,SGP,85,Singapore,CHN,China,2023,Export,6,24100794.41
+H6,SGP,85,Singapore,CHN,China,2023,Import,5,20933543.75
+H6,SGP,85,Singapore,HKG,"Hong Kong, China",2022,Export,6,43850462.15
+H6,SGP,85,Singapore,HKG,"Hong Kong, China",2022,Import,5,715345.608
+H6,SGP,85,Singapore,HKG,"Hong Kong, China",2023,Export,6,34692215.19
+H6,SGP,85,Singapore,HKG,"Hong Kong, China",2023,Import,5,335640.083
+H6,SGP,85,Singapore,IDN,Indonesia,2022,Export,6,8345531.361
+H6,SGP,85,Singapore,IDN,Indonesia,2022,Import,5,5414696.524
+H6,SGP,85,Singapore,IDN,Indonesia,2023,Export,6,8351773.485
+H6,SGP,85,Singapore,IDN,Indonesia,2023,Import,5,4929541.468
+H6,SGP,85,Singapore,JPN,Japan,2022,Export,6,6043719.923
+H6,SGP,85,Singapore,JPN,Japan,2022,Import,5,7623411.164
+H6,SGP,85,Singapore,JPN,Japan,2023,Export,6,5651388.679
+H6,SGP,85,Singapore,JPN,Japan,2023,Import,5,6441294.309
+H6,SGP,85,Singapore,KOR,"Korea, Rep.",2022,Export,6,8104732.839
+H6,SGP,85,Singapore,KOR,"Korea, Rep.",2022,Import,5,17768967.6
+H6,SGP,85,Singapore,KOR,"Korea, Rep.",2023,Export,6,7974880.178
+H6,SGP,85,Singapore,KOR,"Korea, Rep.",2023,Import,5,16189169.93
+H6,SGP,85,Singapore,MYS,Malaysia,2022,Export,6,19258240.61
+H6,SGP,85,Singapore,MYS,Malaysia,2022,Import,5,22223960.94
+H6,SGP,85,Singapore,MYS,Malaysia,2023,Export,6,15210681.73
+H6,SGP,85,Singapore,MYS,Malaysia,2023,Import,5,17361247.95
+H6,SGP,85,Singapore,SAU,Saudi Arabia,2022,Export,6,54466.137
+H6,SGP,85,Singapore,SAU,Saudi Arabia,2022,Import,5,299.024
+H6,SGP,85,Singapore,SAU,Saudi Arabia,2023,Export,6,96560.275
+H6,SGP,85,Singapore,SAU,Saudi Arabia,2023,Import,5,8725.381
+H6,SGP,85,Singapore,THA,Thailand,2022,Export,6,7233371.534
+H6,SGP,85,Singapore,THA,Thailand,2022,Import,5,6266795.512
+H6,SGP,85,Singapore,THA,Thailand,2023,Export,6,8217401.927
+H6,SGP,85,Singapore,THA,Thailand,2023,Import,5,4779816.303
+H6,SGP,85,Singapore,USA,United States,2022,Export,6,14774584.12
+H6,SGP,85,Singapore,USA,United States,2022,Import,5,4403557.943
+H6,SGP,85,Singapore,USA,United States,2023,Export,6,13168496
+H6,SGP,85,Singapore,USA,United States,2023,Import,5,3906137.684
+H6,SGP,86,Singapore,CHN,China,2022,Export,6,6908.529
+H6,SGP,86,Singapore,CHN,China,2022,Import,5,219307.531
+H6,SGP,86,Singapore,CHN,China,2023,Export,6,6317.505
+H6,SGP,86,Singapore,CHN,China,2023,Import,5,195005.287
+H6,SGP,86,Singapore,HKG,"Hong Kong, China",2022,Export,6,426.298
+H6,SGP,86,Singapore,HKG,"Hong Kong, China",2022,Import,5,786.337
+H6,SGP,86,Singapore,HKG,"Hong Kong, China",2023,Export,6,516.268
+H6,SGP,86,Singapore,HKG,"Hong Kong, China",2023,Import,5,160.195
+H6,SGP,86,Singapore,IDN,Indonesia,2022,Export,6,18396.503
+H6,SGP,86,Singapore,IDN,Indonesia,2022,Import,5,2095.758
+H6,SGP,86,Singapore,IDN,Indonesia,2023,Export,6,18266.82
+H6,SGP,86,Singapore,IDN,Indonesia,2023,Import,5,1976.987
+H6,SGP,86,Singapore,JPN,Japan,2022,Export,6,2902.696
+H6,SGP,86,Singapore,JPN,Japan,2022,Import,5,13985.714
+H6,SGP,86,Singapore,JPN,Japan,2023,Export,6,4006.737
+H6,SGP,86,Singapore,JPN,Japan,2023,Import,5,9065.549
+H6,SGP,86,Singapore,KOR,"Korea, Rep.",2022,Export,6,1435.797
+H6,SGP,86,Singapore,KOR,"Korea, Rep.",2022,Import,5,829.383
+H6,SGP,86,Singapore,KOR,"Korea, Rep.",2023,Export,6,83.361
+H6,SGP,86,Singapore,KOR,"Korea, Rep.",2023,Import,5,121.068
+H6,SGP,86,Singapore,MYS,Malaysia,2022,Export,6,11026.852
+H6,SGP,86,Singapore,MYS,Malaysia,2022,Import,5,3990.158
+H6,SGP,86,Singapore,MYS,Malaysia,2023,Export,6,8040.815
+H6,SGP,86,Singapore,MYS,Malaysia,2023,Import,5,5043.88
+H6,SGP,86,Singapore,SAU,Saudi Arabia,2022,Export,6,153.46
+H6,SGP,86,Singapore,SAU,Saudi Arabia,2023,Export,6,359.377
+H6,SGP,86,Singapore,SAU,Saudi Arabia,2023,Import,5,3.539
+H6,SGP,86,Singapore,THA,Thailand,2022,Export,6,1565.341
+H6,SGP,86,Singapore,THA,Thailand,2022,Import,5,6419.687
+H6,SGP,86,Singapore,THA,Thailand,2023,Export,6,3194.337
+H6,SGP,86,Singapore,THA,Thailand,2023,Import,5,4147.866
+H6,SGP,86,Singapore,USA,United States,2022,Export,6,23834.585
+H6,SGP,86,Singapore,USA,United States,2022,Import,5,36813.865
+H6,SGP,86,Singapore,USA,United States,2023,Export,6,15009.4
+H6,SGP,86,Singapore,USA,United States,2023,Import,5,14317.033
+H6,SGP,87,Singapore,CHN,China,2022,Export,6,285012.921
+H6,SGP,87,Singapore,CHN,China,2022,Import,5,390600.234
+H6,SGP,87,Singapore,CHN,China,2023,Export,6,318408.446
+H6,SGP,87,Singapore,CHN,China,2023,Import,5,397369.98
+H6,SGP,87,Singapore,HKG,"Hong Kong, China",2022,Export,6,149363.058
+H6,SGP,87,Singapore,HKG,"Hong Kong, China",2022,Import,5,13253.14
+H6,SGP,87,Singapore,HKG,"Hong Kong, China",2023,Export,6,180506.532
+H6,SGP,87,Singapore,HKG,"Hong Kong, China",2023,Import,5,22169.853
+H6,SGP,87,Singapore,IDN,Indonesia,2022,Export,6,430367.587
+H6,SGP,87,Singapore,IDN,Indonesia,2022,Import,5,233408.254
+H6,SGP,87,Singapore,IDN,Indonesia,2023,Export,6,442758.473
+H6,SGP,87,Singapore,IDN,Indonesia,2023,Import,5,171045.536
+H6,SGP,87,Singapore,JPN,Japan,2022,Export,6,61000.712
+H6,SGP,87,Singapore,JPN,Japan,2022,Import,5,755748.625
+H6,SGP,87,Singapore,JPN,Japan,2023,Export,6,33000.094
+H6,SGP,87,Singapore,JPN,Japan,2023,Import,5,735481.624
+H6,SGP,87,Singapore,KOR,"Korea, Rep.",2022,Export,6,32648.25
+H6,SGP,87,Singapore,KOR,"Korea, Rep.",2022,Import,5,76607.731
+H6,SGP,87,Singapore,KOR,"Korea, Rep.",2023,Export,6,31692.156
+H6,SGP,87,Singapore,KOR,"Korea, Rep.",2023,Import,5,81555.518
+H6,SGP,87,Singapore,MYS,Malaysia,2022,Export,6,343231.04
+H6,SGP,87,Singapore,MYS,Malaysia,2022,Import,5,815678.486
+H6,SGP,87,Singapore,MYS,Malaysia,2023,Export,6,340364.473
+H6,SGP,87,Singapore,MYS,Malaysia,2023,Import,5,486083.128
+H6,SGP,87,Singapore,SAU,Saudi Arabia,2022,Export,6,7993.671
+H6,SGP,87,Singapore,SAU,Saudi Arabia,2022,Import,5,10.782
+H6,SGP,87,Singapore,SAU,Saudi Arabia,2023,Export,6,10511.082
+H6,SGP,87,Singapore,SAU,Saudi Arabia,2023,Import,5,2.599
+H6,SGP,87,Singapore,THA,Thailand,2022,Export,6,188203.015
+H6,SGP,87,Singapore,THA,Thailand,2022,Import,5,99786.187
+H6,SGP,87,Singapore,THA,Thailand,2023,Export,6,210305.241
+H6,SGP,87,Singapore,THA,Thailand,2023,Import,5,106359.274
+H6,SGP,87,Singapore,USA,United States,2022,Export,6,118051.893
+H6,SGP,87,Singapore,USA,United States,2022,Import,5,248977.025
+H6,SGP,87,Singapore,USA,United States,2023,Export,6,106406.427
+H6,SGP,87,Singapore,USA,United States,2023,Import,5,254743.556
+H6,SGP,88,Singapore,CHN,China,2022,Export,6,443074.068
+H6,SGP,88,Singapore,CHN,China,2022,Import,5,105294.753
+H6,SGP,88,Singapore,CHN,China,2023,Export,6,572183.676
+H6,SGP,88,Singapore,CHN,China,2023,Import,5,104534.064
+H6,SGP,88,Singapore,HKG,"Hong Kong, China",2022,Export,6,227180.201
+H6,SGP,88,Singapore,HKG,"Hong Kong, China",2022,Import,5,23261.336
+H6,SGP,88,Singapore,HKG,"Hong Kong, China",2023,Export,6,271496.447
+H6,SGP,88,Singapore,HKG,"Hong Kong, China",2023,Import,5,12408.228
+H6,SGP,88,Singapore,IDN,Indonesia,2022,Export,6,154881.704
+H6,SGP,88,Singapore,IDN,Indonesia,2022,Import,5,12632.732
+H6,SGP,88,Singapore,IDN,Indonesia,2023,Export,6,182681.878
+H6,SGP,88,Singapore,IDN,Indonesia,2023,Import,5,10025.621
+H6,SGP,88,Singapore,JPN,Japan,2022,Export,6,395693.325
+H6,SGP,88,Singapore,JPN,Japan,2022,Import,5,102705.473
+H6,SGP,88,Singapore,JPN,Japan,2023,Export,6,364925.021
+H6,SGP,88,Singapore,JPN,Japan,2023,Import,5,75271.717
+H6,SGP,88,Singapore,KOR,"Korea, Rep.",2022,Export,6,240775.627
+H6,SGP,88,Singapore,KOR,"Korea, Rep.",2022,Import,5,41034.014
+H6,SGP,88,Singapore,KOR,"Korea, Rep.",2023,Export,6,275817.364
+H6,SGP,88,Singapore,KOR,"Korea, Rep.",2023,Import,5,39404.488
+H6,SGP,88,Singapore,MYS,Malaysia,2022,Export,6,319649.733
+H6,SGP,88,Singapore,MYS,Malaysia,2022,Import,5,56550.788
+H6,SGP,88,Singapore,MYS,Malaysia,2023,Export,6,351460.509
+H6,SGP,88,Singapore,MYS,Malaysia,2023,Import,5,66643.99
+H6,SGP,88,Singapore,SAU,Saudi Arabia,2022,Export,6,4851.381
+H6,SGP,88,Singapore,SAU,Saudi Arabia,2022,Import,5,115.767
+H6,SGP,88,Singapore,SAU,Saudi Arabia,2023,Export,6,7838.282
+H6,SGP,88,Singapore,SAU,Saudi Arabia,2023,Import,5,191.744
+H6,SGP,88,Singapore,THA,Thailand,2022,Export,6,86637.024
+H6,SGP,88,Singapore,THA,Thailand,2022,Import,5,19223.531
+H6,SGP,88,Singapore,THA,Thailand,2023,Export,6,109513.459
+H6,SGP,88,Singapore,THA,Thailand,2023,Import,5,19052.098
+H6,SGP,88,Singapore,USA,United States,2022,Export,6,720878.66
+H6,SGP,88,Singapore,USA,United States,2022,Import,5,4397031.165
+H6,SGP,88,Singapore,USA,United States,2023,Export,6,807275.412
+H6,SGP,88,Singapore,USA,United States,2023,Import,5,7742689.911
+H6,SGP,89,Singapore,CHN,China,2022,Export,6,750.547
+H6,SGP,89,Singapore,CHN,China,2022,Import,5,6575.392
+H6,SGP,89,Singapore,CHN,China,2023,Export,6,7457.276
+H6,SGP,89,Singapore,CHN,China,2023,Import,5,7797.553
+H6,SGP,89,Singapore,HKG,"Hong Kong, China",2022,Export,6,336.09
+H6,SGP,89,Singapore,HKG,"Hong Kong, China",2022,Import,5,246.394
+H6,SGP,89,Singapore,HKG,"Hong Kong, China",2023,Export,6,552.597
+H6,SGP,89,Singapore,HKG,"Hong Kong, China",2023,Import,5,15.323
+H6,SGP,89,Singapore,IDN,Indonesia,2022,Export,6,116190.419
+H6,SGP,89,Singapore,IDN,Indonesia,2022,Import,5,9372.468
+H6,SGP,89,Singapore,IDN,Indonesia,2023,Export,6,10512.925
+H6,SGP,89,Singapore,IDN,Indonesia,2023,Import,5,12563.098
+H6,SGP,89,Singapore,JPN,Japan,2022,Export,6,1213.362
+H6,SGP,89,Singapore,JPN,Japan,2022,Import,5,542.199
+H6,SGP,89,Singapore,JPN,Japan,2023,Export,6,1589.311
+H6,SGP,89,Singapore,JPN,Japan,2023,Import,5,1844.26
+H6,SGP,89,Singapore,KOR,"Korea, Rep.",2022,Export,6,219.353
+H6,SGP,89,Singapore,KOR,"Korea, Rep.",2022,Import,5,108.602
+H6,SGP,89,Singapore,KOR,"Korea, Rep.",2023,Export,6,5074.996
+H6,SGP,89,Singapore,KOR,"Korea, Rep.",2023,Import,5,1292.931
+H6,SGP,89,Singapore,MYS,Malaysia,2022,Export,6,11108.315
+H6,SGP,89,Singapore,MYS,Malaysia,2022,Import,5,4887.078
+H6,SGP,89,Singapore,MYS,Malaysia,2023,Export,6,6021.263
+H6,SGP,89,Singapore,MYS,Malaysia,2023,Import,5,7648.487
+H6,SGP,89,Singapore,SAU,Saudi Arabia,2022,Export,6,1686.875
+H6,SGP,89,Singapore,SAU,Saudi Arabia,2023,Export,6,21647.809
+H6,SGP,89,Singapore,THA,Thailand,2022,Export,6,764.537
+H6,SGP,89,Singapore,THA,Thailand,2022,Import,5,1343.467
+H6,SGP,89,Singapore,THA,Thailand,2023,Export,6,2265.767
+H6,SGP,89,Singapore,THA,Thailand,2023,Import,5,1416.322
+H6,SGP,89,Singapore,USA,United States,2022,Export,6,1081405.365
+H6,SGP,89,Singapore,USA,United States,2022,Import,5,13591.181
+H6,SGP,89,Singapore,USA,United States,2023,Export,6,1191459.408
+H6,SGP,89,Singapore,USA,United States,2023,Import,5,11390.678
+H6,SGP,90,Singapore,CHN,China,2022,Export,6,3850874.2
+H6,SGP,90,Singapore,CHN,China,2022,Import,5,1600836.518
+H6,SGP,90,Singapore,CHN,China,2023,Export,6,3893602.732
+H6,SGP,90,Singapore,CHN,China,2023,Import,5,1349000.494
+H6,SGP,90,Singapore,HKG,"Hong Kong, China",2022,Export,6,605069.754
+H6,SGP,90,Singapore,HKG,"Hong Kong, China",2022,Import,5,48800.586
+H6,SGP,90,Singapore,HKG,"Hong Kong, China",2023,Export,6,455687.008
+H6,SGP,90,Singapore,HKG,"Hong Kong, China",2023,Import,5,33665.07
+H6,SGP,90,Singapore,IDN,Indonesia,2022,Export,6,764861.996
+H6,SGP,90,Singapore,IDN,Indonesia,2022,Import,5,264809.509
+H6,SGP,90,Singapore,IDN,Indonesia,2023,Export,6,774782.707
+H6,SGP,90,Singapore,IDN,Indonesia,2023,Import,5,290350.932
+H6,SGP,90,Singapore,JPN,Japan,2022,Export,6,1678655.917
+H6,SGP,90,Singapore,JPN,Japan,2022,Import,5,1119263.486
+H6,SGP,90,Singapore,JPN,Japan,2023,Export,6,1859061.394
+H6,SGP,90,Singapore,JPN,Japan,2023,Import,5,915690.054
+H6,SGP,90,Singapore,KOR,"Korea, Rep.",2022,Export,6,1399960.289
+H6,SGP,90,Singapore,KOR,"Korea, Rep.",2022,Import,5,935564.164
+H6,SGP,90,Singapore,KOR,"Korea, Rep.",2023,Export,6,1159851.347
+H6,SGP,90,Singapore,KOR,"Korea, Rep.",2023,Import,5,163549.475
+H6,SGP,90,Singapore,MYS,Malaysia,2022,Export,6,1173704.954
+H6,SGP,90,Singapore,MYS,Malaysia,2022,Import,5,2183777.906
+H6,SGP,90,Singapore,MYS,Malaysia,2023,Export,6,1214467.222
+H6,SGP,90,Singapore,MYS,Malaysia,2023,Import,5,1895783.081
+H6,SGP,90,Singapore,SAU,Saudi Arabia,2022,Export,6,31816.035
+H6,SGP,90,Singapore,SAU,Saudi Arabia,2022,Import,5,1588.699
+H6,SGP,90,Singapore,SAU,Saudi Arabia,2023,Export,6,49545.072
+H6,SGP,90,Singapore,SAU,Saudi Arabia,2023,Import,5,724.449
+H6,SGP,90,Singapore,THA,Thailand,2022,Export,6,510299.082
+H6,SGP,90,Singapore,THA,Thailand,2022,Import,5,164767.488
+H6,SGP,90,Singapore,THA,Thailand,2023,Export,6,578294.988
+H6,SGP,90,Singapore,THA,Thailand,2023,Import,5,118983.801
+H6,SGP,90,Singapore,USA,United States,2022,Export,6,5108083.099
+H6,SGP,90,Singapore,USA,United States,2022,Import,5,3673461.772
+H6,SGP,90,Singapore,USA,United States,2023,Export,6,5622870.246
+H6,SGP,90,Singapore,USA,United States,2023,Import,5,3753204.998
+H6,SGP,91,Singapore,CHN,China,2022,Export,6,110864.438
+H6,SGP,91,Singapore,CHN,China,2022,Import,5,88088.064
+H6,SGP,91,Singapore,CHN,China,2023,Export,6,104468.205
+H6,SGP,91,Singapore,CHN,China,2023,Import,5,71050.396
+H6,SGP,91,Singapore,HKG,"Hong Kong, China",2022,Export,6,399874.232
+H6,SGP,91,Singapore,HKG,"Hong Kong, China",2022,Import,5,23570.531
+H6,SGP,91,Singapore,HKG,"Hong Kong, China",2023,Export,6,452390.14
+H6,SGP,91,Singapore,HKG,"Hong Kong, China",2023,Import,5,28147.926
+H6,SGP,91,Singapore,IDN,Indonesia,2022,Export,6,191264.658
+H6,SGP,91,Singapore,IDN,Indonesia,2022,Import,5,3871.937
+H6,SGP,91,Singapore,IDN,Indonesia,2023,Export,6,161985.764
+H6,SGP,91,Singapore,IDN,Indonesia,2023,Import,5,7251.148
+H6,SGP,91,Singapore,JPN,Japan,2022,Export,6,138195.761
+H6,SGP,91,Singapore,JPN,Japan,2022,Import,5,43737.841
+H6,SGP,91,Singapore,JPN,Japan,2023,Export,6,127438.512
+H6,SGP,91,Singapore,JPN,Japan,2023,Import,5,45521.754
+H6,SGP,91,Singapore,KOR,"Korea, Rep.",2022,Export,6,12099.799
+H6,SGP,91,Singapore,KOR,"Korea, Rep.",2022,Import,5,521.346
+H6,SGP,91,Singapore,KOR,"Korea, Rep.",2023,Export,6,14930.408
+H6,SGP,91,Singapore,KOR,"Korea, Rep.",2023,Import,5,238.824
+H6,SGP,91,Singapore,MYS,Malaysia,2022,Export,6,455965.325
+H6,SGP,91,Singapore,MYS,Malaysia,2022,Import,5,162334.215
+H6,SGP,01,Singapore,CHN,China,2022,Export,6,17.95
+H6,SGP,01,Singapore,CHN,China,2022,Import,5,405.216
+H6,SGP,01,Singapore,CHN,China,2023,Export,6,4.279
+H6,SGP,01,Singapore,CHN,China,2023,Import,5,575.495
+H6,SGP,01,Singapore,HKG,"Hong Kong, China",2022,Export,6,59.539
+H6,SGP,01,Singapore,HKG,"Hong Kong, China",2022,Import,5,880.779
+H6,SGP,01,Singapore,HKG,"Hong Kong, China",2023,Export,6,37.467
+H6,SGP,01,Singapore,HKG,"Hong Kong, China",2023,Import,5,115.093
+H6,SGP,01,Singapore,IDN,Indonesia,2022,Export,6,3.09
+H6,SGP,01,Singapore,IDN,Indonesia,2022,Import,5,1738.41
+H6,SGP,01,Singapore,IDN,Indonesia,2023,Export,6,30.368
+H6,SGP,01,Singapore,IDN,Indonesia,2023,Import,5,2112.038
+H6,SGP,01,Singapore,JPN,Japan,2022,Export,6,296.013
+H6,SGP,01,Singapore,JPN,Japan,2022,Import,5,233.542
+H6,SGP,01,Singapore,JPN,Japan,2023,Export,6,276.194
+H6,SGP,01,Singapore,JPN,Japan,2023,Import,5,253.38
+H6,SGP,01,Singapore,KOR,"Korea, Rep.",2022,Export,6,0.485
+H6,SGP,01,Singapore,KOR,"Korea, Rep.",2022,Import,5,59.162
+H6,SGP,01,Singapore,KOR,"Korea, Rep.",2023,Export,6,0.583
+H6,SGP,01,Singapore,KOR,"Korea, Rep.",2023,Import,5,116.176
+H6,SGP,01,Singapore,MYS,Malaysia,2022,Export,6,813.846
+H6,SGP,01,Singapore,MYS,Malaysia,2022,Import,5,166414.894
+H6,SGP,01,Singapore,MYS,Malaysia,2023,Export,6,1015.096
+H6,SGP,01,Singapore,MYS,Malaysia,2023,Import,5,199801.04
+H6,SGP,01,Singapore,SAU,Saudi Arabia,2022,Export,6,0.167
+H6,SGP,01,Singapore,SAU,Saudi Arabia,2023,Export,6,0.745
+H6,SGP,01,Singapore,THA,Thailand,2022,Export,6,4.975
+H6,SGP,01,Singapore,THA,Thailand,2022,Import,5,97.527
+H6,SGP,01,Singapore,THA,Thailand,2023,Export,6,54.638
+H6,SGP,01,Singapore,THA,Thailand,2023,Import,5,58.111
+H6,SGP,01,Singapore,USA,United States,2022,Export,6,26303.858
+H6,SGP,01,Singapore,USA,United States,2022,Import,5,1376.711
+H6,SGP,01,Singapore,USA,United States,2023,Export,6,93.126
+H6,SGP,01,Singapore,USA,United States,2023,Import,5,842.33
+H6,SGP,02,Singapore,CHN,China,2022,Import,5,2070.02
+H6,SGP,02,Singapore,CHN,China,2023,Export,6,271.079
+H6,SGP,02,Singapore,CHN,China,2023,Import,5,7334.677
+H6,SGP,02,Singapore,HKG,"Hong Kong, China",2022,Export,6,1138.082
+H6,SGP,02,Singapore,HKG,"Hong Kong, China",2022,Import,5,236.512
+H6,SGP,02,Singapore,HKG,"Hong Kong, China",2023,Export,6,2516.815
+H6,SGP,02,Singapore,HKG,"Hong Kong, China",2023,Import,5,441.105
+H6,SGP,02,Singapore,IDN,Indonesia,2022,Export,6,41138.742
+H6,SGP,02,Singapore,IDN,Indonesia,2022,Import,5,882.094
+H6,SGP,02,Singapore,IDN,Indonesia,2023,Export,6,61680.965
+H6,SGP,02,Singapore,IDN,Indonesia,2023,Import,5,939.729
+H6,SGP,02,Singapore,JPN,Japan,2022,Export,6,3.629
+H6,SGP,02,Singapore,JPN,Japan,2022,Import,5,32277.907
+H6,SGP,02,Singapore,JPN,Japan,2023,Import,5,28699.932
+H6,SGP,02,Singapore,KOR,"Korea, Rep.",2022,Export,6,1.567
+H6,SGP,02,Singapore,KOR,"Korea, Rep.",2022,Import,5,246.458
+H6,SGP,02,Singapore,KOR,"Korea, Rep.",2023,Export,6,111.244
+H6,SGP,02,Singapore,KOR,"Korea, Rep.",2023,Import,5,449.107
+H6,SGP,02,Singapore,MYS,Malaysia,2022,Export,6,22419.08
+H6,SGP,02,Singapore,MYS,Malaysia,2022,Import,5,13470.769
+H6,SGP,02,Singapore,MYS,Malaysia,2023,Export,6,36816.587
+H6,SGP,02,Singapore,MYS,Malaysia,2023,Import,5,6921.202
+H6,SGP,02,Singapore,THA,Thailand,2022,Export,6,5069.89
+H6,SGP,02,Singapore,THA,Thailand,2022,Import,5,19306.142
+H6,SGP,02,Singapore,THA,Thailand,2023,Export,6,1488.972
+H6,SGP,02,Singapore,THA,Thailand,2023,Import,5,21751.063
+H6,SGP,02,Singapore,USA,United States,2022,Export,6,311.91
+H6,SGP,02,Singapore,USA,United States,2022,Import,5,88834.746
+H6,SGP,02,Singapore,USA,United States,2023,Import,5,83759.358
+H6,SGP,03,Singapore,CHN,China,2022,Export,6,54982.596
+H6,SGP,03,Singapore,CHN,China,2022,Import,5,104747.153
+H6,SGP,03,Singapore,CHN,China,2023,Export,6,47933.16
+H6,SGP,03,Singapore,CHN,China,2023,Import,5,93847.456
+H6,SGP,03,Singapore,HKG,"Hong Kong, China",2022,Export,6,21060.143
+H6,SGP,03,Singapore,HKG,"Hong Kong, China",2022,Import,5,6815.514
+H6,SGP,03,Singapore,HKG,"Hong Kong, China",2023,Export,6,30655.667
+H6,SGP,03,Singapore,HKG,"Hong Kong, China",2023,Import,5,10354.139
+H6,SGP,03,Singapore,IDN,Indonesia,2022,Export,6,13505.315
+H6,SGP,03,Singapore,IDN,Indonesia,2022,Import,5,87538.333
+H6,SGP,03,Singapore,IDN,Indonesia,2023,Export,6,15662.431
+H6,SGP,03,Singapore,IDN,Indonesia,2023,Import,5,94595.362
+H6,SGP,03,Singapore,JPN,Japan,2022,Export,6,8398.447
+H6,SGP,03,Singapore,JPN,Japan,2022,Import,5,94143.643
+H6,SGP,03,Singapore,JPN,Japan,2023,Export,6,11492.659
+H6,SGP,03,Singapore,JPN,Japan,2023,Import,5,83889.658
+H6,SGP,03,Singapore,KOR,"Korea, Rep.",2022,Export,6,6495.252
+H6,SGP,03,Singapore,KOR,"Korea, Rep.",2022,Import,5,14371.234
+H6,SGP,03,Singapore,KOR,"Korea, Rep.",2023,Export,6,3380.896
+H6,SGP,03,Singapore,KOR,"Korea, Rep.",2023,Import,5,12181.911
+H6,SGP,03,Singapore,MYS,Malaysia,2022,Export,6,34428.474
+H6,SGP,03,Singapore,MYS,Malaysia,2022,Import,5,116585.829
+H6,SGP,03,Singapore,MYS,Malaysia,2023,Export,6,30353.349
+H6,SGP,03,Singapore,MYS,Malaysia,2023,Import,5,117325.292
+H6,SGP,03,Singapore,SAU,Saudi Arabia,2022,Export,6,30.618
+H6,SGP,03,Singapore,SAU,Saudi Arabia,2022,Import,5,1265.134
+H6,SGP,03,Singapore,SAU,Saudi Arabia,2023,Export,6,18.152
+H6,SGP,03,Singapore,SAU,Saudi Arabia,2023,Import,5,1700.166
+H6,SGP,03,Singapore,THA,Thailand,2022,Export,6,9548.642
+H6,SGP,03,Singapore,THA,Thailand,2022,Import,5,16113.859
+H6,SGP,03,Singapore,THA,Thailand,2023,Export,6,10889.499
+H6,SGP,03,Singapore,THA,Thailand,2023,Import,5,18413.482
+H6,SGP,03,Singapore,USA,United States,2022,Export,6,19539.14
+H6,SGP,03,Singapore,USA,United States,2022,Import,5,13433.521
+H6,SGP,03,Singapore,USA,United States,2023,Export,6,16489.953
+H6,SGP,03,Singapore,USA,United States,2023,Import,5,12265.886
+H6,SGP,04,Singapore,CHN,China,2022,Export,6,28962.507
+H6,SGP,04,Singapore,CHN,China,2022,Import,5,14920.358
+H6,SGP,04,Singapore,CHN,China,2023,Export,6,9439.085
+H6,SGP,04,Singapore,CHN,China,2023,Import,5,16107.178
+H6,SGP,04,Singapore,HKG,"Hong Kong, China",2022,Export,6,5362.244
+H6,SGP,04,Singapore,HKG,"Hong Kong, China",2022,Import,5,250.319
+H6,SGP,04,Singapore,HKG,"Hong Kong, China",2023,Export,6,6775.237
+H6,SGP,04,Singapore,HKG,"Hong Kong, China",2023,Import,5,142.412
+H6,SGP,04,Singapore,IDN,Indonesia,2022,Export,6,3358.883
+H6,SGP,04,Singapore,IDN,Indonesia,2022,Import,5,64398.422
+H6,SGP,04,Singapore,IDN,Indonesia,2023,Export,6,3384.703
+H6,SGP,04,Singapore,IDN,Indonesia,2023,Import,5,65594.394
+H6,SGP,04,Singapore,JPN,Japan,2022,Export,6,138720.748
+H6,SGP,04,Singapore,JPN,Japan,2022,Import,5,14867.407
+H6,SGP,04,Singapore,JPN,Japan,2023,Export,6,77652.891
+H6,SGP,04,Singapore,JPN,Japan,2023,Import,5,10091.085
+H6,SGP,04,Singapore,KOR,"Korea, Rep.",2022,Export,6,585.271
+H6,SGP,04,Singapore,KOR,"Korea, Rep.",2022,Import,5,1331.343
+H6,SGP,04,Singapore,KOR,"Korea, Rep.",2023,Export,6,391.119
+H6,SGP,04,Singapore,KOR,"Korea, Rep.",2023,Import,5,1233.204
+H6,SGP,04,Singapore,MYS,Malaysia,2022,Export,6,32446.873
+H6,SGP,04,Singapore,MYS,Malaysia,2022,Import,5,177329.57
+H6,SGP,04,Singapore,MYS,Malaysia,2023,Export,6,26060.454
+H6,SGP,04,Singapore,MYS,Malaysia,2023,Import,5,178936.027
+H6,SGP,04,Singapore,SAU,Saudi Arabia,2022,Export,6,9339.012
+H6,SGP,04,Singapore,SAU,Saudi Arabia,2022,Import,5,676.441
+H6,SGP,04,Singapore,SAU,Saudi Arabia,2023,Export,6,12153.941
+H6,SGP,04,Singapore,SAU,Saudi Arabia,2023,Import,5,526.197

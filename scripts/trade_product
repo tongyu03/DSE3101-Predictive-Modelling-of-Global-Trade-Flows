@@ -1,0 +1,29 @@
+import pandas as pd
+
+# Define the file path
+file_path = 'data/raw data/Import_Export_by_Industry_SG.csv'
+hs_file_path = 'data/raw data/Harmonic Code and Products.csv'
+
+data = pd.read_csv(file_path)
+hs_code = pd.read_csv(hs_file_path)
+
+exports = data[data['TradeFlowName'] == 'Export']
+imports = data[data['TradeFlowName'] == 'Import']
+
+exports_grouped = exports.groupby(['ReporterName', 'PartnerName', 'ProductCode', 'Year'])['TradeValue in 1000 USD'].sum().reset_index()
+imports_grouped = imports.groupby(['ReporterName', 'PartnerName', 'ProductCode', 'Year'])['TradeValue in 1000 USD'].sum().reset_index()
+trade_data = pd.merge(exports_grouped, imports_grouped, on=['ReporterName', 'PartnerName', 'ProductCode', 'Year'], how='outer', suffixes=('_Export', '_Import'))
+trade_data['Total_Trade'] = trade_data['TradeValue in 1000 USD_Export'].fillna(0) + trade_data['TradeValue in 1000 USD_Import'].fillna(0)
+trade_data = trade_data.sort_values(by='Year', ascending=False)
+trade_data = pd.merge(trade_data, hs_code, left_on='ProductCode', right_on='HS Code', how='left')
+#to get top industries
+trade_data_by_product = trade_data.groupby(['HS Code','Product descriptions'])['Total_Trade'].sum().reset_index()
+top_10_industries = trade_data_by_product.sort_values(by='Total_Trade', ascending=False).head(10)
+
+
+print(top_10_industries)
+
+print(trade_data)
+
+trade_data.to_csv('data/cleaned data/trade_product_data.csv', index=False)
+# Export the top 10 industries to a CSV file
