@@ -294,7 +294,7 @@ def prepare_data_for_regression(log_transform=True):
         X = merged_data[["log_Lag1", "log_Lag2", "log_Lag3", "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)', 'Adjusted_value']]
         y = np.log(merged_data["Trade_Value"])
     else:
-        X = merged_data[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3", "IdealPointDistance", "agree", "GDP", 'Exchange Rate (per US$)', 'Adjusted_value']]
+        X = merged_data[["Trade_Value_Lag1", "Trade_Value_Lag2", "Trade_Value_Lag3", "IdealPointDistance", "GDP", 'Exchange Rate (per US$)', 'Adjusted_value']]
         y = merged_data["Trade_Value"]
 
     return X, y
