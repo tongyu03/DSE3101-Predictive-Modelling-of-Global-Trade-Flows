@@ -4,16 +4,18 @@ from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sns
 import ast
+import seaborn as sns
 from sklearn.model_selection import TimeSeriesSplit
 import warnings
+
+warnings.filterwarnings("ignore", category=UserWarning, module="xgboost")
 
 def process_unga_data():
     unga = pd.read_csv("data/cleaned data/unga_voting_2.csv")
 
     # Split the 'CountryPair' column into 'Country1' and 'Country2'
-    unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
+    unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else x)
     unga[['Country1', 'Country2']] = pd.DataFrame(unga['CountryPair'].tolist(), index=unga.index)
 
     # Filter data for years 1989 to 2021
@@ -33,9 +35,7 @@ def process_unga_data():
 
     return unga_sg
 
-#reclean GDP data
 def process_gdp_data():
-    # Load the GDP data
     gdp = pd.read_csv("data/raw data/GDP.csv", header = 2)
     gdp = gdp.drop(gdp.columns[[1, 2, 3]], axis=1)
 
@@ -48,10 +48,9 @@ def process_gdp_data():
     gdp_long = gdp_long.drop(gdp_long.columns[[0, 1, 2]], axis=1)
     gdp_long['Year'] = gdp_long['Year'].astype(int)
     gdp_long['Country Name'] = gdp_long['Country Name'].astype(str)
-    # Return the cleaned and reshaped GDP data
+
     return gdp_long
 
-#reclean exchange rate data
 def process_exrate_data():
     exrate = pd.read_csv("data/raw data/exchange_rate.csv", header = 4)
     exrate = exrate.drop(exrate.columns[[1, 2, 3]], axis=1)
@@ -106,7 +105,6 @@ def prepare_data_for_regression(log_transform=True):
     gdp_data.columns = gdp_data.columns.str.strip()
     exrate_data.columns = exrate_data.columns.str.strip()
     fta_data.columns = fta_data.columns.str.strip()
-    # Rename columns to ensure consistent merging
     trade_data = trade_data.rename(columns={"Year": "year"})
     trade_data = trade_data.rename(columns={"Country": "Partner"})
     gdp_data = gdp_data.rename(columns={"Year": "year"})
@@ -115,57 +113,36 @@ def prepare_data_for_regression(log_transform=True):
 
     # Merge datasets
     merged_data = pd.merge(unga_data, trade_data, how='left', left_on=['year', 'Partner'], right_on=['year', 'Partner'])
-    
     merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
     merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
     merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['Country', 'year'])
 
-    # Debug: Check columns after merging
-    print("Columns after merging:", merged_data.columns)
+    # Ensure the columns are not duplicated after merging
+    merged_data = merged_data.loc[:, ~merged_data.columns.duplicated()]
 
-    # Convert HS_Code to string and handle NaN values
+    # Handle 'HS Code' column and missing values
     if "HS Code" in merged_data.columns:
-        merged_data["HS Code"] = merged_data["HS Code"].astype(str)  # Ensure it's a string
-        merged_data["HS_Section"] = merged_data["HS Code"].str[:2]  # first 2 digits of HS code
-
-        # Check for any NaN or invalid values
-        merged_data["HS_Section"] = merged_data["HS_Section"].fillna('00')  # Fill NaN with '00' or any placeholder you prefer
+        merged_data["HS Code"] = merged_data["HS Code"].astype(str)
+        merged_data["HS_Section"] = merged_data["HS Code"].str[:2]
+        merged_data["HS_Section"] = merged_data["HS_Section"].fillna('00')
     else:
-        print("'HS_Code' column is missing from merged data.")
-        merged_data["HS_Section"] = '00'  # Handle the case where HS_Code is missing
+        merged_data["HS_Section"] = '00'
 
-    # Lag features for Trade_Value
-    merged_data["Trade_Volume_Lag1"] = merged_data.groupby(["Partner"])['Trade Volume'].shift(1)
-    merged_data["Trade_Volume_Lag2"] = merged_data.groupby(["Partner"])['Trade Volume'].shift(2)
-    merged_data["Trade_Volume_Lag3"] = merged_data.groupby(["Partner"])['Trade Volume'].shift(3)
-
-    # Lag features for GDP and Exchange Rate
-    merged_data["GDP_Lag1"] = merged_data.groupby(["Partner"])['GDP'].shift(1)
-    merged_data["GDP_Lag2"] = merged_data.groupby(["Partner"])['GDP'].shift(2)
-    merged_data["GDP_Lag3"] = merged_data.groupby(["Partner"])['GDP'].shift(3)
-
-    merged_data["ExRate_Lag1"] = merged_data.groupby(["Partner"])['Exchange Rate (per US$)'].shift(1)
-    merged_data["ExRate_Lag2"] = merged_data.groupby(["Partner"])['Exchange Rate (per US$)'].shift(2)
-    merged_data["ExRate_Lag3"] = merged_data.groupby(["Partner"])['Exchange Rate (per US$)'].shift(3)
+    # Lag features for Trade_Value, GDP, and Exchange Rate
+    lag_columns = ["Trade Volume", "GDP", "Exchange Rate (per US$)"]
+    for col in lag_columns:
+        for lag in range(1, 4):
+            merged_data[f"{col}_Lag{lag}"] = merged_data.groupby(["Partner"])[col].shift(lag)
 
     merged_data = merged_data.dropna()
 
     if log_transform:
         # Log-transform lag features and target
-        merged_data["log_Trade_Volume_Lag1"] = np.log(merged_data["Trade_Volume_Lag1"])
-        merged_data["log_Trade_Volume_Lag2"] = np.log(merged_data["Trade_Volume_Lag2"])
-        merged_data["log_Trade_Volume_Lag3"] = np.log(merged_data["Trade_Volume_Lag3"])
-
-        merged_data["log_GDP_Lag1"] = np.log(merged_data["GDP_Lag1"])
-        merged_data["log_GDP_Lag2"] = np.log(merged_data["GDP_Lag2"])
-        merged_data["log_GDP_Lag3"] = np.log(merged_data["GDP_Lag3"])
-
-        merged_data["log_ExRate_Lag1"] = np.log(merged_data["ExRate_Lag1"])
-        merged_data["log_ExRate_Lag2"] = np.log(merged_data["ExRate_Lag2"])
-        merged_data["log_ExRate_Lag3"] = np.log(merged_data["ExRate_Lag3"])
+        for col in lag_columns:
+            for lag in range(1, 4):
+                merged_data[f"log_{col}_Lag{lag}"] = np.log(merged_data[f"{col}_Lag{lag}"])
 
     return merged_data
-
 
 def run_xgboost_model():
     # Prepare data
