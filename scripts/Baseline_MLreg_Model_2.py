@@ -169,19 +169,20 @@ def prepare_data_for_regression(log_transform=True):
         merged_data["log_GDP_Lag2"] = np.log(merged_data["GDP_Lag2"])
         merged_data["log_GDP_Lag3"] = np.log(merged_data["GDP_Lag3"])
 
-        merged_data["log_ExRate_Lag1"] = np.log(merged_data["ExRate_Lag1"])
-        merged_data["log_ExRate_Lag2"] = np.log(merged_data["ExRate_Lag2"])
-        merged_data["log_ExRate_Lag3"] = np.log(merged_data["ExRate_Lag3"])
+        #merged_data["log_ExRate_Lag1"] = np.log(merged_data["ExRate_Lag1"])
+        #merged_data["log_ExRate_Lag2"] = np.log(merged_data["ExRate_Lag2"])
+        #merged_data["log_ExRate_Lag3"] = np.log(merged_data["ExRate_Lag3"])
 
         # Log-transform target (Trade_Value)
         X = merged_data[["log_Trade_Volume_Lag1", "log_Trade_Volume_Lag2", "log_Trade_Volume_Lag3",
-                         "IdealPointDistance", "agree", "log_GDP_Lag1", 'log_GDP_Lag2', 'log_GDP_Lag3', 
-                         'log_ExRate_Lag1', 'log_ExRate_Lag2', 'log_ExRate_Lag3', 'Adjusted_value']]
+                         "IdealPointDistance", "log_GDP_Lag1",
+                         'Exchange Rate (per US$)', 'Adjusted_value']]
+        print(X)
         y = np.log(merged_data["Trade Volume"])
 
     else:
         X = merged_data[["Trade_Volume_Lag1", "Trade_Volume_Lag2", "Trade_Volume_Lag3",
-                         "IdealPointDistance", "agree", "GDP_Lag1", 'GDP_Lag2', 'GDP_Lag3', 
+                         "IdealPointDistance", "GDP_Lag1", 'GDP_Lag2', 'GDP_Lag3',
                          'ExRate_Lag1', 'ExRate_Lag2', 'ExRate_Lag3', 'Adjusted_value']]
         y = merged_data["Trade Volume"]
 
@@ -242,7 +243,8 @@ print(f"Average AIC: {average_aic}")
 print(f"Average BIC: {average_bic}")
 
 # Output average metrics
-print(f"\nK-Fold Cross-Validation Results (k=5)")
+#print(f"\nK-Fold Cross-Validation Results (k=5)")
+print(f"\nTime Series Split Results (k=5)")
 print(f"Average R²: {np.mean(r2_scores):.4f}")
 print(f"Average MAE: {np.mean(mae_scores):.2f}")
 print(f"Average MSE: {np.mean(mse_scores):.2f}")
