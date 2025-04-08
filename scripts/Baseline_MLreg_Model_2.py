@@ -95,7 +95,14 @@ def process_FTA_data():
         'SAU': 'Saudi Arabia',
         'THA': 'Thailand',
         'USA': 'United States',
-        'IDN': 'Indonesia'
+        'IDN': 'Indonesia',
+        'ARE': 'United Arab Emirates',
+        'IND': 'India',
+        'PHL': 'Philippines',
+        'VNM': 'Vietnam',
+        'AUS': 'Australia',
+        'TWN': 'Taiwan',
+        'DEU': 'Germany',
     }
 
     fta_sg['Country'] = fta_sg['Country Code'].replace(iso3_to_country)
