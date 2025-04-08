@@ -7,6 +7,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import pandas as pd
 import ast
+from sklearn.model_selection import TimeSeriesSplit
 
 def process_trade_data():
     # Load the CSV file
@@ -305,7 +306,10 @@ def prepare_data_for_regression(log_transform=True):
 X, y = prepare_data_for_regression()
 
 # K-Fold Cross Validation
-kf = KFold(n_splits=5, shuffle=True, random_state=42)
+#kf = KFold(n_splits=5, shuffle=True, random_state=42)
+
+#TimeSeriesSplits
+tscv = TimeSeriesSplit(n_splits=5)
 
 r2_scores = []
 mae_scores = []
@@ -328,9 +332,13 @@ def calculate_aic_bic(y_true, y_pred, n_params):
     
     return aic, bic
 
-for train_index, test_index in kf.split(X):
+for train_index, test_index in tscv.split(X):
     X_train, X_test = X.iloc[train_index], X.iloc[test_index]
     y_train, y_test = y.iloc[train_index], y.iloc[test_index]
+
+#for train_index, test_index in kf.split(X):
+#    X_train, X_test = X.iloc[train_index], X.iloc[test_index]
+#    y_train, y_test = y.iloc[train_index], y.iloc[test_index]
 
     model = LinearRegression()
     model.fit(X_train, y_train)
@@ -385,7 +393,8 @@ plt.plot([min(all_y_test), max(all_y_test)],
 
 plt.xlabel("Actual Trade Value")
 plt.ylabel("Predicted Trade Value")
-plt.title("Actual vs Predicted Trade Value (Linear Regression, K-Fold CV)")
+#plt.title("Actual vs Predicted Trade Value (Linear Regression, K-Fold CV)")
+plt.title("Actual vs Predicted Trade Value (Linear Regression, Time Series Split)")
 plt.grid(True)
 plt.tight_layout()
 plt.show()
