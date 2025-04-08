@@ -20,7 +20,7 @@ from sklearn.linear_model import Ridge, Lasso
 
 # Function to load and preprocess UNGA data
 def process_unga_data():
-    unga = pd.read_csv("data/cleaned data/unga_voting_2.csv")
+    unga = pd.read_csv("data/cleaned data/unga_voting_3.csv")
 
     # Split the 'CountryPair' column into 'Country1' and 'Country2'
     unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
@@ -129,8 +129,6 @@ def prepare_data_for_regression(log_transform=True):
     merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
     merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['Country', 'year'])
 
-    # Debug: Check columns after merging
-    print("Columns after merging:", merged_data.columns)
 
     # Convert HS_Code to string and handle NaN values
     if "HS Code" in merged_data.columns:
@@ -143,48 +141,68 @@ def prepare_data_for_regression(log_transform=True):
         print("'HS_Code' column is missing from merged data.")
         merged_data["HS_Section"] = '00'  # Handle the case where HS_Code is missing
 
-    # Lag features for Trade_Value
-    merged_data["Trade_Volume_Lag1"] = merged_data.groupby(["Partner"])['Trade Volume'].shift(1)
-    merged_data["Trade_Volume_Lag2"] = merged_data.groupby(["Partner"])['Trade Volume'].shift(2)
-    merged_data["Trade_Volume_Lag3"] = merged_data.groupby(["Partner"])['Trade Volume'].shift(3)
+    # Dummy variables for Selected HS
+    hs_sections_of_interest = ['85', '84', '27', '90', '71', '39', '29', '33', '88', '38']
+    merged_data["HS_Section"] = merged_data["HS_Section"].str.zfill(2)
+
+    for section in hs_sections_of_interest:
+        col_name = f"HS_{section}"
+        merged_data[col_name] = (merged_data["HS_Section"] == section).astype(int)
+
+
+    # Debug: Check columns after merging
+    print("Columns after merging:", merged_data.columns)
+
+    # Lag features for Imports
+    merged_data["Import_Lag1"] = merged_data.groupby(["Partner"])['Imports'].shift(1)
+    merged_data["Import_Lag2"] = merged_data.groupby(["Partner"])['Imports'].shift(2)
+    merged_data["Import_Lag3"] = merged_data.groupby(["Partner"])['Imports'].shift(3)
 
     # Lag features for GDP and Exchange Rate
     merged_data["GDP_Lag1"] = merged_data.groupby(["Partner"])['GDP'].shift(1)
-    merged_data["GDP_Lag2"] = merged_data.groupby(["Partner"])['GDP'].shift(2)
-    merged_data["GDP_Lag3"] = merged_data.groupby(["Partner"])['GDP'].shift(3)
+    #merged_data["GDP_Lag2"] = merged_data.groupby(["Partner"])['GDP'].shift(2)
+    #merged_data["GDP_Lag3"] = merged_data.groupby(["Partner"])['GDP'].shift(3)
 
-    merged_data["ExRate_Lag1"] = merged_data.groupby(["Partner"])['Exchange Rate (per US$)'].shift(1)
-    merged_data["ExRate_Lag2"] = merged_data.groupby(["Partner"])['Exchange Rate (per US$)'].shift(2)
-    merged_data["ExRate_Lag3"] = merged_data.groupby(["Partner"])['Exchange Rate (per US$)'].shift(3)
+    #merged_data["ExRate_Lag1"] = merged_data.groupby(["Partner"])['Exchange Rate (per US$)'].shift(1)
+    #merged_data["ExRate_Lag2"] = merged_data.groupby(["Partner"])['Exchange Rate (per US$)'].shift(2)
+    #merged_data["ExRate_Lag3"] = merged_data.groupby(["Partner"])['Exchange Rate (per US$)'].shift(3)
 
     merged_data = merged_data.dropna()
 
+    print(merged_data)
+
     if log_transform:
         # Log-transform lag features and target
-        merged_data["log_Trade_Volume_Lag1"] = np.log(merged_data["Trade_Volume_Lag1"])
-        merged_data["log_Trade_Volume_Lag2"] = np.log(merged_data["Trade_Volume_Lag2"])
-        merged_data["log_Trade_Volume_Lag3"] = np.log(merged_data["Trade_Volume_Lag3"])
+        #merged_data["log_Trade_Volume_Lag1"] = np.log(merged_data["Trade_Volume_Lag1"])
+        #merged_data["log_Trade_Volume_Lag2"] = np.log(merged_data["Trade_Volume_Lag2"])
+        #merged_data["log_Trade_Volume_Lag3"] = np.log(merged_data["Trade_Volume_Lag3"])
+
+        merged_data["log_Import_Lag1"] = np.log(merged_data["Import_Lag1"])
+        merged_data["log_Import_Lag2"] = np.log(merged_data["Import_Lag2"])
+        merged_data["log_Import_Lag3"] = np.log(merged_data["Import_Lag3"])
 
         merged_data["log_GDP_Lag1"] = np.log(merged_data["GDP_Lag1"])
-        merged_data["log_GDP_Lag2"] = np.log(merged_data["GDP_Lag2"])
-        merged_data["log_GDP_Lag3"] = np.log(merged_data["GDP_Lag3"])
+        #merged_data["log_GDP_Lag2"] = np.log(merged_data["GDP_Lag2"])
+        #merged_data["log_GDP_Lag3"] = np.log(merged_data["GDP_Lag3"])
 
         #merged_data["log_ExRate_Lag1"] = np.log(merged_data["ExRate_Lag1"])
         #merged_data["log_ExRate_Lag2"] = np.log(merged_data["ExRate_Lag2"])
         #merged_data["log_ExRate_Lag3"] = np.log(merged_data["ExRate_Lag3"])
 
-        # Log-transform target (Trade_Value)
-        X = merged_data[["log_Trade_Volume_Lag1", "log_Trade_Volume_Lag2", "log_Trade_Volume_Lag3",
+    # Log-transform target (Imports)
+        X = merged_data[["log_Import_Lag1", "log_Import_Lag2", "log_Import_Lag3",
                          "IdealPointDistance", "log_GDP_Lag1",
-                         'Exchange Rate (per US$)', 'Adjusted_value']]
+                         'Exchange Rate (per US$)', 'Adjusted_value',
+                         "HS_85", "HS_84", "HS_27", "HS_90", "HS_71", "HS_39", "HS_29", "HS_33", "HS_88", "HS_38"]]
         print(X)
-        y = np.log(merged_data["Trade Volume"])
+        y = np.log(merged_data["Imports"])
 
     else:
-        X = merged_data[["Trade_Volume_Lag1", "Trade_Volume_Lag2", "Trade_Volume_Lag3",
-                         "IdealPointDistance", "GDP_Lag1", 'GDP_Lag2', 'GDP_Lag3',
-                         'ExRate_Lag1', 'ExRate_Lag2', 'ExRate_Lag3', 'Adjusted_value']]
-        y = merged_data["Trade Volume"]
+        X = merged_data[["Import_Lag1", "Import_Lag2", "Import_Lag3",
+                         "IdealPointDistance", "GDP_Lag1",
+                         'Exchange Rate (per US$)', 'Adjusted_value',
+                         "HS_85", "HS_84", "HS_27", "HS_90", "HS_71", "HS_39", "HS_29", "HS_33", "HS_88", "HS_38"]]
+        y = merged_data["Imports"]
 
     return X, y
 
@@ -274,7 +292,8 @@ plt.plot([min(all_y_test), max(all_y_test)],
 
 plt.xlabel("Actual Trade Volume")
 plt.ylabel("Predicted Trade Volume")
-plt.title("Actual vs Predicted Trade Value (Linear Regression, K-Fold CV)")
+#plt.title("Actual vs Predicted Trade Value (Linear Regression, K-Fold CV)")
+plt.title("Actual vs Predicted Trade Value (Linear Regression, Time Series Split)")
 plt.grid(True)
 plt.tight_layout()
 plt.show()
