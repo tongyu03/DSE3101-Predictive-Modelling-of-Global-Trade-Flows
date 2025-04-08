@@ -10,7 +10,7 @@ from shinywidgets import render_widget
 trade_pdt_df = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
 
 
-#product list
+#product list for industry
 product_list = sorted(trade_pdt_df["Product"].dropna().unique().tolist())
 
 # import intro text
