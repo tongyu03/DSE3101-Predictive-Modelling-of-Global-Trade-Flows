@@ -175,14 +175,14 @@ def prepare_data_for_regression(log_transform=True):
 
         # Log-transform target (Trade_Value)
         X = merged_data[["log_Trade_Volume_Lag1", "log_Trade_Volume_Lag2", "log_Trade_Volume_Lag3",
-                         "IdealPointDistance", "agree", "log_GDP_Lag1", 'log_GDP_Lag2', 'log_GDP_Lag3', 
-                         'log_ExRate_Lag1', 'log_ExRate_Lag2', 'log_ExRate_Lag3', 'Adjusted_value']]
+                         "IdealPointDistance", "GDP_Lag1", 
+                         'ExRate', 'Adjusted_value']] #ask prof for exrate, assumption: exrate dont fluctuate much, exrate in data equal throughout the year
         y = np.log(merged_data["Trade Volume"])
 
     else:
         X = merged_data[["Trade_Volume_Lag1", "Trade_Volume_Lag2", "Trade_Volume_Lag3",
-                         "IdealPointDistance", "agree", "GDP_Lag1", 'GDP_Lag2', 'GDP_Lag3', 
-                         'ExRate_Lag1', 'ExRate_Lag2', 'ExRate_Lag3', 'Adjusted_value']]
+                         "IdealPointDistance", "GDP_Lag1", 
+                         'ExRate_Lag1', 'Adjusted_value']]
         y = merged_data["Trade Volume"]
 
     return X, y

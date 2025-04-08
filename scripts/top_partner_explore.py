@@ -28,10 +28,10 @@ data = data.drop(columns=["Dates"])  # Drop the 'Dates' column
 data = data[["Country", "Year", "Month", "Imports", "Exports", "Trade Volume"]]  # Reorder columns
 data = data[(data["Year"] <= 2024)]
 data = data.groupby(['Country','Year'])[['Imports', 'Exports', 'Trade Volume']].sum().reset_index()
-unwanted_entries = ['Total All Markets', 'Asia', 'Europe', 'America', 'Oceania', 'Other Markets Africa', 
-                    'Other Markets Europe', 'Other Markets Asia', 'Other Markets America', 'Other Markets Oceania']  # Add other unwanted entries if needed
-partners = ['Saudi Arabia', 'Thailand', 'Malaysia', 'United States', 
-            'China', 'Hong Kong', 'Japan', "South Korea", 'Indonesia', 'Taiwan']
+unwanted_entries = ['Total All Markets', 'Asia', 'Europe', 'America', 'Oceania', 'Africa', 'Other Markets Africa', 
+                    'Other Markets Europe', 'Other Markets Asia', 'Other Markets America', 'Other Markets Oceania', 'Panama', 'New Caledonia']  # Add other unwanted entries if needed
+partners = ['Thailand', 'Malaysia', 'United States', 
+            'China', 'Hong Kong', 'Japan', "South Korea", 'Indonesia', 'Taiwan', 'India', 'Saudi Arabia']
 data = data[data['Year']>=2013]
 data = data[~data['Country'].isin(unwanted_entries)]
 total_trade_vol = data.groupby(['Country'])[['Trade Volume']].sum().reset_index()
@@ -42,5 +42,6 @@ partners_trade_vol = partners_trade.groupby(['Country'])[['Trade Volume']].sum()
 
 proportion = partners_trade_vol['Trade Volume'].sum() / total_trade_vol['Trade Volume'].sum()*100
 print(partners_trade_vol)
+print(partners_trade_vol.count())
 print(total_trade_vol.head(15))
 print(proportion)
