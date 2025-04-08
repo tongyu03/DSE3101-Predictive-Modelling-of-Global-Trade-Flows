@@ -6,6 +6,12 @@ import seaborn as sns
 import shinywidgets
 from shinywidgets import render_widget
 
+#import trade product data
+trade_pdt_df = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
+
+
+#product list
+product_list = sorted(trade_pdt_df["Product"].dropna().unique().tolist())
 
 # import intro text
 def read_intro():
@@ -35,15 +41,17 @@ app_ui = ui.page_fluid(
                 ui.sidebar(
                     ui.input_selectize(
                         "select_industry1", "Select an Industry:",
-                        choices=["Manufacturing", "B", "C", "D", "E", "F", "G", "H"]
-                    ),
+                        choices=product_list,
+                        selected=product_list[0] if product_list else None
+                        ),
                     ui.input_selectize(
                         "select_trade", "Select Imports or Exports:",
                         choices=["Exports", "Imports"]
                     ),
-                    ui.input_slider("slide_year", "Choose a Year:", 2009, 2024, value=2020),
+                    ui.input_slider("slide_year", "Choose a Year:", 2013, 2023, value=2020),
                 ),
-                    ui.output_text("page_b_output")  # Placeholder output
+                    shinywidgets.output_widget("bubble_plot")
+
             )
         ),
 
@@ -79,9 +87,38 @@ def server(input, output, session):
         return ui.HTML(f"<p>{text_content}</p>")  # Display formatted text
     
     @output
-    @render.text
-    def page_b_output():
-        return f"You selected: {input['select_industry1']()}, {input['select_trade']()}, {input['slide_year']()}"
+    @render_widget
+    def bubble_plot():
+        trade_type_col = input.select_trade().strip()
+        filtered = trade_pdt_df[
+            (trade_pdt_df['Product'] == input.select_industry1()) &
+            (trade_pdt_df['Year'] == input.slide_year())
+        ]
+
+        if filtered.empty:
+            return px.scatter(
+            title="No data available for the selected filters.",
+            x=[],
+            y=[]
+            )
+        #plotting
+        fig = px.scatter(
+            filtered, 
+            x= "Country", 
+            y= trade_type_col,
+            size= trade_type_col,
+            color= "Country", 
+            hover_name= "Product",
+            title= f"Singapore {input.select_industry1()} {trade_type_col} in {input.slide_year()}",
+            size_max= 60
+        )
+
+        fig.update_layout(
+        xaxis_title="Country",
+        yaxis_title=trade_type_col,
+        margin=dict(l=20, r=20, t=40, b=20)
+    )
+        return fig
 
     @output
     @render.text
