@@ -1,24 +1,14 @@
-"""
-
-@author: Shannen
-Updated trade data
-
-"""
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+from xgboost import XGBRegressor
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 import pandas as pd
-import ast
 import numpy as np
-from sklearn.model_selection import KFold
 import matplotlib.pyplot as plt
+import seaborn as sns
+import ast
 from sklearn.model_selection import TimeSeriesSplit
-from sklearn.linear_model import Ridge, Lasso
+import warnings
 
-
-#new trade data
-
-# Function to load and preprocess UNGA data
 def process_unga_data():
     unga = pd.read_csv("data/cleaned data/unga_voting_2.csv")
 
@@ -71,6 +61,7 @@ def process_exrate_data():
     exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
 
     return exrate_long
+
 def process_FTA_data():
     fta = pd.read_csv("data/cleaned data/adjusted_fta_data_2.csv")
 
@@ -173,151 +164,41 @@ def prepare_data_for_regression(log_transform=True):
         merged_data["log_ExRate_Lag2"] = np.log(merged_data["ExRate_Lag2"])
         merged_data["log_ExRate_Lag3"] = np.log(merged_data["ExRate_Lag3"])
 
-        # Log-transform target (Trade_Value)
-        X = merged_data[["log_Trade_Volume_Lag1", "log_Trade_Volume_Lag2", "log_Trade_Volume_Lag3",
-                         "IdealPointDistance", "agree", "log_GDP_Lag1", 'log_GDP_Lag2', 'log_GDP_Lag3', 
-                         'log_ExRate_Lag1', 'log_ExRate_Lag2', 'log_ExRate_Lag3', 'Adjusted_value']]
-        y = np.log(merged_data["Trade Volume"])
-
-    else:
-        X = merged_data[["Trade_Volume_Lag1", "Trade_Volume_Lag2", "Trade_Volume_Lag3",
-                         "IdealPointDistance", "agree", "GDP_Lag1", 'GDP_Lag2', 'GDP_Lag3', 
-                         'ExRate_Lag1', 'ExRate_Lag2', 'ExRate_Lag3', 'Adjusted_value']]
-        y = merged_data["Trade Volume"]
-
-    return X, y
-
-X, y = prepare_data_for_regression()
-print(f"Number of datapoints: {len(X)}")
+    return merged_data
 
 
-# TimeSeriesSplit
-tscv = TimeSeriesSplit(n_splits=5)
+def run_xgboost_model():
+    # Prepare data
+    merged_data = prepare_data_for_regression()
+    X = merged_data.drop(columns=['Trade Volume', 'Country1', 'Country2', 'Partner'])
+    y = merged_data['Trade Volume']
 
-r2_scores = []
-mae_scores = []
-mse_scores = []
-coefficients_list = []
+    # Train-test split
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Initialize lists before the loop
-all_y_test = []
-all_y_pred = []
-aic_values = []
-bic_values = []
+    # Initialize XGBoost Regressor
+    model = XGBRegressor(objective='reg:squarederror', colsample_bytree=0.3, learning_rate=0.1,
+                         max_depth=5, alpha=10, n_estimators=1000)
 
-n_params = X.shape[1]
-
-def calculate_aic_bic(y_true, y_pred, n_params):
-    log_likelihood = -0.5 * np.sum((y_true - y_pred) ** 2)
-    n = len(y_true)
-    aic = 2 * n_params - 2 * log_likelihood
-    bic = np.log(n) * n_params - 2 * log_likelihood
-    
-    return aic, bic
-
-for train_index, test_index in tscv.split(X):
-    X_train, X_test = X.iloc[train_index], X.iloc[test_index]
-    y_train, y_test = y.iloc[train_index], y.iloc[test_index]
-
-    model = LinearRegression()
+    # Fit the model
     model.fit(X_train, y_train)
 
+    # Make predictions
     y_pred = model.predict(X_test)
 
-    r2_scores.append(r2_score(y_test, y_pred))
-    mae_scores.append(mean_absolute_error(y_test, y_pred))
-    mse_scores.append(mean_squared_error(y_test, y_pred))
-    coefficients_list.append(model.coef_)
+    # Evaluate the model
+    rmse = np.sqrt(mean_squared_error(y_test, y_pred))
+    r2 = r2_score(y_test, y_pred)
+    mae = mean_absolute_error(y_test, y_pred)
 
-    # Collect for plotting
-    all_y_test.extend(y_test)
-    all_y_pred.extend(y_pred)
-    #Calc Aic and BIC
-    aic, bic = calculate_aic_bic(y_test, y_pred, n_params)
-    aic_values.append(aic)
-    bic_values.append(bic)
-average_aic = np.mean(aic_values)
-average_bic = np.mean(bic_values)
-print(f"Average AIC: {average_aic}")
-print(f"Average BIC: {average_bic}")
+    print("RMSE: ", rmse)
+    print("R-squared: ", r2)
+    print("MAE: ", mae)
 
-# Output average metrics
-print(f"\nK-Fold Cross-Validation Results (k=5)")
-print(f"Average R²: {np.mean(r2_scores):.4f}")
-print(f"Average MAE: {np.mean(mae_scores):.2f}")
-print(f"Average MSE: {np.mean(mse_scores):.2f}")
+    # Feature importance plot
+    plt.figure(figsize=(10, 6))
+    sns.barplot(x=model.feature_importances_, y=X.columns)
+    plt.title('Feature Importance')
+    plt.show()
 
-# Trade stats
-print("\nTrade Value Statistics:")
-print(f"Mean Trade Volume: {y.mean():.2f}")
-print(f"Median Trade Volume: {y.median():.2f}")
-print(f"Min Trade Volume: {y.min():.2f}")
-print(f"Max Trade Volume: {y.max():.2f}")
-print(f"Variance: {y.var():.2f}")
-
-# Average Coefficients across folds
-avg_coefficients = np.mean(coefficients_list, axis=0)
-coefficients_df = pd.DataFrame({
-    "Feature": X.columns,
-    "Average Coefficient": avg_coefficients
-})
-print("\nAverage Model Coefficients (across folds):")
-print(coefficients_df)
-
-plt.figure(figsize=(8, 6))
-plt.scatter(all_y_test, all_y_pred, alpha=0.6)
-plt.plot([min(all_y_test), max(all_y_test)],
-         [min(all_y_test), max(all_y_test)],
-         color='red', linestyle='--')
-
-plt.xlabel("Actual Trade Volume")
-plt.ylabel("Predicted Trade Volume")
-plt.title("Actual vs Predicted Trade Value (Linear Regression, K-Fold CV)")
-plt.grid(True)
-plt.tight_layout()
-plt.show()
-
-#residuals plot
-residuals = np.array(all_y_test) - np.array(all_y_pred)
-
-plt.figure(figsize=(8, 6))
-plt.scatter(all_y_pred, residuals, alpha=0.6)
-plt.axhline(y=0, color='red', linestyle='--')
-plt.xlabel("Predicted Trade Volume")
-plt.ylabel("Residuals (Actual - Predicted)")
-plt.title("Residuals vs Predicted (Linear Regression)")
-plt.grid(True)
-plt.tight_layout()
-plt.show()
-
-#check autocorrelation
-print(y.corr(y.shift(1)))
-print(y.corr(y.shift(2)))
-print(y.corr(y.shift(3)))
-
-# Initialize Ridge and Lasso models
-ridge_model = Ridge(alpha=1.0)
-lasso_model = Lasso(alpha=0.1)
-
-r2_scores_ridge = []
-r2_scores_lasso = []
-
-#Overly high R^2
-#Cross-validation for Ridge and Lasso
-for train_index, test_index in tscv.split(X):
-    X_train, X_test = X.iloc[train_index], X.iloc[test_index]
-    y_train, y_test = y.iloc[train_index], y.iloc[test_index]
-
-    # Ridge regression
-    ridge_model.fit(X_train, y_train)
-    y_pred_ridge = ridge_model.predict(X_test)
-    r2_scores_ridge.append(r2_score(y_test, y_pred_ridge))
-
-    # Lasso regression
-    lasso_model.fit(X_train, y_train)
-    y_pred_lasso = lasso_model.predict(X_test)
-    r2_scores_lasso.append(r2_score(y_test, y_pred_lasso))
-
-# Output average R² for Ridge and Lasso
-print(f"Average R² for Ridge Regression: {np.mean(r2_scores_ridge):.4f}")
-print(f"Average R² for Lasso Regression: {np.mean(r2_scores_lasso):.4f}")
+run_xgboost_model()
