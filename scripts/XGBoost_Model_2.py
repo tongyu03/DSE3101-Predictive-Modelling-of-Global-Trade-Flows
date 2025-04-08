@@ -208,3 +208,38 @@ for fold, (train_index, test_index) in enumerate(tscv.split(X)):
 #%%
 
 #plot predicted vs actual
+
+import matplotlib.pyplot as plt
+
+
+all_preds = []
+all_actuals = []
+
+for fold, (train_index, test_index) in enumerate(tscv.split(X)):
+    # ... existing code ...
+    
+    model.fit(X_train, y_train)
+    preds = model.predict(X_test)
+
+    # Store for combined plot
+    all_preds.extend(preds)
+    all_actuals.extend(y_test.values)
+
+    # Optional: Plot for each fold
+    plt.figure(figsize=(6, 4))
+    plt.scatter(y_test, preds, alpha=0.5)
+    plt.xlabel("Actual Log Imports")
+    plt.ylabel("Predicted Log Imports")
+    plt.title(f"Fold {fold + 1}: Predicted vs Actual")
+    plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], color='red', linestyle='--')
+    plt.tight_layout()
+    plt.show()
+
+plt.figure(figsize=(7, 5))
+plt.scatter(all_actuals, all_preds, alpha=0.5)
+plt.xlabel("Actual Log Imports")
+plt.ylabel("Predicted Log Imports")
+plt.title("All Folds: Predicted vs Actual")
+plt.plot([min(all_actuals), max(all_actuals)], [min(all_actuals), max(all_actuals)], color='red', linestyle='--')
+plt.tight_layout()
+plt.show()
