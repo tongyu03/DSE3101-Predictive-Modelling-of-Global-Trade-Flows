@@ -14,7 +14,7 @@ import pandas as pd
 import ast
 
 def process_unga_data():
-    unga = pd.read_csv("data/cleaned data/unga_voting_2.csv")
+    unga = pd.read_csv("data/cleaned data/unga_voting_3.csv")
 
     # Split the 'CountryPair' column into 'Country1' and 'Country2'
     unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
