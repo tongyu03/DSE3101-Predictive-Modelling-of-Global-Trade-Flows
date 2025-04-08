@@ -355,7 +355,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Set up K-Fold
-kf = KFold(n_splits=5, shuffle=True, random_state=42)
+#kf = KFold(n_splits=5, shuffle=True, random_state=42)
+
+# Time Series Split
+tscv = TimeSeriesSplit(n_splits=5)
 
 # For storing evaluation metrics and all predictions
 r2_scores = []
@@ -375,7 +378,8 @@ def calculate_aic_bic(y_true, y_pred, n_params):
     
     return aic, bic
 
-for train_index, test_index in kf.split(X):
+#for train_index, test_index in kf.split(X):
+for train_index, test_index in tscv.split(X):
     X_train, X_test = X.iloc[train_index], X.iloc[test_index]
     y_train, y_test = y.iloc[train_index], y.iloc[test_index]
 
