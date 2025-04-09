@@ -4,6 +4,67 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
+#import trade product data
+trade_pdt_df = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
+
+# Rename industries
+industry_rename_map = {
+    'Chemical products n.e.c.': 'Other Chemicals',
+    'Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles': 'Electrical Equipment & AV Gear',
+    'Essential oils and resinoids; perfumery, cosmetic or toilet preparations': 'Cosmetics & Fragrances',
+    'Metal; miscellaneous products of base metal': 'Base Metal Products',
+    'Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes': 'Mineral Fuels & Oils',
+    'Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin': 'Jewellery & Precious Metals',
+    'Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof': 'Machinery & Boilers',
+    'Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories': 'Optical & Medical Instruments',
+    'Organic chemicals': 'Organic Chemicals',
+    'Plastics and articles thereof': 'Plastics',
+    'Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof': 'Machinery & Boilers'  # same as above
+}
+
+# plot trade line graph
+def plot_trade_line_graph(country, industry, trade_data_df):
+    # Filter the data for the given country and industry
+    filtered_data = trade_data_df[
+        (trade_data_df['Country'] == country) & 
+        (trade_data_df['Product'] == industry)
+    ]
+    # Create the line plot
+    fig = px.line(
+        filtered_data, 
+        x='Year', 
+        y=['Imports', 'Exports'], 
+        title=f"Trade of {industry} between Singapore and {country}",
+        labels={'Year': 'Year', 'value': 'Trade Value (USD)', 'variable': 'Trade Type'},
+        markers=True
+    )
+    # Customize the layout
+    fig.update_layout(
+        template='plotly_white',
+        xaxis_title="Year",
+        yaxis_title="Trade Value (USD)",
+        legend_title="Trade Type",
+        margin=dict(l=20, r=20, t=40, b=20),
+        xaxis=dict(range=[filtered_data['Year'].min(), 2024]) 
+    )
+    # Show the figure
+    return fig
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+# functions for old script
 
 ### Historical Trade Data
 trade_df = pd.read_csv("data\cleaned data\cleaned_monthly_trade_data.csv")
@@ -98,3 +159,5 @@ def get_gdp_comparison(gdp_df, country, year):
         return value
     else:
         return f"GDP data not available for {country} in {year}"
+    
+    '''

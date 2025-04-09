@@ -7,8 +7,7 @@ import shinywidgets
 from shinywidgets import render_widget
 
 #import trade product data
-trade_pdt_df = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
-
+trade_pdt_df = pd.read_csv("data/cleaned data/10_years_trade_frontend.csv")
 
 #product list for industry
 product_list = sorted(trade_pdt_df["Product"].dropna().unique().tolist())
@@ -17,6 +16,9 @@ product_list = sorted(trade_pdt_df["Product"].dropna().unique().tolist())
 def read_intro():
     with open("data\intro.txt", "r", encoding="utf-8") as f:
         return f.read()
+
+# import functions
+from shiny_functions import plot_trade_line_graph
 
 ## ui
 app_ui = ui.page_fluid(
@@ -66,10 +68,12 @@ app_ui = ui.page_fluid(
                     ),
                     ui.input_selectize(
                         "select_industry2", "Select an Industry:",
-                        choices=["Manufacturing", "B", "C", "D", "E", "F", "G", "H"]
+                        choices=product_list,
+                        selected=product_list[0] if product_list else None
                     )
                 ),
-                ui.output_text("page_c_output")  # Placeholder output
+                shinywidgets.output_widget("trade_lineplot")
+
             )
         ),
         title="TideTrackers",
@@ -121,9 +125,10 @@ def server(input, output, session):
         return fig
 
     @output
-    @render.text
-    def page_c_output():
-        return f"You selected: {input['select_country']()}, {input['select_industry2']()}"
+    @render_widget
+    def trade_lineplot():
+        return plot_trade_line_graph(input.select_country(), input.select_industry2(), trade_pdt_df)
+
 
 
 app = App(app_ui, server)
