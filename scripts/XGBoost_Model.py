@@ -59,7 +59,7 @@ def process_trade_data():
 
 # Function to load and preprocess UNGA data
 def process_unga_data():
-    unga = pd.read_csv("data/cleaned data/unga_voting_2.csv")
+    unga = pd.read_csv("data/cleaned data/unga_voting_3.csv")
     
     # Split the 'CountryPair' column into 'Country1' and 'Country2'
     unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
@@ -149,9 +149,15 @@ def process_FTA_data():
         'SAU': 'Saudi Arabia',
         'THA': 'Thailand',
         'USA': 'United States',
-        'IDN': 'Indonesia'
+        'IDN': 'Indonesia',
+        'ARE': 'United Arab Emirates',
+        'IND': 'India',
+        'PHL': 'Philippines',
+        'VNM': 'Vietnam',
+        'AUS': 'Australia',
+        'TWN': 'Taiwan',
+        'DEU': 'Germany',
     }
-
     fta_sg['Country'] = fta_sg['Country Code'].replace(iso3_to_country)
     fta_sg = fta_sg.sort_values(by='Year')
 
@@ -355,7 +361,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Set up K-Fold
-kf = KFold(n_splits=5, shuffle=True, random_state=42)
+#kf = KFold(n_splits=5, shuffle=True, random_state=42)
+
+# Time Series Split
+tscv = TimeSeriesSplit(n_splits=5)
 
 # For storing evaluation metrics and all predictions
 r2_scores = []
@@ -375,7 +384,8 @@ def calculate_aic_bic(y_true, y_pred, n_params):
     
     return aic, bic
 
-for train_index, test_index in kf.split(X):
+#for train_index, test_index in kf.split(X):
+for train_index, test_index in tscv.split(X):
     X_train, X_test = X.iloc[train_index], X.iloc[test_index]
     y_train, y_test = y.iloc[train_index], y.iloc[test_index]
 
