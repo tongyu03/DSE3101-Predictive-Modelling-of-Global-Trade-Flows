@@ -6,6 +6,8 @@ import seaborn as sns
 import shinywidgets
 from shinywidgets import render_widget
 from shinyswatch import theme
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 #import trade product data
@@ -22,6 +24,18 @@ def read_intro():
 
 # import functions
 from shiny_functions import plot_trade_line_graph
+from shiny_functions import plot_geopol_distance
+
+# Create Synthetic data for Geopolitical Distance
+np.random.seed(42) 
+years = list(range(2013, 2023 + 1))
+countries = ["China", "Hong Kong", "South Korea", "Thailand", "Malaysia",
+             "Japan", "USA", "Indonesia", "Saudi Arabia"]
+# Create a DataFrame with all combinations
+data = pd.DataFrame([(year, country) for year in years for country in countries],
+                    columns=["year", "country"])
+data["geo_distance"] = np.round(np.random.uniform(0.2, 0.9, size=len(data)), 2)
+
 
 ## ui
 app_ui = ui.page_fluid(
@@ -55,6 +69,7 @@ app_ui = ui.page_fluid(
                     ),
                     ui.input_slider("slide_year", "Choose a Year:", 2013, 2023, value=2020),
                 ),
+                    shinywidgets.output_widget("bar_plot"),
                     shinywidgets.output_widget("bubble_plot"),
                     ui.output_text("bubble_plot_text")
             )
@@ -106,6 +121,12 @@ def server(input, output, session):
     
     @output
     @render_widget
+    def bar_plot():
+        return plot_geopol_distance(data, input.slide_year())
+
+    
+    @output
+    @render_widget
     def bubble_plot():
         trade_type_col = input.select_trade().strip()
         filtered = trade_pdt_df[
@@ -134,7 +155,8 @@ def server(input, output, session):
         fig.update_layout(
         xaxis_title="Country",
         yaxis_title=trade_type_col,
-        margin=dict(l=20, r=20, t=40, b=20)
+        margin=dict(l=20, r=20, t=40, b=20),
+        template='plotly_white'
     )
         return fig
 
