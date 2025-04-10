@@ -14,6 +14,7 @@ More specifically, we define "Geopolitical Distance" in this website as a weight
 2) Tariffs imposed between countries
 3) Free Trade Agreements between countries
 4) Exchange rate of country's currency
+5) Past GDP of country
 
 This app helps you explore global trade trends and predict trade volumes based on Geopolitical Distance
 
