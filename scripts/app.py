@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import shinywidgets
 from shinywidgets import render_widget
+from shinyswatch import theme
+
 
 #import trade product data
 trade_pdt_df = pd.read_csv("data/cleaned data/10_years_trade_frontend.csv")
@@ -78,7 +80,8 @@ app_ui = ui.page_fluid(
         ),
         title="TideTrackers",
         id="page"
-    )
+    ),
+    theme=theme.darkly()
 )
 
 
