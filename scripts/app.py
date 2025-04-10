@@ -123,7 +123,7 @@ def server(input, output, session):
     @output
     @render_widget
     def bar_plot():
-        return plot_geopol_distance(data, input.slide_year())
+        return plot_geopol_distance(input.slide_year())
 
     @output
     @render_widget

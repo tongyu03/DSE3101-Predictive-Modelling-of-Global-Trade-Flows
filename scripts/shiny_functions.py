@@ -51,32 +51,43 @@ def plot_trade_line_graph(country, industry, trade_data_df):
     # Show the figure
     return fig
 
+#import geopolitical dist function
+from Geopolitical_dist import get_geopolitical_data
 
+# List of countries
+Countries = ['China', 'Hong Kong', 'South Korea', 'Thailand', 'Malaysia', 'USA', 'Saudi Arabia', 'Japan', 'Indonesia']
 
-# Geopolitical Distance Barplot
-def plot_geopol_distance(data, input_year):
-    df_year = data[data["year"] == input_year].copy()
-    df_year = df_year.sort_values("geo_distance", ascending=True)
-
+def plot_geopol_distance(input_year):
+    # Initialize an empty list to collect data
+    all_country_data = []
+    # Loop through countries and get the geopolitical data
+    for country in Countries:
+        df = get_geopolitical_data(country, input_year)
+        # Ensure that the necessary columns are included
+        df['geo_distance'] = df['Geopolitical_Score']
+        all_country_data.append(df)
+    # Combine all the data into one DataFrame
+    combined_df = pd.concat(all_country_data)
     # Create the bar plot with a discrete blue color scale
     fig = px.bar(
-        df_year,
+        combined_df,
         x="geo_distance",
-        y="country",
+        y="Country",
         orientation="h",
         title=f"Geopolitical Distance with Singapore in {input_year}",
-        labels={"geo_distance": "Geopolitical Distance", "country": "Country"},
-        color="country",  # Color by country
-        color_discrete_sequence=px.colors.sequential.Viridis  
+        labels={"geo_distance": "Geopolitical Distance", "Country": "Country"},
+        color="Country",  # Color by country
+        color_discrete_sequence=px.colors.sequential.Viridis  # Use the Viridis color scale
     )
-
+    # Customize the layout
     fig.update_layout(
         xaxis=dict(range=[0, 1]),
         yaxis=dict(categoryorder='total ascending'),
         margin=dict(t=60, l=100, r=20, b=40),
         template="plotly_white",
-        showlegend = False
+        showlegend=False  # Hide the legend
     )
+    # Return the figure
     return fig
 
 def plot_bubble(industry, trade_type_col, year, trade_pdt_df):

@@ -2,10 +2,24 @@ import pandas as pd
 import numpy as np
 import ast
 
+iso3_to_country = {
+        'CHN': 'China',
+        'HKG': 'Hong Kong',
+        'JPN': 'Japan',
+        'KOR': 'South Korea',
+        'MYS': 'Malaysia',
+        'SAU': 'Saudi Arabia',
+        'THA': 'Thailand',
+        'USA': 'USA',
+        'IDN': 'Indonesia'
+    }
+
 def process_unga_data():
     unga = pd.read_csv("data/cleaned data/unga_voting_3.csv")
     unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
     unga[['Country1', 'Country2']] = pd.DataFrame(unga['CountryPair'].tolist(), index=unga.index)
+    unga['Country1'] = unga['Country1'].replace("United States of America", "USA")
+    unga['Country2'] = unga['Country2'].replace("United States of America", "USA")
     unga = unga[(unga['year'] >= 1989) & (unga['year'] <= 2021)]
     unga_sg = unga[(unga['Country1'] == 'Singapore') | (unga['Country2'] == 'Singapore')]
     unga_sg['Partner'] = unga_sg.apply(lambda row: row['Country1'] if row['Country1'] != 'Singapore' else row['Country2'], axis=1)
@@ -32,6 +46,11 @@ def process_exrate_data():
     exrate_long = exrate_long.dropna()
     exrate_long['Year'] = exrate_long['Year'].astype(int)
     exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
+    exrate_long['Country Name'] = exrate_long['Country Name'].replace({
+        "China, Hong Kong SAR": "Hong Kong",
+        "Rep. of Korea": "South Korea",
+        "United States": "USA"
+    })
     return exrate_long
 
 def process_FTA_data():
@@ -44,17 +63,6 @@ def process_FTA_data():
         axis=1
     )
     fta_sg = fta_sg.drop(columns=["Country", "Partner Country"])
-    iso3_to_country = {
-        'CHN': 'China',
-        'HKG': 'Hong Kong',
-        'JPN': 'Japan',
-        'KOR': 'Korea',
-        'MYS': 'Malaysia',
-        'SAU': 'Saudi Arabia',
-        'THA': 'Thailand',
-        'USA': 'United States',
-        'IDN': 'Indonesia'
-    }
     fta_sg['Country'] = fta_sg['Country Code'].replace(iso3_to_country)
     fta_sg = fta_sg.sort_values(by='Year')
     return fta_sg
@@ -71,10 +79,21 @@ exrate_data_geo.columns = exrate_data_geo.columns.str.strip()
 fta_data_geo.columns = fta_data_geo.columns.str.strip()
 # Rename columns to ensure consistent merging
 trade_data_geo = trade_data_geo.rename(columns={"Year": "year"})
+trade_data_geo["Country"] = trade_data_geo["Country"].replace({
+    "China, Hong Kong SAR": "Hong Kong",
+    "Rep. of Korea": "South Korea"
+})
 trade_data_geo = trade_data_geo.rename(columns={"Country": "Partner"})
 gdp_data_geo = gdp_data_geo.rename(columns={"Year": "year"})
+gdp_data_geo['Country Name'] = gdp_data_geo['Country Name'].replace({
+    "Hong Kong SAR, China": "Hong Kong",
+    "Korea": "South Korea",
+    "United States of America": "USA"
+})
 exrate_data_geo = exrate_data_geo.rename(columns={"Year": "year"})
 fta_data_geo = fta_data_geo.rename(columns={"Year": "year"})
+
+
 
 merged_data_geo = pd.merge(unga_data_geo, trade_data_geo, how='left', left_on=['year', 'Partner'], right_on=['year', 'Partner'])
 merged_data_geo = pd.merge(merged_data_geo, gdp_data_geo, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
@@ -128,3 +147,19 @@ def get_geopolitical_data(country, year):
     return country_data[['Country', 'year', 'Geopolitical_Score']]
     
 
+# For year
+def get_geopolitical_data_for_year(year):
+    # Filter the DataFrame for the specified year
+    year_data = Geopol_df[Geopol_df['year'] == year].copy()
+    # Calculate the geopolitical score for all countries in that year
+    year_data['Geopolitical_Score'] = (
+        100 * year_data['IdealPointDistance'] +
+        np.log10(year_data['GDP_Lag1']) +
+        year_data['Exchange Rate (per US$)'] -
+        5 * year_data['Adjusted_value'] -
+        5 * year_data['FTA_binary']
+    )
+    # Return the relevant columns for all countries in the specified year
+    return year_data[['Country', 'year', 'Geopolitical_Score']]
+
+print(get_geopolitical_data_for_year(2020))
