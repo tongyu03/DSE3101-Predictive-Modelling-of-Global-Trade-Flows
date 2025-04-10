@@ -7,6 +7,10 @@ import numpy as np
 
 #import trade product data
 trade_pdt_df = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
+#import Geopolitical distance data
+geo_pol_df = pd.read_csv("data/cleaned data/geopolitical_data.csv")
+#import geopolitical distance data
+from Geopolitical_dist import get_geopolitical_data
 
 # Rename industries
 industry_rename_map = {
@@ -134,6 +138,29 @@ def plot_bubble(industry, trade_type_col, year, trade_pdt_df):
     
     return fig
 
+def plot_geo_pol_line_graph(country):
+    years = geo_pol_df["year"].unique()
+    years.sort()
+    scores = []
+    for y in years:
+        data = get_geopolitical_data(country, y)
+        if not data.empty:
+            scores.append(data[["year", "Geopolitical_Score"]].iloc[0])
+    score_df = pd.DataFrame(scores)
+    fig = px.line(score_df, 
+                  x = 'year', 
+                  y = "Geopolitical_Score", 
+                  title=f'Geopolitical Distance of {country} with Singapore Over Time',
+                  labels={'year': 'Year', 'Geopolitical_Score': 'Geopolitical Score'},
+                  markers=True)
+    
+    fig.update_layout(
+        template='plotly_white',
+        xaxis_title="Year",
+        yaxis_title="Geopolitical Distance",
+        margin=dict(l=20, r=20, t=40, b=20) 
+    )
+    return fig
 
 
 '''

@@ -16,6 +16,9 @@ trade_pdt_df = pd.read_csv("data/cleaned data/10_years_trade_frontend.csv")
 #product list for industry
 product_list = sorted(trade_pdt_df["Product"].dropna().unique().tolist())
 
+#Geopolitical distance data
+geo_pol_df = pd.read_csv("data/cleaned data/geopolitical_data.csv")
+
 # import intro text
 def read_intro():
     with open("data\intro.txt", "r", encoding="utf-8") as f:
@@ -26,6 +29,8 @@ def read_intro():
 from shiny_functions import plot_trade_line_graph
 from shiny_functions import plot_geopol_distance
 from shiny_functions import plot_bubble
+from shiny_functions import plot_geo_pol_line_graph
+from Geopolitical_dist import get_geopolitical_data
 
 # Create Synthetic data for Geopolitical Distance
 np.random.seed(42) 
@@ -92,6 +97,7 @@ app_ui = ui.page_fluid(
                     )
                 ),
                 shinywidgets.output_widget("trade_lineplot"),
+                shinywidgets.output_widget("geo_pol_line_plot"),
                 ui.output_text("trade_lineplot_text")
             )
         ),
@@ -138,6 +144,11 @@ def server(input, output, session):
     def trade_lineplot():
         return plot_trade_line_graph(input.select_country(), input.select_industry2(), trade_pdt_df)
 
+    @output
+    @render_widget
+    def geo_pol_line_plot():
+        country = input.select_country()
+        return plot_geo_pol_line_graph(country)
 
 
 app = App(app_ui, server)
