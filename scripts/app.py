@@ -19,6 +19,7 @@ def read_intro():
     with open("data\intro.txt", "r", encoding="utf-8") as f:
         return f.read()
 
+
 # import functions
 from shiny_functions import plot_trade_line_graph
 
@@ -54,8 +55,8 @@ app_ui = ui.page_fluid(
                     ),
                     ui.input_slider("slide_year", "Choose a Year:", 2013, 2023, value=2020),
                 ),
-                    shinywidgets.output_widget("bubble_plot")
-
+                    shinywidgets.output_widget("bubble_plot"),
+                    ui.output_text("bubble_plot_text")
             )
         ),
 
@@ -74,8 +75,8 @@ app_ui = ui.page_fluid(
                         selected=product_list[0] if product_list else None
                     )
                 ),
-                shinywidgets.output_widget("trade_lineplot")
-
+                shinywidgets.output_widget("trade_lineplot"),
+                ui.output_text("trade_lineplot_text")
             )
         ),
         title="TideTrackers",
@@ -86,6 +87,16 @@ app_ui = ui.page_fluid(
 
 
 def server(input, output, session):
+
+    @output
+    @render.text
+    def bubble_plot_text():
+        return "Fig 1: Bubble plot displaying level of imports/exports for Singapore's main trade partners per industry"
+    
+    @output
+    @render.text
+    def trade_lineplot_text():
+        return "Fig 3: Line plot displaying level of imports/exports for specified trade partner per industry over the years"
 
     @output
     @render.ui
