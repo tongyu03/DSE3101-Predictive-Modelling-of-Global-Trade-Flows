@@ -24,6 +24,7 @@ def read_intro():
 # import functions
 from shiny_functions import plot_trade_line_graph
 from shiny_functions import plot_geopol_distance
+from shiny_functions import plot_bubble
 
 # Create Synthetic data for Geopolitical Distance
 np.random.seed(42) 
@@ -113,42 +114,14 @@ def server(input, output, session):
     def bar_plot():
         return plot_geopol_distance(data, input.slide_year())
 
-    
     @output
     @render_widget
     def bubble_plot():
-        trade_type_col = input.select_trade().strip()
-        filtered = trade_pdt_df[
-            (trade_pdt_df['Product'] == input.select_industry1()) &
-            (trade_pdt_df['Year'] == input.slide_year())
-        ]
-
-        if filtered.empty:
-            return px.scatter(
-            title="No data available for the selected filters.",
-            x=[],
-            y=[]
-            )
-        #plotting
-        fig = px.scatter(
-            filtered, 
-            x= "Country", 
-            y= trade_type_col,
-            size= trade_type_col,
-            color= "Country", 
-            hover_name= "Product",
-            title= f"Singapore {input.select_industry1()} {trade_type_col} in {input.slide_year()}",
-            size_max= 60
-        )
-
-        fig.update_layout(
-        xaxis_title="Country",
-        yaxis_title=trade_type_col,
-        margin=dict(l=20, r=20, t=40, b=20),
-        template='plotly_white'
-    )
-        return fig
-
+        industry = input.select_industry1()
+        trade_type = input.select_trade()
+        year = input.slide_year()
+        return plot_bubble(industry, trade_type, year, trade_pdt_df)
+    
     @output
     @render_widget
     def trade_lineplot():

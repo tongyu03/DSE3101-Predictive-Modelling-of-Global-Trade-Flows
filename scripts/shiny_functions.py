@@ -5,8 +5,6 @@ import seaborn as sns
 import numpy as np
 
 
-
-
 #import trade product data
 trade_pdt_df = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
 
@@ -54,12 +52,13 @@ def plot_trade_line_graph(country, industry, trade_data_df):
     return fig
 
 
-# Geopolitical Distance Barplot
 
+# Geopolitical Distance Barplot
 def plot_geopol_distance(data, input_year):
     df_year = data[data["year"] == input_year].copy()
     df_year = df_year.sort_values("geo_distance", ascending=True)
 
+    # Create the bar plot with a discrete blue color scale
     fig = px.bar(
         df_year,
         x="geo_distance",
@@ -67,23 +66,62 @@ def plot_geopol_distance(data, input_year):
         orientation="h",
         title=f"Geopolitical Distance with Singapore in {input_year}",
         labels={"geo_distance": "Geopolitical Distance", "country": "Country"},
-        color="geo_distance",
-        color_continuous_scale="Blues"
+        color="country",  # Color by country
+        color_discrete_sequence=px.colors.sequential.Viridis  
     )
 
     fig.update_layout(
         xaxis=dict(range=[0, 1]),
         yaxis=dict(categoryorder='total ascending'),
         margin=dict(t=60, l=100, r=20, b=40),
-        template="plotly_white"
+        template="plotly_white",
+        showlegend = False
     )
-
     return fig
 
-
-
-
-
+def plot_bubble(industry, trade_type_col, year, trade_pdt_df):
+    # Filter the DataFrame for the specified industry and year
+    filtered = trade_pdt_df[
+        (trade_pdt_df['Product'] == industry) & 
+        (trade_pdt_df['Year'] == year)
+    ]
+    
+    # If no data is available for the filters
+    if filtered.empty:
+        return px.scatter(
+            title="No data available for the selected filters.",
+            x=[],
+            y=[]
+        )
+    
+    # Create the bubble plot using Plotly Express
+    fig = px.scatter(
+        filtered, 
+        x="Country", 
+        y=trade_type_col,
+        size=trade_type_col,
+        color="Country",  # Color by country
+        hover_name="Country",  # bolded in tooltip
+        hover_data={ 
+            "Product": True, 
+            trade_type_col: ':.2f',  
+            "Country": False,  
+            "Year": False  
+        },
+        title=f"Singapore {industry} {trade_type_col} in {year}",
+        size_max=60,
+        color_discrete_sequence=px.colors.sequential.Viridis  
+    )
+    
+    fig.update_layout(
+        xaxis_title="Country",
+        yaxis_title=trade_type_col,
+        margin=dict(l=20, r=20, t=40, b=20),
+        template='plotly_white',
+        showlegend = False
+    )
+    
+    return fig
 
 
 
