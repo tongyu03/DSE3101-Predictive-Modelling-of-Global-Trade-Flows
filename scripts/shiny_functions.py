@@ -56,43 +56,40 @@ def plot_trade_line_graph(country, industry, trade_data_df):
     return fig
 
 #import geopolitical dist function
-from Geopolitical_dist import get_geopolitical_data
+from Geopolitical_dist import get_geopolitical_data_for_year
 
 # List of countries
 Countries = ['China', 'Hong Kong', 'South Korea', 'Thailand', 'Malaysia', 'USA', 'Saudi Arabia', 'Japan', 'Indonesia']
 
+import plotly.express as px
+
 def plot_geopol_distance(input_year):
-    # Initialize an empty list to collect data
-    all_country_data = []
-    # Loop through countries and get the geopolitical data
-    for country in Countries:
-        df = get_geopolitical_data(country, input_year)
-        # Ensure that the necessary columns are included
-        df['geo_distance'] = df['Geopolitical_Score']
-        all_country_data.append(df)
-    # Combine all the data into one DataFrame
-    combined_df = pd.concat(all_country_data)
-    # Create the bar plot with a discrete blue color scale
+    # Get geopolitical data for all countries in the input year
+    year_data = get_geopolitical_data_for_year(input_year)
+    year_data['Geopolitical_Score'] = year_data['Geopolitical_Score'].astype(float)
+    year_data['Country'] = year_data['Country'].astype(str)
+    if year_data.empty:
+        print(f"No data available for the year {input_year}.")
+        return None
     fig = px.bar(
-        combined_df,
-        x="geo_distance",
+        year_data,
+        x="Geopolitical_Score",
         y="Country",
-        orientation="h",
+        orientation="h",  # Horizontal bar plot
         title=f"Geopolitical Distance with Singapore in {input_year}",
-        labels={"geo_distance": "Geopolitical Distance", "Country": "Country"},
-        color="Country",  # Color by country
-        color_discrete_sequence=px.colors.sequential.Viridis  # Use the Viridis color scale
+        labels={"Geopolitical_Score": "Geopolitical Distance", "Country": "Country"},
+        color="Country", 
+        color_discrete_sequence=px.colors.sequential.Viridis 
     )
-    # Customize the layout
     fig.update_layout(
-        xaxis=dict(range=[0, 1]),
-        yaxis=dict(categoryorder='total ascending'),
-        margin=dict(t=60, l=100, r=20, b=40),
-        template="plotly_white",
-        showlegend=False  # Hide the legend
+        xaxis=dict(range=[0, year_data['Geopolitical_Score'].max()]),  # Adjust x-axis range to data
+        yaxis=dict(categoryorder='total ascending'),  # Sort the countries in ascending order of the geopolitical score
+        margin=dict(t=60, l=100, r=20, b=40),  # Adjust margins
+        template="plotly_white",  # Use a clean white template
+        showlegend=False  # Hide the legend to avoid redundancy
     )
-    # Return the figure
     return fig
+
 
 def plot_bubble(industry, trade_type_col, year, trade_pdt_df):
     # Filter the DataFrame for the specified industry and year
@@ -100,23 +97,20 @@ def plot_bubble(industry, trade_type_col, year, trade_pdt_df):
         (trade_pdt_df['Product'] == industry) & 
         (trade_pdt_df['Year'] == year)
     ]
-    
-    # If no data is available for the filters
     if filtered.empty:
         return px.scatter(
             title="No data available for the selected filters.",
             x=[],
             y=[]
         )
-    
-    # Create the bubble plot using Plotly Express
+    # Create the bubble plot 
     fig = px.scatter(
         filtered, 
         x="Country", 
         y=trade_type_col,
         size=trade_type_col,
         color="Country",  # Color by country
-        hover_name="Country",  # bolded in tooltip
+        hover_name="Country", 
         hover_data={ 
             "Product": True, 
             trade_type_col: ':.2f',  
@@ -127,7 +121,6 @@ def plot_bubble(industry, trade_type_col, year, trade_pdt_df):
         size_max=60,
         color_discrete_sequence=px.colors.sequential.Viridis  
     )
-    
     fig.update_layout(
         xaxis_title="Country",
         yaxis_title=trade_type_col,

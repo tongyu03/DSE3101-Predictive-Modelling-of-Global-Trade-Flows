@@ -27,6 +27,7 @@ def process_unga_data():
     unga_sg['year'] = unga_sg['year'].astype(int)
     return unga_sg
 
+
 def process_gdp_data():
     gdp = pd.read_csv("data/raw data/GDP.csv", header = 2)
     gdp = gdp.drop(gdp.columns[[1, 2, 3]], axis=1)
@@ -38,6 +39,26 @@ def process_gdp_data():
     gdp_long['Year'] = gdp_long['Year'].astype(int)
     gdp_long['Country Name'] = gdp_long['Country Name'].astype(str)
     return gdp_long
+
+'''
+def process_gdp_data():
+    gdp = pd.read_csv("data/cleaned data/Processed_GDP.csv")
+    gdp["Country"] = gdp["Country Code"].replace({
+    "HKG": "Hong Kong",
+    "KOR": "South Korea",
+    "JPN": "Japan",
+    "CHN": "China",
+    "MYS": "Malaysia",
+    "SAU": "Saudi Arabia",
+    "SGP": "Singapore",
+    "THA": "Thailand"
+    })
+    return gdp
+'''
+
+
+
+
 
 def process_exrate_data():
     exrate = pd.read_csv("data/raw data/exchange_rate.csv", header = 4)
