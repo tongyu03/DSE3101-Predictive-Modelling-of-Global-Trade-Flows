@@ -94,29 +94,37 @@ else:
     print("'HS_Code' column is missing from merged data.")
     merged_data_geo["HS_Section"] = '00'  # Handle the case where HS_Code is missing
 
+
 # Lag features for GDP
 merged_data_geo["GDP_Lag1"] = merged_data_geo.groupby(["Partner"])['GDP'].shift(1)
 
 # drop empty data
 merged_data_geo = merged_data_geo.dropna()
 
-
-Geopol_df = merged_data_geo[["Country", "year", "IdealPointDistance", "GDP_Lag1",
-                 'Exchange Rate (per US$)', 'Adjusted_value','Imports', 'Exports']]
+Geopol_df = merged_data_geo.groupby(["Country", "year"]).agg({
+    "Imports": "sum",
+    "Exports": "sum",
+    "IdealPointDistance": "median",
+    "GDP_Lag1": "median",
+    "Exchange Rate (per US$)": "median",
+    "Adjusted_value": "median",
+    "FTA_binary": "median"
+}).reset_index()
 
 # Define a geopolitical score
 
 def get_geopolitical_data(country, year):
-    # Filter the DataFrame for the specified country
+    # Filter the DataFrame for the specified country and year
     country_data = Geopol_df[(Geopol_df['Country'] == country) & (Geopol_df['year'] == year)].copy()
     
     # Calculate the geopolitical score
     country_data['Geopolitical_Score'] = (
-        country_data['IdealPointDistance'] +
-        country_data['GDP_Lag1'] +
-        country_data['Exchange Rate (per US$)'] +
-        country_data['Adjusted_value'] 
+        100 * country_data['IdealPointDistance'] +
+        np.log10(country_data['GDP_Lag1']) +
+        country_data['Exchange Rate (per US$)'] -
+        5 * country_data['Adjusted_value'] -
+        5 * country_data['FTA_binary']
     )
-    
     return country_data[['Country', 'year', 'Geopolitical_Score']]
     
+
