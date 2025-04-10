@@ -111,10 +111,6 @@ Geopol_df = merged_data_geo.groupby(["Country", "year"]).agg({
     "FTA_binary": "median"
 }).reset_index()
 
-# print(Geopol_df.columns)
-# print(Geopol_df[["Country", "year"]])
-print(Geopol_df.head())
-
 # Define a geopolitical score
 
 def get_geopolitical_data(country, year):
@@ -130,5 +126,5 @@ def get_geopolitical_data(country, year):
         5 * country_data['FTA_binary']
     )
     return country_data[['Country', 'year', 'Geopolitical_Score']]
+    
 
-print(get_geopolitical_data('China', 2020))
