@@ -108,7 +108,7 @@ Geopol_df = merged_data_geo[["Country", "year", "IdealPointDistance", "GDP_Lag1"
 
 def get_geopolitical_data(country, year):
     # Filter the DataFrame for the specified country
-    country_data = Geopol_df[(Geopol_df['Country'] == country) & (Geopol_df['year'] == year)].copy()
+    country_data = Geopol_df[Geopol_df['Country'] == country and Geopol_df['year'] == year].copy()
     
     # Calculate the geopolitical score
     country_data['Geopolitical_Score'] = (
@@ -120,3 +120,4 @@ def get_geopolitical_data(country, year):
     
     return country_data[['Country', 'year', 'Geopolitical_Score']]
     
+

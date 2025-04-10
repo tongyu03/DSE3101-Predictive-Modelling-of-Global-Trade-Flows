@@ -2,6 +2,9 @@ import pandas as pd
 import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
+
+
 
 
 #import trade product data
@@ -51,10 +54,31 @@ def plot_trade_line_graph(country, industry, trade_data_df):
     return fig
 
 
+# Geopolitical Distance Barplot
 
+def plot_geopol_distance(data, input_year):
+    df_year = data[data["year"] == input_year].copy()
+    df_year = df_year.sort_values("geo_distance", ascending=True)
 
+    fig = px.bar(
+        df_year,
+        x="geo_distance",
+        y="country",
+        orientation="h",
+        title=f"Geopolitical Distance with Singapore in {input_year}",
+        labels={"geo_distance": "Geopolitical Distance", "country": "Country"},
+        color="geo_distance",
+        color_continuous_scale="Blues"
+    )
 
+    fig.update_layout(
+        xaxis=dict(range=[0, 1]),
+        yaxis=dict(categoryorder='total ascending'),
+        margin=dict(t=60, l=100, r=20, b=40),
+        template="plotly_white"
+    )
 
+    return fig
 
 
 
