@@ -147,7 +147,8 @@ def plot_geo_pol_line_graph(country):
         template='plotly_white',
         xaxis_title="Year",
         yaxis_title="Geopolitical Distance",
-        margin=dict(l=20, r=20, t=40, b=20) 
+        margin=dict(l=20, r=20, t=40, b=20),
+        xaxis=dict(range=[score_df['year'].min(), 2024])
     )
     return fig
 
