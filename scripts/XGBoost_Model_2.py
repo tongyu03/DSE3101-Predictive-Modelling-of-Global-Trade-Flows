@@ -154,7 +154,7 @@ merged_data = merged_data.dropna()
 
 
 X = merged_data[["Imports_Lag1", "Imports_Lag2", "Imports_Lag3","IdealPointDistance", "GDP_Lag1",
-                 'Exchange Rate (per US$)', 'Adjusted_value', 'HS Code', 'Imports']]
+                 'Exchange Rate (per US$)', 'Adjusted_value', 'HS Code']]
 
 # Log-transform target (Imports)
 y = np.log(merged_data["Imports"])
@@ -169,8 +169,9 @@ from sklearn.metrics import mean_squared_error, r2_score
 import pandas as pd
 import numpy as np
 
+# Ensure HS Code is categorical in X
+X["HS Code"] = X["HS Code"].astype("category")
 
-# Make sure you haven't used rmse_scores or r2_scores as function names above
 rmse_scores = []
 r2_scores = []
 
@@ -188,10 +189,11 @@ for fold, (train_index, test_index) in enumerate(tscv.split(X)):
         learning_rate=0.05,
         subsample=0.8,
         colsample_bytree=0.8,
-        reg_alpha=1,     # L1 regularization
-        reg_lambda=2,    # L2 regularization
+        reg_alpha=1,
+        reg_lambda=2,
         random_state=42,
-        objective="reg:squarederror"
+        objective="reg:squarederror",
+        enable_categorical=True  
     )
 
     model.fit(X_train, y_train)
@@ -204,6 +206,7 @@ for fold, (train_index, test_index) in enumerate(tscv.split(X)):
     r2_scores.append(r2)
 
     print(f"RMSE: {rmse:.4f} | R²: {r2:.4f}")
+
     
 #%%
 
