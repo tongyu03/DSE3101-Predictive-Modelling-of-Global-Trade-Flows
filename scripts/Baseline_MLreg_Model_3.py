@@ -14,6 +14,7 @@ from sklearn.model_selection import KFold
 import matplotlib.pyplot as plt
 from sklearn.model_selection import TimeSeriesSplit
 from sklearn.linear_model import Ridge, Lasso
+from sklearn.preprocessing import OneHotEncoder
 
 
 #new trade data
@@ -131,10 +132,11 @@ def prepare_data_for_regression(log_transform=True):
 
     # Merge datasets
     merged_data = pd.merge(unga_data, trade_data, how='left', left_on=['year', 'Partner'], right_on=['year', 'Partner'])
-    
+
     merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
     merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
     merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['Country', 'year'])
+
 
 
     # Convert HS_Code to string and handle NaN values
@@ -148,14 +150,17 @@ def prepare_data_for_regression(log_transform=True):
         print("'HS_Code' column is missing from merged data.")
         merged_data["HS_Section"] = '00'  # Handle the case where HS_Code is missing
 
-    # Dummy variables for Selected HS
-    hs_sections_of_interest = ['85', '84', '27', '90', '71', '39', '29', '33', '88', '38']
-    merged_data["HS_Section"] = merged_data["HS_Section"].str.zfill(2)
+    ohe = OneHotEncoder(sparse_output=False, drop='first')    # drop='first' to avoid dummy variable trap
+    hs_section_encoded = ohe.fit_transform(merged_data[['HS_Section']])
+    hs_section_df = pd.DataFrame(hs_section_encoded, columns=ohe.get_feature_names_out(['HS_Section']))
 
-    for section in hs_sections_of_interest:
-        col_name = f"HS_{section}"
-        merged_data[col_name] = (merged_data["HS_Section"] == section).astype(int)
+    # Reset index to avoid misalignment during concat
+    hs_section_df.index = merged_data.index
 
+    # Combine encoded columns with original dataset
+    merged_data = pd.concat([merged_data, hs_section_df], axis=1)
+
+    hs_cols = list(hs_section_df.columns)
 
     # Debug: Check columns after merging
     print("Columns after merging:", merged_data.columns)
@@ -167,48 +172,30 @@ def prepare_data_for_regression(log_transform=True):
 
     # Lag features for GDP and Exchange Rate
     merged_data["GDP_Lag1"] = merged_data.groupby(["Partner"])['GDP'].shift(1)
-    #merged_data["GDP_Lag2"] = merged_data.groupby(["Partner"])['GDP'].shift(2)
-    #merged_data["GDP_Lag3"] = merged_data.groupby(["Partner"])['GDP'].shift(3)
-
-    #merged_data["ExRate_Lag1"] = merged_data.groupby(["Partner"])['Exchange Rate (per US$)'].shift(1)
-    #merged_data["ExRate_Lag2"] = merged_data.groupby(["Partner"])['Exchange Rate (per US$)'].shift(2)
-    #merged_data["ExRate_Lag3"] = merged_data.groupby(["Partner"])['Exchange Rate (per US$)'].shift(3)
 
     merged_data = merged_data.dropna()
 
     print(merged_data)
 
     if log_transform:
-        # Log-transform lag features and target
-        #merged_data["log_Trade_Volume_Lag1"] = np.log(merged_data["Trade_Volume_Lag1"])
-        #merged_data["log_Trade_Volume_Lag2"] = np.log(merged_data["Trade_Volume_Lag2"])
-        #merged_data["log_Trade_Volume_Lag3"] = np.log(merged_data["Trade_Volume_Lag3"])
 
         merged_data["log_Import_Lag1"] = np.log(merged_data["Import_Lag1"])
         merged_data["log_Import_Lag2"] = np.log(merged_data["Import_Lag2"])
         merged_data["log_Import_Lag3"] = np.log(merged_data["Import_Lag3"])
 
         merged_data["log_GDP_Lag1"] = np.log(merged_data["GDP_Lag1"])
-        #merged_data["log_GDP_Lag2"] = np.log(merged_data["GDP_Lag2"])
-        #merged_data["log_GDP_Lag3"] = np.log(merged_data["GDP_Lag3"])
 
-        #merged_data["log_ExRate_Lag1"] = np.log(merged_data["ExRate_Lag1"])
-        #merged_data["log_ExRate_Lag2"] = np.log(merged_data["ExRate_Lag2"])
-        #merged_data["log_ExRate_Lag3"] = np.log(merged_data["ExRate_Lag3"])
-
-    # Log-transform target (Imports)
+        # Log-transform target (Imports)
         X = merged_data[["log_Import_Lag1", "log_Import_Lag2", "log_Import_Lag3",
                          "IdealPointDistance", "log_GDP_Lag1",
-                         'Exchange Rate (per US$)', 'Adjusted_value',
-                         "HS_85", "HS_84", "HS_27", "HS_90", "HS_71", "HS_39", "HS_29", "HS_33", "HS_88", "HS_38"]]
+                         'Exchange Rate (per US$)', 'Adjusted_value']+ hs_cols]
         print(X)
         y = np.log(merged_data["Imports"])
 
     else:
         X = merged_data[["Import_Lag1", "Import_Lag2", "Import_Lag3",
                          "IdealPointDistance", "GDP_Lag1",
-                         'Exchange Rate (per US$)', 'Adjusted_value',
-                         "HS_85", "HS_84", "HS_27", "HS_90", "HS_71", "HS_39", "HS_29", "HS_33", "HS_88", "HS_38"]]
+                         'Exchange Rate (per US$)', 'Adjusted_value']+ hs_cols]
         y = merged_data["Imports"]
 
     return X, y
@@ -238,7 +225,7 @@ def calculate_aic_bic(y_true, y_pred, n_params):
     n = len(y_true)
     aic = 2 * n_params - 2 * log_likelihood
     bic = np.log(n) * n_params - 2 * log_likelihood
-    
+
     return aic, bic
 
 for train_index, test_index in tscv.split(X):

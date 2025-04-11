@@ -22,7 +22,7 @@ columns = agree_sc.columns.tolist() + ['Country1', 'Country2']
 df = pd.DataFrame(result, columns=columns)
 
 #filter target countries
-target_countries = ["China", "Hong Kong", "Japan", "Korea", "Malaysia", "Saudi Arabia", "Thailand", "United States of America", "Singapore", "Indonesia"]
+target_countries = ["China", "Hong Kong", "Japan", "Korea", "Malaysia", "Saudi Arabia", "Thailand", "United States of America", "Singapore", "Indonesia", "Taiwan", "India", "Australia", "United Arab Emirates", "Vietnam", "Germany", "Philippines"]
 df = df[(df["Country1"].isin(target_countries)) & (df["Country2"].isin(target_countries))]
 
 #print("Unique Years in Filtered Data:", df["year"].unique())
@@ -68,4 +68,4 @@ df = df.groupby(['year', 'CountryPair']).agg({
     'IdealPointDistance': 'mean'
 }).reset_index()
 
-df.to_csv('data/cleaned data/unga_voting.csv', index=False)
+df.to_csv('data/cleaned data/unga_voting_3.csv', index=False)

@@ -5,12 +5,33 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import shinywidgets
 from shinywidgets import render_widget
+from shinyswatch import theme
+import numpy as np
 
+
+
+#import trade product data
+trade_pdt_df = pd.read_csv("data/cleaned data/10_years_trade_frontend.csv")
+
+#product list for industry
+product_list = sorted(trade_pdt_df["Product"].dropna().unique().tolist())
+
+#Geopolitical distance data
+geo_pol_df = pd.read_csv("data/cleaned data/geopolitical_data.csv")
 
 # import intro text
 def read_intro():
     with open("data\intro.txt", "r", encoding="utf-8") as f:
         return f.read()
+
+
+# import functions
+from shiny_functions import plot_trade_line_graph
+from shiny_functions import plot_geopol_distance
+from shiny_functions import plot_bubble
+from shiny_functions import plot_geo_pol_line_graph
+from Geopolitical_dist import get_geopolitical_data
+
 
 ## ui
 app_ui = ui.page_fluid(
@@ -35,15 +56,19 @@ app_ui = ui.page_fluid(
                 ui.sidebar(
                     ui.input_selectize(
                         "select_industry1", "Select an Industry:",
-                        choices=["Manufacturing", "B", "C", "D", "E", "F", "G", "H"]
-                    ),
+                        choices=product_list,
+                        selected=product_list[0] if product_list else None
+                        ),
                     ui.input_selectize(
                         "select_trade", "Select Imports or Exports:",
                         choices=["Exports", "Imports"]
                     ),
-                    ui.input_slider("slide_year", "Choose a Year:", 2009, 2024, value=2020),
+                    ui.input_slider("slide_year", "Choose a Year:", 2013, 2023, value=2020),
                 ),
-                    ui.output_text("page_b_output")  # Placeholder output
+                ui.output_ui("trade_data_intro_text"),
+                shinywidgets.output_widget("bar_plot"),
+                shinywidgets.output_widget("bubble_plot"),
+                ui.output_text("bubble_plot_text")
             )
         ),
 
@@ -53,24 +78,38 @@ app_ui = ui.page_fluid(
                 ui.sidebar(
                     ui.input_selectize(
                         "select_country", "Select a Trade Partner:",
-                        choices=["China", "Hong Kong", "Japan", "South Korea", "Malaysia", "Saudi Arabia", "Thailand", "United States"],
+                        choices=["China", "Hong Kong","Indonesia", "Japan", "South Korea", "Malaysia", "Saudi Arabia", "Thailand", "United States"],
                         selected="China"
                     ),
                     ui.input_selectize(
                         "select_industry2", "Select an Industry:",
-                        choices=["Manufacturing", "B", "C", "D", "E", "F", "G", "H"]
+                        choices=product_list,
+                        selected=product_list[0] if product_list else None
                     )
                 ),
-                ui.output_text("page_c_output")  # Placeholder output
+                shinywidgets.output_widget("trade_lineplot"),
+                shinywidgets.output_widget("geo_pol_line_plot"),
+                ui.output_text("trade_lineplot_text")
             )
         ),
         title="TideTrackers",
         id="page"
-    )
+    ),
+    theme=theme.flatly() 
 )
 
 
 def server(input, output, session):
+
+    @output
+    @render.text
+    def bubble_plot_text():
+        return "Fig 1: Bubble plot displaying level of imports/exports for Singapore's main trade partners per industry"
+    
+    @output
+    @render.text
+    def trade_lineplot_text():
+        return "Fig 3: Line plot displaying level of imports/exports for specified trade partner per industry over the years"
 
     @output
     @render.ui
@@ -79,14 +118,38 @@ def server(input, output, session):
         return ui.HTML(f"<p>{text_content}</p>")  # Display formatted text
     
     @output
-    @render.text
-    def page_b_output():
-        return f"You selected: {input['select_industry1']()}, {input['select_trade']()}, {input['slide_year']()}"
+    @render.ui
+    def trade_data_intro_text():
+        return ui.HTML("""
+            <div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
+                <p><strong>Explore Singapore's imports and exports across major industries and trade partners between 2013 and 2023.</strong><br><br>
+                Use the filters on the left to select an industry, trade type, and year to visualize historical trade data and geopolitical trends.</p>
+            </div>
+        """)
 
     @output
-    @render.text
-    def page_c_output():
-        return f"You selected: {input['select_country']()}, {input['select_industry2']()}"
+    @render_widget
+    def bar_plot():
+        return plot_geopol_distance(input.slide_year())
+
+    @output
+    @render_widget
+    def bubble_plot():
+        industry = input.select_industry1()
+        trade_type = input.select_trade()
+        year = input.slide_year()
+        return plot_bubble(industry, trade_type, year, trade_pdt_df)
+    
+    @output
+    @render_widget
+    def trade_lineplot():
+        return plot_trade_line_graph(input.select_country(), input.select_industry2(), trade_pdt_df)
+
+    @output
+    @render_widget
+    def geo_pol_line_plot():
+        country = input.select_country()
+        return plot_geo_pol_line_graph(country)
 
 
 app = App(app_ui, server)

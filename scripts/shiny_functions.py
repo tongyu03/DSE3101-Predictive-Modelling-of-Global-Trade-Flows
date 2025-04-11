@@ -2,8 +2,170 @@ import pandas as pd
 import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
 
 
+#import trade product data
+trade_pdt_df = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
+#import Geopolitical distance data
+geo_pol_df = pd.read_csv("data/cleaned data/geopolitical_data.csv")
+#import geopolitical distance data
+from Geopolitical_dist import get_geopolitical_data
+
+# Rename industries
+industry_rename_map = {
+    'Chemical products n.e.c.': 'Other Chemicals',
+    'Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles': 'Electrical Equipment & AV Gear',
+    'Essential oils and resinoids; perfumery, cosmetic or toilet preparations': 'Cosmetics & Fragrances',
+    'Metal; miscellaneous products of base metal': 'Base Metal Products',
+    'Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes': 'Mineral Fuels & Oils',
+    'Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin': 'Jewellery & Precious Metals',
+    'Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof': 'Machinery & Boilers',
+    'Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories': 'Optical & Medical Instruments',
+    'Organic chemicals': 'Organic Chemicals',
+    'Plastics and articles thereof': 'Plastics',
+    'Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof': 'Machinery & Boilers'  # same as above
+}
+
+# plot trade line graph
+def plot_trade_line_graph(country, industry, trade_data_df):
+    # Filter the data for the given country and industry
+    filtered_data = trade_data_df[
+        (trade_data_df['Country'] == country) & 
+        (trade_data_df['Product'] == industry)
+    ]
+    # Create the line plot
+    fig = px.line(
+        filtered_data, 
+        x='Year', 
+        y=['Imports', 'Exports'], 
+        title=f"Trade of {industry} between Singapore and {country}",
+        labels={'Year': 'Year', 'value': 'Trade Value (USD)', 'variable': 'Trade Type'},
+        markers=True
+    )
+    # Customize the layout
+    fig.update_layout(
+        template='plotly_white',
+        xaxis_title="Year",
+        yaxis_title="Trade Value (USD)",
+        legend_title="Trade Type",
+        margin=dict(l=20, r=20, t=40, b=20),
+        xaxis=dict(range=[filtered_data['Year'].min(), 2024]) 
+    )
+    # Show the figure
+    return fig
+
+#import geopolitical dist function
+from Geopolitical_dist import get_geopolitical_data_for_year
+
+# List of countries
+Countries = ['China', 'Hong Kong', 'South Korea', 'Thailand', 'Malaysia', 'USA', 'Saudi Arabia', 'Japan', 'Indonesia']
+
+import plotly.express as px
+
+def plot_geopol_distance(input_year):
+    # Get geopolitical data for all countries in the input year
+    year_data = get_geopolitical_data_for_year(input_year)
+    year_data['Geopolitical_Score'] = year_data['Geopolitical_Score'].astype(float)
+    year_data['Country'] = year_data['Country'].astype(str)
+    if year_data.empty:
+        print(f"No data available for the year {input_year}.")
+        return None
+    fig = px.bar(
+        year_data,
+        x="Geopolitical_Score",
+        y="Country",
+        orientation="h",  # Horizontal bar plot
+        title=f"Geopolitical Distance with Singapore in {input_year}",
+        labels={"Geopolitical_Score": "Geopolitical Distance", "Country": "Country"},
+        color="Country", 
+        color_discrete_sequence=px.colors.sequential.Viridis 
+    )
+    fig.update_layout(
+        xaxis=dict(range=[0, year_data['Geopolitical_Score'].max()]),  # Adjust x-axis range to data
+        yaxis=dict(categoryorder='total ascending'),  # Sort the countries in ascending order of the geopolitical score
+        margin=dict(t=60, l=100, r=20, b=40),  # Adjust margins
+        template="plotly_white", 
+        showlegend=False,
+        title=dict(
+        x=0.5,  # Center the title
+        xanchor='center',
+        font=dict(size=20))
+    )
+    return fig
+
+
+def plot_bubble(industry, trade_type_col, year, trade_pdt_df):
+    # Filter the DataFrame for the specified industry and year
+    filtered = trade_pdt_df[
+        (trade_pdt_df['Product'] == industry) & 
+        (trade_pdt_df['Year'] == year)
+    ]
+    if filtered.empty:
+        return px.scatter(
+            title="No data available for the selected filters.",
+            x=[],
+            y=[]
+        )
+    # Create the bubble plot 
+    fig = px.scatter(
+        filtered, 
+        x="Country", 
+        y=trade_type_col,
+        size=trade_type_col,
+        color="Country",  # Color by country
+        hover_name="Country", 
+        hover_data={ 
+            "Product": True, 
+            trade_type_col: ':.2f',  
+            "Country": False,  
+            "Year": False  
+        },
+        title=f"Singapore {industry} {trade_type_col} in {year}",
+        size_max=60,
+        color_discrete_sequence=px.colors.sequential.Viridis  
+    )
+    fig.update_layout(
+        xaxis_title="Country",
+        yaxis_title=trade_type_col,
+        margin=dict(l=20, r=20, t=40, b=20),
+        template='plotly_white',
+        showlegend = False,
+        title=dict(
+            x=0.5,  # Center the title
+            xanchor='center',
+            font=dict(size=20))
+    )
+    return fig
+
+def plot_geo_pol_line_graph(country):
+    years = geo_pol_df["year"].unique()
+    years.sort()
+    scores = []
+    for y in years:
+        data = get_geopolitical_data(country, y)
+        if not data.empty:
+            scores.append(data[["year", "Geopolitical_Score"]].iloc[0])
+    score_df = pd.DataFrame(scores)
+    fig = px.line(score_df, 
+                  x = 'year', 
+                  y = "Geopolitical_Score", 
+                  title=f'Geopolitical Distance of {country} with Singapore Over Time',
+                  labels={'year': 'Year', 'Geopolitical_Score': 'Geopolitical Score'},
+                  markers=True)
+    
+    fig.update_layout(
+        template='plotly_white',
+        xaxis_title="Year",
+        yaxis_title="Geopolitical Distance",
+        margin=dict(l=20, r=20, t=40, b=20),
+        xaxis=dict(range=[score_df['year'].min(), 2024])
+    )
+    return fig
+
+
+'''
+# functions for old script
 
 ### Historical Trade Data
 trade_df = pd.read_csv("data\cleaned data\cleaned_monthly_trade_data.csv")
@@ -98,3 +260,5 @@ def get_gdp_comparison(gdp_df, country, year):
         return value
     else:
         return f"GDP data not available for {country} in {year}"
+    
+    '''
