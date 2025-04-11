@@ -84,13 +84,21 @@ def plot_geopol_distance(input_year):
     fig.update_layout(
         xaxis=dict(range=[0, year_data['Geopolitical_Score'].max()]),  # Adjust x-axis range to data
         yaxis=dict(categoryorder='total descending'),  
-        margin=dict(t=60, l=100, r=20, b=40),  # Adjust margins
+        margin=dict(t=60, l=100, r=20, b=100),  # Adjust margins
         template="plotly_white", 
         showlegend=False,
         title=dict(
         x=0.5,  # Center the title
         xanchor='center',
         font=dict(size=20))
+    )
+    fig.add_annotation(
+        text="Fig 2: Bar plot displaying geopolitical distance of Singapore with key trade partner over the years",
+        xref="paper", yref="paper",  # "paper" means the coordinates are relative to the entire plot
+        x=0.5, y=-0.3,  # Position the annotation below the plot
+        showarrow=False,
+        font=dict(size=14), 
+        align="center"
     )
     return fig
 
@@ -128,13 +136,21 @@ def plot_bubble(industry, trade_type_col, year, trade_pdt_df):
     fig.update_layout(
         xaxis_title="Country",
         yaxis_title=trade_type_col,
-        margin=dict(l=20, r=20, t=40, b=20),
+        margin=dict(t=60, l=100, r=20, b=100),
         template='plotly_white',
         showlegend = False,
         title=dict(
             x=0.5,  # Center the title
             xanchor='center',
             font=dict(size=20))
+    )
+    fig.add_annotation(
+        text="Fig 1: Bubble plot displaying level of imports/exports for Singapore's main trade partners per industry",
+        xref="paper", yref="paper",  # "paper" means the coordinates are relative to the entire plot
+        x=0.5, y=-0.3,  # Position the annotation below the plot
+        showarrow=False,
+        font=dict(size=14), 
+        align="center"
     )
     return fig
 
