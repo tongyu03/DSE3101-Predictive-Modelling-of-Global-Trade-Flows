@@ -2,6 +2,9 @@
 @author: Shannen
 Test all model approaches
 """
+# run this script from top to bottom
+# load packages
+
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression, Ridge, Lasso, ElasticNet
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
@@ -14,13 +17,17 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler, PolynomialFeatu
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.pipeline import Pipeline
 import seaborn as sns
+import joblib
 
+#%%
+
+# data processing functions
 
 def process_unga_data():
     unga = pd.read_csv("data/cleaned data/unga_voting_3.csv")
     unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
     unga[['Country1', 'Country2']] = pd.DataFrame(unga['CountryPair'].tolist(), index=unga.index)
-    unga = unga[(unga['year'] >= 1989) & (unga['year'] <= 2021)]
+    unga = unga[(unga['year'] >= 1989) & (unga['year'] <= 2023)]
     unga_sg = unga[(unga['Country1'] == 'Singapore') | (unga['Country2'] == 'Singapore')]
     unga_sg['Partner'] = unga_sg.apply(lambda row: row['Country1'] if row['Country1'] != 'Singapore' else row['Country2'], axis=1)
     unga_sg = unga_sg[['agree', 'year', 'IdealPointDistance', 'Country1', 'Country2', 'Partner']]
@@ -65,6 +72,10 @@ def process_FTA_data():
     fta_sg['Country'] = fta_sg['Country Code'].replace(iso3_to_country)
     fta_sg = fta_sg.sort_values(by='Year')
     return fta_sg
+
+#%%
+
+# merge datasets and prepare for linear regression
 
 def prepare_data_for_regression(log_transform=True, add_interactions=True):
     trade_data = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
@@ -114,14 +125,14 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
     merged_data["GDP_Lag1"] = merged_data.groupby(["Partner"])['GDP'].shift(1)
 
     # Add GDP growth rate as a feature
-    merged_data["GDP_Growth"] = merged_data.groupby(["Partner"])['GDP'].pct_change()
+    # merged_data["GDP_Growth"] = merged_data.groupby(["Partner"])['GDP'].pct_change()
 
     # Add exchange rate change as a feature
     merged_data["ExRate_Change"] = merged_data.groupby(["Partner"])['Exchange Rate (per US$)'].pct_change()
 
     # dd time-based features
-    merged_data["Time_Since_FTA"] = merged_data["year"] - merged_data.groupby("Partner")["Adjusted_value"].cumsum()
-    merged_data["Time_Since_FTA"] = merged_data["Time_Since_FTA"].fillna(0)
+    # merged_data["Time_Since_FTA"] = merged_data["year"] - merged_data.groupby("Partner")["Adjusted_value"].cumsum()
+    # merged_data["Time_Since_FTA"] = merged_data["Time_Since_FTA"].fillna(0)
 
     # Add interaction terms
     if add_interactions:
@@ -139,10 +150,12 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
         merged_data["log_GDP_Lag1"] = np.log(merged_data["GDP_Lag1"].clip(lower=1))
 
         #features for model
+        #grace: removed GDP_Growth
+        #grace: removed Time_Since_FTA
         feature_cols = ["log_Import_Lag1", "log_Import_Lag2", "log_Import_Lag3",
                         "IdealPointDistance", "log_GDP_Lag1",
                         'Exchange Rate (per US$)', 'Adjusted_value',
-                        'GDP_Growth', 'ExRate_Change', 'Time_Since_FTA']
+                        'ExRate_Change']
 
         if add_interactions:
             feature_cols.extend(["GDP_x_FTA", "GDP_x_IdealPoint"])
@@ -153,10 +166,12 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
         X = merged_data[feature_cols]
         y = np.log(merged_data["Imports"].clip(lower=1))
     else:
+        #grace: removed GDP_Growth
+        #grace: removed Time_Since_FTA
         feature_cols = ["Import_Lag1", "Import_Lag2", "Import_Lag3",
                         "IdealPointDistance", "GDP_Lag1",
                         'Exchange Rate (per US$)', 'Adjusted_value',
-                        'GDP_Growth', 'ExRate_Change', 'Time_Since_FTA']
+                        'ExRate_Change']
 
         if add_interactions:
             feature_cols.extend(["GDP_x_FTA", "GDP_x_IdealPoint"])
@@ -166,6 +181,10 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
         y = merged_data["Imports"]
 
     return X, y, merged_data
+
+#%%
+
+# model evaluation
 
 def calculate_aic_bic(y_true, y_pred, n_params):
     log_likelihood = -0.5 * np.sum((y_true - y_pred) ** 2)
@@ -244,29 +263,35 @@ def evaluate_model(model, X, y, cv_split, model_name="Model"):
         'bic': np.mean(bic_values),
     }
 
+#%%
+
+#fine tuning 
+
 # grid search CV
 def tune_model_hyperparameters(X, y, cv_split):
     # Define parameter grids for different models
     param_grid_ridge = {'alpha': [0.01, 0.1, 1.0, 10.0, 100.0]}
     param_grid_lasso = {'alpha': [0.001, 0.01, 0.1, 1.0, 10.0]}
-    param_grid_elastic = {
-        'alpha': [0.001, 0.01, 0.1, 1.0],
-        'l1_ratio': [0.1, 0.3, 0.5, 0.7, 0.9]
-    }
+    # param_grid_elastic = {
+    #     'alpha': [0.001, 0.01, 0.1, 1.0],
+    #     'l1_ratio': [0.1, 0.3, 0.5, 0.7, 0.9]
+    # }
+    
     param_grid_rf = {
-        'n_estimators': [50, 100, 200],
-        'max_depth': [None, 10, 20],
-        'min_samples_split': [2, 5, 10]
+        'n_estimators': [50, 75, 100],
+        'max_depth': [5, 10, 15],
+        'min_samples_split': [4, 6, 8]
     }
+    
     param_grid_gb = {
-        'n_estimators': [50, 100, 200],
-        'learning_rate': [0.01, 0.1, 0.2],
-        'max_depth': [3, 5, 7]
+        'n_estimators': [50, 75, 100],         # 100 shud b enuf
+        'learning_rate': [0.05, 0.1, 0.15],    # 0.1 as a baseline
+        'max_depth': [2, 3, 4, 5],  
     }
 
     grid_ridge = GridSearchCV(Ridge(), param_grid_ridge, cv=cv_split, scoring='r2')
     grid_lasso = GridSearchCV(Lasso(), param_grid_lasso, cv=cv_split, scoring='r2')
-    grid_elastic = GridSearchCV(ElasticNet(), param_grid_elastic, cv=cv_split, scoring='r2')
+    #grid_elastic = GridSearchCV(ElasticNet(), param_grid_elastic, cv=cv_split, scoring='r2')
     grid_rf = GridSearchCV(RandomForestRegressor(random_state=42), param_grid_rf, cv=cv_split, scoring='r2')
     grid_gb = GridSearchCV(GradientBoostingRegressor(random_state=42), param_grid_gb, cv=cv_split, scoring='r2')
 
@@ -279,9 +304,9 @@ def tune_model_hyperparameters(X, y, cv_split):
     grid_lasso.fit(X, y)
     print(f"Best Lasso parameters: {grid_lasso.best_params_}, Best score: {grid_lasso.best_score_:.4f}")
 
-    print("Tuning ElasticNet Regression...")
-    grid_elastic.fit(X, y)
-    print(f"Best ElasticNet parameters: {grid_elastic.best_params_}, Best score: {grid_elastic.best_score_:.4f}")
+    # print("Tuning ElasticNet Regression...")
+    # grid_elastic.fit(X, y)
+    # print(f"Best ElasticNet parameters: {grid_elastic.best_params_}, Best score: {grid_elastic.best_score_:.4f}")
 
     print("Tuning Random Forest...")
     grid_rf.fit(X, y)
@@ -294,7 +319,7 @@ def tune_model_hyperparameters(X, y, cv_split):
     return {
         'ridge': grid_ridge.best_estimator_,
         'lasso': grid_lasso.best_estimator_,
-        'elastic': grid_elastic.best_estimator_,
+        # 'elastic': grid_elastic.best_estimator_,
         'rf': grid_rf.best_estimator_,
         'gb': grid_gb.best_estimator_
     }
@@ -370,7 +395,7 @@ def main():
     linear_model = LinearRegression()
     linear_results = evaluate_model(linear_model, X, y, tscv, "Linear Regression")
 
-    # Try standardizing features
+    # Standardize features
     scaler = StandardScaler()
     X_scaled = pd.DataFrame(scaler.fit_transform(X), columns=X.columns, index=X.index)
 
@@ -382,28 +407,22 @@ def main():
         'Linear Regression': linear_results,
         'Ridge Regression (tuned)': evaluate_model(best_models['ridge'], X_scaled, y, tscv, "Ridge (tuned)"),
         'Lasso Regression (tuned)': evaluate_model(best_models['lasso'], X_scaled, y, tscv, "Lasso (tuned)"),
-        'ElasticNet (tuned)': evaluate_model(best_models['elastic'], X_scaled, y, tscv, "ElasticNet (tuned)"),
         'Random Forest (tuned)': evaluate_model(best_models['rf'], X_scaled, y, tscv, "Random Forest (tuned)"),
         'Gradient Boosting (tuned)': evaluate_model(best_models['gb'], X_scaled, y, tscv, "Gradient Boosting (tuned)")
     }
-
-    # Polynomial features with the best linear model
-    X_poly = add_polynomial_features(X_scaled, degree=2)
-    best_linear_model_name = max([k for k in results.keys() if 'Linear' in k or 'Ridge' in k or 'Lasso' in k or 'Elastic' in k],
-                                 key=lambda k: results[k]['r2'])
-    best_linear_model = best_models.get(best_linear_model_name.split()[0].lower(), linear_model)
-
-    poly_results = evaluate_model(best_linear_model, X_poly, y, tscv, f"Polynomial {best_linear_model_name}")
-    results[f'Polynomial {best_linear_model_name}'] = poly_results
 
     # Feature importance for best model
     best_model_name = max(results.keys(), key=lambda k: results[k]['r2'])
     best_model = best_models.get(best_model_name.split()[0].lower(), linear_model)
 
-    if best_model_name == f'Polynomial {best_linear_model_name}':
-        feature_importance = analyze_feature_importance(X_poly, y, best_model, best_model_name)
-    else:
-        feature_importance = analyze_feature_importance(X_scaled, y, best_model, best_model_name)
+    feature_importance = analyze_feature_importance(X_scaled, y, best_model, best_model_name)
+
+    # Save best model and scaler
+    joblib.dump(best_model, "best_model.pkl")
+    print("Model saved to 'best_model.pkl'.")
+
+    joblib.dump(scaler, "scaler.pkl")
+    print("Scaler saved to 'scaler.pkl'.")
 
     # Compare all models
     print("\nModel Comparison Summary:")
@@ -415,8 +434,55 @@ def main():
     # Return best model and performance metrics
     return best_model, results[best_model_name], feature_importance
 
+
 if __name__ == "__main__":
     best_model, best_performance, top_features = main()
     print(f"\nBest Model achieved R² of {best_performance['r2']:.4f}")
     print("Top 10 most important features:")
     print(top_features.head(10))
+
+#%%
+
+# handover to frontend: predictions
+
+def get_merged_data():
+    _, _, merged_data = prepare_data_for_regression()
+    return merged_data
+
+merged_data = get_merged_data()
+
+X, _, _ = prepare_data_for_regression(log_transform=True, add_interactions=True)
+X.columns.to_series().to_csv("feature_columns.csv", index=False)
+
+def predict_import_value(target_year):
+    # Load model & scaler
+    model = joblib.load("best_model.pkl")
+    scaler = joblib.load("scaler.pkl")
+    expected_cols = pd.read_csv("feature_columns.csv").squeeze().tolist()
+
+    # Get merged data
+    merged_data = get_merged_data()
+
+    # Filter for the year before target year
+    input_data = merged_data[merged_data['year'] == target_year - 1].copy()
+
+    if input_data.empty:
+        print(f"No data available for year {target_year - 1}")
+        return None
+
+    # Make sure only model features are used
+    input_df = input_data[expected_cols]
+
+    # Scale and predict
+    input_scaled = scaler.transform(input_df)
+    prediction = model.predict(input_scaled)
+
+    # Return result with reference
+    result = input_data[['Partner', 'year', 'HS_Section']].copy()
+    result['Predicted Imports'] = np.exp(prediction)  # undo log if model was trained on log
+    result['Target Year'] = target_year
+
+    return result
+
+
+
