@@ -53,13 +53,10 @@ def process_exrate_data():
     exrate = pd.read_csv("data/raw data/exchange_rate.csv", header = 4)
     exrate = exrate.drop(exrate.columns[[1, 2, 3]], axis=1)
     exrate_long = exrate.melt(id_vars=['Country Name'], var_name='Year', value_name='Exchange Rate (per US$)')
-    exrate_long['Country Name'] = exrate_long['Country Name'].replace('United States of America', 'United States')
     exrate_long = exrate_long.dropna()
     exrate_long['Year'] = exrate_long['Year'].astype(int)
     exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
-    exrate_long['Country Name'] = exrate_long['Country Name'].replace({
-        'United States': 'USA'
-    })
+    exrate_long['Country Name'] = exrate_long['Country Name'].replace('United States of America', 'United States')
     return exrate_long
 
 def process_FTA_data():
