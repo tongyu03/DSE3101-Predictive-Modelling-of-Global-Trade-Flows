@@ -65,10 +65,9 @@ app_ui = ui.page_fluid(
                     ),
                     ui.input_slider("slide_year", "Choose a Year:", 2013, 2023, value=2020),
                 ),
-                ui.output_ui("trade_data_intro_text"),
-                shinywidgets.output_widget("bar_plot"),
+                ui.output_ui("pg2_intro_text"),
                 shinywidgets.output_widget("bubble_plot"),
-                ui.output_text("bubble_plot_text")
+                shinywidgets.output_widget("bar_plot")
             )
         ),
 
@@ -87,9 +86,9 @@ app_ui = ui.page_fluid(
                         selected=product_list[0] if product_list else None
                     )
                 ),
+                ui.output_ui("pg3_intro_text"),
                 shinywidgets.output_widget("trade_lineplot"),
-                shinywidgets.output_widget("geo_pol_line_plot"),
-                ui.output_text("trade_lineplot_text")
+                shinywidgets.output_widget("geo_pol_line_plot")
             )
         ),
         title="TideTrackers",
@@ -102,16 +101,6 @@ app_ui = ui.page_fluid(
 def server(input, output, session):
 
     @output
-    @render.text
-    def bubble_plot_text():
-        return "Fig 1: Bubble plot displaying level of imports/exports for Singapore's main trade partners per industry"
-    
-    @output
-    @render.text
-    def trade_lineplot_text():
-        return "Fig 3: Line plot displaying level of imports/exports for specified trade partner per industry over the years"
-
-    @output
     @render.ui
     def intro_text():
         text_content = read_intro().replace("\n", "<br>") 
@@ -119,11 +108,29 @@ def server(input, output, session):
     
     @output
     @render.ui
-    def trade_data_intro_text():
+    def pg2_intro_text():
         return ui.HTML("""
             <div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
                 <p><strong>Explore Singapore's imports and exports across major industries and trade partners between 2013 and 2023.</strong><br><br>
-                Use the filters on the left to select an industry, trade type, and year to visualize historical trade data and geopolitical trends.</p>
+                Use the filters on the left to select an industry, trade type, and year to visualize historical trade volumes in the bubble plot.<br><br>
+                The bar graph shows the Geopolitical Score with Singapore for the selected year. 
+                <strong>A higher score indicates a greater geopolitical distance — i.e., less political and economic alignment with Singapore.</strong></p>
+                
+                <p style="margin-top: 20px; cursor: pointer; color: #007bff;" onclick="var x = document.getElementById('geo-explainer'); x.style.display = x.style.display === 'none' ? 'block' : 'none';">
+                <strong>ⓘ What is Geopolitical Distance?</strong>
+                </p>
+                <div id="geo-explainer" style="display: none; background-color: #ffffff; padding: 10px; border-left: 4px solid #007bff; margin-top: 5px; border-radius: 6px;">
+                    <p>Geopolitical Distance is a composite score reflecting how closely a country aligns with Singapore’s foreign policy and economic priorities.
+                    It is computed using historical indicators and scaled as part of our modeling process.</p>
+                    <p>The score incorporates:</p>
+                    <ul style="padding-left: 20px; margin-top: 5px;">
+                        <li>United Nations General Assembly (UNGA) voting similarity</li>
+                        <li>Presence of Free Trade Agreements (FTAs)</li>
+                        <li>Trade import and export volumes</li>
+                        <li>Gross Domestic Product (GDP)</li>
+                    </ul>
+                    <p>Lower scores (shorter bars) indicate stronger alignment with Singapore.</p>
+                </div>
             </div>
         """)
 
@@ -140,6 +147,36 @@ def server(input, output, session):
         year = input.slide_year()
         return plot_bubble(industry, trade_type, year, trade_pdt_df)
     
+    #Pg 3
+
+    @output
+    @render.ui
+    def pg3_intro_text():
+        return ui.HTML("""
+            <div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
+                <p><strong>Track how a partner country's trade and geopolitical relationship with Singapore has changed over time.</strong><br><br>
+                The first line chart shows historical trade volume with Singapore from 2013–2023.<br>
+                <strong>It also includes a 2024 prediction of import and export volumes for the selected industry.</strong></p>
+
+                <p style="margin-top: 20px; cursor: pointer; color: #007bff;" onclick="var x = document.getElementById('geo-trend-explainer'); x.style.display = x.style.display === 'none' ? 'block' : 'none';">
+                <strong>ⓘ How is this trade prediction made?</strong>
+                </p>
+                <div id="geo-trend-explainer" style="display: none; background-color: #ffffff; padding: 10px; border-left: 4px solid #007bff; margin-top: 5px; border-radius: 6px;">
+                    <p>The 2024 prediction is generated using a multiple linear regression model trained on historical indicators:</p>
+                    <ul style="padding-left: 20px;">
+                        <li>UN General Assembly (UNGA) voting alignment</li>
+                        <li>Existence of Free Trade Agreements</li>
+                        <li>Annual trade volume with Singapore</li>
+                        <li>Gross Domestic Product (GDP)</li>
+                    </ul>
+                    <p>These features are standardized and used to estimate future trade flows by country and industry.</p>
+                </div>
+                <p><strong>Geopolitical Distance</strong> is also charted to show how bilateral alignment has evolved annually.<br>
+                    A <strong>rising score</strong> reflects increasing geopolitical distance (weaker alignment), while a <strong>declining score</strong> indicates closer ties with Singapore over time.</p>
+            </div>
+        """)
+
+
     @output
     @render_widget
     def trade_lineplot():
