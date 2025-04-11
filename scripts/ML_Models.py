@@ -44,6 +44,9 @@ def process_gdp_data():
     gdp_long = gdp_long.drop(gdp_long.columns[[0, 1, 2]], axis=1)
     gdp_long['Year'] = gdp_long['Year'].astype(int)
     gdp_long['Country Name'] = gdp_long['Country Name'].astype(str)
+    gdp_long['Country Name'] = gdp_long['Country Name'].replace({
+        'United States': 'United States of America'
+    })
     return gdp_long
 
 def process_exrate_data():
@@ -53,6 +56,9 @@ def process_exrate_data():
     exrate_long = exrate_long.dropna()
     exrate_long['Year'] = exrate_long['Year'].astype(int)
     exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
+    exrate_long['Country Name'] = exrate_long['Country Name'].replace({
+        'United States': 'USA'
+    })
     return exrate_long
 
 def process_FTA_data():
@@ -89,6 +95,7 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
     gdp_data.columns = gdp_data.columns.str.strip()
     exrate_data.columns = exrate_data.columns.str.strip()
     fta_data.columns = fta_data.columns.str.strip()
+    gdp_data['Country Name'] = gdp_data['Country Name'].replace({"United States of America": "USA"})
 
     trade_data = trade_data.rename(columns={"Year": "year", "Country": "Partner"})
     gdp_data = gdp_data.rename(columns={"Year": "year"})
@@ -471,7 +478,7 @@ def predict_import_value(year_or_range):
         print(f"No data available for latest year ({latest_year})")
         return None
 
-    # Create a clean base for recursive prediction
+    # Prepare for forecasting
     results = []
 
     # Determine prediction years
@@ -487,24 +494,36 @@ def predict_import_value(year_or_range):
         input_scaled = scaler.transform(input_df)
         prediction = model.predict(input_scaled)
 
-        # Construct result
+        # Construct detailed product-level results
         result = temp_input[['Partner', 'HS Code', 'HS_Section']].copy()
-        result['Predicted Imports'] = np.exp(prediction)  # undo log if model was trained on log
+        result['Predicted Imports'] = np.exp(prediction)
         result['Target Year'] = target_year
-        results.append(result)
 
-        # Update temp_input with new Import predictions for next loop
+        # Aggregated country-level result
+        agg = result.groupby('Partner', as_index=False)['Predicted Imports'].sum()
+        agg['HS Code'] = 'All Products'
+        agg['HS_Section'] = 'All'
+        agg['Target Year'] = target_year
+
+        # Match column order
+        agg = agg[result.columns]
+
+        # Combine detailed and aggregated results
+        full_result = pd.concat([result, agg], ignore_index=True)
+        results.append(full_result)
+
+        # Update import lags for recursive prediction
         temp_input['Import_Lag1'] = prediction
         temp_input['Import_Lag2'] = temp_input['Import_Lag1']
         temp_input['Import_Lag3'] = temp_input['Import_Lag2']
 
-        # If using log-transformed lags
         temp_input['log_Import_Lag1'] = np.log(temp_input['Import_Lag1'].clip(lower=1))
         temp_input['log_Import_Lag2'] = np.log(temp_input['Import_Lag2'].clip(lower=1))
         temp_input['log_Import_Lag3'] = np.log(temp_input['Import_Lag3'].clip(lower=1))
 
     final_df = pd.concat(results).reset_index(drop=True)
     return final_df
+
 
 # predict_import_value(2025)
 # predict_import_value(range(2025, 2028))
