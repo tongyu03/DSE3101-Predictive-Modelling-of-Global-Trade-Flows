@@ -88,8 +88,9 @@ app_ui = ui.page_fluid(
                     )
                 ),
                 shinywidgets.output_widget("trade_lineplot"),
+                ui.output_text("trade_lineplot_text"),
                 shinywidgets.output_widget("geo_pol_line_plot"),
-                ui.output_text("trade_lineplot_text")
+                ui.output_text("geo_pol_line_plot_text")
             )
         ),
         title="TideTrackers",
@@ -103,13 +104,23 @@ def server(input, output, session):
 
     @output
     @render.text
+    def bar_plot_text():
+        return "Fig 1: Bar plot displaying geopolitical distance of Singapore with key trade partner over the years"
+
+    @output
+    @render.text
     def bubble_plot_text():
-        return "Fig 1: Bubble plot displaying level of imports/exports for Singapore's main trade partners per industry"
+        return "Fig 2: Bubble plot displaying level of imports/exports for Singapore's main trade partners per industry"
     
     @output
     @render.text
     def trade_lineplot_text():
         return "Fig 3: Line plot displaying level of imports/exports for specified trade partner per industry over the years"
+
+    @output
+    @render.text
+    def geo_pol_line_plot_text():
+        return "Fig 4: Line plot displaying geopolitical distance of Singapore with specified trade partner over the years"
 
     @output
     @render.ui
