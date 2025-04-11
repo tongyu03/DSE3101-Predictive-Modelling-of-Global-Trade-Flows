@@ -83,11 +83,10 @@ def process_FTA_data():
 
 def prepare_data_for_regression(log_transform=True, add_interactions=True):
     trade_data = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
-<<<<<<< HEAD
+
     sg_gdp = pd.read_csv("data/cleaned data/singapore_gdp.csv")
-=======
     trade_data['Country'] = trade_data['Country'].replace('United States of America', 'USA')
->>>>>>> 73f73095761f11cacdb44be92fa7a2c36500a3d9
+
     unga_data = process_unga_data()
     gdp_data = process_gdp_data()
     exrate_data = process_exrate_data()
