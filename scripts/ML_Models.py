@@ -43,9 +43,7 @@ def process_gdp_data():
     gdp_long = gdp_long.drop(gdp_long.columns[[0, 1, 2]], axis=1)
     gdp_long['Year'] = gdp_long['Year'].astype(int)
     gdp_long['Country Name'] = gdp_long['Country Name'].astype(str)
-    gdp_long['Country Name'] = gdp_long['Country Name'].replace({
-        'United States': 'United States of America'
-    })
+    gdp_long['Country Name'] = gdp_long['Country Name'].replace('United States of America', 'United States')
     return gdp_long
 
 def process_exrate_data():
@@ -78,8 +76,6 @@ def process_FTA_data():
 
 #%%
 
-n
-
 
 
 # merge datasets and prepare for linear regression
@@ -101,7 +97,6 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
     exrate_data.columns = exrate_data.columns.str.strip()
     fta_data.columns = fta_data.columns.str.strip()
     sg_gdp.columns = sg_gdp.columns.str.strip()
-    gdp_data['Country Name'] = gdp_data['Country Name'].replace({"United States of America": "USA"})
 
 
     trade_data = trade_data.rename(columns={"Year": "year", "Country": "Partner"})
