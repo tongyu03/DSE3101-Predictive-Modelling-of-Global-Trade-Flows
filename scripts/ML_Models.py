@@ -44,15 +44,22 @@ def process_gdp_data():
     gdp_long = gdp_long.drop(gdp_long.columns[[0, 1, 2]], axis=1)
     gdp_long['Year'] = gdp_long['Year'].astype(int)
     gdp_long['Country Name'] = gdp_long['Country Name'].astype(str)
+    gdp_long['Country Name'] = gdp_long['Country Name'].replace({
+        'United States': 'United States of America'
+    })
     return gdp_long
 
 def process_exrate_data():
     exrate = pd.read_csv("data/raw data/exchange_rate.csv", header = 4)
     exrate = exrate.drop(exrate.columns[[1, 2, 3]], axis=1)
     exrate_long = exrate.melt(id_vars=['Country Name'], var_name='Year', value_name='Exchange Rate (per US$)')
+    exrate_long['Country Name'] = exrate_long['Country Name'].replace('United States of America', 'United States')
     exrate_long = exrate_long.dropna()
     exrate_long['Year'] = exrate_long['Year'].astype(int)
     exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
+    exrate_long['Country Name'] = exrate_long['Country Name'].replace({
+        'United States': 'USA'
+    })
     return exrate_long
 
 def process_FTA_data():
@@ -65,7 +72,7 @@ def process_FTA_data():
     fta_sg = fta_sg.drop(columns=["Country", "Partner Country"])
     iso3_to_country = {
         'CHN': 'China', 'HKG': 'Hong Kong', 'JPN': 'Japan', 'KOR': 'Korea',
-        'MYS': 'Malaysia', 'SAU': 'Saudi Arabia', 'THA': 'Thailand', 'USA': 'United States',
+        'MYS': 'Malaysia', 'SAU': 'Saudi Arabia', 'THA': 'Thailand', 'USA': 'United States of America',
         'IDN': 'Indonesia', 'ARE': 'United Arab Emirates', 'IND': 'India', 'PHL': 'Philippines',
         'VNM': 'Vietnam', 'AUS': 'Australia', 'TWN': 'Taiwan', 'DEU': 'Germany',
     }
@@ -79,7 +86,11 @@ def process_FTA_data():
 
 def prepare_data_for_regression(log_transform=True, add_interactions=True):
     trade_data = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
+<<<<<<< HEAD
     sg_gdp = pd.read_csv("data/cleaned data/singapore_gdp.csv")
+=======
+    trade_data['Country'] = trade_data['Country'].replace('United States of America', 'USA')
+>>>>>>> 73f73095761f11cacdb44be92fa7a2c36500a3d9
     unga_data = process_unga_data()
     gdp_data = process_gdp_data()
     exrate_data = process_exrate_data()
@@ -91,6 +102,8 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
     exrate_data.columns = exrate_data.columns.str.strip()
     fta_data.columns = fta_data.columns.str.strip()
     sg_gdp.columns = sg_gdp.columns.str.strip()
+    gdp_data['Country Name'] = gdp_data['Country Name'].replace({"United States of America": "USA"})
+
 
     trade_data = trade_data.rename(columns={"Year": "year", "Country": "Partner"})
     gdp_data = gdp_data.rename(columns={"Year": "year"})
@@ -462,35 +475,73 @@ merged_data = get_merged_data()
 X, _, _ = prepare_data_for_regression(log_transform=True, add_interactions=True)
 X.columns.to_series().to_csv("feature_columns.csv", index=False)
 
-def predict_import_value(target_year):
+def predict_import_value(year_or_range):
+    import numbers
+
     # Load model & scaler
     model = joblib.load("best_model.pkl")
     scaler = joblib.load("scaler.pkl")
     expected_cols = pd.read_csv("feature_columns.csv").squeeze().tolist()
 
-    # Get merged data
+    # Get base data (latest available year for forecasting)
     merged_data = get_merged_data()
+    latest_year = merged_data['year'].max()
+    base_input = merged_data[merged_data['year'] == latest_year].copy()
 
-    # Filter for the year before target year
-    input_data = merged_data[merged_data['year'] == target_year - 1].copy()
-
-    if input_data.empty:
-        print(f"No data available for year {target_year - 1}")
+    if base_input.empty:
+        print(f"No data available for latest year ({latest_year})")
         return None
 
-    # Make sure only model features are used
-    input_df = input_data[expected_cols]
+    # Prepare for forecasting
+    results = []
 
-    # Scale and predict
-    input_scaled = scaler.transform(input_df)
-    prediction = model.predict(input_scaled)
+    # Determine prediction years
+    if isinstance(year_or_range, numbers.Integral):
+        years = [year_or_range]
+    else:
+        years = list(year_or_range)
 
-    # Return result with reference
-    result = input_data[['Partner', 'year', 'HS_Section']].copy()
-    result['Predicted Imports'] = np.exp(prediction)  # undo log if model was trained on log
-    result['Target Year'] = target_year
+    temp_input = base_input.copy()
 
-    return result
+    for target_year in years:
+        input_df = temp_input[expected_cols].copy()
+        input_scaled = scaler.transform(input_df)
+        prediction = model.predict(input_scaled)
+
+        # Construct detailed product-level results
+        result = temp_input[['Partner', 'HS Code', 'HS_Section']].copy()
+        result['Predicted Imports'] = np.exp(prediction)
+        result['Target Year'] = target_year
+
+        # Aggregated country-level result
+        agg = result.groupby('Partner', as_index=False)['Predicted Imports'].sum()
+        agg['HS Code'] = 'All Products'
+        agg['HS_Section'] = 'All'
+        agg['Target Year'] = target_year
+
+        # Match column order
+        agg = agg[result.columns]
+
+        # Combine detailed and aggregated results
+        full_result = pd.concat([result, agg], ignore_index=True)
+        results.append(full_result)
+
+        # Update import lags for recursive prediction
+        temp_input['Import_Lag1'] = prediction
+        temp_input['Import_Lag2'] = temp_input['Import_Lag1']
+        temp_input['Import_Lag3'] = temp_input['Import_Lag2']
+
+        temp_input['log_Import_Lag1'] = np.log(temp_input['Import_Lag1'].clip(lower=1))
+        temp_input['log_Import_Lag2'] = np.log(temp_input['Import_Lag2'].clip(lower=1))
+        temp_input['log_Import_Lag3'] = np.log(temp_input['Import_Lag3'].clip(lower=1))
+
+    final_df = pd.concat(results).reset_index(drop=True)
+    return final_df
+
+
+# predict_import_value(2025)
+# predict_import_value(range(2025, 2028))
+
 
 
 
