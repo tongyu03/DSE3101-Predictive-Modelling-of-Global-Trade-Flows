@@ -102,6 +102,7 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
     exrate_data = exrate_data.rename(columns={"Year": "year"})
     fta_data = fta_data.rename(columns={"Year": "year"})
     sg_gdp = sg_gdp.rename(columns={"Year": "year"}) #sgp gdp code
+    sg_gdp['year'] = sg_gdp['year'].astype(int)
     
 
     # Merge datasets
@@ -109,9 +110,9 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
     merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
     merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
     merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['Country', 'year'])
-    merged_data = pd.merge(merged_data, sg_gdp_data, how='left', on='year') #sgp gdp code
+    merged_data = pd.merge(merged_data, sg_gdp, how='left', on='year') #sgp gdp code
 
-
+    
     # Process HS code
     if "HS Code" in merged_data.columns:
         merged_data["HS Code"] = merged_data["HS Code"].astype(str)
@@ -134,7 +135,7 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
     merged_data["Import_Lag2"] = merged_data.groupby(["Partner"])['Imports'].shift(2)
     merged_data["Import_Lag3"] = merged_data.groupby(["Partner"])['Imports'].shift(3)
     merged_data["GDP_Lag1"] = merged_data.groupby(["Partner"])['GDP'].shift(1)
-    merged_data["SG_Lag1"] = merged_data.groupby(["Partner"])['SG_GDP'].shift(1) #sgp gdp code
+    merged_data["SG_Lag1"] = merged_data.groupby(["Partner"])['Singapore_GDP'].shift(1) #sgp gdp code
 
     # Add GDP growth rate as a feature
     # merged_data["GDP_Growth"] = merged_data.groupby(["Partner"])['GDP'].pct_change()
