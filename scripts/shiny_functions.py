@@ -85,8 +85,12 @@ def plot_geopol_distance(input_year):
         xaxis=dict(range=[0, year_data['Geopolitical_Score'].max()]),  # Adjust x-axis range to data
         yaxis=dict(categoryorder='total ascending'),  # Sort the countries in ascending order of the geopolitical score
         margin=dict(t=60, l=100, r=20, b=40),  # Adjust margins
-        template="plotly_white",  # Use a clean white template
-        showlegend=False  # Hide the legend to avoid redundancy
+        template="plotly_white", 
+        showlegend=False,
+        title=dict(
+        x=0.5,  # Center the title
+        xanchor='center',
+        font=dict(size=20))
     )
     return fig
 
@@ -126,9 +130,12 @@ def plot_bubble(industry, trade_type_col, year, trade_pdt_df):
         yaxis_title=trade_type_col,
         margin=dict(l=20, r=20, t=40, b=20),
         template='plotly_white',
-        showlegend = False
+        showlegend = False,
+        title=dict(
+            x=0.5,  # Center the title
+            xanchor='center',
+            font=dict(size=20))
     )
-    
     return fig
 
 def plot_geo_pol_line_graph(country):

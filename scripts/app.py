@@ -7,7 +7,7 @@ import shinywidgets
 from shinywidgets import render_widget
 from shinyswatch import theme
 import numpy as np
-import matplotlib.pyplot as plt
+
 
 
 #import trade product data
@@ -31,16 +31,6 @@ from shiny_functions import plot_geopol_distance
 from shiny_functions import plot_bubble
 from shiny_functions import plot_geo_pol_line_graph
 from Geopolitical_dist import get_geopolitical_data
-
-# Create Synthetic data for Geopolitical Distance
-np.random.seed(42) 
-years = list(range(2013, 2023 + 1))
-countries = ["China", "Hong Kong", "South Korea", "Thailand", "Malaysia",
-             "Japan", "USA", "Indonesia", "Saudi Arabia"]
-# Create a DataFrame with all combinations
-data = pd.DataFrame([(year, country) for year in years for country in countries],
-                    columns=["year", "country"])
-data["geo_distance"] = np.round(np.random.uniform(0.2, 0.9, size=len(data)), 2)
 
 
 ## ui
@@ -75,9 +65,10 @@ app_ui = ui.page_fluid(
                     ),
                     ui.input_slider("slide_year", "Choose a Year:", 2013, 2023, value=2020),
                 ),
-                    shinywidgets.output_widget("bar_plot"),
-                    shinywidgets.output_widget("bubble_plot"),
-                    ui.output_text("bubble_plot_text")
+                ui.output_ui("trade_data_intro_text"),
+                shinywidgets.output_widget("bar_plot"),
+                shinywidgets.output_widget("bubble_plot"),
+                ui.output_text("bubble_plot_text")
             )
         ),
 
@@ -87,7 +78,7 @@ app_ui = ui.page_fluid(
                 ui.sidebar(
                     ui.input_selectize(
                         "select_country", "Select a Trade Partner:",
-                        choices=["China", "Hong Kong", "Japan", "South Korea", "Malaysia", "Saudi Arabia", "Thailand", "United States"],
+                        choices=["China", "Hong Kong","Indonesia", "Japan", "South Korea", "Malaysia", "Saudi Arabia", "Thailand", "United States"],
                         selected="China"
                     ),
                     ui.input_selectize(
@@ -104,7 +95,7 @@ app_ui = ui.page_fluid(
         title="TideTrackers",
         id="page"
     ),
-    theme=theme.darkly()
+    theme=theme.flatly() 
 )
 
 
@@ -126,6 +117,16 @@ def server(input, output, session):
         text_content = read_intro().replace("\n", "<br>") 
         return ui.HTML(f"<p>{text_content}</p>")  # Display formatted text
     
+    @output
+    @render.ui
+    def trade_data_intro_text():
+        return ui.HTML("""
+            <div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
+                <p><strong>Explore Singapore's imports and exports across major industries and trade partners between 2013 and 2023.</strong><br><br>
+                Use the filters on the left to select an industry, trade type, and year to visualize historical trade data and geopolitical trends.</p>
+            </div>
+        """)
+
     @output
     @render_widget
     def bar_plot():
