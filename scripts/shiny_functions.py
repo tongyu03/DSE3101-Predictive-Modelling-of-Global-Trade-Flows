@@ -83,7 +83,7 @@ def plot_geopol_distance(input_year):
     )
     fig.update_layout(
         xaxis=dict(range=[0, year_data['Geopolitical_Score'].max()]),  # Adjust x-axis range to data
-        yaxis=dict(categoryorder='total ascending'),  # Sort the countries in ascending order of the geopolitical score
+        yaxis=dict(categoryorder='total descending'),  
         margin=dict(t=60, l=100, r=20, b=40),  # Adjust margins
         template="plotly_white", 
         showlegend=False,

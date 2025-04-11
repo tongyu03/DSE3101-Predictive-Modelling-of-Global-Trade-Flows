@@ -66,8 +66,8 @@ app_ui = ui.page_fluid(
                     ui.input_slider("slide_year", "Choose a Year:", 2013, 2023, value=2020),
                 ),
                 ui.output_ui("trade_data_intro_text"),
-                shinywidgets.output_widget("bar_plot"),
                 shinywidgets.output_widget("bubble_plot"),
+                shinywidgets.output_widget("bar_plot"),
                 ui.output_text("bubble_plot_text")
             )
         ),
@@ -123,7 +123,25 @@ def server(input, output, session):
         return ui.HTML("""
             <div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
                 <p><strong>Explore Singapore's imports and exports across major industries and trade partners between 2013 and 2023.</strong><br><br>
-                Use the filters on the left to select an industry, trade type, and year to visualize historical trade data and geopolitical trends.</p>
+                Use the filters on the left to select an industry, trade type, and year to visualize historical trade volumes in the bubble plot.<br><br>
+                The bar graph shows the Geopolitical Score with Singapore for the selected year. 
+                <strong>A higher score indicates a greater geopolitical distance — i.e., less political and economic alignment with Singapore.</strong></p>
+                
+                <p style="margin-top: 20px; cursor: pointer; color: #007bff;" onclick="var x = document.getElementById('geo-explainer'); x.style.display = x.style.display === 'none' ? 'block' : 'none';">
+                <strong>ⓘ What is Geopolitical Distance?</strong>
+                </p>
+                <div id="geo-explainer" style="display: none; background-color: #ffffff; padding: 10px; border-left: 4px solid #007bff; margin-top: 5px; border-radius: 6px;">
+                    <p>Geopolitical Distance is a composite score reflecting how closely a country aligns with Singapore’s foreign policy and economic priorities.
+                    It is computed using historical indicators and scaled as part of our modeling process.</p>
+                    <p>The score incorporates:</p>
+                    <ul style="padding-left: 20px; margin-top: 5px;">
+                        <li>United Nations General Assembly (UNGA) voting similarity</li>
+                        <li>Presence of Free Trade Agreements (FTAs)</li>
+                        <li>Trade import and export volumes</li>
+                        <li>Gross Domestic Product (GDP)</li>
+                    </ul>
+                    <p>Lower scores (shorter bars) indicate stronger alignment with Singapore.</p>
+                </div>
             </div>
         """)
 
