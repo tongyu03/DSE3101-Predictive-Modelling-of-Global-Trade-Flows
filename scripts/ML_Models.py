@@ -50,6 +50,7 @@ def process_exrate_data():
     exrate = pd.read_csv("data/raw data/exchange_rate.csv", header = 4)
     exrate = exrate.drop(exrate.columns[[1, 2, 3]], axis=1)
     exrate_long = exrate.melt(id_vars=['Country Name'], var_name='Year', value_name='Exchange Rate (per US$)')
+    exrate_long['Country Name'] = exrate_long['Country Name'].replace('United States of America', 'United States')
     exrate_long = exrate_long.dropna()
     exrate_long['Year'] = exrate_long['Year'].astype(int)
     exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
@@ -65,7 +66,7 @@ def process_FTA_data():
     fta_sg = fta_sg.drop(columns=["Country", "Partner Country"])
     iso3_to_country = {
         'CHN': 'China', 'HKG': 'Hong Kong', 'JPN': 'Japan', 'KOR': 'Korea',
-        'MYS': 'Malaysia', 'SAU': 'Saudi Arabia', 'THA': 'Thailand', 'USA': 'United States',
+        'MYS': 'Malaysia', 'SAU': 'Saudi Arabia', 'THA': 'Thailand', 'USA': 'United States of America',
         'IDN': 'Indonesia', 'ARE': 'United Arab Emirates', 'IND': 'India', 'PHL': 'Philippines',
         'VNM': 'Vietnam', 'AUS': 'Australia', 'TWN': 'Taiwan', 'DEU': 'Germany',
     }
@@ -79,6 +80,7 @@ def process_FTA_data():
 
 def prepare_data_for_regression(log_transform=True, add_interactions=True):
     trade_data = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
+    trade_data['Country'] = trade_data['Country'].replace('United States of America', 'USA')
     unga_data = process_unga_data()
     gdp_data = process_gdp_data()
     exrate_data = process_exrate_data()
