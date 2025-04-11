@@ -88,9 +88,7 @@ app_ui = ui.page_fluid(
                 ),
                 ui.output_ui("pg3_intro_text"),
                 shinywidgets.output_widget("trade_lineplot"),
-                ui.output_text("trade_lineplot_text"),
-                shinywidgets.output_widget("geo_pol_line_plot"),
-                ui.output_text("geo_pol_line_plot_text")
+                shinywidgets.output_widget("geo_pol_line_plot")
             )
         ),
         title="TideTrackers",
@@ -101,16 +99,6 @@ app_ui = ui.page_fluid(
 
 
 def server(input, output, session):
-
-    @output
-    @render.text
-    def trade_lineplot_text():
-        return "Fig 3: Line plot displaying level of imports/exports for specified trade partner per industry over the years"
-
-    @output
-    @render.text
-    def geo_pol_line_plot_text():
-        return "Fig 4: Line plot displaying geopolitical distance of Singapore with specified trade partner over the years"
 
     @output
     @render.ui
@@ -166,23 +154,25 @@ def server(input, output, session):
     def pg3_intro_text():
         return ui.HTML("""
             <div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
-                <p><strong>Track how a country's geopolitical relationship with Singapore has changed over time.</strong><br><br>
-                This line chart shows the evolution of the Geopolitical Distance score between Singapore and the selected country from 2013 to 2023.</p>
+                <p><strong>Track how a partner country's trade and geopolitical relationship with Singapore has changed over time.</strong><br><br>
+                The first line chart shows historical trade volume with Singapore from 2013–2023.<br>
+                <strong>It also includes a 2024 prediction of import and export volumes for the selected industry.</strong></p>
 
                 <p style="margin-top: 20px; cursor: pointer; color: #007bff;" onclick="var x = document.getElementById('geo-trend-explainer'); x.style.display = x.style.display === 'none' ? 'block' : 'none';">
-                <strong>ⓘ What does this score mean?</strong>
+                <strong>ⓘ How is this trade prediction made?</strong>
                 </p>
                 <div id="geo-trend-explainer" style="display: none; background-color: #ffffff; padding: 10px; border-left: 4px solid #007bff; margin-top: 5px; border-radius: 6px;">
-                    <p>This score is computed based on multiple historical indicators, including:</p>
+                    <p>The 2024 prediction is generated using a multiple linear regression model trained on historical indicators:</p>
                     <ul style="padding-left: 20px;">
-                        <li>UNGA voting patterns</li>
-                        <li>Free Trade Agreements</li>
-                        <li>Trade data with Singapore</li>
-                        <li>GDP</li>
+                        <li>UN General Assembly (UNGA) voting alignment</li>
+                        <li>Existence of Free Trade Agreements</li>
+                        <li>Annual trade volume with Singapore</li>
+                        <li>Gross Domestic Product (GDP)</li>
                     </ul>
-                    <p>Each year's score is scaled for comparability and used in our modeling of trade relationships.</p>
-                    <p><strong>A rising score</strong> indicates increasing geopolitical distance (weaker alignment), while <strong>a falling score</strong> suggests closer ties with Singapore.</p>
+                    <p>These features are standardized and used to estimate future trade flows by country and industry.</p>
                 </div>
+                <p><strong>Geopolitical Distance</strong> is also charted to show how bilateral alignment has evolved annually.<br>
+                    A <strong>rising score</strong> reflects increasing geopolitical distance (weaker alignment), while a <strong>declining score</strong> indicates closer ties with Singapore over time.</p>
             </div>
         """)
 
