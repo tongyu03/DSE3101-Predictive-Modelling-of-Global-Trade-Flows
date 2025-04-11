@@ -22,7 +22,6 @@ import joblib
 #%%
 
 # data processing functions
-
 def process_unga_data():
     unga = pd.read_csv("data/cleaned data/unga_voting_3.csv")
     unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
@@ -78,6 +77,10 @@ def process_FTA_data():
     return fta_sg
 
 #%%
+
+n
+
+
 
 # merge datasets and prepare for linear regression
 
@@ -200,6 +203,7 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
     return X, y, merged_data
 
 #%%
+
 
 # model evaluation
 
@@ -534,6 +538,9 @@ def predict_import_value(year_or_range):
     final_df = pd.concat(results).reset_index(drop=True)
     return final_df
 
+
+# predict_import_value(2025)
+# predict_import_value(range(2025, 2028))
 
 # predict_import_value(2025)
 # predict_import_value(range(2025, 2028))
