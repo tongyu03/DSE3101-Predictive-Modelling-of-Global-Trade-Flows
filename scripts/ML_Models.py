@@ -454,35 +454,61 @@ merged_data = get_merged_data()
 X, _, _ = prepare_data_for_regression(log_transform=True, add_interactions=True)
 X.columns.to_series().to_csv("feature_columns.csv", index=False)
 
-def predict_import_value(target_year):
+def predict_import_value(year_or_range):
+    import numbers
+
     # Load model & scaler
     model = joblib.load("best_model.pkl")
     scaler = joblib.load("scaler.pkl")
     expected_cols = pd.read_csv("feature_columns.csv").squeeze().tolist()
 
-    # Get merged data
+    # Get base data (latest available year for forecasting)
     merged_data = get_merged_data()
+    latest_year = merged_data['year'].max()
+    base_input = merged_data[merged_data['year'] == latest_year].copy()
 
-    # Filter for the year before target year
-    input_data = merged_data[merged_data['year'] == target_year - 1].copy()
-
-    if input_data.empty:
-        print(f"No data available for year {target_year - 1}")
+    if base_input.empty:
+        print(f"No data available for latest year ({latest_year})")
         return None
 
-    # Make sure only model features are used
-    input_df = input_data[expected_cols]
+    # Create a clean base for recursive prediction
+    results = []
 
-    # Scale and predict
-    input_scaled = scaler.transform(input_df)
-    prediction = model.predict(input_scaled)
+    # Determine prediction years
+    if isinstance(year_or_range, numbers.Integral):
+        years = [year_or_range]
+    else:
+        years = list(year_or_range)
 
-    # Return result with reference
-    result = input_data[['Partner', 'year', 'HS_Section']].copy()
-    result['Predicted Imports'] = np.exp(prediction)  # undo log if model was trained on log
-    result['Target Year'] = target_year
+    temp_input = base_input.copy()
 
-    return result
+    for target_year in years:
+        input_df = temp_input[expected_cols].copy()
+        input_scaled = scaler.transform(input_df)
+        prediction = model.predict(input_scaled)
+
+        # Construct result
+        result = temp_input[['Partner', 'HS Code', 'HS_Section']].copy()
+        result['Predicted Imports'] = np.exp(prediction)  # undo log if model was trained on log
+        result['Target Year'] = target_year
+        results.append(result)
+
+        # Update temp_input with new Import predictions for next loop
+        temp_input['Import_Lag1'] = prediction
+        temp_input['Import_Lag2'] = temp_input['Import_Lag1']
+        temp_input['Import_Lag3'] = temp_input['Import_Lag2']
+
+        # If using log-transformed lags
+        temp_input['log_Import_Lag1'] = np.log(temp_input['Import_Lag1'].clip(lower=1))
+        temp_input['log_Import_Lag2'] = np.log(temp_input['Import_Lag2'].clip(lower=1))
+        temp_input['log_Import_Lag3'] = np.log(temp_input['Import_Lag3'].clip(lower=1))
+
+    final_df = pd.concat(results).reset_index(drop=True)
+    return final_df
+
+# predict_import_value(2025)
+# predict_import_value(range(2025, 2028))
+
 
 
 
