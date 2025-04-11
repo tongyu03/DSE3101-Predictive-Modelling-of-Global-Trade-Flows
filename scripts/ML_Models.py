@@ -43,7 +43,7 @@ def process_gdp_data():
     gdp_long = gdp_long.drop(gdp_long.columns[[0, 1, 2]], axis=1)
     gdp_long['Year'] = gdp_long['Year'].astype(int)
     gdp_long['Country Name'] = gdp_long['Country Name'].astype(str)
-    gdp_long['Country Name'] = gdp_long['Country Name'].replace('United States of America', 'United States')
+    gdp_long['Country Name'] = gdp_long['Country Name'].replace('United States', 'United States of America')
     return gdp_long
 
 def process_exrate_data():
@@ -53,7 +53,7 @@ def process_exrate_data():
     exrate_long = exrate_long.dropna()
     exrate_long['Year'] = exrate_long['Year'].astype(int)
     exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
-    exrate_long['Country Name'] = exrate_long['Country Name'].replace('United States of America', 'United States')
+    exrate_long['Country Name'] = exrate_long['Country Name'].replace('United States', 'United States of America')
     return exrate_long
 
 def process_FTA_data():
@@ -82,10 +82,8 @@ def process_FTA_data():
 
 def prepare_data_for_regression(log_transform=True, add_interactions=True):
     trade_data = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
-
+    trade_data['Country'] = trade_data['Country'].replace('USA', 'United States of America')
     sg_gdp = pd.read_csv("data/cleaned data/singapore_gdp.csv")
-    trade_data['Country'] = trade_data['Country'].replace('United States of America', 'USA')
-
     unga_data = process_unga_data()
     gdp_data = process_gdp_data()
     exrate_data = process_exrate_data()
