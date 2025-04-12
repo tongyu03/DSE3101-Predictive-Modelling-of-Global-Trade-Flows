@@ -130,48 +130,74 @@ def plot_geopol_distance(input_year):
 
 
 # Pg 3 Fig 1: Trade line graph
+import plotly.graph_objects as go
+
 def plot_trade_line_graph(country, industry, trade_pred_df):
     # Filter the data for the given country and industry
     filtered_data = trade_pred_df[
         (trade_pred_df['Country'] == country) & 
         (trade_pred_df['Product'] == industry)
     ]
-    color_map = {
-        'Imports': '#1f9e89',  # Teal
-        'Exports': '#f8961e'   # Orange
-    }
-    # Create the line plot
-    fig = px.line(
-        filtered_data, 
-        x='Year', 
-        y=['Imports', 'Exports'], 
-        title=f"Trade of {industry} between Singapore and {country}",
-        labels={'Year': 'Year', 'value': 'Trade Value (USD)', 'variable': 'Trade Type'},
-        markers=True,
-        color_discrete_map=color_map
-    )
-    # Customize the layout
+
+    # Split historical (up to 2023) and predicted (2024 onwards)
+    historical_data = filtered_data[filtered_data['Year'] <= 2023]
+    predicted_data = filtered_data[filtered_data['Year'] >= 2023]
+
+    # Initialize the figure
+    fig = go.Figure()
+
+    # Plot historical data
+    fig.add_trace(go.Scatter(
+        x=historical_data['Year'], y=historical_data['Imports'],
+        mode='lines+markers',
+        name='Imports (Historical)',
+        line=dict(color='#1f9e89', dash='solid')
+    ))
+    fig.add_trace(go.Scatter(
+        x=historical_data['Year'], y=historical_data['Exports'],
+        mode='lines+markers',
+        name='Exports (Historical)',
+        line=dict(color='#f8961e', dash='solid')
+    ))
+
+    # Plot predicted data (dotted lines)
+    fig.add_trace(go.Scatter(
+        x=predicted_data['Year'], y=predicted_data['Imports'],
+        mode='lines+markers',
+        name='Imports (Predicted)',
+        line=dict(color='#1f9e89', dash='dot')
+    ))
+    fig.add_trace(go.Scatter(
+        x=predicted_data['Year'], y=predicted_data['Exports'],
+        mode='lines+markers',
+        name='Exports (Predicted)',
+        line=dict(color='#f8961e', dash='dot')
+    ))
+
+    # Update layout
     fig.update_layout(
+        title=f"Trade of {industry} between Singapore and {country}",
         template='plotly_white',
         xaxis_title="Year",
         yaxis_title="Trade Value (USD)",
         legend_title="Trade Type",
         margin=dict(t=60, l=100, r=20, b=100),
         xaxis=dict(range=[filtered_data['Year'].min(), 2026]),
-        title=dict(
-            x=0.5,
-            xanchor='center',
-            font=dict(size=20))
+        title_font=dict(size=20),
+        title_x=0.5
     )
+
     fig.add_annotation(
         text="Fig 3: Line plot displaying level of imports/exports for specified trade partner per industry over the years",
-        xref="paper", yref="paper",  # "paper" means the coordinates are relative to the entire plot
-        x=0.5, y=-0.3,  # Position the annotation below the plot
+        xref="paper", yref="paper",
+        x=0.5, y=-0.3,
         showarrow=False,
-        font=dict(size=14), 
+        font=dict(size=14),
         align="center"
     )
+
     return fig
+
 
 # Pg 3 Fig 2: Geopolitical Distance line graph
 def plot_geo_pol_line_graph(country):

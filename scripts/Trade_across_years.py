@@ -77,6 +77,6 @@ predicted_df = predicted_df[trade_pdt_df.columns]
 # concatenate trade_pdt_df with predicted
 combined_df = pd.concat([trade_pdt_df, predicted_df], ignore_index=True)
 
-# combined_df.to_csv("data/cleaned data/trade_with_predicted.csv", index=False)
+#combined_df.to_csv("data/cleaned data/trade_with_predicted.csv", index=False)
 
 
