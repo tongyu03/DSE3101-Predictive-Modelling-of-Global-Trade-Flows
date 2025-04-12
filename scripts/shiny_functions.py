@@ -221,6 +221,7 @@ def plot_geo_pol_line_graph(country):
         yaxis_title="Geopolitical Distance",
         margin=dict(t=60, l=100, r=20, b=100),
         xaxis=dict(range=[score_df['year'].min(), 2024]),
+        width = 655,
         title=dict(
             x=0.5,
             xanchor='center',
