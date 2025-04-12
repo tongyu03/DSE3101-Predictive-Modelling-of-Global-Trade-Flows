@@ -35,6 +35,7 @@ from Geopolitical_dist import get_geopolitical_data
 
 ## ui
 app_ui = ui.page_fluid(
+    ui.include_css("scripts\styles.css"),
     ui.tags.head(
         ui.tags.style("""
             .navbar { background-color: #004080 !important; }
@@ -47,7 +48,42 @@ app_ui = ui.page_fluid(
     ui.page_navbar(
         ui.nav_panel(
             "Introduction",
-            ui.output_ui("intro_text")
+                ui.h3("Introduction"),
+                ui.p("Global trade is deeply influenced by geopolitical factors, making it a dynamic and often unpredictable sector.\
+Our TideTrackers website gives historical insight into import and export trends based in Singapore and selected countries and for selected years.\
+We also provide a feature to predict the trade volume of different sectors with the country of choice for the near future years based on the historical political trends."),
+                ui.div(
+                    ui.row(
+                        ui.column(4, ui.card(
+                            ui.h5("🌍 Trade Visualization"),
+                            ui.p("Practical insights into import/export over time")
+                        )),
+                        ui.column(4, ui.card(
+                            ui.h5("🔍 Geopolitical Distance"),
+                            ui.p("Measure distance by political disruption")
+                        )),
+                        ui.column(4, ui.card(
+                            ui.h5("📈 Predictive Insights"),
+                            ui.p("Forecast future trade activity")
+                        ))
+                    )
+                ),
+                ui.hr(),
+                ui.h3("What is Geopolitical Distance?"),
+                ui.p("Geopolitical distance can be defined as a measure of geopolitical misalignment between countries, which could affect relations, and thus trade volume.\
+More specifically, we define Geopolitical Distance in this website as a weighted combination of:"),
+                ui.tags.ul(
+                    ui.tags.li("Voting records in International Organizations"),
+                    ui.tags.li("Tariffs imposed"),
+                    ui.tags.li("Free Trade Agreements"),
+                    ui.tags.li("Currency exchange rate"),
+                    ui.tags.li("Past GDP")
+                ),
+                ui.hr(),
+                ui.h3("Why This Matters"),
+                ui.div(
+                    ui.p("TideTrackers helps you explore trade trends and predict future trade volumes so that you will never make an uninformed decision again!")
+                )
         ),
 
         ui.nav_panel(
