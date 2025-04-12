@@ -27,10 +27,9 @@ def read_intro():
         return f.read()
 
 
-
 ## ui
 app_ui = ui.page_fluid(
-    ui.include_css("scripts\styles.css"),
+    ui.include_css("scripts\\styles.css"),
     ui.tags.head(
         ui.tags.style("""
             .navbar { background-color: #004080 !important; }
@@ -38,47 +37,66 @@ app_ui = ui.page_fluid(
             .nav-link { color: white !important; }
             .nav-link.active { background-color: #0066cc !important; color: white !important; }
             .nav-link:hover { background-color: #0059b3 !important; color: #ffffff !important; }
+
+            /* 👇 New font size styling below */
+            body, .container-fluid, .card, .nav-panel-tab, .form-group {
+                font-size: 14px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            h5 {
+                font-size: 16px;
+            }
+            p {
+                font-size: 14px;
+            }
         """)
     ),
+
     ui.page_navbar(
         ui.nav_panel(
             "Home",
-                ui.h3("Introduction"),
-                ui.p("Global trade is deeply influenced by geopolitical factors, making it a dynamic and often unpredictable sector.\
-Our TideTrackers website gives historical insight into import and export trends based in Singapore and selected countries and for selected years.\
-We also provide a feature to predict the trade volume of different sectors with the country of choice for the near future years based on the historical political trends."),
-                ui.div(
-                    ui.row(
-                        ui.column(4, ui.card(
-                            ui.h5("🌍 Trade Visualization"),
-                            ui.p("Practical insights into import/export over time")
-                        )),
-                        ui.column(4, ui.card(
-                            ui.h5("🔍 Geopolitical Distance"),
-                            ui.p("Measure distance by political disruption")
-                        )),
-                        ui.column(4, ui.card(
-                            ui.h5("📈 Predictive Insights"),
-                            ui.p("Forecast future trade activity")
-                        ))
-                    )
-                ),
-                ui.hr(),
-                ui.h3("What is Geopolitical Distance?"),
-                ui.p("Geopolitical distance can be defined as a measure of geopolitical misalignment between countries, which could affect relations, and thus trade volume.\
-More specifically, we define Geopolitical Distance in this website as a weighted combination of:"),
-                ui.tags.ul(
-                    ui.tags.li("Voting records in International Organizations"),
-                    ui.tags.li("Tariffs imposed"),
-                    ui.tags.li("Free Trade Agreements"),
-                    ui.tags.li("Currency exchange rate"),
-                    ui.tags.li("Past GDP")
-                ),
-                ui.hr(),
-                ui.h3("Why This Matters"),
-                ui.div(
-                    ui.p("TideTrackers helps you explore trade trends and predict future trade volumes so that you will never make an uninformed decision again!")
+            ui.h3("Introduction", style="color: #CC5500;"),
+            ui.p("Global trade is heavily shaped by geopolitical dynamics, making it a constantly evolving and often unpredictable landscape. "
+                "TideTrackers offers historical insights into import and export trends involving Singapore and selected countries over recent years. "
+                "We also provide a forecasting feature that predicts trade volumes across different sectors for specific countries, based on historical political patterns and trends."),
+            ui.div(
+                ui.row(
+                    ui.column(4, ui.card(
+                        ui.h5("🌍 Trade Visualization"),
+                        ui.p("Practical insights into import/export over time")
+                    )),
+                    ui.column(4, ui.card(
+                        ui.h5("🔍 Geopolitical Distance"),
+                        ui.p("Measure distance by political disruption")
+                    )),
+                    ui.column(4, ui.card(
+                        ui.h5("📈 Predictive Insights"),
+                        ui.p("Forecast future trade activity")
+                    ))
                 )
+            ),
+            ui.hr(),
+            ui.row(
+                ui.column(6,
+                    ui.h3("Why Geopolitics Matters", style="color: #CC5500;"),
+                    ui.p("Rising geopolitical tensions — especially in recent years — have raised concerns about trade fragmentation. "
+                        "Geopolitical decisions, from diplomatic votes to trade agreements, shape the flow of goods and services. "
+                        "Our dashboard helps you examine and compare political alignment from Singapore's perspective to better understand past and present trade relationships — and anticipate future shifts."),
+                        style = "background-color: #f4faff; padding: 8px; border-radius: 8px; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);"
+                ),
+                ui.column(6, 
+                    ui.h3("Who is TideTrackers for", style="color: #CC5500;"),
+                    ui.p("Designed for supply chain professionals in Singapore or in partner countries that trade with Singapore, TideTrackers provides strategic insights into how shifting geopolitical landscapes may impact import and export flows across industries. "
+                        "We aim to support supply chain leaders in anticipating trade disruptions and making informed, data-driven decisions in a volatile global environment."),
+                        style = "background-color: #f4faff; padding: 8px; border-radius: 8px; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);"
+                )
+            ),
+            ui.hr(),
+            ui.h3("💡 Get Started", style="color: #CC5500;"),
+            ui.p("Use the tabs above to explore the dashboard. "
+                "Visualize trade trends, measure geopolitical distance, or forecast future flows — all in one place."),
         ),
 
         ui.nav_panel(
@@ -88,8 +106,8 @@ More specifically, we define Geopolitical Distance in this website as a weighted
                     ui.input_selectize(
                         "select_industry1", "Select an Industry:",
                         choices=product_list,
-                        selected=product_list[0] if product_list else None
-                        ),
+                        selected=product_list[0] if product_list else NULL
+                    ),
                     ui.input_selectize(
                         "select_trade", "Select Imports or Exports:",
                         choices=["Exports", "Imports"]
@@ -101,20 +119,20 @@ More specifically, we define Geopolitical Distance in this website as a weighted
                 shinywidgets.output_widget("bar_plot")
             )
         ),
-
+        
         ui.nav_panel(
             "Trade Data Across Time",
             ui.layout_sidebar(
                 ui.sidebar(
                     ui.input_selectize(
                         "select_country", "Select a Trade Partner:",
-                        choices=["China","Indonesia", "Japan", "Malaysia", "Saudi Arabia","South Korea", "Thailand", "United States"],
+                        choices=["China", "Indonesia", "Japan", "Malaysia", "Saudi Arabia", "South Korea", "Thailand", "United States"],
                         selected="China"
                     ),
                     ui.input_selectize(
                         "select_industry2", "Select an Industry:",
                         choices=product_list,
-                        selected=product_list[0] if product_list else None
+                        selected=product_list[0] if product_list else NULL
                     )
                 ),
                 ui.output_ui("pg3_intro_text"),
@@ -122,13 +140,16 @@ More specifically, we define Geopolitical Distance in this website as a weighted
                 shinywidgets.output_widget("geo_pol_line_plot")
             )
         ),
+        
         title="TideTrackers",
         id="page"
     ),
-    theme=theme.flatly() 
+    theme=theme.flatly()
 )
 
 
+
+## Server
 def server(input, output, session):
 
     @output

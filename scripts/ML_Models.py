@@ -603,7 +603,12 @@ def predict_import_value(year_or_range):
     return final_df
 
 # predict_import_value(2024)
-# predict_import_value(range(2024, 2028))
+# predict_import_value(range(2024, 2027))
+
+#predicted_imports_2024__2026 = predict_import_value(range(2024, 2027))
+#predicted_imports_2024__2026.to_csv("predicted_imports_2024_2026.csv", index=False)
+
+
 
 
 

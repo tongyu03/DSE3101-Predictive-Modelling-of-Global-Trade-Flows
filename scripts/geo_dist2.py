@@ -1,7 +1,12 @@
 import pandas as pd
 import numpy as np
 import ast
+from sklearn.linear_model import Ridge
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
+from sklearn.model_selection import train_test_split
 
+# Mapping from ISO3 to country names
 iso3_to_country = {
     'CHN': 'China',
     'HKG': 'Hong Kong',
@@ -14,6 +19,7 @@ iso3_to_country = {
     'IDN': 'Indonesia'
 }
 
+# Process UNGA voting data
 def process_unga_data():
     unga = pd.read_csv("data/cleaned data/unga_voting_3.csv")
     unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
@@ -27,8 +33,9 @@ def process_unga_data():
     unga_sg['year'] = unga_sg['year'].astype(int)
     return unga_sg
 
+# Process GDP data
 def process_gdp_data():
-    gdp = pd.read_csv("data/raw data/GDP.csv", header=2)
+    gdp = pd.read_csv("data/raw data/GDP.csv", header = 2)
     gdp = gdp.drop(gdp.columns[[1, 2, 3]], axis=1)
     gdp_long = gdp.melt(id_vars=['Country Name'], var_name='Year', value_name='GDP')
     gdp_long = gdp_long.dropna(subset=['GDP'])
@@ -42,8 +49,9 @@ def process_gdp_data():
     gdp_long['Country Name'] = gdp_long['Country Name'].astype(str)
     return gdp_long
 
+# Process Exchange Rate data
 def process_exrate_data():
-    exrate = pd.read_csv("data/raw data/exchange_rate.csv", header=4)
+    exrate = pd.read_csv("data/raw data/exchange_rate.csv", header = 4)
     exrate = exrate.drop(exrate.columns[[1, 2, 3]], axis=1)
     exrate_long = exrate.melt(id_vars=['Country Name'], var_name='Year', value_name='Exchange Rate (per US$)')
     exrate_long = exrate_long.dropna()
@@ -56,101 +64,154 @@ def process_exrate_data():
     })
     return exrate_long
 
+# Process FTA data
 def process_FTA_data():
     fta = pd.read_csv("data/cleaned data/adjusted_fta_data_2.csv")
-    fta_sg = fta[
-        (fta['Partner Country'].isin(['SG', 'SGP']))
-    ]
-    fta_sg['Country Code'] = fta_sg.apply(
-        lambda row: row['Country'] if row['Country'] not in ['SG', 'SGP'] else row['Partner Country'],
-        axis=1
-    )
+    fta_sg = fta[(fta['Partner Country'].isin(['SG', 'SGP']))]
+    fta_sg['Country Code'] = fta_sg.apply(lambda row: row['Country'] if row['Country'] not in ['SG', 'SGP'] else row['Partner Country'], axis=1)
     fta_sg = fta_sg.drop(columns=["Country", "Partner Country"])
     fta_sg['Country'] = fta_sg['Country Code'].replace(iso3_to_country)
     fta_sg = fta_sg.sort_values(by='Year')
     return fta_sg
 
-trade_data_geo = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
-unga_data_geo = process_unga_data()
-gdp_data_geo = process_gdp_data()
-exrate_data_geo = process_exrate_data()
-fta_data_geo = process_FTA_data()
+# Merge all data
+def merge_all_data():
+    trade_data_geo = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
+    unga_data_geo = process_unga_data()
+    gdp_data_geo = process_gdp_data()
+    exrate_data_geo = process_exrate_data()
+    fta_data_geo = process_FTA_data()
 
-trade_data_geo.columns = trade_data_geo.columns.str.strip()
-gdp_data_geo.columns = gdp_data_geo.columns.str.strip()
-exrate_data_geo.columns = exrate_data_geo.columns.str.strip()
-fta_data_geo.columns = fta_data_geo.columns.str.strip()
+    trade_data_geo.columns = trade_data_geo.columns.str.strip()
+    gdp_data_geo.columns = gdp_data_geo.columns.str.strip()
+    exrate_data_geo.columns = exrate_data_geo.columns.str.strip()
+    fta_data_geo.columns = fta_data_geo.columns.str.strip()
 
-# Rename columns to ensure consistent merging
-trade_data_geo = trade_data_geo.rename(columns={"Year": "year"})
-trade_data_geo["Country"] = trade_data_geo["Country"].replace({
-    "China, Hong Kong SAR": "Hong Kong",
-    "Rep. of Korea": "South Korea"
-})
+    # Rename columns for merging consistency
+    trade_data_geo = trade_data_geo.rename(columns={"Year": "year"})
+    trade_data_geo["Country"] = trade_data_geo["Country"].replace({
+        "China, Hong Kong SAR": "Hong Kong",
+        "Rep. of Korea": "South Korea"
+    })
+    trade_data_geo = trade_data_geo.rename(columns={"Country": "Partner"})
+    gdp_data_geo = gdp_data_geo.rename(columns={"Year": "year"})
+    gdp_data_geo['Country Name'] = gdp_data_geo['Country Name'].replace({
+        "United States of America": "USA"
+    })
+    exrate_data_geo = exrate_data_geo.rename(columns={"Year": "year"})
+    fta_data_geo = fta_data_geo.rename(columns={"Year": "year"})
 
-trade_data_geo = trade_data_geo.rename(columns={"Country": "Partner"})
-gdp_data_geo = gdp_data_geo.rename(columns={"Year": "year"})
-gdp_data_geo['Country Name'] = gdp_data_geo['Country Name'].replace({
-    "United States of America": "USA"
-})
-exrate_data_geo = exrate_data_geo.rename(columns={"Year": "year"})
-fta_data_geo = fta_data_geo.rename(columns={"Year": "year"})
+    # Merge data
+    merged_data_geo = pd.merge(unga_data_geo, trade_data_geo, how='left', left_on=['year', 'Partner'], right_on=['year', 'Partner'])
+    merged_data_geo = pd.merge(merged_data_geo, gdp_data_geo, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
+    merged_data_geo = pd.merge(merged_data_geo, exrate_data_geo, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
+    merged_data_geo = pd.merge(merged_data_geo, fta_data_geo, how='left', left_on=['Partner', 'year'], right_on=['Country', 'year'])
 
-merged_data_geo = pd.merge(unga_data_geo, trade_data_geo, how='left', left_on=['year', 'Partner'], right_on=['year', 'Partner'])
-merged_data_geo = pd.merge(merged_data_geo, gdp_data_geo, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
-merged_data_geo = pd.merge(merged_data_geo, exrate_data_geo, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
-merged_data_geo = pd.merge(merged_data_geo, fta_data_geo, how='left', left_on=['Partner', 'year'], right_on=['Country', 'year'])
+    # Lag features for GDP
+    merged_data_geo["GDP_Lag1"] = merged_data_geo.groupby(["Partner"])['GDP'].shift(1)
 
-if "HS Code" in merged_data_geo.columns:
-    merged_data_geo["HS Code"] = merged_data_geo["HS Code"].astype(str)
-    merged_data_geo["HS_Section"] = merged_data_geo["HS Code"].str[:2]
-    merged_data_geo["HS_Section"] = merged_data_geo["HS_Section"].fillna('00')
-else:
-    print("'HS_Code' column is missing from merged data.")
-    merged_data_geo["HS_Section"] = '00'
+    # Drop empty data
+    merged_data_geo = merged_data_geo.dropna()
 
-# Lag features for GDP
-merged_data_geo["GDP_Lag1"] = merged_data_geo.groupby(["Partner"])['GDP'].shift(1)
+    # Log exchange rate
+    merged_data_geo['Exchange Rate (per US$)_scaled'] = np.log1p(merged_data_geo['Exchange Rate (per US$)'])
 
-# Drop empty data
-merged_data_geo = merged_data_geo.dropna()
+    # Group and aggregate data
+    Geopol_df = merged_data_geo.groupby(["Country", "year"]).agg({
+        "Imports": "sum",
+        "Exports": "sum",
+        "IdealPointDistance": "median",
+        "GDP_Lag1": "median",
+        "Exchange Rate (per US$)_scaled": "median",
+        "Adjusted_value": "median",
+        "FTA_binary": "median"
+    }).reset_index()
 
-# Log exchange rate
-merged_data_geo['Exchange Rate (per US$)_scaled'] = np.log1p(merged_data_geo['Exchange Rate (per US$)'])
+    return Geopol_df
 
-# Geopolitical Data Aggregation
-Geopol_df = merged_data_geo.groupby(["Country", "year"]).agg({
-    "Imports": "sum",
-    "Exports": "sum",
-    "IdealPointDistance": "median",
-    "GDP_Lag1": "median",
-    "Exchange Rate (per US$)_scaled": "median",
-    "Adjusted_value": "median",
-    "FTA_binary": "median"
-}).reset_index()
+# Define and train the model
+def train_model(Geopol_df):
+    # Prepare training data
+    X = Geopol_df[['IdealPointDistance', 'GDP_Lag1', 'Exchange Rate (per US$)_scaled', 'Adjusted_value', 'FTA_binary']]
+    y = Geopol_df['Imports']  # Assuming you're predicting imports as an example target
 
-# Define a geopolitical score
-def get_geopolitical_data(country, year):
-    country_data = Geopol_df[(Geopol_df['Country'] == country) & (Geopol_df['year'] == year)].copy()
-    country_data['Geopolitical_Score'] = (
-        100 * country_data['IdealPointDistance'] +
-        np.log10(country_data['GDP_Lag1']) +
-        country_data['Exchange Rate (per US$)_scaled'] -
-        5 * country_data['Adjusted_value'] -
-        5 * country_data['FTA_binary']
-    )
-    return country_data[['Country', 'year', 'Geopolitical_Score']]
+    # Split data into training and testing
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-def get_geopolitical_data_for_year(year):
-    year_data = Geopol_df[Geopol_df['year'] == year].copy()
-    year_data['Geopolitical_Score'] = (
-        100 * year_data['IdealPointDistance'] +
-        np.log10(year_data['GDP_Lag1']) +
-        year_data['Exchange Rate (per US$)_scaled'] -
-        5 * year_data['Adjusted_value'] -
-        5 * year_data['FTA_binary']
-    )
-    return year_data[['Country', 'year', 'Geopolitical_Score']]
+    # Define model pipeline with scaling and Ridge regression
+    pipeline = Pipeline([
+        ("scaler", StandardScaler()),
+        ("reg", Ridge(alpha=1.0))
+    ])
 
-# Example output for 2020
-print(get_geopolitical_data_for_year(2020))
+    # Train the model
+    pipeline.fit(X_train, y_train)
+    
+    return pipeline, X.columns
+
+# Get the coefficients
+def get_model_coefficients(pipeline, feature_names):
+    model = pipeline.named_steps['reg']
+    coefficients = model.coef_
+    coef_df = pd.DataFrame({
+        'Feature': feature_names,
+        'Coefficient': coefficients
+    })
+    return coef_df
+
+
+
+
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import Ridge
+from sklearn.pipeline import Pipeline
+
+# Assuming you have a trained Ridge model pipeline
+
+# Define the features and their respective model coefficients
+features = ['IdealPointDistance', 'GDP_Lag1', 'Exchange Rate (per US$)_scaled', 'Adjusted_value', 'FTA_binary']
+
+# Assuming your model pipeline has already been trained and is available
+# For example:
+pipeline = Pipeline([
+    ('scaler', StandardScaler()),
+    ('reg', Ridge(alpha=1.0))
+])
+
+# Model training (you must replace this part with your trained pipeline)
+# pipeline.fit(X_train, y_train)  # Where X_train and y_train are your training data
+
+# Define a function to calculate the geopolitical score for a given country and year
+def calculate_geopolitical_score(country_list, year_list, pipeline, data):
+    result = []
+    
+    for country in country_list:
+        for year in year_list:
+            country_data = data[(data['Country'] == country) & (data['year'] == year)].copy()
+
+            if country_data.empty:
+                result.append({"Country": country, "year": year, "Geopolitical_Score": "No data"})
+                continue
+
+            X_country = country_data[features]
+            X_country_scaled = pipeline.named_steps['scaler'].transform(X_country)
+
+            geo_score = np.dot(X_country_scaled, pipeline.named_steps['reg'].coef_) + pipeline.named_steps['reg'].intercept_
+            country_data['Geopolitical_Score'] = geo_score
+            result.append({"Country": country, "year": year, "Geopolitical_Score": geo_score[0]})
+
+    return pd.DataFrame(result)
+
+# Example usage for a country and a specific year
+country = 'China'  # Replace with any country of interest
+year = 2020  # Replace with the year of interest
+
+# Assume you have your merged dataset named 'Geopol_df'
+# Geopol_df = merge_all_data()  # This should be your actual data
+
+# Calculate the geopolitical score
+geopolitical_score_df = calculate_geopolitical_score(country, year, pipeline, Geopol_df)
+
+print(geopolitical_score_df)
