@@ -174,4 +174,4 @@ def get_geopolitical_data_for_year(year):
     # Return the relevant columns for all countries in the specified year
     return year_data[['Country', 'year', 'Geopolitical_Score']]
 
-print(get_geopolitical_data_for_year(2020))
+#print(get_geopolitical_data_for_year(2020))

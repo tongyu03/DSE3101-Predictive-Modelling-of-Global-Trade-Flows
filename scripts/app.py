@@ -42,7 +42,7 @@ app_ui = ui.page_fluid(
     ),
     ui.page_navbar(
         ui.nav_panel(
-            "Introduction",
+            "Home",
                 ui.h3("Introduction"),
                 ui.p("Global trade is deeply influenced by geopolitical factors, making it a dynamic and often unpredictable sector.\
 Our TideTrackers website gives historical insight into import and export trends based in Singapore and selected countries and for selected years.\
