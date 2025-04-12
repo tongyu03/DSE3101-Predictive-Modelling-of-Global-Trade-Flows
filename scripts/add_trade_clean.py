@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
 # Load raw data
-import_data = pd.read_csv('DSE3101-Predictive-Modelling-of-Global-Trade-Flows/data/raw data/Add_Import_Data.csv')
-export_data = pd.read_csv('DSE3101-Predictive-Modelling-of-Global-Trade-Flows/data/raw data/Add_Export_Data.csv')
-original = pd.read_csv('DSE3101-Predictive-Modelling-of-Global-Trade-Flows/data/cleaned data/10 years Trade Product Data.csv')
+import_data = pd.read_csv('../data/raw data/Add_Import_Data.csv')
+export_data = pd.read_csv('../data/raw data/Add_Export_Data.csv')
+original = pd.read_csv('../data/cleaned data/10 years Trade Product Data.csv')
 # Strip any leading/trailing spaces from column names
 import_data.columns = import_data.columns.str.strip()
 export_data.columns = export_data.columns.str.strip()
@@ -66,8 +66,8 @@ trade_data = trade_data.rename(columns={
 print(trade_data.head(10))
 
 # Save the cleaned and merged data to a CSV file
-trade_data.to_csv('DSE3101-Predictive-Modelling-of-Global-Trade-Flows/data/cleaned data/Add 10 years Trade Product Data.csv', index=False)
+trade_data.to_csv('../data/cleaned data/Add 10 years Trade Product Data.csv', index=False)
 concatenated_data = pd.concat([original, trade_data], ignore_index=True)
 concatenated_data['Year'] = pd.to_numeric(concatenated_data['Year'], errors='coerce')
 concatenated_data = concatenated_data.sort_values(by='Year', ascending=True)
-concatenated_data.to_csv('DSE3101-Predictive-Modelling-of-Global-Trade-Flows/data/cleaned data/Concatenated_Trade_Data.csv', index=False)
+concatenated_data.to_csv('../data/cleaned data/Concatenated_Trade_Data.csv', index=False)
