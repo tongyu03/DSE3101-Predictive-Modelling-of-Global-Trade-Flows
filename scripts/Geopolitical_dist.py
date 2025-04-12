@@ -151,11 +151,12 @@ def get_geopolitical_data(country, year):
     
     # Calculate the geopolitical score
     country_data['Geopolitical_Score'] = (
-        100 * country_data['IdealPointDistance'] +
-        np.log10(country_data['GDP_Lag1']) +
-        country_data['Exchange Rate (per US$)_scaled'] -
-        5 * country_data['Adjusted_value'] -
-        5 * country_data['FTA_binary']
+        500 +
+        4 * country_data['IdealPointDistance'] +
+        -28 * np.log10(country_data['GDP_Lag1']) +
+        -0.7 * country_data['Exchange Rate (per US$)_scaled'] +
+        -16 * country_data['Adjusted_value'] +
+        -16 * country_data['FTA_binary']
     )
     return country_data[['Country', 'year', 'Geopolitical_Score']]
     
@@ -165,11 +166,12 @@ def get_geopolitical_data_for_year(year):
     year_data = Geopol_df[Geopol_df['year'] == year].copy()
     # Calculate the geopolitical score for all countries in that year
     year_data['Geopolitical_Score'] = (
-        100 * year_data['IdealPointDistance'] +
-        np.log10(year_data['GDP_Lag1']) +
-        year_data['Exchange Rate (per US$)_scaled'] -
-        5 * year_data['Adjusted_value'] -
-        5 * year_data['FTA_binary']
+        500 +
+        4 * year_data['IdealPointDistance'] +
+        -28 * np.log10(year_data['GDP_Lag1']) +
+        -0.7 * year_data['Exchange Rate (per US$)_scaled'] +
+        -16  * year_data['Adjusted_value'] +
+        -16 * year_data['FTA_binary']
     )
     # Return the relevant columns for all countries in the specified year
     return year_data[['Country', 'year', 'Geopolitical_Score']]
