@@ -576,7 +576,10 @@ def predict_import_value(year_or_range):
 # predict_import_value(2025)
 # predict_import_value(range(2025, 2028))
 
-
+# Generate predicted values for 2024 to 2026
+#predicted_df = predict_import_value(range(2024, 2027))
+# Save to CSV
+#predicted_df.to_csv("predicted_imports_2024_2026.csv", index=False)
 
 
 
