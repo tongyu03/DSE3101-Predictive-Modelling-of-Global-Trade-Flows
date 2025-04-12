@@ -84,7 +84,7 @@ def process_FTA_data():
 # merge datasets and prepare for linear regression
 
 def prepare_data_for_regression(log_transform=True, add_interactions=True):
-    trade_data = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
+    trade_data = pd.read_csv("data/cleaned data/Concatenated_Trade_Data.csv")
     trade_data['Country'] = trade_data['Country'].replace('USA', 'United States of America')
     trade_data['Country'] = trade_data['Country'].replace('Rep. of Korea', 'South Korea')
     sg_gdp = pd.read_csv("data/cleaned data/singapore_gdp.csv").iloc[:-1]
@@ -303,34 +303,58 @@ def evaluate_model(model, X, y, cv_split, model_name="Model"):
 #fine tuning 
 
 # grid search CV
+from sklearn.pipeline import Pipeline
+
 def tune_model_hyperparameters(X, y, cv_split):
-    # Define parameter grids for different models
-    param_grid_ridge = {'alpha': [0.01, 0.1, 1.0, 10.0, 100.0]}
-    param_grid_lasso = {'alpha': [0.001, 0.01, 0.1, 1.0, 10.0]}
-    # param_grid_elastic = {
-    #     'alpha': [0.001, 0.01, 0.1, 1.0],
-    #     'l1_ratio': [0.1, 0.3, 0.5, 0.7, 0.9]
-    # }
-    
+    # Define parameter grids for each model using pipeline names
+    param_grid_ridge = {
+        'ridge__alpha': [0.01, 0.1, 1.0, 10.0, 100.0]
+    }
+
+    param_grid_lasso = {
+        'lasso__alpha': [0.001, 0.01, 0.1, 1.0, 10.0]
+    }
+
     param_grid_rf = {
-        'n_estimators': [50, 75, 100],
-        'max_depth': [5, 10, 15],
-        'min_samples_split': [4, 6, 8]
+        'rf__n_estimators': [50, 75, 100],
+        'rf__max_depth': [5, 10, 15],
+        'rf__min_samples_split': [4, 6, 8]
     }
-    
+
     param_grid_gb = {
-        'n_estimators': [50, 75, 100],         # 100 shud b enuf
-        'learning_rate': [0.05, 0.1, 0.15],    # 0.1 as a baseline
-        'max_depth': [2, 3, 4, 5],  
+        'gb__n_estimators': [50, 75, 100],
+        'gb__learning_rate': [0.05, 0.1, 0.15],
+        'gb__max_depth': [2, 3, 4, 5]
     }
 
-    grid_ridge = GridSearchCV(Ridge(), param_grid_ridge, cv=cv_split, scoring='r2')
-    grid_lasso = GridSearchCV(Lasso(), param_grid_lasso, cv=cv_split, scoring='r2')
-    #grid_elastic = GridSearchCV(ElasticNet(), param_grid_elastic, cv=cv_split, scoring='r2')
-    grid_rf = GridSearchCV(RandomForestRegressor(random_state=42), param_grid_rf, cv=cv_split, scoring='r2')
-    grid_gb = GridSearchCV(GradientBoostingRegressor(random_state=42), param_grid_gb, cv=cv_split, scoring='r2')
+    # Define pipelines
+    ridge_pipe = Pipeline([
+        ("scaler", StandardScaler()),
+        ("ridge", Ridge())
+    ])
 
-    # Find best parameters
+    lasso_pipe = Pipeline([
+        ("scaler", StandardScaler()),
+        ("lasso", Lasso())
+    ])
+
+    rf_pipe = Pipeline([
+        ("scaler", StandardScaler()),  # Not always needed for RF, but keeps consistent
+        ("rf", RandomForestRegressor(random_state=42))
+    ])
+
+    gb_pipe = Pipeline([
+        ("scaler", StandardScaler()),
+        ("gb", GradientBoostingRegressor(random_state=42))
+    ])
+
+    # Set up GridSearchCV
+    grid_ridge = GridSearchCV(ridge_pipe, param_grid_ridge, cv=cv_split, scoring='r2')
+    grid_lasso = GridSearchCV(lasso_pipe, param_grid_lasso, cv=cv_split, scoring='r2')
+    grid_rf = GridSearchCV(rf_pipe, param_grid_rf, cv=cv_split, scoring='r2')
+    grid_gb = GridSearchCV(gb_pipe, param_grid_gb, cv=cv_split, scoring='r2')
+
+    # Fit and report
     print("Tuning Ridge Regression...")
     grid_ridge.fit(X, y)
     print(f"Best Ridge parameters: {grid_ridge.best_params_}, Best score: {grid_ridge.best_score_:.4f}")
@@ -338,10 +362,6 @@ def tune_model_hyperparameters(X, y, cv_split):
     print("Tuning Lasso Regression...")
     grid_lasso.fit(X, y)
     print(f"Best Lasso parameters: {grid_lasso.best_params_}, Best score: {grid_lasso.best_score_:.4f}")
-
-    # print("Tuning ElasticNet Regression...")
-    # grid_elastic.fit(X, y)
-    # print(f"Best ElasticNet parameters: {grid_elastic.best_params_}, Best score: {grid_elastic.best_score_:.4f}")
 
     print("Tuning Random Forest...")
     grid_rf.fit(X, y)
@@ -354,10 +374,10 @@ def tune_model_hyperparameters(X, y, cv_split):
     return {
         'ridge': grid_ridge.best_estimator_,
         'lasso': grid_lasso.best_estimator_,
-        # 'elastic': grid_elastic.best_estimator_,
         'rf': grid_rf.best_estimator_,
         'gb': grid_gb.best_estimator_
     }
+
 
 # Feature importance
 def analyze_feature_importance(X, y, model, model_name):
@@ -499,6 +519,7 @@ X.columns.to_series().to_csv("feature_columns.csv", index=False)
 
 def predict_import_value(year_or_range):
     import numbers
+    import matplotlib.pyplot as plt
 
     # Load model & scaler
     model = joblib.load("best_model.pkl")
@@ -518,9 +539,8 @@ def predict_import_value(year_or_range):
     if isinstance(year_or_range, numbers.Integral):
         years = [year_or_range]
     else:
-        years = list(year_or_range)
+        years = sorted(list(year_or_range))  # ensure chronological order
 
-    # Make sure prediction starts from the year **after** latest_year
     if min(years) <= latest_year:
         raise ValueError(f"Prediction year(s) must start after {latest_year} (latest data year)")
 
@@ -533,18 +553,32 @@ def predict_import_value(year_or_range):
 
         # Predict log(imports)
         prediction_log = model.predict(input_scaled)
+
+        # Cap log predictions
+        prediction_log = np.clip(prediction_log, 18, 24)  # log bounds ≈ [65B, 2.6T]
+
+        # Diagnostic plot
+        plt.figure(figsize=(8, 5))
+        plt.plot(prediction_log, marker='o')
+        plt.axhline(np.log(1e11), color='red', linestyle='--', label='Upper Bound ($100B)')
+        plt.axhline(np.log(1e6), color='green', linestyle='--', label='Lower Bound ($1M)')
+        plt.title(f'Log Predictions for {target_year}')
+        plt.ylabel('Log(Import Value)')
+        plt.legend()
+        plt.grid(True)
+        plt.tight_layout()
+        plt.show()
+
+        # Convert back to level values and clip
         prediction_actual = np.exp(prediction_log)
         prediction_actual = np.clip(prediction_actual, 1e6, 1e11)
-
-        if (prediction_actual >= 1e11).any():
-            print(f"Warning: Prediction reached upper cap in {target_year}")
 
         # Construct detailed product-level results
         result = current_input[['Partner', 'HS Code', 'HS_Section']].copy()
         result['Predicted Imports'] = prediction_actual
         result['Target Year'] = target_year
 
-        # Aggregate country-level result
+        # Aggregated country-level result
         agg = result.groupby('Partner', as_index=False)['Predicted Imports'].sum()
         agg['HS Code'] = 'All Products'
         agg['HS_Section'] = 'All'
@@ -553,7 +587,7 @@ def predict_import_value(year_or_range):
 
         results.append(pd.concat([result, agg], ignore_index=True))
 
-        # Roll input forward for next year
+        # Roll forward for next iteration using current prediction
         next_input = current_input.copy()
         next_input['Import_Lag3'] = current_input['Import_Lag2']
         next_input['Import_Lag2'] = current_input['Import_Lag1']
@@ -563,23 +597,14 @@ def predict_import_value(year_or_range):
         next_input['log_Import_Lag2'] = current_input['log_Import_Lag1']
         next_input['log_Import_Lag1'] = np.log(next_input['Import_Lag1'].clip(lower=1))
 
-        current_input = next_input  # update reference
+        current_input = next_input  # update for next year
 
     final_df = pd.concat(results).reset_index(drop=True)
     return final_df
 
+# predict_import_value(2024)
+# predict_import_value(range(2024, 2028))
 
-
-
-
-
-# predict_import_value(2025)
-# predict_import_value(range(2025, 2028))
-
-# Generate predicted values for 2024 to 2026
-#predicted_df = predict_import_value(range(2024, 2027))
-# Save to CSV
-#predicted_df.to_csv("predicted_imports_2024_2026.csv", index=False)
 
 
 
