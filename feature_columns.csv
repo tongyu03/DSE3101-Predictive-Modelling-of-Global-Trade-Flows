@@ -4,6 +4,7 @@ log_Import_Lag2
 log_Import_Lag3
 IdealPointDistance
 log_GDP_Lag1
+log_SG_GDP_Lag1
 Exchange Rate (per US$)
 Adjusted_value
 ExRate_Change

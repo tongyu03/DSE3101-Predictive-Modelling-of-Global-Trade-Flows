@@ -546,8 +546,7 @@ def predict_import_value(year_or_range):
 # predict_import_value(2025)
 # predict_import_value(range(2025, 2028))
 
-# predict_import_value(2025)
-# predict_import_value(range(2025, 2028))
+
 
 
 
