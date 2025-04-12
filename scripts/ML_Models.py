@@ -84,7 +84,7 @@ def process_FTA_data():
 # merge datasets and prepare for linear regression
 
 def prepare_data_for_regression(log_transform=True, add_interactions=True):
-    trade_data = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
+    trade_data = pd.read_csv("data/cleaned data/Concatenated_Trade_Data.csv")
     trade_data['Country'] = trade_data['Country'].replace('USA', 'United States of America')
     trade_data['Country'] = trade_data['Country'].replace('Rep. of Korea', 'South Korea')
     sg_gdp = pd.read_csv("data/cleaned data/singapore_gdp.csv").iloc[:-1]
