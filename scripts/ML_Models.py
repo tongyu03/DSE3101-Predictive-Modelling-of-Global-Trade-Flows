@@ -1,5 +1,5 @@
 """
-@author: Shannen
+@author: shannen, grace
 Test all model approaches
 """
 # run this script from top to bottom
@@ -45,6 +45,7 @@ def process_gdp_data():
     gdp_long = gdp_long.drop(gdp_long.columns[[0, 1, 2]], axis=1)
     gdp_long['Year'] = gdp_long['Year'].astype(int)
     gdp_long['Country Name'] = gdp_long['Country Name'].astype(str)
+    gdp_long = gdp_long[gdp_long['Year'] >= 2013]
     return gdp_long
 
 def process_exrate_data():
@@ -112,7 +113,15 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
 
     # Merge datasets
     merged_data = pd.merge(unga_data, trade_data, how='left', left_on=['year', 'Partner'], right_on=['year', 'Partner'])
+    
+    #checks
+    merged_data = merged_data[merged_data['year'] >= 2013]
+    merged_data = merged_data.dropna()
+    merged_data = merged_data.drop_duplicates()
+    
     merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
+    merged_data = merged_data.drop_duplicates()
+    
     merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
     merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['Country', 'year'])
     merged_data = pd.merge(merged_data, sg_gdp, how='left', on='year') #sgp gdp code
@@ -159,6 +168,8 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
 
     # Remove rows with missing values
     merged_data = merged_data.dropna()
+    merged_data = merged_data.drop_duplicates()
+
 
     if log_transform:
         # Apply log transformations to relevant columns
@@ -198,6 +209,10 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
         feature_cols.extend(hs_cols)
         X = merged_data[feature_cols]
         y = merged_data["Imports"]
+        
+        # Remove rows with missing values
+        merged_data = merged_data.dropna()
+        merged_data = merged_data.drop_duplicates()
 
     return X, y, merged_data
 
