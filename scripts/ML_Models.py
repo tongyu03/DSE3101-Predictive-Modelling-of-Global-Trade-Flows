@@ -83,7 +83,9 @@ def process_FTA_data():
 def prepare_data_for_regression(log_transform=True, add_interactions=True):
     trade_data = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
     trade_data['Country'] = trade_data['Country'].replace('USA', 'United States of America')
-    #sg_gdp = pd.read_csv("data/cleaned data/singapore_gdp.csv")
+    sg_gdp = pd.read_csv("data/cleaned data/singapore_gdp.csv").iloc[:-1]
+    # Create lagged GDP column
+    sg_gdp['SG_GDP_Lag1'] = sg_gdp['Singapore_GDP'].shift(1)
     unga_data = process_unga_data()
     gdp_data = process_gdp_data()
     exrate_data = process_exrate_data()
@@ -94,15 +96,15 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
     gdp_data.columns = gdp_data.columns.str.strip()
     exrate_data.columns = exrate_data.columns.str.strip()
     fta_data.columns = fta_data.columns.str.strip()
-    #sg_gdp.columns = sg_gdp.columns.str.strip()
+    sg_gdp.columns = sg_gdp.columns.str.strip()
 
 
     trade_data = trade_data.rename(columns={"Year": "year", "Country": "Partner"})
     gdp_data = gdp_data.rename(columns={"Year": "year"})
     exrate_data = exrate_data.rename(columns={"Year": "year"})
     fta_data = fta_data.rename(columns={"Year": "year"})
-    #sg_gdp = sg_gdp.rename(columns={"Year": "year"}) #sgp gdp code
-    #sg_gdp['year'] = sg_gdp['year'].astype(int)
+    sg_gdp = sg_gdp.rename(columns={"Year": "year"}) #sgp gdp code
+    sg_gdp['year'] = sg_gdp['year'].astype(int)
 
 
     # Merge datasets
@@ -110,7 +112,7 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
     merged_data = pd.merge(merged_data, gdp_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
     merged_data = pd.merge(merged_data, exrate_data, how='left', left_on=['Partner', 'year'], right_on=['Country Name', 'year'])
     merged_data = pd.merge(merged_data, fta_data, how='left', left_on=['Partner', 'year'], right_on=['Country', 'year'])
-    #merged_data = pd.merge(merged_data, sg_gdp, how='left', on='year') #sgp gdp code
+    merged_data = pd.merge(merged_data, sg_gdp, how='left', on='year') #sgp gdp code
 
 
     # Process HS code
@@ -161,13 +163,13 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
         merged_data["log_Import_Lag2"] = np.log(merged_data["Import_Lag2"].clip(lower=1))
         merged_data["log_Import_Lag3"] = np.log(merged_data["Import_Lag3"].clip(lower=1))
         merged_data["log_GDP_Lag1"] = np.log(merged_data["GDP_Lag1"].clip(lower=1))
-        #merged_data["log_SG_Lag1"] = np.log(merged_data["SG_Lag1"].clip(lower=1)) #sgp gdp code
+        merged_data["log_SG_GDP_Lag1"] = np.log(merged_data["SG_GDP_Lag1"].clip(lower=1)) #sgp gdp code
 
         #features for model
         #grace: removed GDP_Growth
         #grace: removed Time_Since_FTA
         feature_cols = ["log_Import_Lag1", "log_Import_Lag2", "log_Import_Lag3",
-                        "IdealPointDistance", "log_GDP_Lag1", #'log_SG_Lag1',
+                        "IdealPointDistance", "log_GDP_Lag1", 'log_SG_GDP_Lag1',
                         'Exchange Rate (per US$)', 'Adjusted_value',
                         'ExRate_Change'] #added sgp gdp code
 
@@ -183,7 +185,7 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
         #grace: removed GDP_Growth
         #grace: removed Time_Since_FTA
         feature_cols = ["Import_Lag1", "Import_Lag2", "Import_Lag3",
-                        "IdealPointDistance", "GDP_Lag1", 'SG_Lag1',
+                        "IdealPointDistance", "GDP_Lag1", 'SG_GDP_Lag1',
                         'Exchange Rate (per US$)', 'Adjusted_value',
                         'ExRate_Change'] #added sgp gdp code
 
