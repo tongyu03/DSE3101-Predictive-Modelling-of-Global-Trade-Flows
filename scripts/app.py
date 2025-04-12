@@ -7,30 +7,25 @@ import shinywidgets
 from shinywidgets import render_widget
 from shinyswatch import theme
 import numpy as np
+from shiny_functions import plot_trade_line_graph
+from shiny_functions import plot_geopol_distance
+from shiny_functions import plot_bubble
+from shiny_functions import plot_geo_pol_line_graph
 
-
-
-#import trade product data
+#Import datasets
 trade_pdt_df = pd.read_csv("data/cleaned data/10_years_trade_frontend.csv")
+geo_pol_df = pd.read_csv("data/cleaned data/geopolitical_data.csv")
+trade_pred_df = pd.read_csv("data/cleaned data/trade_with_predicted.csv")
+
 
 #product list for industry
 product_list = sorted(trade_pdt_df["Product"].dropna().unique().tolist())
-
-#Geopolitical distance data
-geo_pol_df = pd.read_csv("data/cleaned data/geopolitical_data.csv")
 
 # import intro text
 def read_intro():
     with open("data\intro.txt", "r", encoding="utf-8") as f:
         return f.read()
 
-
-# import functions
-from shiny_functions import plot_trade_line_graph
-from shiny_functions import plot_geopol_distance
-from shiny_functions import plot_bubble
-from shiny_functions import plot_geo_pol_line_graph
-from Geopolitical_dist import get_geopolitical_data
 
 
 ## ui
@@ -77,7 +72,7 @@ app_ui = ui.page_fluid(
                 ui.sidebar(
                     ui.input_selectize(
                         "select_country", "Select a Trade Partner:",
-                        choices=["China", "Hong Kong","Indonesia", "Japan", "South Korea", "Malaysia", "Saudi Arabia", "Thailand", "United States"],
+                        choices=["China","Indonesia", "Japan", "Malaysia", "Saudi Arabia","South Korea", "Thailand", "United States"],
                         selected="China"
                     ),
                     ui.input_selectize(
@@ -180,7 +175,7 @@ def server(input, output, session):
     @output
     @render_widget
     def trade_lineplot():
-        return plot_trade_line_graph(input.select_country(), input.select_industry2(), trade_pdt_df)
+        return plot_trade_line_graph(input.select_country(), input.select_industry2(), trade_pred_df)
 
     @output
     @render_widget

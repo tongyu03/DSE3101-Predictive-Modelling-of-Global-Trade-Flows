@@ -11,6 +11,9 @@ trade_pdt_df = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
 geo_pol_df = pd.read_csv("data/cleaned data/geopolitical_data.csv")
 #import geopolitical distance data
 from Geopolitical_dist import get_geopolitical_data
+#import trade predictions data
+trade_pred_df = pd.read_csv("data/cleaned data/trade_with_predicted.csv")
+
 
 # Rename industries
 industry_rename_map = {
@@ -24,53 +27,65 @@ industry_rename_map = {
     'Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories': 'Optical & Medical Instruments',
     'Organic chemicals': 'Organic Chemicals',
     'Plastics and articles thereof': 'Plastics',
-    'Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof': 'Machinery & Boilers'  # same as above
+    'Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof': 'Machinery & Boilers'  
 }
 
-# plot trade line graph
-def plot_trade_line_graph(country, industry, trade_data_df):
-    # Filter the data for the given country and industry
-    filtered_data = trade_data_df[
-        (trade_data_df['Country'] == country) & 
-        (trade_data_df['Product'] == industry)
+# Pg 2 Figure 1: Bubble Plot
+def plot_bubble(industry, trade_type_col, year, trade_pdt_df):
+    # Filter the DataFrame for the specified industry and year
+    filtered = trade_pdt_df[
+        (trade_pdt_df['Product'] == industry) & 
+        (trade_pdt_df['Year'] == year)
     ]
-    # Create the line plot
-    fig = px.line(
-        filtered_data, 
-        x='Year', 
-        y=['Imports', 'Exports'], 
-        title=f"Trade of {industry} between Singapore and {country}",
-        labels={'Year': 'Year', 'value': 'Trade Value (USD)', 'variable': 'Trade Type'},
-        markers=True
+    if filtered.empty:
+        return px.scatter(
+            title="No data available for the selected filters.", x=[], y=[]
+        )
+    # Create the bubble plot 
+    fig = px.scatter(
+        filtered, 
+        x="Country", 
+        y=trade_type_col,
+        size=trade_type_col,
+        color="Country",  # Color by country
+        hover_name="Country", 
+        hover_data={ 
+            "Product": True, 
+            trade_type_col: ':.2f',  
+            "Country": False,  
+            "Year": False  
+        },
+        title=f"Singapore {industry} {trade_type_col} in {year}",
+        size_max=60,
+        color_discrete_sequence=px.colors.sequential.Viridis  
     )
-    # Customize the layout
     fig.update_layout(
-        template='plotly_white',
-        xaxis_title="Year",
-        yaxis_title="Trade Value (USD)",
-        legend_title="Trade Type",
+        xaxis_title="Country",
+        yaxis_title=trade_type_col,
         margin=dict(t=60, l=100, r=20, b=100),
-        xaxis=dict(range=[filtered_data['Year'].min(), 2024]),
+        template='plotly_white',
+        showlegend = False,
         title=dict(
-            x=0.5,
+            x=0.5, 
             xanchor='center',
             font=dict(size=20))
     )
     fig.add_annotation(
-        text="Fig 3: Line plot displaying level of imports/exports for specified trade partner per industry over the years",
-        xref="paper", yref="paper",  # "paper" means the coordinates are relative to the entire plot
-        x=0.5, y=-0.3,  # Position the annotation below the plot
+        text="Fig 1: Bubble plot displaying level of imports/exports for Singapore's main trade partners per industry",
+        xref="paper", yref="paper",  
+        x=0.5, y=-0.3,
         showarrow=False,
         font=dict(size=14), 
         align="center"
     )
     return fig
 
+# Pg 2 Figure 2: Geopolitical Distance Bar Graph
 #import geopolitical dist function
 from Geopolitical_dist import get_geopolitical_data_for_year
 
 # List of countries
-Countries = ['China', 'Hong Kong', 'South Korea', 'Thailand', 'Malaysia', 'USA', 'Saudi Arabia', 'Japan', 'Indonesia']
+Countries = ['China', 'Hong Kong', 'South Korea', 'Thailand', 'Malaysia', 'United States', 'Saudi Arabia', 'Japan', 'Indonesia']
 
 import plotly.express as px
 
@@ -114,49 +129,42 @@ def plot_geopol_distance(input_year):
     return fig
 
 
-def plot_bubble(industry, trade_type_col, year, trade_pdt_df):
-    # Filter the DataFrame for the specified industry and year
-    filtered = trade_pdt_df[
-        (trade_pdt_df['Product'] == industry) & 
-        (trade_pdt_df['Year'] == year)
+# Pg 3 Fig 1: Trade line graph
+def plot_trade_line_graph(country, industry, trade_pred_df):
+    # Filter the data for the given country and industry
+    filtered_data = trade_pred_df[
+        (trade_pred_df['Country'] == country) & 
+        (trade_pred_df['Product'] == industry)
     ]
-    if filtered.empty:
-        return px.scatter(
-            title="No data available for the selected filters.",
-            x=[],
-            y=[]
-        )
-    # Create the bubble plot 
-    fig = px.scatter(
-        filtered, 
-        x="Country", 
-        y=trade_type_col,
-        size=trade_type_col,
-        color="Country",  # Color by country
-        hover_name="Country", 
-        hover_data={ 
-            "Product": True, 
-            trade_type_col: ':.2f',  
-            "Country": False,  
-            "Year": False  
-        },
-        title=f"Singapore {industry} {trade_type_col} in {year}",
-        size_max=60,
-        color_discrete_sequence=px.colors.sequential.Viridis  
+    color_map = {
+        'Imports': '#1f9e89',  # Teal
+        'Exports': '#f8961e'   # Orange
+    }
+    # Create the line plot
+    fig = px.line(
+        filtered_data, 
+        x='Year', 
+        y=['Imports', 'Exports'], 
+        title=f"Trade of {industry} between Singapore and {country}",
+        labels={'Year': 'Year', 'value': 'Trade Value (USD)', 'variable': 'Trade Type'},
+        markers=True,
+        color_discrete_map=color_map
     )
+    # Customize the layout
     fig.update_layout(
-        xaxis_title="Country",
-        yaxis_title=trade_type_col,
-        margin=dict(t=60, l=100, r=20, b=100),
         template='plotly_white',
-        showlegend = False,
+        xaxis_title="Year",
+        yaxis_title="Trade Value (USD)",
+        legend_title="Trade Type",
+        margin=dict(t=60, l=100, r=20, b=100),
+        xaxis=dict(range=[filtered_data['Year'].min(), 2026]),
         title=dict(
-            x=0.5,  # Center the title
+            x=0.5,
             xanchor='center',
             font=dict(size=20))
     )
     fig.add_annotation(
-        text="Fig 1: Bubble plot displaying level of imports/exports for Singapore's main trade partners per industry",
+        text="Fig 3: Line plot displaying level of imports/exports for specified trade partner per industry over the years",
         xref="paper", yref="paper",  # "paper" means the coordinates are relative to the entire plot
         x=0.5, y=-0.3,  # Position the annotation below the plot
         showarrow=False,
@@ -165,6 +173,7 @@ def plot_bubble(industry, trade_type_col, year, trade_pdt_df):
     )
     return fig
 
+# Pg 3 Fig 2: Geopolitical Distance line graph
 def plot_geo_pol_line_graph(country):
     years = geo_pol_df["year"].unique()
     years.sort()
@@ -301,3 +310,7 @@ def get_gdp_comparison(gdp_df, country, year):
         return f"GDP data not available for {country} in {year}"
     
     '''
+
+
+
+trade_pdt_df = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")

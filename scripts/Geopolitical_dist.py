@@ -34,8 +34,6 @@ def process_gdp_data():
     gdp_long = gdp.melt(id_vars=['Country Name'], var_name='Year', value_name='GDP')
     gdp_long = gdp_long.dropna(subset=['GDP'])
     gdp_long['Country Name'] = gdp_long['Country Name'].replace({
-        'Hong Kong SAR, China': 'Hong Kong',
-        'Korea, Rep.': 'South Korea',
         'United States': 'United States of America'
     })
     countries = pd.read_csv("data/raw data/COW-country-codes.csv")
@@ -98,7 +96,6 @@ trade_data_geo["Country"] = trade_data_geo["Country"].replace({
 trade_data_geo = trade_data_geo.rename(columns={"Country": "Partner"})
 gdp_data_geo = gdp_data_geo.rename(columns={"Year": "year"})
 gdp_data_geo['Country Name'] = gdp_data_geo['Country Name'].replace({
-    "Hong Kong SAR, China": "Hong Kong",
     "United States of America": "USA"
 })
 exrate_data_geo = exrate_data_geo.rename(columns={"Year": "year"})
