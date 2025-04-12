@@ -102,7 +102,6 @@ app_ui = ui.page_fluid(
             ui.p("Use the tabs at the top of the page to explore the dashboard. "
                  "Dive into data-driven insights, explore geopolitical trends, and stay ahead in the ever-changing world of trade - all in one place."),
         ),
-
         ui.nav_panel(
             "Historical Trade Data Across Countries",
             ui.layout_sidebar(
@@ -123,14 +122,14 @@ app_ui = ui.page_fluid(
                 shinywidgets.output_widget("bar_plot")
             )
         ),
-        
+    
         ui.nav_panel(
             "Trade Data Across Time",
             ui.layout_sidebar(
                 ui.sidebar(
                     ui.input_selectize(
                         "select_country", "Select a Trade Partner:",
-                        choices=["China", "Indonesia", "Japan", "Malaysia", "Saudi Arabia", "South Korea", "Thailand", "United States"],
+                        choices=["China", "Indonesia", "Japan", "Malaysia", "Saudi Arabia", "Thailand", "United States"],
                         selected="China"
                     ),
                     ui.input_selectize(
@@ -169,7 +168,7 @@ def server(input, output, session):
             <div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
                 <p><strong>Explore Singapore's imports and exports across major industries and trade partners between 2013 and 2023.</strong><br><br>
                 Use the filters on the left to select an industry, trade type, and year to visualize historical trade volumes in the bubble plot.<br><br>
-                The bar graph shows the Geopolitical Score with Singapore for the selected year. 
+                The bar graph shows the Geopolitical Distance with Singapore for the selected year. 
                 <strong>A higher score indicates a greater geopolitical distance — i.e., less political and economic alignment with Singapore.</strong></p>
                 
                 <p style="margin-top: 20px; cursor: pointer; color: #007bff;" onclick="var x = document.getElementById('geo-explainer'); x.style.display = x.style.display === 'none' ? 'block' : 'none';">
@@ -184,6 +183,7 @@ def server(input, output, session):
                         <li>Presence of Free Trade Agreements (FTAs)</li>
                         <li>Trade import and export volumes</li>
                         <li>Gross Domestic Product (GDP)</li>
+                        <li>Exchange Rate</li>
                     </ul>
                     <p>Lower scores (shorter bars) indicate stronger alignment with Singapore.</p>
                 </div>

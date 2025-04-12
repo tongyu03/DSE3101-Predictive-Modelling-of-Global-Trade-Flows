@@ -15,7 +15,7 @@ iso3_to_country = {
     'MYS': 'Malaysia',
     'SAU': 'Saudi Arabia',
     'THA': 'Thailand',
-    'USA': 'USA',
+    'USA': 'United States',
     'IDN': 'Indonesia'
 }
 
@@ -24,8 +24,8 @@ def process_unga_data():
     unga = pd.read_csv("data/cleaned data/unga_voting_3.csv")
     unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
     unga[['Country1', 'Country2']] = pd.DataFrame(unga['CountryPair'].tolist(), index=unga.index)
-    unga['Country1'] = unga['Country1'].replace("United States of America", "USA")
-    unga['Country2'] = unga['Country2'].replace("United States of America", "USA")
+    unga['Country1'] = unga['Country1'].replace("United States of America", "United States")
+    unga['Country2'] = unga['Country2'].replace("United States of America", "United States")
     unga = unga[(unga['year'] >= 1989) & (unga['year'] <= 2021)]
     unga_sg = unga[(unga['Country1'] == 'Singapore') | (unga['Country2'] == 'Singapore')]
     unga_sg['Partner'] = unga_sg.apply(lambda row: row['Country1'] if row['Country1'] != 'Singapore' else row['Country2'], axis=1)
@@ -59,8 +59,7 @@ def process_exrate_data():
     exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
     exrate_long['Country Name'] = exrate_long['Country Name'].replace({
         "Hong Kong SAR, China": "Hong Kong",
-        "Korea, Rep.": "South Korea",
-        "United States": "USA"
+        "Korea, Rep.": "South Korea"
     })
     return exrate_long
 
@@ -91,12 +90,14 @@ def merge_all_data():
     trade_data_geo = trade_data_geo.rename(columns={"Year": "year"})
     trade_data_geo["Country"] = trade_data_geo["Country"].replace({
         "China, Hong Kong SAR": "Hong Kong",
-        "Rep. of Korea": "South Korea"
+        "Rep. of Korea": "South Korea",
+        "USA": "United States"
+
     })
     trade_data_geo = trade_data_geo.rename(columns={"Country": "Partner"})
     gdp_data_geo = gdp_data_geo.rename(columns={"Year": "year"})
     gdp_data_geo['Country Name'] = gdp_data_geo['Country Name'].replace({
-        "United States of America": "USA"
+        "United States of America": "United States"
     })
     exrate_data_geo = exrate_data_geo.rename(columns={"Year": "year"})
     fta_data_geo = fta_data_geo.rename(columns={"Year": "year"})
