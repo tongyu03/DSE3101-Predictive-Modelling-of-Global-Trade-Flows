@@ -967,432 +967,267 @@ Year,Product,HS Code,Country,Imports,Exports,Trade Volume
 2023,Optical & Medical Instruments,90.0,Japan,915690054.4,1859061394.0,2774751448.4
 2023,Other Chemicals,38.0,China,579373531.0,1251111794.0,1830485325.0
 2023,All Products,99.0,United States,39259613949.22,36761669886.619995,76021283835.84
-2024,Optical & Medical Instruments,90.0,Australia,204382567.1043996,,
-2024,Electrical Equipment & AV Gear,85.0,Australia,348794629.08118033,,
-2024,Machinery & Boilers,84.0,Australia,311689902.2893775,,
-2024,Base Metal Products,83.0,Australia,65659969.13733051,,
-2024,Jewellery & Precious Metals,71.0,Australia,100678991.934894,,
-2024,Plastics,39.0,Australia,232810118.9972117,,
-2024,Other Chemicals,38.0,Australia,65659969.13733051,,
-2024,Cosmetics & Fragrances,33.0,Australia,65659969.13733051,,
-2024,Organic Chemicals,29.0,Australia,65659969.13733051,,
-2024,Mineral Fuels & Oils,27.0,Australia,361559404.222882,,
-2024,Optical & Medical Instruments,90.0,China,1360043993.243401,,
-2024,Electrical Equipment & AV Gear,85.0,China,12224650610.259312,,
-2024,Machinery & Boilers,84.0,China,9513209358.43436,,
-2024,Base Metal Products,83.0,China,65659969.13733051,,
-2024,Jewellery & Precious Metals,71.0,China,5510153204.66217,,
-2024,Plastics,39.0,China,1071365979.4927232,,
-2024,Other Chemicals,38.0,China,512928097.6982548,,
-2024,Cosmetics & Fragrances,33.0,China,370252373.5112959,,
-2024,Organic Chemicals,29.0,China,672977119.5443687,,
-2024,Mineral Fuels & Oils,27.0,China,26489122129.84347,,
-2024,Optical & Medical Instruments,90.0,Germany,65659969.13733051,,
-2024,Electrical Equipment & AV Gear,85.0,Germany,2203400176.079921,,
-2024,Machinery & Boilers,84.0,Germany,598022589.6226206,,
-2024,Base Metal Products,83.0,Germany,65659969.13733051,,
-2024,Jewellery & Precious Metals,71.0,Germany,749597934.4086916,,
-2024,Plastics,39.0,Germany,183308122.3430977,,
-2024,Other Chemicals,38.0,Germany,84295782.99793978,,
-2024,Cosmetics & Fragrances,33.0,Germany,73665453.51668131,,
-2024,Organic Chemicals,29.0,Germany,155740541.31488234,,
-2024,Mineral Fuels & Oils,27.0,Germany,3029529773.600116,,
-2024,Optical & Medical Instruments,90.0,India,297042441.8415675,,
-2024,Electrical Equipment & AV Gear,85.0,India,1443639816.2825785,,
-2024,Machinery & Boilers,84.0,India,651368426.7982748,,
-2024,Base Metal Products,83.0,India,65659969.13733051,,
-2024,Jewellery & Precious Metals,71.0,India,263325510.7604302,,
-2024,Plastics,39.0,India,293960183.851961,,
-2024,Other Chemicals,38.0,India,65659969.13733051,,
-2024,Cosmetics & Fragrances,33.0,India,71711669.07432097,,
-2024,Organic Chemicals,29.0,India,119773056.88114911,,
-2024,Mineral Fuels & Oils,27.0,India,3582167070.883817,,
-2024,Optical & Medical Instruments,90.0,Indonesia,405461936.0662708,,
-2024,Electrical Equipment & AV Gear,85.0,Indonesia,1638910777.6774702,,
-2024,Machinery & Boilers,84.0,Indonesia,2500638049.534673,,
-2024,Base Metal Products,83.0,Indonesia,65659969.13733051,,
-2024,Jewellery & Precious Metals,71.0,Indonesia,752775742.2370005,,
-2024,Plastics,39.0,Indonesia,540640082.9872218,,
-2024,Other Chemicals,38.0,Indonesia,78022650.8503587,,
-2024,Cosmetics & Fragrances,33.0,Indonesia,142925047.78147304,,
-2024,Organic Chemicals,29.0,Indonesia,193405766.4942443,,
-2024,Mineral Fuels & Oils,27.0,Indonesia,2660643036.2645373,,
-2024,Optical & Medical Instruments,90.0,Japan,514190089.0684412,,
-2024,Electrical Equipment & AV Gear,85.0,Japan,2467232207.911225,,
-2024,Machinery & Boilers,84.0,Japan,1918077304.6109388,,
-2024,Base Metal Products,83.0,Japan,65659969.13733051,,
-2024,Jewellery & Precious Metals,71.0,Japan,724903677.3323653,,
-2024,Plastics,39.0,Japan,610624859.170348,,
-2024,Other Chemicals,38.0,Japan,96816481.08258326,,
-2024,Cosmetics & Fragrances,33.0,Japan,194356573.013353,,
-2024,Organic Chemicals,29.0,Japan,390691953.6485098,,
-2024,Mineral Fuels & Oils,27.0,Japan,4650582531.901306,,
-2024,Optical & Medical Instruments,90.0,Malaysia,341477112.9913413,,
-2024,Electrical Equipment & AV Gear,85.0,Malaysia,2173343328.998242,,
-2024,Machinery & Boilers,84.0,Malaysia,2525198615.563997,,
-2024,Base Metal Products,83.0,Malaysia,65659969.13733051,,
-2024,Jewellery & Precious Metals,71.0,Malaysia,946719072.971444,,
-2024,Plastics,39.0,Malaysia,352144383.7700351,,
-2024,Other Chemicals,38.0,Malaysia,113672631.75155328,,
-2024,Cosmetics & Fragrances,33.0,Malaysia,95070062.70708244,,
-2024,Organic Chemicals,29.0,Malaysia,147934272.15049383,,
-2024,Mineral Fuels & Oils,27.0,Malaysia,2695382490.7896924,,
-2024,Optical & Medical Instruments,90.0,Philippines,65659969.13733051,,
-2024,Electrical Equipment & AV Gear,85.0,Philippines,498848419.7445141,,
-2024,Machinery & Boilers,84.0,Philippines,403102563.5286731,,
-2024,Base Metal Products,83.0,Philippines,65659969.13733051,,
-2024,Jewellery & Precious Metals,71.0,Philippines,151139544.974745,,
-2024,Plastics,39.0,Philippines,65659969.13733051,,
-2024,Other Chemicals,38.0,Philippines,65659969.13733051,,
-2024,Cosmetics & Fragrances,33.0,Philippines,65659969.13733051,,
-2024,Organic Chemicals,29.0,Philippines,65659969.13733051,,
-2024,Mineral Fuels & Oils,27.0,Philippines,356071550.0116445,,
-2024,Optical & Medical Instruments,90.0,Saudi Arabia,123001070.26430754,,
-2024,Electrical Equipment & AV Gear,85.0,Saudi Arabia,171508992.8727487,,
-2024,Machinery & Boilers,84.0,Saudi Arabia,131274520.94060196,,
-2024,Base Metal Products,83.0,Saudi Arabia,65659969.13733051,,
-2024,Jewellery & Precious Metals,71.0,Saudi Arabia,65659969.13733051,,
-2024,Plastics,39.0,Saudi Arabia,65659969.13733051,,
-2024,Other Chemicals,38.0,Saudi Arabia,65659969.13733051,,
-2024,Cosmetics & Fragrances,33.0,Saudi Arabia,65659969.13733051,,
-2024,Organic Chemicals,29.0,Saudi Arabia,65659969.13733051,,
-2024,Mineral Fuels & Oils,27.0,Saudi Arabia,1723426374.2495475,,
-2024,Optical & Medical Instruments,90.0,South Korea,353076879.1178174,,
-2024,Electrical Equipment & AV Gear,85.0,South Korea,1104519737.6177084,,
-2024,Machinery & Boilers,84.0,South Korea,2609468082.796452,,
-2024,Base Metal Products,83.0,South Korea,65659969.13733051,,
-2024,Jewellery & Precious Metals,71.0,South Korea,687365130.4615082,,
-2024,Plastics,39.0,South Korea,251483574.9302805,,
-2024,Other Chemicals,38.0,South Korea,65659969.13733051,,
-2024,Cosmetics & Fragrances,33.0,South Korea,86636462.01308396,,
-2024,Organic Chemicals,29.0,South Korea,206476686.24871203,,
-2024,Mineral Fuels & Oils,27.0,South Korea,2771002009.5586824,,
-2024,Optical & Medical Instruments,90.0,Thailand,134468675.78812176,,
-2024,Electrical Equipment & AV Gear,85.0,Thailand,650878451.8583324,,
-2024,Machinery & Boilers,84.0,Thailand,1009370639.1370926,,
-2024,Base Metal Products,83.0,Thailand,65659969.13733051,,
-2024,Jewellery & Precious Metals,71.0,Thailand,389296688.9330205,,
-2024,Plastics,39.0,Thailand,284244739.7192787,,
-2024,Other Chemicals,38.0,Thailand,65659969.13733051,,
-2024,Cosmetics & Fragrances,33.0,Thailand,65659969.13733051,,
-2024,Organic Chemicals,29.0,Thailand,97295068.94554684,,
-2024,Mineral Fuels & Oils,27.0,Thailand,1202780347.6252675,,
-2024,Optical & Medical Instruments,90.0,United Arab Emirates,196032445.8772518,,
-2024,Electrical Equipment & AV Gear,85.0,United Arab Emirates,230163535.2232327,,
-2024,Machinery & Boilers,84.0,United Arab Emirates,219380162.4528299,,
-2024,Base Metal Products,83.0,United Arab Emirates,65659969.13733051,,
-2024,Jewellery & Precious Metals,71.0,United Arab Emirates,65659969.13733051,,
-2024,Plastics,39.0,United Arab Emirates,135159623.76262563,,
-2024,Other Chemicals,38.0,United Arab Emirates,65659969.13733051,,
-2024,Cosmetics & Fragrances,33.0,United Arab Emirates,65659969.13733051,,
-2024,Organic Chemicals,29.0,United Arab Emirates,65659969.13733051,,
-2024,Mineral Fuels & Oils,27.0,United Arab Emirates,196343255.05902895,,
-2024,Optical & Medical Instruments,90.0,United States,1567709239.4814944,,
-2024,Electrical Equipment & AV Gear,85.0,United States,14438457922.982594,,
-2024,Machinery & Boilers,84.0,United States,6436229709.812547,,
-2024,Base Metal Products,83.0,United States,93149762.35249272,,
-2024,Jewellery & Precious Metals,71.0,United States,3369861435.205846,,
-2024,Plastics,39.0,United States,1845675029.036001,,
-2024,Other Chemicals,38.0,United States,590143849.7213639,,
-2024,Cosmetics & Fragrances,33.0,United States,645874064.1704904,,
-2024,Organic Chemicals,29.0,United States,1425115917.3797529,,
-2024,Mineral Fuels & Oils,27.0,United States,20085268555.11689,,
-2024,All Products,99.0,Australia,1822555490.1792672,,
-2024,All Products,99.0,China,57790362835.82669,,
-2024,All Products,99.0,Germany,7208880312.158611,,
-2024,All Products,99.0,India,6854308114.64876,,
-2024,All Products,99.0,Indonesia,8979083059.03058,,
-2024,All Products,99.0,Japan,11633135646.8764,,
-2024,All Products,99.0,Malaysia,9456601940.831211,,
-2024,All Products,99.0,Philippines,1803121893.08356,,
-2024,All Products,99.0,Saudi Arabia,2543170773.151189,,
-2024,All Products,99.0,South Korea,8201348501.018906,,
-2024,All Products,99.0,Thailand,3965314519.418652,,
-2024,All Products,99.0,United Arab Emirates,1305378868.0616217,,
-2024,All Products,99.0,United States,50497485485.25948,,
-2025,Optical & Medical Instruments,90.0,Australia,65659969.13733051,,
-2025,Electrical Equipment & AV Gear,85.0,Australia,2098144326.7325635,,
-2025,Machinery & Boilers,84.0,Australia,247806021.7996978,,
-2025,Base Metal Products,83.0,Australia,65659969.13733051,,
-2025,Jewellery & Precious Metals,71.0,Australia,451118948.3540775,,
-2025,Plastics,39.0,Australia,65659969.13733051,,
-2025,Other Chemicals,38.0,Australia,96177079.96414034,,
-2025,Cosmetics & Fragrances,33.0,Australia,65659969.13733051,,
-2025,Organic Chemicals,29.0,Australia,65659969.13733051,,
-2025,Mineral Fuels & Oils,27.0,Australia,1906076072.1536496,,
-2025,Optical & Medical Instruments,90.0,China,1478328330.436817,,
-2025,Electrical Equipment & AV Gear,85.0,China,26489122129.84347,,
-2025,Machinery & Boilers,84.0,China,5532344646.53749,,
-2025,Base Metal Products,83.0,China,65659969.13733051,,
-2025,Jewellery & Precious Metals,71.0,China,15598994372.47556,,
-2025,Plastics,39.0,China,708358060.5009904,,
-2025,Other Chemicals,38.0,China,515298212.81026137,,
-2025,Cosmetics & Fragrances,33.0,China,368789782.7932915,,
-2025,Organic Chemicals,29.0,China,1128954587.7182758,,
-2025,Mineral Fuels & Oils,27.0,China,26489122129.84347,,
-2025,Optical & Medical Instruments,90.0,Germany,65659969.13733051,,
-2025,Electrical Equipment & AV Gear,85.0,Germany,2181300720.7442827,,
-2025,Machinery & Boilers,84.0,Germany,737139394.5426656,,
-2025,Base Metal Products,83.0,Germany,65659969.13733051,,
-2025,Jewellery & Precious Metals,71.0,Germany,2249515186.148383,,
-2025,Plastics,39.0,Germany,103488912.44696853,,
-2025,Other Chemicals,38.0,Germany,76642796.4970047,,
-2025,Cosmetics & Fragrances,33.0,Germany,65659969.13733051,,
-2025,Organic Chemicals,29.0,Germany,214104848.2322272,,
-2025,Mineral Fuels & Oils,27.0,Germany,6763720048.193413,,
-2025,Optical & Medical Instruments,90.0,India,218804691.56998083,,
-2025,Electrical Equipment & AV Gear,85.0,India,4012010990.018832,,
-2025,Machinery & Boilers,84.0,India,461322229.2853199,,
-2025,Base Metal Products,83.0,India,65659969.13733051,,
-2025,Jewellery & Precious Metals,71.0,India,1051944936.4059184,,
-2025,Plastics,39.0,India,88887932.0305117,,
-2025,Other Chemicals,38.0,India,102232785.4213393,,
-2025,Cosmetics & Fragrances,33.0,India,65659969.13733051,,
-2025,Organic Chemicals,29.0,India,145841239.1621464,,
-2025,Mineral Fuels & Oils,27.0,India,6800102931.066538,,
-2025,Optical & Medical Instruments,90.0,Indonesia,192586326.0926298,,
-2025,Electrical Equipment & AV Gear,85.0,Indonesia,6177189829.540938,,
-2025,Machinery & Boilers,84.0,Indonesia,1231342959.6434083,,
-2025,Base Metal Products,83.0,Indonesia,65659969.13733051,,
-2025,Jewellery & Precious Metals,71.0,Indonesia,2481271777.5675607,,
-2025,Plastics,39.0,Indonesia,169383523.52368066,,
-2025,Other Chemicals,38.0,Indonesia,159342230.80213898,,
-2025,Cosmetics & Fragrances,33.0,Indonesia,87235051.59287585,,
-2025,Organic Chemicals,29.0,Indonesia,280790296.7370384,,
-2025,Mineral Fuels & Oils,27.0,Indonesia,8395621611.031614,,
-2025,Optical & Medical Instruments,90.0,Japan,266166525.05502945,,
-2025,Electrical Equipment & AV Gear,85.0,Japan,4982967149.890015,,
-2025,Machinery & Boilers,84.0,Japan,1088679582.7244058,,
-2025,Base Metal Products,83.0,Japan,65659969.13733051,,
-2025,Jewellery & Precious Metals,71.0,Japan,2240253636.9423733,,
-2025,Plastics,39.0,Japan,150393090.61796704,,
-2025,Other Chemicals,38.0,Japan,153240314.5784305,,
-2025,Cosmetics & Fragrances,33.0,Japan,95188401.90861651,,
-2025,Organic Chemicals,29.0,Japan,369247227.9810841,,
-2025,Mineral Fuels & Oils,27.0,Japan,12179611577.029213,,
-2025,Optical & Medical Instruments,90.0,Malaysia,131095261.37508108,,
-2025,Electrical Equipment & AV Gear,85.0,Malaysia,4406308071.472579,,
-2025,Machinery & Boilers,84.0,Malaysia,890823190.6456288,,
-2025,Base Metal Products,83.0,Malaysia,65659969.13733051,,
-2025,Jewellery & Precious Metals,71.0,Malaysia,1778533272.23659,,
-2025,Plastics,39.0,Malaysia,101759431.50422862,,
-2025,Other Chemicals,38.0,Malaysia,92722281.47793794,,
-2025,Cosmetics & Fragrances,33.0,Malaysia,65659969.13733051,,
-2025,Organic Chemicals,29.0,Malaysia,143999032.7614782,,
-2025,Mineral Fuels & Oils,27.0,Malaysia,4366039620.988715,,
-2025,Optical & Medical Instruments,90.0,Philippines,65659969.13733051,,
-2025,Electrical Equipment & AV Gear,85.0,Philippines,709730487.073985,,
-2025,Machinery & Boilers,84.0,Philippines,270523596.3837962,,
-2025,Base Metal Products,83.0,Philippines,65659969.13733051,,
-2025,Jewellery & Precious Metals,71.0,Philippines,513380369.9572535,,
-2025,Plastics,39.0,Philippines,65659969.13733051,,
-2025,Other Chemicals,38.0,Philippines,65659969.13733051,,
-2025,Cosmetics & Fragrances,33.0,Philippines,65659969.13733051,,
-2025,Organic Chemicals,29.0,Philippines,65659969.13733051,,
-2025,Mineral Fuels & Oils,27.0,Philippines,1429816192.994737,,
-2025,Optical & Medical Instruments,90.0,Saudi Arabia,97064001.43204331,,
-2025,Electrical Equipment & AV Gear,85.0,Saudi Arabia,1384954744.407694,,
-2025,Machinery & Boilers,84.0,Saudi Arabia,65659969.13733051,,
-2025,Base Metal Products,83.0,Saudi Arabia,65659969.13733051,,
-2025,Jewellery & Precious Metals,71.0,Saudi Arabia,215160948.6553527,,
-2025,Plastics,39.0,Saudi Arabia,65659969.13733051,,
-2025,Other Chemicals,38.0,Saudi Arabia,65659969.13733051,,
-2025,Cosmetics & Fragrances,33.0,Saudi Arabia,65659969.13733051,,
-2025,Organic Chemicals,29.0,Saudi Arabia,65659969.13733051,,
-2025,Mineral Fuels & Oils,27.0,Saudi Arabia,1592616438.926617,,
-2025,Optical & Medical Instruments,90.0,South Korea,139682049.09245002,,
-2025,Electrical Equipment & AV Gear,85.0,South Korea,3668802656.894909,,
-2025,Machinery & Boilers,84.0,South Korea,747230545.5353729,,
-2025,Base Metal Products,83.0,South Korea,65659969.13733051,,
-2025,Jewellery & Precious Metals,71.0,South Korea,1593558151.7333007,,
-2025,Plastics,39.0,South Korea,86600921.97512774,,
-2025,Other Chemicals,38.0,South Korea,80975151.63357417,,
-2025,Cosmetics & Fragrances,33.0,South Korea,65659969.13733051,,
-2025,Organic Chemicals,29.0,South Korea,203944655.67929196,,
-2025,Mineral Fuels & Oils,27.0,South Korea,7081472771.4280205,,
-2025,Optical & Medical Instruments,90.0,Thailand,65659969.13733051,,
-2025,Electrical Equipment & AV Gear,85.0,Thailand,1814821656.512216,,
-2025,Machinery & Boilers,84.0,Thailand,373713107.7593523,,
-2025,Base Metal Products,83.0,Thailand,65659969.13733051,,
-2025,Jewellery & Precious Metals,71.0,Thailand,1022483748.4997996,,
-2025,Plastics,39.0,Thailand,68537071.25544174,,
-2025,Other Chemicals,38.0,Thailand,74976404.315452,,
-2025,Cosmetics & Fragrances,33.0,Thailand,65659969.13733051,,
-2025,Organic Chemicals,29.0,Thailand,83571335.89189683,,
-2025,Mineral Fuels & Oils,27.0,Thailand,3271997270.680666,,
-2025,Optical & Medical Instruments,90.0,United Arab Emirates,65659969.13733051,,
-2025,Electrical Equipment & AV Gear,85.0,United Arab Emirates,1767022234.4616246,,
-2025,Machinery & Boilers,84.0,United Arab Emirates,130767505.13132352,,
-2025,Base Metal Products,83.0,United Arab Emirates,65659969.13733051,,
-2025,Jewellery & Precious Metals,71.0,United Arab Emirates,276654731.6155353,,
-2025,Plastics,39.0,United Arab Emirates,65659969.13733051,,
-2025,Other Chemicals,38.0,United Arab Emirates,68514020.32597007,,
-2025,Cosmetics & Fragrances,33.0,United Arab Emirates,65659969.13733051,,
-2025,Organic Chemicals,29.0,United Arab Emirates,65659969.13733051,,
-2025,Mineral Fuels & Oils,27.0,United Arab Emirates,1329906153.0631185,,
-2025,Optical & Medical Instruments,90.0,United States,953863818.5721462,,
-2025,Electrical Equipment & AV Gear,85.0,United States,26489122129.84347,,
-2025,Machinery & Boilers,84.0,United States,6385280053.720451,,
-2025,Base Metal Products,83.0,United States,65659969.13733051,,
-2025,Jewellery & Precious Metals,71.0,United States,16281304998.16474,,
-2025,Plastics,39.0,United States,844908486.381912,,
-2025,Other Chemicals,38.0,United States,742441391.517664,,
-2025,Cosmetics & Fragrances,33.0,United States,565873748.7025969,,
-2025,Organic Chemicals,29.0,United States,1980478337.1906333,,
-2025,Mineral Fuels & Oils,27.0,United States,26489122129.84347,,
-2025,All Products,99.0,Australia,5127622294.690781,,
-2025,All Products,99.0,China,78374972222.09695,,
-2025,All Products,99.0,Germany,12522891814.216936,,
-2025,All Products,99.0,India,13012467673.235249,,
-2025,All Products,99.0,Indonesia,19240423575.669216,,
-2025,All Products,99.0,Japan,21591407475.864464,,
-2025,All Products,99.0,Malaysia,12042600100.7369,,
-2025,All Products,99.0,Philippines,3317410461.2337546,,
-2025,All Products,99.0,Saudi Arabia,3683755948.24569,,
-2025,All Products,99.0,South Korea,13733586842.246708,,
-2025,All Products,99.0,Thailand,6907080502.326816,,
-2025,All Products,99.0,United Arab Emirates,3901164490.284225,,
-2025,All Products,99.0,United States,80798055063.07442,,
-2026,Optical & Medical Instruments,90.0,Australia,137459859.9883062,,
-2026,Electrical Equipment & AV Gear,85.0,Australia,1864260512.4968777,,
-2026,Machinery & Boilers,84.0,Australia,234365204.8679132,,
-2026,Base Metal Products,83.0,Australia,65659969.13733051,,
-2026,Jewellery & Precious Metals,71.0,Australia,367088146.6498278,,
-2026,Plastics,39.0,Australia,132485728.79441324,,
-2026,Other Chemicals,38.0,Australia,65659969.13733051,,
-2026,Cosmetics & Fragrances,33.0,Australia,65659969.13733051,,
-2026,Organic Chemicals,29.0,Australia,79998391.78088972,,
-2026,Mineral Fuels & Oils,27.0,Australia,3087577885.346593,,
-2026,Optical & Medical Instruments,90.0,China,1633027833.070439,,
-2026,Electrical Equipment & AV Gear,85.0,China,26489122129.84347,,
-2026,Machinery & Boilers,84.0,China,7576005409.091891,,
-2026,Base Metal Products,83.0,China,65659969.13733051,,
-2026,Jewellery & Precious Metals,71.0,China,10977313322.882627,,
-2026,Plastics,39.0,China,749076640.4140923,,
-2026,Other Chemicals,38.0,China,601067584.8507049,,
-2026,Cosmetics & Fragrances,33.0,China,335739985.2840908,,
-2026,Organic Chemicals,29.0,China,1034275451.5107474,,
-2026,Mineral Fuels & Oils,27.0,China,26489122129.84347,,
-2026,Optical & Medical Instruments,90.0,Germany,65659969.13733051,,
-2026,Electrical Equipment & AV Gear,85.0,Germany,4269897846.120721,,
-2026,Machinery & Boilers,84.0,Germany,878706795.0930191,,
-2026,Base Metal Products,83.0,Germany,65659969.13733051,,
-2026,Jewellery & Precious Metals,71.0,Germany,1490941768.6634383,,
-2026,Plastics,39.0,Germany,105958468.7405979,,
-2026,Other Chemicals,38.0,Germany,86795955.55479667,,
-2026,Cosmetics & Fragrances,33.0,Germany,65659969.13733051,,
-2026,Organic Chemicals,29.0,Germany,191438294.84078157,,
-2026,Mineral Fuels & Oils,27.0,Germany,11861360891.371098,,
-2026,Optical & Medical Instruments,90.0,India,248854496.84481275,,
-2026,Electrical Equipment & AV Gear,85.0,India,3341502145.837161,,
-2026,Machinery & Boilers,84.0,India,482675688.7335214,,
-2026,Base Metal Products,83.0,India,65659969.13733051,,
-2026,Jewellery & Precious Metals,71.0,India,756985269.4884073,,
-2026,Plastics,39.0,India,150697628.70584178,,
-2026,Other Chemicals,38.0,India,77971981.31859712,,
-2026,Cosmetics & Fragrances,33.0,India,65659969.13733051,,
-2026,Organic Chemicals,29.0,India,152117332.33195996,,
-2026,Mineral Fuels & Oils,27.0,India,14249361408.928658,,
-2026,Optical & Medical Instruments,90.0,Indonesia,303365690.2912597,,
-2026,Electrical Equipment & AV Gear,85.0,Indonesia,6040042543.199536,,
-2026,Machinery & Boilers,84.0,Indonesia,1621462851.7985976,,
-2026,Base Metal Products,83.0,Indonesia,65659969.13733051,,
-2026,Jewellery & Precious Metals,71.0,Indonesia,1604042332.320645,,
-2026,Plastics,39.0,Indonesia,280936118.9636956,,
-2026,Other Chemicals,38.0,Indonesia,129341145.10479994,,
-2026,Cosmetics & Fragrances,33.0,Indonesia,76848595.15585613,,
-2026,Organic Chemicals,29.0,Indonesia,281960008.60833,,
-2026,Mineral Fuels & Oils,27.0,Indonesia,13631013130.958536,,
-2026,Optical & Medical Instruments,90.0,Japan,294554242.0018667,,
-2026,Electrical Equipment & AV Gear,85.0,Japan,5456272052.684107,,
-2026,Machinery & Boilers,84.0,Japan,1256027048.2049708,,
-2026,Base Metal Products,83.0,Japan,65659969.13733051,,
-2026,Jewellery & Precious Metals,71.0,Japan,1294457082.2120245,,
-2026,Plastics,39.0,Japan,234224753.13244617,,
-2026,Other Chemicals,38.0,Japan,121743825.67937246,,
-2026,Cosmetics & Fragrances,33.0,Japan,77707893.47408742,,
-2026,Organic Chemicals,29.0,Japan,362280855.09163886,,
-2026,Mineral Fuels & Oils,27.0,Japan,16303961505.126108,,
-2026,Optical & Medical Instruments,90.0,Malaysia,172470309.13521886,,
-2026,Electrical Equipment & AV Gear,85.0,Malaysia,3767482678.753537,,
-2026,Machinery & Boilers,84.0,Malaysia,896563860.2862098,,
-2026,Base Metal Products,83.0,Malaysia,65659969.13733051,,
-2026,Jewellery & Precious Metals,71.0,Malaysia,1003819564.0134248,,
-2026,Plastics,39.0,Malaysia,112029096.74703026,,
-2026,Other Chemicals,38.0,Malaysia,77928341.01898427,,
-2026,Cosmetics & Fragrances,33.0,Malaysia,65659969.13733051,,
-2026,Organic Chemicals,29.0,Malaysia,109671232.37303036,,
-2026,Mineral Fuels & Oils,27.0,Malaysia,7218351696.590228,,
-2026,Optical & Medical Instruments,90.0,Philippines,65659969.13733051,,
-2026,Electrical Equipment & AV Gear,85.0,Philippines,1148492261.9990785,,
-2026,Machinery & Boilers,84.0,Philippines,422566523.0585778,,
-2026,Base Metal Products,83.0,Philippines,65659969.13733051,,
-2026,Jewellery & Precious Metals,71.0,Philippines,277231751.2753766,,
-2026,Plastics,39.0,Philippines,65659969.13733051,,
-2026,Other Chemicals,38.0,Philippines,65659969.13733051,,
-2026,Cosmetics & Fragrances,33.0,Philippines,65659969.13733051,,
-2026,Organic Chemicals,29.0,Philippines,65659969.13733051,,
-2026,Mineral Fuels & Oils,27.0,Philippines,2753715996.2504683,,
-2026,Optical & Medical Instruments,90.0,Saudi Arabia,117166667.3155808,,
-2026,Electrical Equipment & AV Gear,85.0,Saudi Arabia,592067653.2355642,,
-2026,Machinery & Boilers,84.0,Saudi Arabia,87713512.02222747,,
-2026,Base Metal Products,83.0,Saudi Arabia,65659969.13733051,,
-2026,Jewellery & Precious Metals,71.0,Saudi Arabia,142503320.67345187,,
-2026,Plastics,39.0,Saudi Arabia,65659969.13733051,,
-2026,Other Chemicals,38.0,Saudi Arabia,84418140.71051337,,
-2026,Cosmetics & Fragrances,33.0,Saudi Arabia,65659969.13733051,,
-2026,Organic Chemicals,29.0,Saudi Arabia,65659969.13733051,,
-2026,Mineral Fuels & Oils,27.0,Saudi Arabia,5941765134.058761,,
-2026,Optical & Medical Instruments,90.0,South Korea,172338542.26510215,,
-2026,Electrical Equipment & AV Gear,85.0,South Korea,2882010030.0165195,,
-2026,Machinery & Boilers,84.0,South Korea,1106287333.8499634,,
-2026,Base Metal Products,83.0,South Korea,65659969.13733051,,
-2026,Jewellery & Precious Metals,71.0,South Korea,941091287.5978096,,
-2026,Plastics,39.0,South Korea,116065135.37790886,,
-2026,Other Chemicals,38.0,South Korea,71007472.24359193,,
-2026,Cosmetics & Fragrances,33.0,South Korea,65659969.13733051,,
-2026,Organic Chemicals,29.0,South Korea,203932023.4424737,,
-2026,Mineral Fuels & Oils,27.0,South Korea,10235060395.889875,,
-2026,Optical & Medical Instruments,90.0,Thailand,69808270.12497194,,
-2026,Electrical Equipment & AV Gear,85.0,Thailand,1600831751.31049,,
-2026,Machinery & Boilers,84.0,Thailand,513241016.79726,,
-2026,Base Metal Products,83.0,Thailand,65659969.13733051,,
-2026,Jewellery & Precious Metals,71.0,Thailand,584970658.0132722,,
-2026,Plastics,39.0,Thailand,100238023.45124789,,
-2026,Other Chemicals,38.0,Thailand,65659969.13733051,,
-2026,Cosmetics & Fragrances,33.0,Thailand,65659969.13733051,,
-2026,Organic Chemicals,29.0,Thailand,91940665.64744876,,
-2026,Mineral Fuels & Oils,27.0,Thailand,5225209895.993372,,
-2026,Optical & Medical Instruments,90.0,United Arab Emirates,108958396.6336833,,
-2026,Electrical Equipment & AV Gear,85.0,United Arab Emirates,1062040505.3528467,,
-2026,Machinery & Boilers,84.0,United Arab Emirates,124798346.4128566,,
-2026,Base Metal Products,83.0,United Arab Emirates,65659969.13733051,,
-2026,Jewellery & Precious Metals,71.0,United Arab Emirates,168780836.88937137,,
-2026,Plastics,39.0,United Arab Emirates,94066244.48455746,,
-2026,Other Chemicals,38.0,United Arab Emirates,65659969.13733051,,
-2026,Cosmetics & Fragrances,33.0,United Arab Emirates,65659969.13733051,,
-2026,Organic Chemicals,29.0,United Arab Emirates,71813966.42238018,,
-2026,Mineral Fuels & Oils,27.0,United Arab Emirates,1651521677.549306,,
-2026,Optical & Medical Instruments,90.0,United States,1256106224.787952,,
-2026,Electrical Equipment & AV Gear,85.0,United States,26489122129.84347,,
-2026,Machinery & Boilers,84.0,United States,6497494880.269194,,
-2026,Base Metal Products,83.0,United States,65659969.13733051,,
-2026,Jewellery & Precious Metals,71.0,United States,10573340831.005796,,
-2026,Plastics,39.0,United States,1095994922.2891808,,
-2026,Other Chemicals,38.0,United States,850032673.5899854,,
-2026,Cosmetics & Fragrances,33.0,United States,513345989.2483843,,
-2026,Organic Chemicals,29.0,United States,1937866617.9993932,,
-2026,Mineral Fuels & Oils,27.0,United States,26489122129.84347,,
-2026,All Products,99.0,Australia,6100215637.336813,,
-2026,All Products,99.0,China,75950410455.92886,,
-2026,All Products,99.0,Germany,19082079927.796444,,
-2026,All Products,99.0,India,19591485890.46362,,
-2026,All Products,99.0,Indonesia,24034672385.53859,,
-2026,All Products,99.0,Japan,25466889226.74395,,
-2026,All Products,99.0,Malaysia,13489636717.192326,,
-2026,All Products,99.0,Philippines,4995966347.407484,,
-2026,All Products,99.0,Saudi Arabia,7228274304.56542,,
-2026,All Products,99.0,South Korea,15859112158.957909,,
-2026,All Products,99.0,Thailand,8383220188.750054,,
-2026,All Products,99.0,United Arab Emirates,3478959881.156993,,
-2026,All Products,99.0,United States,75768086368.01416,,
+2024,Optical & Medical Instruments,90.0,China,1360043993.243401,5465403185.694952,6825447178.938353
+2024,Electrical Equipment & AV Gear,85.0,China,12224650610.259312,20343463676.68457,32568114286.943882
+2024,Machinery & Boilers,84.0,China,9513209358.43436,15635936916.444796,25149146274.879158
+2024,Base Metal Products,83.0,China,65659969.13733051,107999145.00675914,173659114.14408964
+2024,Jewellery & Precious Metals,71.0,China,5510153204.66217,1633213187.8684757,7143366392.530646
+2024,Plastics,39.0,China,1071365979.4927232,2069472657.9762733,3140838637.4689965
+2024,Other Chemicals,38.0,China,512928097.6982548,1429625458.3906355,1942553556.0888903
+2024,Cosmetics & Fragrances,33.0,China,370252373.5112959,1553533510.8125665,1923785884.3238626
+2024,Organic Chemicals,29.0,China,672977119.5443687,2959885958.7346206,3632863078.2789893
+2024,Mineral Fuels & Oils,27.0,China,26489122129.84347,5841684276.645754,32330806406.489227
+2024,Optical & Medical Instruments,90.0,Indonesia,405461936.0662708,2972292392.653113,3377754328.7193837
+2024,Electrical Equipment & AV Gear,85.0,Indonesia,1638910777.6774702,12698818863.813135,14337729641.490604
+2024,Machinery & Boilers,84.0,Indonesia,2500638049.534673,7600831308.139449,10101469357.674122
+2024,Base Metal Products,83.0,Indonesia,65659969.13733051,65659969.13733051,131319938.27466102
+2024,Jewellery & Precious Metals,71.0,Indonesia,752775742.2370005,1069616938.1559012,1822392680.3929017
+2024,Plastics,39.0,Indonesia,540640082.9872218,1415390230.8941855,1956030313.8814073
+2024,Other Chemicals,38.0,Indonesia,78022650.8503587,767251221.3161944,845273872.1665531
+2024,Cosmetics & Fragrances,33.0,Indonesia,142925047.78147304,470667097.9617051,613592145.7431781
+2024,Organic Chemicals,29.0,Indonesia,193405766.4942443,910467563.2273952,1103873329.7216394
+2024,Mineral Fuels & Oils,27.0,Indonesia,2660643036.2645373,2105841481.864253,4766484518.12879
+2024,Optical & Medical Instruments,90.0,Japan,514190089.0684412,703658850.8498665,1217848939.9183078
+2024,Electrical Equipment & AV Gear,85.0,Japan,2467232207.911225,3818795317.1419606,6286027525.053185
+2024,Machinery & Boilers,84.0,Japan,1918077304.6109388,3347946899.669124,5266024204.280063
+2024,Base Metal Products,83.0,Japan,65659969.13733051,65659969.13733051,131319938.27466102
+2024,Jewellery & Precious Metals,71.0,Japan,724903677.3323653,413801220.488909,1138704897.8212743
+2024,Plastics,39.0,Japan,610624859.170348,453976837.5035489,1064601696.673897
+2024,Other Chemicals,38.0,Japan,96816481.08258326,195759681.4108363,292576162.4934196
+2024,Cosmetics & Fragrances,33.0,Japan,194356573.013353,163970650.59241018,358327223.6057632
+2024,Organic Chemicals,29.0,Japan,390691953.6485098,379749654.7621263,770441608.4106362
+2024,Mineral Fuels & Oils,27.0,Japan,4650582531.901306,788144777.2715707,5438727309.172876
+2024,Optical & Medical Instruments,90.0,Malaysia,341477112.9913413,1651612690.541144,1993089803.5324852
+2024,Electrical Equipment & AV Gear,85.0,Malaysia,2173343328.998242,8930183831.857573,11103527160.855814
+2024,Machinery & Boilers,84.0,Malaysia,2525198615.563997,6684804522.619188,9210003138.183186
+2024,Base Metal Products,83.0,Malaysia,65659969.13733051,65659969.13733051,131319938.27466102
+2024,Jewellery & Precious Metals,71.0,Malaysia,946719072.971444,742433555.6107591,1689152628.5822031
+2024,Plastics,39.0,Malaysia,352144383.7700351,987283033.6548256,1339427417.4248607
+2024,Other Chemicals,38.0,Malaysia,113672631.75155328,546274070.8280401,659946702.5795934
+2024,Cosmetics & Fragrances,33.0,Malaysia,95070062.70708244,323051830.8687847,418121893.5758672
+2024,Organic Chemicals,29.0,Malaysia,147934272.15049383,481574410.8590165,629508683.0095103
+2024,Mineral Fuels & Oils,27.0,Malaysia,2695382490.7896924,1050562395.0714586,3745944885.8611507
+2024,Optical & Medical Instruments,90.0,Saudi Arabia,123001070.26430754,66186414.427962855,189187484.6922704
+2024,Electrical Equipment & AV Gear,85.0,Saudi Arabia,171508992.8727487,558271471.6855335,729780464.5582823
+2024,Machinery & Boilers,84.0,Saudi Arabia,131274520.94060196,326206564.85300285,457481085.7936048
+2024,Base Metal Products,83.0,Saudi Arabia,65659969.13733051,65659969.13733051,131319938.27466102
+2024,Jewellery & Precious Metals,71.0,Saudi Arabia,65659969.13733051,65659969.13733051,131319938.27466102
+2024,Plastics,39.0,Saudi Arabia,65659969.13733051,65659969.13733051,131319938.27466102
+2024,Other Chemicals,38.0,Saudi Arabia,65659969.13733051,65659969.13733051,131319938.27466102
+2024,Cosmetics & Fragrances,33.0,Saudi Arabia,65659969.13733051,65659969.13733051,131319938.27466102
+2024,Organic Chemicals,29.0,Saudi Arabia,65659969.13733051,65659969.13733051,131319938.27466102
+2024,Mineral Fuels & Oils,27.0,Saudi Arabia,1723426374.2495475,65659969.13733051,1789086343.386878
+2024,Optical & Medical Instruments,90.0,South Korea,353076879.1178174,979540780.415305,1332617659.5331225
+2024,Electrical Equipment & AV Gear,85.0,South Korea,1104519737.6177084,3000386946.078366,4104906683.6960745
+2024,Machinery & Boilers,84.0,South Korea,2609468082.796452,2847926243.3288417,5457394326.125294
+2024,Base Metal Products,83.0,South Korea,65659969.13733051,65659969.13733051,131319938.27466102
+2024,Jewellery & Precious Metals,71.0,South Korea,687365130.4615082,375381230.9620716,1062746361.4235797
+2024,Plastics,39.0,South Korea,251483574.9302805,220580431.30269644,472064006.2329769
+2024,Other Chemicals,38.0,South Korea,65659969.13733051,80349524.25227033,146009493.38960084
+2024,Cosmetics & Fragrances,33.0,South Korea,86636462.01308396,106771365.08969653,193407827.1027805
+2024,Organic Chemicals,29.0,South Korea,206476686.24871203,582804226.9759107,789280913.2246227
+2024,Mineral Fuels & Oils,27.0,South Korea,2771002009.5586824,1529686842.5002508,4300688852.058933
+2024,Optical & Medical Instruments,90.0,Thailand,134468675.78812176,1028491263.7546194,1162959939.542741
+2024,Electrical Equipment & AV Gear,85.0,Thailand,650878451.8583324,3564793198.102457,4215671649.9607897
+2024,Machinery & Boilers,84.0,Thailand,1009370639.1370926,2604007177.270422,3613377816.4075146
+2024,Base Metal Products,83.0,Thailand,65659969.13733051,65659969.13733051,131319938.27466102
+2024,Jewellery & Precious Metals,71.0,Thailand,389296688.9330205,318702593.5803424,707999282.5133629
+2024,Plastics,39.0,Thailand,284244739.7192787,439642602.28008527,723887341.9993639
+2024,Other Chemicals,38.0,Thailand,65659969.13733051,284459102.17863333,350119071.31596386
+2024,Cosmetics & Fragrances,33.0,Thailand,65659969.13733051,232635468.38194388,298295437.5192744
+2024,Organic Chemicals,29.0,Thailand,97295068.94554684,431242043.6605601,528537112.6061069
+2024,Mineral Fuels & Oils,27.0,Thailand,1202780347.6252675,1123118407.124725,2325898754.7499924
+2024,Optical & Medical Instruments,90.0,United States,1567709239.4814944,1637482236.9321892,3205191476.413684
+2024,Electrical Equipment & AV Gear,85.0,United States,14438457922.982594,11610805490.311472,26049263413.294067
+2024,Machinery & Boilers,84.0,United States,6436229709.812547,12299221797.388231,18735451507.20078
+2024,Base Metal Products,83.0,United States,93149762.35249272,74884195.13037401,168033957.48286673
+2024,Jewellery & Precious Metals,71.0,United States,3369861435.205846,1205571255.532087,4575432690.737933
+2024,Plastics,39.0,United States,1845675029.036001,1169291800.334165,3014966829.370166
+2024,Other Chemicals,38.0,United States,590143849.7213639,448693918.5435425,1038837768.2649064
+2024,Cosmetics & Fragrances,33.0,United States,645874064.1704904,369792761.4256614,1015666825.5961518
+2024,Organic Chemicals,29.0,United States,1425115917.3797529,804996459.9658772,2230112377.34563
+2024,Mineral Fuels & Oils,27.0,United States,20085268555.11689,2974778280.156404,23060046835.273293
+2024,All Products,99.0,China,57790362835.82669,57040217974.25941,114830580810.08609
+2024,All Products,99.0,Indonesia,8979083059.03058,30076837067.162663,39055920126.193245
+2024,All Products,99.0,Japan,11633135646.8764,10331463858.827682,21964599505.704082
+2024,All Products,99.0,Malaysia,9456601940.831211,21463440311.04812,30920042251.87933
+2024,All Products,99.0,Saudi Arabia,2543170773.151189,1410284234.9278128,3953455008.0790014
+2024,All Products,99.0,South Korea,8201348501.018906,9789087560.04274,17990436061.061646
+2024,All Products,99.0,Thailand,3965314519.418652,10092751825.47112,14058066344.889772
+2024,All Products,99.0,United States,50497485485.25948,32595518195.720005,83093003680.97949
+2025,Optical & Medical Instruments,90.0,China,1478328330.436817,6253337637.598737,7731665968.035554
+2025,Electrical Equipment & AV Gear,85.0,China,26489122129.84347,26489122129.84347,52978244259.68694
+2025,Machinery & Boilers,84.0,China,5532344646.53749,25131428589.51427,30663773236.05176
+2025,Base Metal Products,83.0,China,65659969.13733051,65659969.13733051,131319938.27466102
+2025,Jewellery & Precious Metals,71.0,China,15598994372.47556,609270628.1172186,16208265000.592777
+2025,Plastics,39.0,China,708358060.5009904,1923315436.3566911,2631673496.8576813
+2025,Other Chemicals,38.0,China,515298212.81026137,3804222218.88853,4319520431.6987915
+2025,Cosmetics & Fragrances,33.0,China,368789782.7932915,1128796882.416459,1497586665.2097507
+2025,Organic Chemicals,29.0,China,1128954587.7182758,2864271228.54566,3993225816.263936
+2025,Mineral Fuels & Oils,27.0,China,26489122129.84347,7848156849.092829,34337278978.936302
+2025,Optical & Medical Instruments,90.0,Indonesia,192586326.0926298,4939271747.785053,5131858073.877683
+2025,Electrical Equipment & AV Gear,85.0,Indonesia,6177189829.540938,18602625571.87312,24779815401.41406
+2025,Machinery & Boilers,84.0,Indonesia,1231342959.6434083,8107807969.992125,9339150929.635532
+2025,Base Metal Products,83.0,Indonesia,65659969.13733051,65659969.13733051,131319938.27466102
+2025,Jewellery & Precious Metals,71.0,Indonesia,2481271777.5675607,532751575.0962201,3014023352.6637807
+2025,Plastics,39.0,Indonesia,169383523.52368066,1199394099.0061202,1368777622.529801
+2025,Other Chemicals,38.0,Indonesia,159342230.80213898,1261798479.12345,1421140709.925589
+2025,Cosmetics & Fragrances,33.0,Indonesia,87235051.59287585,372349312.63621694,459584364.2290928
+2025,Organic Chemicals,29.0,Indonesia,280790296.7370384,837282245.9147938,1118072542.651832
+2025,Mineral Fuels & Oils,27.0,Indonesia,8395621611.031614,3072055902.267983,11467677513.299597
+2025,Optical & Medical Instruments,90.0,Japan,266166525.05502945,876795790.4694213,1142962315.5244508
+2025,Electrical Equipment & AV Gear,85.0,Japan,4982967149.890015,6880919222.204381,11863886372.094395
+2025,Machinery & Boilers,84.0,Japan,1088679582.7244058,4672064585.540811,5760744168.265217
+2025,Base Metal Products,83.0,Japan,65659969.13733051,65659969.13733051,131319938.27466102
+2025,Jewellery & Precious Metals,71.0,Japan,2240253636.9423733,166308016.02834377,2406561652.970717
+2025,Plastics,39.0,Japan,150393090.61796704,323598710.76149684,473991801.3794639
+2025,Other Chemicals,38.0,Japan,153240314.5784305,335526240.0195577,488766554.59798825
+2025,Cosmetics & Fragrances,33.0,Japan,95188401.90861651,133064184.49508768,228252586.4037042
+2025,Organic Chemicals,29.0,Japan,369247227.9810841,388758089.5862421,758005317.5673262
+2025,Mineral Fuels & Oils,27.0,Japan,12179611577.029213,865732898.1907091,13045344475.219921
+2025,Optical & Medical Instruments,90.0,Malaysia,131095261.37508108,2741782256.2704024,2872877517.6454835
+2025,Electrical Equipment & AV Gear,85.0,Malaysia,4406308071.472579,13329324098.87563,17735632170.34821
+2025,Machinery & Boilers,84.0,Malaysia,890823190.6456288,6633486599.479042,7524309790.124671
+2025,Base Metal Products,83.0,Malaysia,65659969.13733051,65659969.13733051,131319938.27466102
+2025,Jewellery & Precious Metals,71.0,Malaysia,1778533272.23659,292825211.5352831,2071358483.771873
+2025,Plastics,39.0,Malaysia,101759431.50422862,818312736.1425481,920072167.6467767
+2025,Other Chemicals,38.0,Malaysia,92722281.47793794,852414467.0796908,945136748.5576288
+2025,Cosmetics & Fragrances,33.0,Malaysia,65659969.13733051,198409616.66092545,264069585.79825595
+2025,Organic Chemicals,29.0,Malaysia,143999032.7614782,396013894.6271027,540012927.3885808
+2025,Mineral Fuels & Oils,27.0,Malaysia,4366039620.988715,1397689528.9534645,5763729149.94218
+2025,Optical & Medical Instruments,90.0,Saudi Arabia,97064001.43204331,173455261.14989963,270519262.5819429
+2025,Electrical Equipment & AV Gear,85.0,Saudi Arabia,1384954744.407694,1064426882.9791284,2449381627.3868227
+2025,Machinery & Boilers,84.0,Saudi Arabia,65659969.13733051,386203039.6905349,451863008.8278654
+2025,Base Metal Products,83.0,Saudi Arabia,65659969.13733051,65659969.13733051,131319938.27466102
+2025,Jewellery & Precious Metals,71.0,Saudi Arabia,215160948.6553527,65659969.13733051,280820917.79268324
+2025,Plastics,39.0,Saudi Arabia,65659969.13733051,65659969.13733051,131319938.27466102
+2025,Other Chemicals,38.0,Saudi Arabia,65659969.13733051,65659969.13733051,131319938.27466102
+2025,Cosmetics & Fragrances,33.0,Saudi Arabia,65659969.13733051,65659969.13733051,131319938.27466102
+2025,Organic Chemicals,29.0,Saudi Arabia,65659969.13733051,65659969.13733051,131319938.27466102
+2025,Mineral Fuels & Oils,27.0,Saudi Arabia,1592616438.926617,80974412.51748367,1673590851.4441006
+2025,Optical & Medical Instruments,90.0,South Korea,139682049.09245002,846992196.2581944,986674245.3506445
+2025,Electrical Equipment & AV Gear,85.0,South Korea,3668802656.894909,5159790319.210547,8828592976.105457
+2025,Machinery & Boilers,84.0,South Korea,747230545.5353729,4560656689.836946,5307887235.372318
+2025,Base Metal Products,83.0,South Korea,65659969.13733051,65659969.13733051,131319938.27466102
+2025,Jewellery & Precious Metals,71.0,South Korea,1593558151.7333007,129612322.66040084,1723170474.3937016
+2025,Plastics,39.0,South Korea,86600921.97512774,122964987.08948784,209565909.06461558
+2025,Other Chemicals,38.0,South Korea,80975151.63357417,153618001.20060474,234593152.83417892
+2025,Cosmetics & Fragrances,33.0,South Korea,65659969.13733051,140343950.88803995,206003920.02537045
+2025,Organic Chemicals,29.0,South Korea,203944655.67929196,738209221.0665619,942153876.7458539
+2025,Mineral Fuels & Oils,27.0,South Korea,7081472771.4280205,1579306209.158837,8660778980.586857
+2025,Optical & Medical Instruments,90.0,Thailand,65659969.13733051,1194893245.2080047,1260553214.3453352
+2025,Electrical Equipment & AV Gear,85.0,Thailand,1814821656.512216,4864783256.844008,6679604913.356224
+2025,Machinery & Boilers,84.0,Thailand,373713107.7593523,3666896316.90524,4040609424.6645923
+2025,Base Metal Products,83.0,Thailand,65659969.13733051,65659969.13733051,131319938.27466102
+2025,Jewellery & Precious Metals,71.0,Thailand,1022483748.4997996,114581592.47629918,1137065340.9760988
+2025,Plastics,39.0,Thailand,68537071.25544174,417209882.62294745,485746953.8783892
+2025,Other Chemicals,38.0,Thailand,74976404.315452,545533933.1273625,620510337.4428145
+2025,Cosmetics & Fragrances,33.0,Thailand,65659969.13733051,145216244.74386206,210876213.88119256
+2025,Organic Chemicals,29.0,Thailand,83571335.89189683,423390161.86787325,506961497.7597701
+2025,Mineral Fuels & Oils,27.0,Thailand,3271997270.680666,1490542281.9916766,4762539552.672342
+2025,Optical & Medical Instruments,90.0,United States,953863818.5721462,2635483331.663494,3589347150.2356405
+2025,Electrical Equipment & AV Gear,85.0,United States,26489122129.84347,26489122129.84347,52978244259.68694
+2025,Machinery & Boilers,84.0,United States,6385280053.720451,17405556822.350906,23790836876.071358
+2025,Base Metal Products,83.0,United States,65659969.13733051,65659969.13733051,131319938.27466102
+2025,Jewellery & Precious Metals,71.0,United States,16281304998.16474,505832304.14507854,16787137302.309818
+2025,Plastics,39.0,United States,844908486.381912,862360145.7657644,1707268632.1476765
+2025,Other Chemicals,38.0,United States,742441391.517664,799126025.3663206,1541567416.8839846
+2025,Cosmetics & Fragrances,33.0,United States,565873748.7025969,342110611.835468,907984360.538065
+2025,Organic Chemicals,29.0,United States,1980478337.1906333,884278764.1055309,2864757101.296164
+2025,Mineral Fuels & Oils,27.0,United States,26489122129.84347,4652639857.794723,31141761987.638195
+2025,All Products,99.0,China,78374972222.09695,76117581569.5112,154492553791.60815
+2025,All Products,99.0,Indonesia,19240423575.669216,38990996872.83241,58231420448.50163
+2025,All Products,99.0,Japan,21591407475.864464,14708427706.43338,36299835182.297844
+2025,All Products,99.0,Malaysia,12042600100.7369,26725918378.76142,38768518479.49832
+2025,All Products,99.0,Saudi Arabia,3683755948.24569,2099019411.1610296,5782775359.406719
+2025,All Products,99.0,South Korea,13733586842.246708,13497153866.50695,27230740708.75366
+2025,All Products,99.0,Thailand,6907080502.326816,12928706884.924604,19835787387.25142
+2025,All Products,99.0,United States,80798055063.07442,54642169962.00809,135440225025.0825
+2026,Optical & Medical Instruments,90.0,China,1633027833.070439,8207617601.376497,9840645434.446936
+2026,Electrical Equipment & AV Gear,85.0,China,26489122129.84347,26489122129.84347,52978244259.68694
+2026,Machinery & Boilers,84.0,China,7576005409.091891,26489122129.84347,34065127538.935364
+2026,Base Metal Products,83.0,China,65659969.13733051,65659969.13733051,131319938.27466102
+2026,Jewellery & Precious Metals,71.0,China,10977313322.882627,406950260.6670716,11384263583.5497
+2026,Plastics,39.0,China,749076640.4140923,5232526504.917879,5981603145.331971
+2026,Other Chemicals,38.0,China,601067584.8507049,3379689578.9194484,3980757163.770153
+2026,Cosmetics & Fragrances,33.0,China,335739985.2840908,860505205.602975,1196245190.887066
+2026,Organic Chemicals,29.0,China,1034275451.5107474,3470131136.832521,4504406588.343268
+2026,Mineral Fuels & Oils,27.0,China,26489122129.84347,10890993280.028849,37380115409.87232
+2026,Optical & Medical Instruments,90.0,Indonesia,303365690.2912597,6412926136.581005,6716291826.872265
+2026,Electrical Equipment & AV Gear,85.0,Indonesia,6040042543.199536,24689269613.25506,30729312156.454594
+2026,Machinery & Boilers,84.0,Indonesia,1621462851.7985976,13581209242.5211,15202672094.319696
+2026,Base Metal Products,83.0,Indonesia,65659969.13733051,65659969.13733051,131319938.27466102
+2026,Jewellery & Precious Metals,71.0,Indonesia,1604042332.320645,366931149.881175,1970973482.2018201
+2026,Plastics,39.0,Indonesia,280936118.9636956,2174110057.093475,2455046176.0571704
+2026,Other Chemicals,38.0,Indonesia,129341145.10479994,1277142068.5119753,1406483213.6167753
+2026,Cosmetics & Fragrances,33.0,Indonesia,76848595.15585613,279352950.0275114,356201545.18336755
+2026,Organic Chemicals,29.0,Indonesia,281960008.60833,991722456.7040136,1273682465.3123436
+2026,Mineral Fuels & Oils,27.0,Indonesia,13631013130.958536,4635861884.980743,18266875015.939278
+2026,Optical & Medical Instruments,90.0,Japan,294554242.0018667,1084113810.932055,1378668052.9339218
+2026,Electrical Equipment & AV Gear,85.0,Japan,5456272052.684107,10946755660.928238,16403027713.612345
+2026,Machinery & Boilers,84.0,Japan,1256027048.2049708,5558663888.094808,6814690936.299778
+2026,Base Metal Products,83.0,Japan,65659969.13733051,65659969.13733051,131319938.27466102
+2026,Jewellery & Precious Metals,71.0,Japan,1294457082.2120245,95053148.03550668,1389510230.2475312
+2026,Plastics,39.0,Japan,234224753.13244617,628674913.1385918,862899666.2710379
+2026,Other Chemicals,38.0,Japan,121743825.67937246,304286609.2725393,426030434.9519118
+2026,Cosmetics & Fragrances,33.0,Japan,77707893.47408742,102854666.33015236,180562559.80423978
+2026,Organic Chemicals,29.0,Japan,362280855.09163886,386242684.4746251,748523539.5662639
+2026,Mineral Fuels & Oils,27.0,Japan,16303961505.126108,1118041124.503201,17422002629.62931
+2026,Optical & Medical Instruments,90.0,Malaysia,172470309.13521886,3234123471.623358,3406593780.7585764
+2026,Electrical Equipment & AV Gear,85.0,Malaysia,3767482678.753537,14852010974.448671,18619493653.20221
+2026,Machinery & Boilers,84.0,Malaysia,896563860.2862098,9246521537.08166,10143085397.367868
+2026,Base Metal Products,83.0,Malaysia,65659969.13733051,65659969.13733051,131319938.27466102
+2026,Jewellery & Precious Metals,71.0,Malaysia,1003819564.0134248,175080204.9769363,1178899768.990361
+2026,Plastics,39.0,Malaysia,112029096.74703026,1377698600.994712,1489727697.7417424
+2026,Other Chemicals,38.0,Malaysia,77928341.01898427,664506991.3945613,742435332.4135456
+2026,Cosmetics & Fragrances,33.0,Malaysia,65659969.13733051,133602386.39177038,199262355.5291009
+2026,Organic Chemicals,29.0,Malaysia,109671232.37303036,416501794.4899371,526173026.8629675
+2026,Mineral Fuels & Oils,27.0,Malaysia,7218351696.590228,1908804882.4428675,9127156579.033096
+2026,Optical & Medical Instruments,90.0,Saudi Arabia,117166667.3155808,261740141.71575645,378906809.03133726
+2026,Electrical Equipment & AV Gear,85.0,Saudi Arabia,592067653.2355642,1810859692.2043908,2402927345.4399548
+2026,Machinery & Boilers,84.0,Saudi Arabia,87713512.02222747,650596048.4276359,738309560.4498634
+2026,Base Metal Products,83.0,Saudi Arabia,65659969.13733051,65659969.13733051,131319938.27466102
+2026,Jewellery & Precious Metals,71.0,Saudi Arabia,142503320.67345187,65659969.13733051,208163289.81078237
+2026,Plastics,39.0,Saudi Arabia,65659969.13733051,77376023.96363316,143035993.10096368
+2026,Other Chemicals,38.0,Saudi Arabia,84418140.71051337,96181527.60662366,180599668.31713703
+2026,Cosmetics & Fragrances,33.0,Saudi Arabia,65659969.13733051,65659969.13733051,131319938.27466102
+2026,Organic Chemicals,29.0,Saudi Arabia,65659969.13733051,65659969.13733051,131319938.27466102
+2026,Mineral Fuels & Oils,27.0,Saudi Arabia,5941765134.058761,196896995.15413117,6138662129.212892
+2026,Optical & Medical Instruments,90.0,South Korea,172338542.26510215,1097838220.8012266,1270176763.0663288
+2026,Electrical Equipment & AV Gear,85.0,South Korea,2882010030.0165195,8843283292.883041,11725293322.89956
+2026,Machinery & Boilers,84.0,South Korea,1106287333.8499634,5824133130.359583,6930420464.209546
+2026,Base Metal Products,83.0,South Korea,65659969.13733051,65659969.13733051,131319938.27466102
+2026,Jewellery & Precious Metals,71.0,South Korea,941091287.5978096,73401363.99951242,1014492651.597322
+2026,Plastics,39.0,South Korea,116065135.37790886,256381719.96407703,372446855.3419859
+2026,Other Chemicals,38.0,South Korea,71007472.24359193,189162094.3147726,260169566.55836454
+2026,Cosmetics & Fragrances,33.0,South Korea,65659969.13733051,111238543.98054506,176898513.11787558
+2026,Organic Chemicals,29.0,South Korea,203932023.4424737,681852412.6321481,885784436.0746219
+2026,Mineral Fuels & Oils,27.0,South Korea,10235060395.889875,1754902197.0510516,11989962592.940928
+2026,Optical & Medical Instruments,90.0,Thailand,69808270.12497194,1335077170.6220088,1404885440.7469807
+2026,Electrical Equipment & AV Gear,85.0,Thailand,1600831751.31049,7445131682.931716,9045963434.242207
+2026,Machinery & Boilers,84.0,Thailand,513241016.79726,5177578144.709506,5690819161.506766
+2026,Base Metal Products,83.0,Thailand,65659969.13733051,65659969.13733051,131319938.27466102
+2026,Jewellery & Precious Metals,71.0,Thailand,584970658.0132722,73519086.39591119,658489744.4091834
+2026,Plastics,39.0,Thailand,100238023.45124789,854194796.8697735,954432820.3210214
+2026,Other Chemicals,38.0,Thailand,65659969.13733051,407438574.2232807,473098543.36061126
+2026,Cosmetics & Fragrances,33.0,Thailand,65659969.13733051,105527843.53994712,171187812.67727762
+2026,Organic Chemicals,29.0,Thailand,91940665.64744876,444212170.5915048,536152836.2389536
+2026,Mineral Fuels & Oils,27.0,Thailand,5225209895.993372,1821557673.885675,7046767569.879047
+2026,Optical & Medical Instruments,90.0,United States,1256106224.787952,4092736767.853651,5348842992.641603
+2026,Electrical Equipment & AV Gear,85.0,United States,26489122129.84347,26489122129.84347,52978244259.68694
+2026,Machinery & Boilers,84.0,United States,6497494880.269194,22234662854.61303,28732157734.882225
+2026,Base Metal Products,83.0,United States,65659969.13733051,65659969.13733051,131319938.27466102
+2026,Jewellery & Precious Metals,71.0,United States,10573340831.005796,325096340.3527551,10898437171.358551
+2026,Plastics,39.0,United States,1095994922.2891808,1877368018.48226,2973362940.7714405
+2026,Other Chemicals,38.0,United States,850032673.5899854,849086243.3628832,1699118916.9528685
+2026,Cosmetics & Fragrances,33.0,United States,513345989.2483843,312545745.6238813,825891734.8722656
+2026,Organic Chemicals,29.0,United States,1937866617.9993932,970716900.8370156,2908583518.8364086
+2026,Mineral Fuels & Oils,27.0,United States,26489122129.84347,8048991845.309231,34538113975.1527
+2026,All Products,99.0,China,75950410455.92886,85492317797.16951,161442728253.0984
+2026,All Products,99.0,Indonesia,24034672385.53859,54474185528.69339,78508857914.23198
+2026,All Products,99.0,Japan,25466889226.74395,20290346474.84705,45757235701.591
+2026,All Products,99.0,Malaysia,13489636717.192326,32074510812.981808,45564147530.17413
+2026,All Products,99.0,Saudi Arabia,7228274304.56542,3356290305.6214933,10584564610.186913
+2026,All Products,99.0,South Korea,15859112158.957909,18897852945.12329,34756965104.0812
+2026,All Products,99.0,Thailand,8383220188.750054,17729897112.906654,26113117301.656708
+2026,All Products,99.0,United States,75768086368.01416,65265986815.41551,141034073183.4297

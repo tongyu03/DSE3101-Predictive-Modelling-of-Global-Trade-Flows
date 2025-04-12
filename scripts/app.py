@@ -55,12 +55,14 @@ app_ui = ui.page_fluid(
     ),
 
     ui.page_navbar(
-        ui.nav_panel(
+      ui.nav_panel(
             "Home",
             ui.h3("Introduction", style="color: #CC5500;"),
-            ui.p("Global trade is heavily shaped by geopolitical dynamics, making it a constantly evolving and often unpredictable landscape. "
-                "TideTrackers offers historical insights into import and export trends involving Singapore and selected countries over recent years. "
+            ui.p("Global trade is heavily shaped by geopolitical dynamics, making it a constantly evolving and often unpredictable landscape. ",
+                ui.tags.span("TideTrackers", style="font-weight: bold; color: #004080;"),
+                " offers historical insights into import and export trends involving Singapore and selected countries over recent years. "
                 "We also provide a forecasting feature that predicts trade volumes across different sectors for specific countries, based on historical political patterns and trends."),
+            ui.p("Our Key Features:"),
             ui.div(
                 ui.row(
                     ui.column(4, ui.card(
@@ -82,21 +84,23 @@ app_ui = ui.page_fluid(
                 ui.column(6,
                     ui.h3("Why Geopolitics Matters", style="color: #CC5500;"),
                     ui.p("Rising geopolitical tensions — especially in recent years — have raised concerns about trade fragmentation. "
-                        "Geopolitical decisions, from diplomatic votes to trade agreements, shape the flow of goods and services. "
-                        "Our dashboard helps you examine and compare political alignment from Singapore's perspective to better understand past and present trade relationships — and anticipate future shifts."),
-                        style = "background-color: #f4faff; padding: 8px; border-radius: 8px; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);"
+                         "Geopolitical decisions, from diplomatic votes to trade agreements, shape the flow of goods and services. "
+                         "Our dashboard helps you examine and compare political alignment from Singapore's perspective to better understand past and present trade relationships — and anticipate future shifts."),
+                    style="background-color: #f4faff; padding: 8px; border-radius: 8px; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);"
                 ),
-                ui.column(6, 
+                ui.column(6,
                     ui.h3("Who is TideTrackers for", style="color: #CC5500;"),
-                    ui.p("Designed for supply chain professionals in Singapore or in partner countries that trade with Singapore, TideTrackers provides strategic insights into how shifting geopolitical landscapes may impact import and export flows across industries. "
+                    ui.p("Designed for supply chain professionals in Singapore or in partner countries that trade with Singapore, ",
+                        ui.tags.span("TideTrackers", style="font-weight: bold; color: #004080;"),
+                        " provides strategic insights into how shifting geopolitical landscapes may impact import and export flows across industries. "
                         "We aim to support supply chain leaders in anticipating trade disruptions and making informed, data-driven decisions in a volatile global environment."),
-                        style = "background-color: #f4faff; padding: 8px; border-radius: 8px; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);"
+                    style="background-color: #f4faff; padding: 8px; border-radius: 8px; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);"
                 )
             ),
             ui.hr(),
             ui.h3("💡 Get Started", style="color: #CC5500;"),
-            ui.p("Use the tabs above to explore the dashboard. "
-                "Visualize trade trends, measure geopolitical distance, or forecast future flows — all in one place."),
+            ui.p("Use the tabs at the top of the page to explore the dashboard. "
+                 "Dive into data-driven insights, explore geopolitical trends, and stay ahead in the ever-changing world of trade - all in one place."),
         ),
 
         ui.nav_panel(
