@@ -23,7 +23,7 @@ import joblib
 
 # data processing functions
 def process_unga_data():
-    unga = pd.read_csv("data/cleaned data/unga_voting_3.csv")
+    unga = pd.read_csv("data/cleaned data/unga_voting_4.csv")
     unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
     unga[['Country1', 'Country2']] = pd.DataFrame(unga['CountryPair'].tolist(), index=unga.index)
     unga = unga[(unga['year'] >= 1989) & (unga['year'] <= 2023)]
@@ -40,6 +40,7 @@ def process_gdp_data():
     gdp_long = gdp_long.dropna(subset=['GDP'])
     countries = pd.read_csv("data/raw data/COW-country-codes.csv")
     gdp_long['Country Name'] = gdp_long['Country Name'].replace('United States', 'United States of America')
+    gdp_long['Country Name'] = gdp_long['Country Name'].replace('Korea, Rep.', 'South Korea')
     gdp_long = countries.merge(gdp_long, left_on='StateNme', right_on='Country Name', how='inner')
     gdp_long = gdp_long.drop(gdp_long.columns[[0, 1, 2]], axis=1)
     gdp_long['Year'] = gdp_long['Year'].astype(int)
@@ -54,6 +55,7 @@ def process_exrate_data():
     exrate_long['Year'] = exrate_long['Year'].astype(int)
     exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
     exrate_long['Country Name'] = exrate_long['Country Name'].replace('United States', 'United States of America')
+    exrate_long['Country Name'] = exrate_long['Country Name'].replace('Korea, Rep.', 'South Korea')
     return exrate_long
 
 def process_FTA_data():
@@ -65,7 +67,7 @@ def process_FTA_data():
     )
     fta_sg = fta_sg.drop(columns=["Country", "Partner Country"])
     iso3_to_country = {
-        'CHN': 'China', 'HKG': 'Hong Kong', 'JPN': 'Japan', 'KOR': 'Korea',
+        'CHN': 'China', 'HKG': 'Hong Kong', 'JPN': 'Japan', 'KOR': 'South Korea',
         'MYS': 'Malaysia', 'SAU': 'Saudi Arabia', 'THA': 'Thailand', 'USA': 'United States of America',
         'IDN': 'Indonesia', 'ARE': 'United Arab Emirates', 'IND': 'India', 'PHL': 'Philippines',
         'VNM': 'Vietnam', 'AUS': 'Australia', 'TWN': 'Taiwan', 'DEU': 'Germany',
@@ -83,6 +85,7 @@ def process_FTA_data():
 def prepare_data_for_regression(log_transform=True, add_interactions=True):
     trade_data = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
     trade_data['Country'] = trade_data['Country'].replace('USA', 'United States of America')
+    trade_data['Country'] = trade_data['Country'].replace('Rep. of Korea', 'South Korea')
     sg_gdp = pd.read_csv("data/cleaned data/singapore_gdp.csv").iloc[:-1]
     # Create lagged GDP column
     sg_gdp['SG_GDP_Lag1'] = sg_gdp['Singapore_GDP'].shift(1)
