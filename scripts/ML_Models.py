@@ -514,55 +514,62 @@ def predict_import_value(year_or_range):
         print(f"No data available for latest year ({latest_year})")
         return None
 
-    # Prepare for forecasting
-    results = []
-
     # Determine prediction years
     if isinstance(year_or_range, numbers.Integral):
         years = [year_or_range]
     else:
         years = list(year_or_range)
 
-    temp_input = base_input.copy()
+    # Make sure prediction starts from the year **after** latest_year
+    if min(years) <= latest_year:
+        raise ValueError(f"Prediction year(s) must start after {latest_year} (latest data year)")
+
+    results = []
+    current_input = base_input.copy()
 
     for target_year in years:
-        input_df = temp_input[expected_cols].copy()
+        input_df = current_input[expected_cols].copy()
         input_scaled = scaler.transform(input_df)
 
         # Predict log(imports)
         prediction_log = model.predict(input_scaled)
-
-        # Convert to actual imports
         prediction_actual = np.exp(prediction_log)
+        prediction_actual = np.clip(prediction_actual, 1e6, 1e11)
+
+        if (prediction_actual >= 1e11).any():
+            print(f"Warning: Prediction reached upper cap in {target_year}")
 
         # Construct detailed product-level results
-        result = temp_input[['Partner', 'HS Code', 'HS_Section']].copy()
+        result = current_input[['Partner', 'HS Code', 'HS_Section']].copy()
         result['Predicted Imports'] = prediction_actual
         result['Target Year'] = target_year
 
-        # Aggregated country-level result
+        # Aggregate country-level result
         agg = result.groupby('Partner', as_index=False)['Predicted Imports'].sum()
         agg['HS Code'] = 'All Products'
         agg['HS_Section'] = 'All'
         agg['Target Year'] = target_year
-        agg = agg[result.columns]  # match column order
+        agg = agg[result.columns]
 
-        # Combine detailed and aggregated results
-        full_result = pd.concat([result, agg], ignore_index=True)
-        results.append(full_result)
+        results.append(pd.concat([result, agg], ignore_index=True))
 
-        # Update import lags for recursive prediction
-        temp_input['Import_Lag1'] = prediction_actual
-        temp_input['Import_Lag2'] = temp_input['Import_Lag1']
-        temp_input['Import_Lag3'] = temp_input['Import_Lag2']
+        # Roll input forward for next year
+        next_input = current_input.copy()
+        next_input['Import_Lag3'] = current_input['Import_Lag2']
+        next_input['Import_Lag2'] = current_input['Import_Lag1']
+        next_input['Import_Lag1'] = prediction_actual
 
-        # Update log lag columns
-        temp_input['log_Import_Lag1'] = np.log(temp_input['Import_Lag1'].clip(lower=1))
-        temp_input['log_Import_Lag2'] = np.log(temp_input['Import_Lag2'].clip(lower=1))
-        temp_input['log_Import_Lag3'] = np.log(temp_input['Import_Lag3'].clip(lower=1))
+        next_input['log_Import_Lag3'] = current_input['log_Import_Lag2']
+        next_input['log_Import_Lag2'] = current_input['log_Import_Lag1']
+        next_input['log_Import_Lag1'] = np.log(next_input['Import_Lag1'].clip(lower=1))
+
+        current_input = next_input  # update reference
 
     final_df = pd.concat(results).reset_index(drop=True)
     return final_df
+
+
+
 
 
 
