@@ -528,11 +528,16 @@ def predict_import_value(year_or_range):
     for target_year in years:
         input_df = temp_input[expected_cols].copy()
         input_scaled = scaler.transform(input_df)
-        prediction = model.predict(input_scaled)
+
+        # Predict log(imports)
+        prediction_log = model.predict(input_scaled)
+
+        # Convert to actual imports
+        prediction_actual = np.exp(prediction_log)
 
         # Construct detailed product-level results
         result = temp_input[['Partner', 'HS Code', 'HS_Section']].copy()
-        result['Predicted Imports'] = np.exp(prediction)
+        result['Predicted Imports'] = prediction_actual
         result['Target Year'] = target_year
 
         # Aggregated country-level result
@@ -540,25 +545,25 @@ def predict_import_value(year_or_range):
         agg['HS Code'] = 'All Products'
         agg['HS_Section'] = 'All'
         agg['Target Year'] = target_year
-
-        # Match column order
-        agg = agg[result.columns]
+        agg = agg[result.columns]  # match column order
 
         # Combine detailed and aggregated results
         full_result = pd.concat([result, agg], ignore_index=True)
         results.append(full_result)
 
         # Update import lags for recursive prediction
-        temp_input['Import_Lag1'] = prediction
+        temp_input['Import_Lag1'] = prediction_actual
         temp_input['Import_Lag2'] = temp_input['Import_Lag1']
         temp_input['Import_Lag3'] = temp_input['Import_Lag2']
 
+        # Update log lag columns
         temp_input['log_Import_Lag1'] = np.log(temp_input['Import_Lag1'].clip(lower=1))
         temp_input['log_Import_Lag2'] = np.log(temp_input['Import_Lag2'].clip(lower=1))
         temp_input['log_Import_Lag3'] = np.log(temp_input['Import_Lag3'].clip(lower=1))
 
     final_df = pd.concat(results).reset_index(drop=True)
     return final_df
+
 
 
 # predict_import_value(2025)
