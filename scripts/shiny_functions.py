@@ -192,7 +192,7 @@ def plot_trade_line_graph(country, industry, trade_pred_df):
         yaxis_title="Trade Value (USD)",
         legend_title="Trade Type",
         margin=dict(t=60, l=100, r=20, b=100),
-        xaxis=dict(range=[filtered_data['Year'].min(), 2026]),
+        xaxis=dict(range=[filtered_data['Year'].min(), 2024.05]),
         title_font=dict(size=20),
         title_x=0.5
     )
