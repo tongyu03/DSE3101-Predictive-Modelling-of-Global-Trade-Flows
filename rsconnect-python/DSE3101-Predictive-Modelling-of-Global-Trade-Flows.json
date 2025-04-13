@@ -1,0 +1,12 @@
+{
+    "https://api.shinyapps.io": {
+        "server_url": "https://api.shinyapps.io",
+        "filename": "C:\\Users\\Jing Xuan\\DSE3101-Predictive-Modelling-of-Global-Trade-Flows",
+        "app_url": "https://jx3ng.shinyapps.io/tidetrackers1/",
+        "app_id": 14509202,
+        "app_guid": null,
+        "title": "TideTrackers",
+        "app_mode": "python-shiny",
+        "app_store_version": 1
+    }
+}

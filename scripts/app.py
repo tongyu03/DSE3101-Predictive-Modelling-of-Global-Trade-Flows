@@ -1,12 +1,8 @@
 from shiny import App, ui, reactive, render
 import pandas as pd
-import plotly.express as px
-import matplotlib.pyplot as plt
-import seaborn as sns
 import shinywidgets
 from shinywidgets import render_widget
 from shinyswatch import theme
-import numpy as np
 from shiny_functions import plot_trade_line_graph
 from shiny_functions import plot_geopol_distance
 from shiny_functions import plot_bubble
