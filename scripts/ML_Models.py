@@ -145,11 +145,11 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
     hs_cols = list(hs_section_df.columns)
 
     # Create lag features
-    merged_data["Import_Lag1"] = merged_data.groupby(["Partner"])['Imports'].shift(1)
-    merged_data["Import_Lag2"] = merged_data.groupby(["Partner"])['Imports'].shift(2)
-    merged_data["Import_Lag3"] = merged_data.groupby(["Partner"])['Imports'].shift(3)
+    merged_data["Import_Lag1"] = merged_data.groupby(["Partner", "Product"])['Imports'].shift(1)
+    merged_data["Import_Lag2"] = merged_data.groupby(["Partner", "Product"])['Imports'].shift(2)
+    merged_data["Import_Lag3"] = merged_data.groupby(["Partner", "Product"])['Imports'].shift(3)
     merged_data["GDP_Lag1"] = merged_data.groupby(["Partner"])['GDP'].shift(1)
-    #merged_data["SG_Lag1"] = merged_data.groupby(["Partner"])['Singapore_GDP'].shift(1) #sgp gdp code
+    merged_data["SG_Lag1"] = merged_data.groupby(["Partner"])['Singapore_GDP'].shift(1) #sgp gdp code
 
     # Add GDP growth rate as a feature
     # merged_data["GDP_Growth"] = merged_data.groupby(["Partner"])['GDP'].pct_change()
@@ -162,9 +162,9 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
     # merged_data["Time_Since_FTA"] = merged_data["Time_Since_FTA"].fillna(0)
 
     # Add interaction terms
-    if add_interactions:
-        merged_data["GDP_x_FTA"] = merged_data["GDP"] * merged_data["Adjusted_value"]
-        merged_data["GDP_x_IdealPoint"] = merged_data["GDP"] * merged_data["IdealPointDistance"]
+    # if add_interactions:
+    #     merged_data["GDP_x_FTA"] = merged_data["GDP_Lag1"] * merged_data["Adjusted_value"]
+    #     merged_data["GDP_x_IdealPoint"] = merged_data["GDP_Lag1"] * merged_data["IdealPointDistance"]
 
     # Remove rows with missing values
     merged_data = merged_data.dropna()
@@ -182,31 +182,31 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
         #features for model
         #grace: removed GDP_Growth
         #grace: removed Time_Since_FTA
-        feature_cols = ["log_Import_Lag1", "log_Import_Lag2", "log_Import_Lag3",
+        feature_cols = [
+                        "log_Import_Lag1", 
                         "IdealPointDistance", "log_GDP_Lag1", 'log_SG_GDP_Lag1',
-                        'Exchange Rate (per US$)', 'Adjusted_value',
-                        'ExRate_Change'] #added sgp gdp code
+                        'Exchange Rate (per US$)', 'Adjusted_value'] #added sgp gdp code
 
-        if add_interactions:
-            feature_cols.extend(["GDP_x_FTA", "GDP_x_IdealPoint"])
+        # if add_interactions:
+        #     feature_cols.extend(["GDP_x_FTA", "GDP_x_IdealPoint"])
 
         # Add HS code columns
-        feature_cols.extend(hs_cols)
+        #feature_cols.extend(hs_cols)
 
         X = merged_data[feature_cols]
         y = np.log(merged_data["Imports"].clip(lower=1))
     else:
         #grace: removed GDP_Growth
         #grace: removed Time_Since_FTA
-        feature_cols = ["Import_Lag1", "Import_Lag2", "Import_Lag3",
+        feature_cols = [
+                        "Import_Lag1",
                         "IdealPointDistance", "GDP_Lag1", 'SG_GDP_Lag1',
-                        'Exchange Rate (per US$)', 'Adjusted_value',
-                        'ExRate_Change'] #added sgp gdp code
+                        'Exchange Rate (per US$)', 'Adjusted_value'] #added sgp gdp code
 
-        if add_interactions:
-            feature_cols.extend(["GDP_x_FTA", "GDP_x_IdealPoint"])
+        # if add_interactions:
+        #     feature_cols.extend(["GDP_x_FTA", "GDP_x_IdealPoint"])
 
-        feature_cols.extend(hs_cols)
+        #feature_cols.extend(hs_cols)
         X = merged_data[feature_cols]
         y = merged_data["Imports"]
         
@@ -300,61 +300,33 @@ def evaluate_model(model, X, y, cv_split, model_name="Model"):
 
 #%%
 
-#fine tuning 
+# Fine tuning
 
-# grid search CV
-from sklearn.pipeline import Pipeline
-
-def tune_model_hyperparameters(X, y, cv_split):
-    # Define parameter grids for each model using pipeline names
-    param_grid_ridge = {
-        'ridge__alpha': [0.01, 0.1, 1.0, 10.0, 100.0]
-    }
-
-    param_grid_lasso = {
-        'lasso__alpha': [0.001, 0.01, 0.1, 1.0, 10.0]
-    }
-
+def tune_model_hyperparameters(X, y):
+    param_grid_ridge = {'ridge__alpha': [0.01, 0.1, 1.0, 10.0, 100.0]}
+    param_grid_lasso = {'lasso__alpha': [0.001, 0.01, 0.1, 1.0, 10.0]}
     param_grid_rf = {
         'rf__n_estimators': [50, 75, 100],
         'rf__max_depth': [5, 10, 15],
         'rf__min_samples_split': [4, 6, 8]
     }
-
     param_grid_gb = {
         'gb__n_estimators': [50, 75, 100],
         'gb__learning_rate': [0.05, 0.1, 0.15],
-        'gb__max_depth': [2, 3, 4, 5]
+        'gb__max_depth': [2, 3, 4, 5],
+        'gb__subsample': [0.8, 1.0]  # Add subsample for regularization
     }
 
-    # Define pipelines
-    ridge_pipe = Pipeline([
-        ("scaler", StandardScaler()),
-        ("ridge", Ridge())
-    ])
+    ridge_pipe = Pipeline([("scaler", StandardScaler()), ("ridge", Ridge())])
+    lasso_pipe = Pipeline([("scaler", StandardScaler()), ("lasso", Lasso())])
+    rf_pipe = Pipeline([("rf", RandomForestRegressor(random_state=42))])
+    gb_pipe = Pipeline([("gb", GradientBoostingRegressor(random_state=42))])
 
-    lasso_pipe = Pipeline([
-        ("scaler", StandardScaler()),
-        ("lasso", Lasso())
-    ])
+    grid_ridge = GridSearchCV(ridge_pipe, param_grid_ridge, cv=5, scoring='r2')
+    grid_lasso = GridSearchCV(lasso_pipe, param_grid_lasso, cv=5, scoring='r2')
+    grid_rf = GridSearchCV(rf_pipe, param_grid_rf, cv=5, scoring='r2')
+    grid_gb = GridSearchCV(gb_pipe, param_grid_gb, cv=5, scoring='r2')
 
-    rf_pipe = Pipeline([
-        ("scaler", StandardScaler()),  # Not always needed for RF, but keeps consistent
-        ("rf", RandomForestRegressor(random_state=42))
-    ])
-
-    gb_pipe = Pipeline([
-        ("scaler", StandardScaler()),
-        ("gb", GradientBoostingRegressor(random_state=42))
-    ])
-
-    # Set up GridSearchCV
-    grid_ridge = GridSearchCV(ridge_pipe, param_grid_ridge, cv=cv_split, scoring='r2')
-    grid_lasso = GridSearchCV(lasso_pipe, param_grid_lasso, cv=cv_split, scoring='r2')
-    grid_rf = GridSearchCV(rf_pipe, param_grid_rf, cv=cv_split, scoring='r2')
-    grid_gb = GridSearchCV(gb_pipe, param_grid_gb, cv=cv_split, scoring='r2')
-
-    # Fit and report
     print("Tuning Ridge Regression...")
     grid_ridge.fit(X, y)
     print(f"Best Ridge parameters: {grid_ridge.best_params_}, Best score: {grid_ridge.best_score_:.4f}")
@@ -379,24 +351,44 @@ def tune_model_hyperparameters(X, y, cv_split):
     }
 
 
-# Feature importance
+def evaluate_model_by_year(model, X, y, merged_data):
+    print("\n Year-by-Year Evaluation (True Time-based Split):")
+    unique_years = sorted(merged_data['year'].unique())
+
+    for test_year in unique_years[-5:]:
+        train_mask = merged_data['year'] < test_year
+        test_mask = merged_data['year'] == test_year
+
+        if train_mask.sum() == 0 or test_mask.sum() == 0:
+            continue
+
+        X_train, y_train = X[train_mask], y[train_mask]
+        X_test, y_test = X[test_mask], y[test_mask]
+
+        model.fit(X_train, y_train)
+        y_pred = model.predict(X_test)
+
+        print(f"Year {test_year} - R²: {r2_score(y_test, y_pred):.4f}")
+
+
 def analyze_feature_importance(X, y, model, model_name):
     model.fit(X, y)
 
-    if hasattr(model, 'feature_importances_'):  # tree-based models
+    if hasattr(model, 'named_steps') and 'gb' in model.named_steps:
+        importance = model.named_steps['gb'].feature_importances_
+    elif hasattr(model, 'feature_importances_'):
         importance = model.feature_importances_
-    elif hasattr(model, 'coef_'):  # linear models
+    elif hasattr(model, 'coef_'):
         importance = np.abs(model.coef_)
     else:
         print(f"Cannot extract feature importance from {model_name}")
-        return
+        return None
 
     feature_importance = pd.DataFrame({
         'Feature': X.columns,
         'Importance': importance
     }).sort_values('Importance', ascending=False)
 
-    # Plot top 15 features
     plt.figure(figsize=(10, 6))
     sns.barplot(x='Importance', y='Feature', data=feature_importance.head(15))
     plt.title(f'Top 15 Features Importance - {model_name}')
@@ -405,21 +397,11 @@ def analyze_feature_importance(X, y, model, model_name):
 
     return feature_importance
 
-# Polynomial features
-def add_polynomial_features(X, degree=2):
-    poly = PolynomialFeatures(degree=degree, include_bias=False)
-    X_poly = poly.fit_transform(X)
-    feature_names = poly.get_feature_names_out(X.columns)
-    X_poly_df = pd.DataFrame(X_poly, columns=feature_names)
 
-    return X_poly_df
-
-# Compare all models
 def compare_models(models_dict, results_dict):
     model_names = list(results_dict.keys())
     r2_values = [results_dict[name]['r2'] for name in model_names]
 
-    # Plot comparison
     plt.figure(figsize=(12, 6))
     bars = plt.bar(model_names, r2_values)
     plt.axhline(y=0.5, color='r', linestyle='--', label='Baseline R² (0.5)')
@@ -427,66 +409,51 @@ def compare_models(models_dict, results_dict):
     plt.title('Model Performance Comparison')
     plt.ylim(0, 1)
 
-    # Add value labels on top of bars
     for bar in bars:
         height = bar.get_height()
-        plt.text(bar.get_x() + bar.get_width()/2., height + 0.01,
-                 f'{height:.4f}', ha='center', va='bottom')
+        plt.text(bar.get_x() + bar.get_width()/2., height + 0.01, f'{height:.4f}', ha='center', va='bottom')
 
     plt.legend()
     plt.tight_layout()
     plt.show()
 
+
 def main():
-    # Prepare data with enhanced features
     X, y, merged_data = prepare_data_for_regression(log_transform=True, add_interactions=True)
     print(f"Number of datapoints: {len(X)}")
     print(f"Features included: {X.columns.tolist()}")
 
-    # Initialize TimeSeriesSplit
-    tscv = TimeSeriesSplit(n_splits=5)
-
-    # Evaluate base linear model (as benchmark)
-    linear_model = LinearRegression()
-    linear_results = evaluate_model(linear_model, X, y, tscv, "Linear Regression")
-
-    # Standardize features
     scaler = StandardScaler()
     X_scaled = pd.DataFrame(scaler.fit_transform(X), columns=X.columns, index=X.index)
 
-    # Hyperparameter tuning
-    best_models = tune_model_hyperparameters(X_scaled, y, tscv)
+    best_models = tune_model_hyperparameters(X_scaled, y)
 
-    # Evaluate tuned models on scaled data
     results = {
-        'Linear Regression': linear_results,
-        'Ridge Regression (tuned)': evaluate_model(best_models['ridge'], X_scaled, y, tscv, "Ridge (tuned)"),
-        'Lasso Regression (tuned)': evaluate_model(best_models['lasso'], X_scaled, y, tscv, "Lasso (tuned)"),
-        'Random Forest (tuned)': evaluate_model(best_models['rf'], X_scaled, y, tscv, "Random Forest (tuned)"),
-        'Gradient Boosting (tuned)': evaluate_model(best_models['gb'], X_scaled, y, tscv, "Gradient Boosting (tuned)")
+        'Linear Regression': evaluate_model(LinearRegression(), X_scaled, y, TimeSeriesSplit(n_splits=5), "Linear Regression"),
+        'Ridge Regression (tuned)': evaluate_model(best_models['ridge'], X_scaled, y, TimeSeriesSplit(n_splits=5), "Ridge (tuned)"),
+        'Lasso Regression (tuned)': evaluate_model(best_models['lasso'], X_scaled, y, TimeSeriesSplit(n_splits=5), "Lasso (tuned)"),
+        'Random Forest (tuned)': evaluate_model(best_models['rf'], X_scaled, y, TimeSeriesSplit(n_splits=5), "Random Forest (tuned)"),
+        'Gradient Boosting (tuned)': evaluate_model(best_models['gb'], X_scaled, y, TimeSeriesSplit(n_splits=5), "Gradient Boosting (tuned)")
     }
 
-    # Feature importance for best model
-    best_model_name = max(results.keys(), key=lambda k: results[k]['r2'])
-    best_model = best_models.get(best_model_name.split()[0].lower(), linear_model)
+    best_model = best_models['gb']
+    best_model_name = "Gradient Boosting (tuned)"
+
+    evaluate_model_by_year(best_model, X_scaled, y, merged_data)
 
     feature_importance = analyze_feature_importance(X_scaled, y, best_model, best_model_name)
 
-    # Save best model and scaler
     joblib.dump(best_model, "best_model.pkl")
     print("Model saved to 'best_model.pkl'.")
-
     joblib.dump(scaler, "scaler.pkl")
     print("Scaler saved to 'scaler.pkl'.")
 
-    # Compare all models
     print("\nModel Comparison Summary:")
     for name, result in results.items():
         print(f"{name}: R² = {result['r2']:.4f}, AIC = {result['aic']:.2f}, BIC = {result['bic']:.2f}")
 
     compare_models(best_models, results)
 
-    # Return best model and performance metrics
     return best_model, results[best_model_name], feature_importance
 
 
@@ -495,6 +462,8 @@ if __name__ == "__main__":
     print(f"\nBest Model achieved R² of {best_performance['r2']:.4f}")
     print("Top 10 most important features:")
     print(top_features.head(10))
+
+
 
 #%%
 
@@ -513,99 +482,103 @@ print(merged_data)
 #usa_rows = merged_data[usa_in_country1 | usa_in_country2]
 #print(usa_rows)
 
+def predict_2024_with_correction():
+    import joblib
+    from sklearn.linear_model import LinearRegression
+    import numpy as np
+    import pandas as pd
 
-X, _, _ = prepare_data_for_regression(log_transform=True, add_interactions=True)
-X.columns.to_series().to_csv("feature_columns.csv", index=False)
-
-def predict_import_value(year_or_range):
-    import numbers
-    import matplotlib.pyplot as plt
-
-    # Load model & scaler
+    # Load model and scaler
     model = joblib.load("best_model.pkl")
     scaler = joblib.load("scaler.pkl")
-    expected_cols = pd.read_csv("feature_columns.csv").squeeze().tolist()
 
-    # Get base data (latest available year for forecasting)
-    merged_data = get_merged_data()
-    latest_year = merged_data['year'].max()
-    base_input = merged_data[merged_data['year'] == latest_year].copy()
+    # Get merged data
+    _, _, merged_data = prepare_data_for_regression(log_transform=True, add_interactions=True)
 
-    if base_input.empty:
-        print(f"No data available for latest year ({latest_year})")
-        return None
+    # Use only one HS_Section per Partner
+    data_2023 = merged_data[merged_data['year'] == 2023].copy()
+    data_2023 = data_2023.drop_duplicates(subset=["Partner", "HS_Section"])
+    actual_2023_totals = (
+        data_2023.groupby("Partner")["Imports"]
+        .sum()
+        .reset_index()
+        .rename(columns={"Imports": "Actual_Import_2023"})
+    )
 
-    # Determine prediction years
-    if isinstance(year_or_range, numbers.Integral):
-        years = [year_or_range]
-    else:
-        years = sorted(list(year_or_range))  # ensure chronological order
+    # Create input for 2024
+    predict_data = data_2023.copy()
+    predict_data['year'] = 2024
 
-    if min(years) <= latest_year:
-        raise ValueError(f"Prediction year(s) must start after {latest_year} (latest data year)")
+    # Manually set lag values and features
+    predict_data["log_Import_Lag1"] = np.log(data_2023["Imports"].clip(lower=1))
+    predict_data["log_GDP_Lag1"] = data_2023["log_GDP_Lag1"]
+    predict_data["log_SG_GDP_Lag1"] = data_2023["log_SG_GDP_Lag1"]
+    predict_data["Exchange Rate (per US$)"] = data_2023["Exchange Rate (per US$)"]
+    predict_data["Adjusted_value"] = data_2023["Adjusted_value"]
+    predict_data["IdealPointDistance"] = data_2023["IdealPointDistance"]
 
-    results = []
-    current_input = base_input.copy()
+    feature_cols = [
+        "log_Import_Lag1", 
+        "IdealPointDistance", "log_GDP_Lag1", "log_SG_GDP_Lag1",
+        "Exchange Rate (per US$)", "Adjusted_value"
+    ]
 
-    for target_year in years:
-        input_df = current_input[expected_cols].copy()
-        input_scaled = scaler.transform(input_df)
+    X_2024 = predict_data[feature_cols]
+    X_2024_scaled = pd.DataFrame(scaler.transform(X_2024), columns=X_2024.columns)
 
-        # Predict log(imports)
-        prediction_log = model.predict(input_scaled)
+    # Make raw predictions in log space and convert to raw
+    log_preds = model.predict(X_2024_scaled)
+    raw_preds = np.exp(log_preds)
 
-        # Cap log predictions
-        prediction_log = np.clip(prediction_log, 18, 24)  # log bounds ≈ [65B, 2.6T]
+    results = predict_data[["Partner", "Product"]].copy()
+    results["Raw_Predicted_Import_2024"] = raw_preds
 
-        # Diagnostic plot
-        plt.figure(figsize=(8, 5))
-        plt.plot(prediction_log, marker='o')
-        plt.axhline(np.log(1e11), color='red', linestyle='--', label='Upper Bound ($100B)')
-        plt.axhline(np.log(1e6), color='green', linestyle='--', label='Lower Bound ($1M)')
-        plt.title(f'Log Predictions for {target_year}')
-        plt.ylabel('Log(Import Value)')
-        plt.legend()
-        plt.grid(True)
-        plt.tight_layout()
-        plt.show()
+    # Sum predicted imports per partner
+    pred_2024_totals = (
+        results.groupby("Partner")["Raw_Predicted_Import_2024"]
+        .sum()
+        .reset_index()
+    )
 
-        # Convert back to level values and clip
-        prediction_actual = np.exp(prediction_log)
-        prediction_actual = np.clip(prediction_actual, 1e6, 1e11)
+    # Merge with actual 2023
+    comparison_df = pd.merge(pred_2024_totals, actual_2023_totals, on="Partner", how="outer")
 
-        # Construct detailed product-level results
-        result = current_input[['Partner', 'HS Code', 'HS_Section']].copy()
-        result['Predicted Imports'] = prediction_actual
-        result['Target Year'] = target_year
+    # Step 1: Compute log values
+    comparison_df["log_Actual_Import_2023"] = np.log(comparison_df["Actual_Import_2023"].clip(lower=1))
+    comparison_df["log_Raw_Predicted_Import_2024"] = np.log(comparison_df["Raw_Predicted_Import_2024"].clip(lower=1))
 
-        # Aggregated country-level result
-        agg = result.groupby('Partner', as_index=False)['Predicted Imports'].sum()
-        agg['HS Code'] = 'All Products'
-        agg['HS_Section'] = 'All'
-        agg['Target Year'] = target_year
-        agg = agg[result.columns]
+    # Step 2: Fit residual correction model in log space
+    X_log = comparison_df[["log_Raw_Predicted_Import_2024"]]
+    y_log = comparison_df["log_Actual_Import_2023"] - comparison_df["log_Raw_Predicted_Import_2024"]
+    correction_model = LinearRegression().fit(X_log, y_log)
 
-        results.append(pd.concat([result, agg], ignore_index=True))
+    # Step 3: Apply correction in log space
+    log_adjustment = correction_model.predict(X_log)
+    comparison_df["log_Corrected_Predicted_Import_2024"] = comparison_df["log_Raw_Predicted_Import_2024"] + log_adjustment
+    comparison_df["Corrected_Predicted_Import_2024"] = np.exp(comparison_df["log_Corrected_Predicted_Import_2024"])
 
-        # Roll forward for next iteration using current prediction
-        next_input = current_input.copy()
-        next_input['Import_Lag3'] = current_input['Import_Lag2']
-        next_input['Import_Lag2'] = current_input['Import_Lag1']
-        next_input['Import_Lag1'] = prediction_actual
+    # % Change Calculations
+    comparison_df["% Change (Raw)"] = (
+        (comparison_df["Raw_Predicted_Import_2024"] - comparison_df["Actual_Import_2023"])
+        / comparison_df["Actual_Import_2023"]
+        * 100
+    )
+    comparison_df["% Change (Corrected)"] = (
+        (comparison_df["Corrected_Predicted_Import_2024"] - comparison_df["Actual_Import_2023"])
+        / comparison_df["Actual_Import_2023"]
+        * 100
+    )
 
-        next_input['log_Import_Lag3'] = current_input['log_Import_Lag2']
-        next_input['log_Import_Lag2'] = current_input['log_Import_Lag1']
-        next_input['log_Import_Lag1'] = np.log(next_input['Import_Lag1'].clip(lower=1))
+    print("\n2024 Raw vs Corrected Predictions (Top 10 by Corrected Volume):")
+    print(
+        comparison_df.sort_values("Corrected_Predicted_Import_2024", ascending=False)
+        .head(10)
+        .round(2)
+    )
 
-        current_input = next_input  # update for next year
-
-    final_df = pd.concat(results).reset_index(drop=True)
-    return final_df
-
-# predict_import_value(2024)
-# predict_import_value(range(2024, 2028))
-
-
+    return results, comparison_df
 
 
+
+predictions_2024 = predict_2024_with_correction()
 
