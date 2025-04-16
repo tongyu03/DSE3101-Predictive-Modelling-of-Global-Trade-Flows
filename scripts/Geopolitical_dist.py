@@ -10,17 +10,17 @@ iso3_to_country = {
         'MYS': 'Malaysia',
         'SAU': 'Saudi Arabia',
         'THA': 'Thailand',
-        'USA': 'USA',
+        'USA': 'United States',
         'IDN': 'Indonesia'
     }
 
 def process_unga_data():
-    unga = pd.read_csv("data/cleaned data/unga_voting_3.csv")
+    unga = pd.read_csv("data/cleaned data/unga_voting_4.csv")
     unga['CountryPair'] = unga['CountryPair'].apply(lambda x: ast.literal_eval(x))
     unga[['Country1', 'Country2']] = pd.DataFrame(unga['CountryPair'].tolist(), index=unga.index)
-    unga['Country1'] = unga['Country1'].replace("United States of America", "USA")
-    unga['Country2'] = unga['Country2'].replace("United States of America", "USA")
-    unga = unga[(unga['year'] >= 1989) & (unga['year'] <= 2021)]
+    unga['Country1'] = unga['Country1'].replace("United States of America", "United States")
+    unga['Country2'] = unga['Country2'].replace("United States of America", "United States")
+    unga = unga[(unga['year'] >= 1989) & (unga['year'] <= 2023)]
     unga_sg = unga[(unga['Country1'] == 'Singapore') | (unga['Country2'] == 'Singapore')]
     unga_sg['Partner'] = unga_sg.apply(lambda row: row['Country1'] if row['Country1'] != 'Singapore' else row['Country2'], axis=1)
     unga_sg = unga_sg[['agree', 'year', 'IdealPointDistance', 'Country1', 'Country2', 'Partner']]
@@ -54,8 +54,7 @@ def process_exrate_data():
     exrate_long['Country Name'] = exrate_long['Country Name'].astype(str)
     exrate_long['Country Name'] = exrate_long['Country Name'].replace({
         "Hong Kong SAR, China": "Hong Kong",
-        "Korea, Rep.": "South Korea",
-        "United States": "USA"
+        "Korea, Rep.": "South Korea"
     })
     return exrate_long
 
@@ -90,13 +89,14 @@ fta_data_geo.columns = fta_data_geo.columns.str.strip()
 trade_data_geo = trade_data_geo.rename(columns={"Year": "year"})
 trade_data_geo["Country"] = trade_data_geo["Country"].replace({
     "China, Hong Kong SAR": "Hong Kong",
-    "Rep. of Korea": "South Korea"
+    "Rep. of Korea": "South Korea",
+    "USA": "United States"
 })
 
 trade_data_geo = trade_data_geo.rename(columns={"Country": "Partner"})
 gdp_data_geo = gdp_data_geo.rename(columns={"Year": "year"})
 gdp_data_geo['Country Name'] = gdp_data_geo['Country Name'].replace({
-    "United States of America": "USA"
+    "United States of America": "United States"
 })
 exrate_data_geo = exrate_data_geo.rename(columns={"Year": "year"})
 fta_data_geo = fta_data_geo.rename(columns={"Year": "year"})
@@ -151,11 +151,12 @@ def get_geopolitical_data(country, year):
     
     # Calculate the geopolitical score
     country_data['Geopolitical_Score'] = (
-        100 * country_data['IdealPointDistance'] +
-        np.log10(country_data['GDP_Lag1']) +
-        country_data['Exchange Rate (per US$)_scaled'] -
-        5 * country_data['Adjusted_value'] -
-        5 * country_data['FTA_binary']
+        500 +
+        4 * country_data['IdealPointDistance'] +
+        -28 * np.log10(country_data['GDP_Lag1']) +
+        -0.7 * country_data['Exchange Rate (per US$)_scaled'] +
+        -16 * country_data['Adjusted_value'] +
+        -16 * country_data['FTA_binary']
     )
     return country_data[['Country', 'year', 'Geopolitical_Score']]
     
@@ -165,13 +166,16 @@ def get_geopolitical_data_for_year(year):
     year_data = Geopol_df[Geopol_df['year'] == year].copy()
     # Calculate the geopolitical score for all countries in that year
     year_data['Geopolitical_Score'] = (
-        100 * year_data['IdealPointDistance'] +
-        np.log10(year_data['GDP_Lag1']) +
-        year_data['Exchange Rate (per US$)_scaled'] -
-        5 * year_data['Adjusted_value'] -
-        5 * year_data['FTA_binary']
+        500 +
+        4 * year_data['IdealPointDistance'] +
+        -28 * np.log10(year_data['GDP_Lag1']) +
+        -0.7 * year_data['Exchange Rate (per US$)_scaled'] +
+        -16  * year_data['Adjusted_value'] +
+        -16 * year_data['FTA_binary']
     )
     # Return the relevant columns for all countries in the specified year
     return year_data[['Country', 'year', 'Geopolitical_Score']]
 
-print(get_geopolitical_data_for_year(2020))
+#print(get_geopolitical_data_for_year(2023))
+
+

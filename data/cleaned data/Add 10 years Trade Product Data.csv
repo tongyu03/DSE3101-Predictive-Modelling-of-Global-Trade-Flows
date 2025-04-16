@@ -1,0 +1,661 @@
+Year,Product,HS Code,Country,Country ISO,Imports,Exports,Trade Volume
+2013,Chemical products n.e.c.,38,Australia,AUS,5235503.261,143685392.7,148920895.961
+2013,Chemical products n.e.c.,38,Germany,DEU,173903682.2,34577976.93,208481659.13
+2013,Chemical products n.e.c.,38,India,IND,43973356.7,188236807.9,232210164.60000002
+2013,Chemical products n.e.c.,38,Philippines,PHL,1958101.229,68347340.31,70305441.539
+2013,Chemical products n.e.c.,38,United Arab Emirates,ARE,628440.969,36920376.54,37548817.508999996
+2013,Chemical products n.e.c.,38,Viet Nam,VNM,11314660.16,167370304.6,178684964.76
+2013,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Australia,AUS,99282680.65,930021900.9,1029304581.55
+2013,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Germany,DEU,2505138670.0,2503900439.0,5009039109.0
+2013,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,India,IND,219235396.0,2281123337.0,2500358733.0
+2013,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Philippines,PHL,4153905349.0,2046662069.0,6200567418.0
+2013,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,United Arab Emirates,ARE,73578243.03,706649125.1,780227368.13
+2013,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Viet Nam,VNM,867942015.4,2898280841.0,3766222856.4
+2013,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Australia,AUS,20253872.74,320718896.3,340972769.04
+2013,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Germany,DEU,100101794.6,25975676.26,126077470.86
+2013,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,India,IND,72409463.23,39307500.06,111716963.29
+2013,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Philippines,PHL,13948231.88,204187015.0,218135246.88
+2013,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,United Arab Emirates,ARE,11182860.98,65180707.2,76363568.18
+2013,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Viet Nam,VNM,7748419.231,191058277.1,198806696.331
+2013,Metal; miscellaneous products of base metal,83,Australia,AUS,3331128.48,14865731.33,18196859.81
+2013,Metal; miscellaneous products of base metal,83,Germany,DEU,42838028.76,15178850.65,58016879.41
+2013,Metal; miscellaneous products of base metal,83,India,IND,8020751.563,10632459.97,18653211.533
+2013,Metal; miscellaneous products of base metal,83,Philippines,PHL,1548383.62,25681666.58,27230050.2
+2013,Metal; miscellaneous products of base metal,83,United Arab Emirates,ARE,146334.225,4158259.245,4304593.47
+2013,Metal; miscellaneous products of base metal,83,Viet Nam,VNM,10932029.14,18819982.49,29752011.63
+2013,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Australia,AUS,,8140580012.0,
+2013,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Germany,DEU,20130223.35,46816.747,20177040.097000003
+2013,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,India,IND,5948274394.0,512075547.7,6460349941.7
+2013,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Philippines,PHL,194725385.5,1051371371.0,1246096756.5
+2013,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,United Arab Emirates,ARE,15329377271.0,358228042.5,15687605313.5
+2013,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Viet Nam,VNM,289872716.0,2370802510.0,2660675226.0
+2013,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Australia,AUS,1322750063.0,125131511.4,1447881574.4
+2013,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Germany,DEU,90659435.11,80856345.81,171515780.92000002
+2013,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,India,IND,836118533.4,987361195.6,1823479729.0
+2013,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Philippines,PHL,2198760.617,85612943.98,87811704.597
+2013,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,United Arab Emirates,ARE,2419898831.0,1790637391.0,4210536222.0
+2013,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Viet Nam,VNM,2291972.556,21349593.15,23641565.706
+2013,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Australia,AUS,353960700.5,2196540503.0,2550501203.5
+2013,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Germany,DEU,2773533693.0,1149227821.0,3922761514.0
+2013,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,India,IND,277847156.4,2279991631.0,2557838787.4
+2013,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Philippines,PHL,262299854.4,1147326080.0,1409625934.4
+2013,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,United Arab Emirates,ARE,63708578.1,1243511033.0,1307219611.1
+2013,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Viet Nam,VNM,300088864.5,1241876059.0,1541964923.5
+2013,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Australia,AUS,104913921.9,523203732.9,628117654.8
+2013,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Germany,DEU,834885888.2,696453977.9,1531339866.1
+2013,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,India,IND,118466071.4,596038291.4,714504362.8
+2013,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Philippines,PHL,42501899.02,164270243.5,206772142.52
+2013,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,United Arab Emirates,ARE,11317834.41,123914478.9,135232313.31
+2013,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Viet Nam,VNM,56652028.03,253291753.1,309943781.13
+2013,Organic chemicals,29,Australia,AUS,3938022.609,235766723.9,239704746.509
+2013,Organic chemicals,29,Germany,DEU,256516779.2,15103646.75,271620425.95
+2013,Organic chemicals,29,India,IND,413133633.7,1696828428.0,2109962061.7
+2013,Organic chemicals,29,Philippines,PHL,1532995.075,108270299.2,109803294.275
+2013,Organic chemicals,29,United Arab Emirates,ARE,40532166.08,55445679.7,95977845.78
+2013,Organic chemicals,29,Viet Nam,VNM,3034653.651,206490620.8,209525274.451
+2013,Plastics and articles thereof,39,Australia,AUS,36097774.99,261181224.9,297278999.89
+2013,Plastics and articles thereof,39,Germany,DEU,326152403.6,44728985.22,370881388.82000005
+2013,Plastics and articles thereof,39,India,IND,57730362.57,798813215.8,856543578.37
+2013,Plastics and articles thereof,39,Philippines,PHL,9515948.964,453590572.8,463106521.764
+2013,Plastics and articles thereof,39,United Arab Emirates,ARE,223288818.4,85323772.03,308612590.43
+2013,Plastics and articles thereof,39,Viet Nam,VNM,26418809.43,704339745.0,730758554.43
+2014,Chemical products n.e.c.,38,Australia,AUS,4401852.871,143855257.4,148257110.271
+2014,Chemical products n.e.c.,38,Germany,DEU,220856148.8,41133304.27,261989453.07000002
+2014,Chemical products n.e.c.,38,India,IND,46797068.49,240609051.9,287406120.39
+2014,Chemical products n.e.c.,38,Philippines,PHL,1432219.414,77902734.85,79334954.264
+2014,Chemical products n.e.c.,38,United Arab Emirates,ARE,442127.322,58757812.37,59199939.691999994
+2014,Chemical products n.e.c.,38,Viet Nam,VNM,11125471.59,217588297.7,228713769.29
+2014,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Australia,AUS,82857408.84,912319046.2,995176455.0400001
+2014,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Germany,DEU,2589048855.0,2563069407.0,5152118262.0
+2014,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,India,IND,222256047.3,2177267066.0,2399523113.3
+2014,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Philippines,PHL,3771442933.0,2159718615.0,5931161548.0
+2014,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,United Arab Emirates,ARE,32102419.28,911424704.6,943527123.88
+2014,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Viet Nam,VNM,1042841292.0,3625327776.0,4668169068.0
+2014,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Australia,AUS,34627289.39,142102160.4,176729449.79000002
+2014,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Germany,DEU,71002364.7,20760464.13,91762828.83
+2014,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,India,IND,47108937.61,34880183.91,81989121.52
+2014,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Philippines,PHL,8004262.727,188504044.5,196508307.227
+2014,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,United Arab Emirates,ARE,9857890.84,78259600.51,88117491.35000001
+2014,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Viet Nam,VNM,7017479.487,199524740.9,206542220.387
+2014,Metal; miscellaneous products of base metal,83,Australia,AUS,2617330.793,91190157.91,93807488.703
+2014,Metal; miscellaneous products of base metal,83,Germany,DEU,36745001.76,14486314.93,51231316.69
+2014,Metal; miscellaneous products of base metal,83,India,IND,10397503.72,14409786.69,24807290.41
+2014,Metal; miscellaneous products of base metal,83,Philippines,PHL,2321581.062,23729055.71,26050636.772
+2014,Metal; miscellaneous products of base metal,83,United Arab Emirates,ARE,157283.376,7603504.373,7760787.749
+2014,Metal; miscellaneous products of base metal,83,Viet Nam,VNM,12632677.95,17117165.8,29749843.75
+2014,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Australia,AUS,1784340082.0,7576185813.0,9360525895.0
+2014,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Germany,DEU,19353475.86,1550409.896,20903885.756
+2014,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,India,IND,5257699682.0,662448780.9,5920148462.9
+2014,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Philippines,PHL,402139700.5,857878795.1,1260018495.6
+2014,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,United Arab Emirates,ARE,14096512491.0,243236579.0,14339749070.0
+2014,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Viet Nam,VNM,363456126.4,2929546571.0,3293002697.4
+2014,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Australia,AUS,3229762452.0,298195132.2,3527957584.2
+2014,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Germany,DEU,149520503.8,113769792.8,263290296.60000002
+2014,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,India,IND,787068613.5,828819421.1,1615888034.6
+2014,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Philippines,PHL,4923012.783,71627295.32,76550308.10299999
+2014,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,United Arab Emirates,ARE,1070766891.0,1647785242.0,2718552133.0
+2014,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Viet Nam,VNM,3367254.752,4930223.887,8297478.639
+2014,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Australia,AUS,307438135.2,2390590936.0,2698029071.2
+2014,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Germany,DEU,2737626255.0,816104218.6,3553730473.6
+2014,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,India,IND,333452160.2,2297310784.0,2630762944.2
+2014,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Philippines,PHL,226669795.4,1216472042.0,1443141837.4
+2014,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,United Arab Emirates,ARE,112291667.4,1174316082.0,1286607749.4
+2014,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Viet Nam,VNM,373583202.2,1389853321.0,1763436523.2
+2014,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Australia,AUS,114300713.6,544030685.6,658331399.2
+2014,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Germany,DEU,886541793.1,690990997.8,1577532790.9
+2014,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,India,IND,141397739.1,605935492.0,747333231.1
+2014,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Philippines,PHL,40176745.95,161285176.5,201461922.45
+2014,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,United Arab Emirates,ARE,6728664.129,103335975.5,110064639.629
+2014,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Viet Nam,VNM,70450403.25,318950265.3,389400668.55
+2014,Organic chemicals,29,Australia,AUS,4750984.881,252835928.1,257586912.981
+2014,Organic chemicals,29,Germany,DEU,267547238.5,16697494.74,284244733.24
+2014,Organic chemicals,29,India,IND,321652144.1,1495175417.0,1816827561.1
+2014,Organic chemicals,29,Philippines,PHL,1484889.381,149911418.9,151396308.28100002
+2014,Organic chemicals,29,United Arab Emirates,ARE,33306470.08,54144013.7,87450483.78
+2014,Organic chemicals,29,Viet Nam,VNM,5879256.666,204981591.6,210860848.266
+2014,Plastics and articles thereof,39,Australia,AUS,33859139.89,268464632.6,302323772.49
+2014,Plastics and articles thereof,39,Germany,DEU,328892057.4,38957059.35,367849116.75
+2014,Plastics and articles thereof,39,India,IND,53200872.1,1087870469.0,1141071341.1
+2014,Plastics and articles thereof,39,Philippines,PHL,11557221.44,513362150.5,524919371.94
+2014,Plastics and articles thereof,39,United Arab Emirates,ARE,284993566.5,118945026.0,403938592.5
+2014,Plastics and articles thereof,39,Viet Nam,VNM,27090884.05,812454134.7,839545018.75
+2015,Chemical products n.e.c.,38,Australia,AUS,4126431.268,107102950.9,111229382.16800001
+2015,Chemical products n.e.c.,38,Germany,DEU,176738898.6,51580874.24,228319772.84
+2015,Chemical products n.e.c.,38,India,IND,59221173.25,205351532.1,264572705.35
+2015,Chemical products n.e.c.,38,Philippines,PHL,1430791.155,68161209.85,69592001.005
+2015,Chemical products n.e.c.,38,United Arab Emirates,ARE,326336.2,78006619.09,78332955.29
+2015,Chemical products n.e.c.,38,Viet Nam,VNM,10480972.08,184935670.7,195416642.78
+2015,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Australia,AUS,68369364.48,968710628.8,1037079993.28
+2015,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Germany,DEU,2133817488.0,2868276680.0,5002094168.0
+2015,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,India,IND,201813530.9,2250677781.0,2452491311.9
+2015,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Philippines,PHL,3764244729.0,2132272146.0,5896516875.0
+2015,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,United Arab Emirates,ARE,31988951.84,830505815.9,862494767.74
+2015,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Viet Nam,VNM,1098751384.0,3786147047.0,4884898431.0
+2015,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Australia,AUS,24208198.01,127904293.2,152112491.21
+2015,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Germany,DEU,69933923.55,20739853.14,90673776.69
+2015,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,India,IND,57976272.75,41765595.72,99741868.47
+2015,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Philippines,PHL,9711900.425,162354011.3,172065911.72500002
+2015,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,United Arab Emirates,ARE,7960693.132,82174382.53,90135075.662
+2015,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Viet Nam,VNM,4950495.813,221112316.2,226062812.01299998
+2015,Metal; miscellaneous products of base metal,83,Australia,AUS,2821814.197,14237082.38,17058896.577
+2015,Metal; miscellaneous products of base metal,83,Germany,DEU,26673110.73,16670982.45,43344093.18
+2015,Metal; miscellaneous products of base metal,83,India,IND,19682586.49,15071098.82,34753685.31
+2015,Metal; miscellaneous products of base metal,83,Philippines,PHL,1283398.727,32485207.79,33768606.517
+2015,Metal; miscellaneous products of base metal,83,United Arab Emirates,ARE,127181.986,7810878.546,7938060.532
+2015,Metal; miscellaneous products of base metal,83,Viet Nam,VNM,9969352.871,15919600.56,25888953.431
+2015,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Australia,AUS,918823846.3,3825100925.0,4743924771.3
+2015,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Germany,DEU,42580704.38,407859.839,42988564.219000004
+2015,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,India,IND,2933860930.0,784218117.5,3718079047.5
+2015,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Philippines,PHL,215617825.3,809809527.8,1025427353.0999999
+2015,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,United Arab Emirates,ARE,7086492732.0,204737503.3,7291230235.3
+2015,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Viet Nam,VNM,745316580.8,2391660073.0,3136976653.8
+2015,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Australia,AUS,1992409913.0,250977615.6,2243387528.6
+2015,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Germany,DEU,130872632.9,91907652.41,222780285.31
+2015,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,India,IND,538640533.4,710493364.0,1249133897.4
+2015,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Philippines,PHL,41377851.96,67794400.55,109172252.50999999
+2015,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,United Arab Emirates,ARE,844223656.1,1613628049.0,2457851705.1
+2015,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Viet Nam,VNM,7963709.562,8752662.471,16716372.033
+2015,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Australia,AUS,240238575.5,2379748590.0,2619987165.5
+2015,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Germany,DEU,2283970206.0,908179954.3,3192150160.3
+2015,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,India,IND,286016998.0,2269131952.0,2555148950.0
+2015,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Philippines,PHL,217592314.6,1151683454.0,1369275768.6
+2015,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,United Arab Emirates,ARE,75854422.34,977513907.9,1053368330.24
+2015,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Viet Nam,VNM,408105823.6,1442987855.0,1851093678.6
+2015,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Australia,AUS,98194834.06,494377116.0,592571950.06
+2015,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Germany,DEU,712332637.3,751276071.4,1463608708.6999998
+2015,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,India,IND,139634151.3,603217174.7,742851326.0
+2015,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Philippines,PHL,44814840.96,175944502.6,220759343.56
+2015,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,United Arab Emirates,ARE,4793955.853,135379023.0,140172978.853
+2015,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Viet Nam,VNM,54183457.14,239052735.1,293236192.24
+2015,Organic chemicals,29,Australia,AUS,3939362.421,208994835.7,212934198.121
+2015,Organic chemicals,29,Germany,DEU,229990669.8,7839749.438,237830419.238
+2015,Organic chemicals,29,India,IND,269971454.9,1179394022.0,1449365476.9
+2015,Organic chemicals,29,Philippines,PHL,7862195.245,96402872.56,104265067.805
+2015,Organic chemicals,29,United Arab Emirates,ARE,47431255.58,33381792.02,80813047.6
+2015,Organic chemicals,29,Viet Nam,VNM,981937.701,244681499.3,245663437.00100002
+2015,Plastics and articles thereof,39,Australia,AUS,26484925.55,230318590.6,256803516.15
+2015,Plastics and articles thereof,39,Germany,DEU,224774159.1,39662319.72,264436478.82
+2015,Plastics and articles thereof,39,India,IND,56836992.41,913529677.6,970366670.01
+2015,Plastics and articles thereof,39,Philippines,PHL,8575652.521,315449115.5,324024768.021
+2015,Plastics and articles thereof,39,United Arab Emirates,ARE,318460935.1,102887483.4,421348418.5
+2015,Plastics and articles thereof,39,Viet Nam,VNM,28953204.74,732114442.8,761067647.54
+2016,Chemical products n.e.c.,38,Australia,AUS,3965413.122,104535606.4,108501019.522
+2016,Chemical products n.e.c.,38,Germany,DEU,139863438.9,36987631.03,176851069.93
+2016,Chemical products n.e.c.,38,India,IND,41588832.68,229726689.1,271315521.78
+2016,Chemical products n.e.c.,38,Philippines,PHL,2476024.275,72421091.78,74897116.055
+2016,Chemical products n.e.c.,38,United Arab Emirates,ARE,286225.453,93333621.95,93619847.403
+2016,Chemical products n.e.c.,38,Viet Nam,VNM,8819967.704,205462414.8,214282382.504
+2016,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Australia,AUS,81600033.33,880653229.2,962253262.5300001
+2016,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Germany,DEU,1937033117.0,3009215836.0,4946248953.0
+2016,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,India,IND,209544856.2,2376016710.0,2585561566.2
+2016,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Philippines,PHL,3988577150.0,2241036058.0,6229613208.0
+2016,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,United Arab Emirates,ARE,22813951.94,515671420.3,538485372.24
+2016,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Viet Nam,VNM,1055746748.0,3422366626.0,4478113374.0
+2016,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Australia,AUS,25899619.14,136460494.3,162360113.44
+2016,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Germany,DEU,64211189.1,13422194.41,77633383.51
+2016,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,India,IND,48638881.6,40866121.83,89505003.43
+2016,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Philippines,PHL,8316671.441,181959151.4,190275822.84100002
+2016,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,United Arab Emirates,ARE,8986609.8,66580754.83,75567364.63
+2016,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Viet Nam,VNM,8440837.119,214479972.0,222920809.119
+2016,Metal; miscellaneous products of base metal,83,Australia,AUS,2790756.249,14859158.37,17649914.619
+2016,Metal; miscellaneous products of base metal,83,Germany,DEU,21942439.14,24044630.0,45987069.14
+2016,Metal; miscellaneous products of base metal,83,India,IND,18787113.54,19439530.14,38226643.68
+2016,Metal; miscellaneous products of base metal,83,Philippines,PHL,1171729.137,34721481.75,35893210.887
+2016,Metal; miscellaneous products of base metal,83,United Arab Emirates,ARE,132000.72,3762925.25,3894925.97
+2016,Metal; miscellaneous products of base metal,83,Viet Nam,VNM,7002342.383,17592183.69,24594526.073000003
+2016,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Australia,AUS,718561564.2,2838855580.0,3557417144.2
+2016,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Germany,DEU,41426395.82,461019.667,41887415.487
+2016,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,India,IND,2847857826.0,636984109.9,3484841935.9
+2016,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Philippines,PHL,99482061.74,715925779.0,815407840.74
+2016,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,United Arab Emirates,ARE,5550703810.0,215024278.4,5765728088.4
+2016,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Viet Nam,VNM,161431201.7,2322820222.0,2484251423.7
+2016,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Australia,AUS,1011956294.0,201633604.0,1213589898.0
+2016,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Germany,DEU,163267136.1,51758308.11,215025444.20999998
+2016,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,India,IND,701344972.1,578889345.3,1280234317.4
+2016,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Philippines,PHL,90261006.52,78819327.58,169080334.1
+2016,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,United Arab Emirates,ARE,754474138.6,1274395904.0,2028870042.6
+2016,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Viet Nam,VNM,12589609.75,15022603.07,27612212.82
+2016,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Australia,AUS,222642094.1,1540302715.0,1762944809.1
+2016,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Germany,DEU,2117965019.0,974429112.7,3092394131.7
+2016,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,India,IND,331506665.7,2074332010.0,2405838675.7
+2016,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Philippines,PHL,203533992.8,1180154505.0,1383688497.8
+2016,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,United Arab Emirates,ARE,69049113.13,800784475.4,869833588.53
+2016,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Viet Nam,VNM,401138383.8,1222959018.0,1624097401.8
+2016,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Australia,AUS,87335166.92,559982920.8,647318087.7199999
+2016,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Germany,DEU,734884403.5,723687473.6,1458571877.1
+2016,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,India,IND,152860508.5,657928514.9,810789023.4
+2016,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Philippines,PHL,45786535.05,165317231.0,211103766.05
+2016,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,United Arab Emirates,ARE,4265942.863,74601904.46,78867847.323
+2016,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Viet Nam,VNM,44571853.24,250419966.0,294991819.24
+2016,Organic chemicals,29,Australia,AUS,5335253.355,142396567.1,147731820.45499998
+2016,Organic chemicals,29,Germany,DEU,255957826.1,64146014.08,320103840.18
+2016,Organic chemicals,29,India,IND,271443106.4,1009639325.0,1281082431.4
+2016,Organic chemicals,29,Philippines,PHL,20392266.3,76534554.92,96926821.22
+2016,Organic chemicals,29,United Arab Emirates,ARE,37088705.69,22562503.64,59651209.33
+2016,Organic chemicals,29,Viet Nam,VNM,1712247.817,175270364.3,176982612.117
+2016,Plastics and articles thereof,39,Australia,AUS,20323139.16,208388654.7,228711793.85999998
+2016,Plastics and articles thereof,39,Germany,DEU,217403778.8,48882399.83,266286178.63
+2016,Plastics and articles thereof,39,India,IND,49289773.39,808923955.1,858213728.49
+2016,Plastics and articles thereof,39,Philippines,PHL,8056332.385,322989976.7,331046309.085
+2016,Plastics and articles thereof,39,United Arab Emirates,ARE,335494179.1,91790197.77,427284376.87
+2016,Plastics and articles thereof,39,Viet Nam,VNM,25951271.06,851417212.1,877368483.16
+2017,Chemical products n.e.c.,38,Australia,AUS,3716610.798,117953705.3,121670316.09799999
+2017,Chemical products n.e.c.,38,Germany,DEU,162721813.3,74501466.72,237223280.02
+2017,Chemical products n.e.c.,38,India,IND,38019005.33,243695784.4,281714789.73
+2017,Chemical products n.e.c.,38,Philippines,PHL,1330369.946,71015123.84,72345493.786
+2017,Chemical products n.e.c.,38,United Arab Emirates,ARE,417799.928,83100842.16,83518642.088
+2017,Chemical products n.e.c.,38,Viet Nam,VNM,7376650.137,203444582.1,210821232.237
+2017,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Australia,AUS,75295360.03,868967317.5,944262677.53
+2017,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Germany,DEU,1794544634.0,3127624698.0,4922169332.0
+2017,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,India,IND,223749203.4,2565531040.0,2789280243.4
+2017,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Philippines,PHL,4929142958.0,2589391534.0,7518534492.0
+2017,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,United Arab Emirates,ARE,19669433.48,421221430.0,440890863.48
+2017,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Viet Nam,VNM,1137823317.0,3180526359.0,4318349676.0
+2017,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Australia,AUS,26069075.04,158177044.6,184246119.64
+2017,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Germany,DEU,145665044.9,12118760.17,157783805.07
+2017,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,India,IND,57054056.54,35126208.22,92180264.75999999
+2017,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Philippines,PHL,7251966.62,223892353.6,231144320.22
+2017,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,United Arab Emirates,ARE,8202771.07,76013605.97,84216377.03999999
+2017,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Viet Nam,VNM,6970909.485,261704073.7,268674983.185
+2017,Metal; miscellaneous products of base metal,83,Australia,AUS,2895079.01,18926312.71,21821391.72
+2017,Metal; miscellaneous products of base metal,83,Germany,DEU,23586251.31,18485701.07,42071952.379999995
+2017,Metal; miscellaneous products of base metal,83,India,IND,7969948.144,12423794.6,20393742.744
+2017,Metal; miscellaneous products of base metal,83,Philippines,PHL,1393076.445,24999013.63,26392090.075
+2017,Metal; miscellaneous products of base metal,83,United Arab Emirates,ARE,124155.421,4604533.442,4728688.863
+2017,Metal; miscellaneous products of base metal,83,Viet Nam,VNM,5514608.586,17551199.49,23065808.075999998
+2017,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Australia,AUS,1079575626.0,3558352108.0,4637927734.0
+2017,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Germany,DEU,36884638.66,1924887.862,38809526.522
+2017,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,India,IND,4152522823.0,524219890.2,4676742713.2
+2017,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Philippines,PHL,144108255.1,901748719.7,1045856974.8000001
+2017,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,United Arab Emirates,ARE,7685661096.0,201782039.8,7887443135.8
+2017,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Viet Nam,VNM,415258724.4,3104863769.0,3520122493.4
+2017,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Australia,AUS,1078906853.0,199445340.0,1278352193.0
+2017,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Germany,DEU,472415122.9,298262072.3,770677195.2
+2017,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,India,IND,703459562.0,804396960.9,1507856522.9
+2017,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Philippines,PHL,1697603.785,71062585.83,72760189.615
+2017,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,United Arab Emirates,ARE,556751637.1,936912170.6,1493663807.7
+2017,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Viet Nam,VNM,13734603.99,18391426.89,32126030.880000003
+2017,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Australia,AUS,155897649.3,1505242217.0,1661139866.3
+2017,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Germany,DEU,2216390449.0,933160128.9,3149550577.9
+2017,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,India,IND,302512204.9,2002475147.0,2304987351.9
+2017,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Philippines,PHL,304335985.9,1236615174.0,1540951159.9
+2017,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,United Arab Emirates,ARE,44055913.09,695407323.6,739463236.69
+2017,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Viet Nam,VNM,400865850.7,1325224630.0,1726090480.7
+2017,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Australia,AUS,82385937.94,545231347.9,627617285.8399999
+2017,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Germany,DEU,855927009.6,831053966.1,1686980975.7
+2017,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,India,IND,133279926.6,682764832.9,816044759.5
+2017,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Philippines,PHL,91501160.94,186672105.3,278173266.24
+2017,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,United Arab Emirates,ARE,5492213.407,64740618.57,70232831.977
+2017,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Viet Nam,VNM,34770924.27,283781821.6,318552745.87
+2017,Organic chemicals,29,Australia,AUS,2392157.845,151672148.2,154064306.045
+2017,Organic chemicals,29,Germany,DEU,263725408.2,73588003.5,337313411.7
+2017,Organic chemicals,29,India,IND,257968114.6,1331949428.0,1589917542.6
+2017,Organic chemicals,29,Philippines,PHL,2259525.362,111649212.3,113908737.662
+2017,Organic chemicals,29,United Arab Emirates,ARE,29251283.92,48222296.44,77473580.36
+2017,Organic chemicals,29,Viet Nam,VNM,3097450.579,269224280.4,272321730.979
+2017,Plastics and articles thereof,39,Australia,AUS,15567479.29,251280124.0,266847603.29
+2017,Plastics and articles thereof,39,Germany,DEU,218633166.0,34288010.62,252921176.62
+2017,Plastics and articles thereof,39,India,IND,52482809.8,986012404.4,1038495214.1999999
+2017,Plastics and articles thereof,39,Philippines,PHL,7036205.031,358855244.4,365891449.431
+2017,Plastics and articles thereof,39,United Arab Emirates,ARE,269962354.2,109455903.2,379418257.4
+2017,Plastics and articles thereof,39,Viet Nam,VNM,26572232.36,922541558.1,949113790.46
+2018,Chemical products n.e.c.,38,Australia,AUS,8233793.149,149390205.0,157623998.149
+2018,Chemical products n.e.c.,38,Germany,DEU,174493808.0,54415042.53,228908850.53
+2018,Chemical products n.e.c.,38,India,IND,44040002.32,243424005.5,287464007.82
+2018,Chemical products n.e.c.,38,Philippines,PHL,1912843.184,89963622.66,91876465.844
+2018,Chemical products n.e.c.,38,United Arab Emirates,ARE,806949.562,76290907.74,77097857.302
+2018,Chemical products n.e.c.,38,Viet Nam,VNM,8667079.301,212068044.0,220735123.301
+2018,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Australia,AUS,135832444.0,845403578.5,981236022.5
+2018,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Germany,DEU,1988349546.0,3208833362.0,5197182908.0
+2018,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,India,IND,298963635.5,3252775439.0,3551739074.5
+2018,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Philippines,PHL,6506211513.0,2952689903.0,9458901416.0
+2018,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,United Arab Emirates,ARE,22849427.86,437580670.7,460430098.56
+2018,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Viet Nam,VNM,1169466988.0,3759923999.0,4929390987.0
+2018,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Australia,AUS,31515757.55,180271916.2,211787673.75
+2018,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Germany,DEU,188612909.4,7854354.297,196467263.697
+2018,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,India,IND,62298102.7,43107128.26,105405230.96000001
+2018,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Philippines,PHL,6944889.935,278086308.2,285031198.135
+2018,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,United Arab Emirates,ARE,7719886.335,62928903.29,70648789.625
+2018,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Viet Nam,VNM,7725296.551,338623404.7,346348701.251
+2018,Metal; miscellaneous products of base metal,83,Australia,AUS,2695580.103,16313398.7,19008978.803
+2018,Metal; miscellaneous products of base metal,83,Germany,DEU,27968966.19,22998458.22,50967424.41
+2018,Metal; miscellaneous products of base metal,83,India,IND,5797401.945,11919873.51,17717275.455
+2018,Metal; miscellaneous products of base metal,83,Philippines,PHL,1001052.911,23150232.62,24151285.531
+2018,Metal; miscellaneous products of base metal,83,United Arab Emirates,ARE,84599.808,5865768.548,5950368.356000001
+2018,Metal; miscellaneous products of base metal,83,Viet Nam,VNM,6567656.257,19101550.22,25669206.476999998
+2018,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Australia,AUS,2171576405.0,5871867660.0,8043444065.0
+2018,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Germany,DEU,67533234.03,4577740.946,72110974.976
+2018,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,India,IND,3908578936.0,604254200.1,4512833136.1
+2018,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Philippines,PHL,407389401.7,771369038.4,1178758440.1
+2018,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,United Arab Emirates,ARE,8646242617.0,353748182.1,8999990799.1
+2018,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Viet Nam,VNM,326304382.6,2129110484.0,2455414866.6
+2018,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Australia,AUS,1426319018.0,285924040.6,1712243058.6
+2018,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Germany,DEU,206295648.5,56545796.46,262841444.96
+2018,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,India,IND,856841833.9,657143006.9,1513984840.8
+2018,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Philippines,PHL,1283657.437,51244153.9,52527811.337
+2018,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,United Arab Emirates,ARE,518148639.0,876220689.3,1394369328.3
+2018,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Viet Nam,VNM,14009749.04,19031106.35,33040855.39
+2018,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Australia,AUS,173269022.9,1443178492.0,1616447514.9
+2018,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Germany,DEU,2243084683.0,1092724174.0,3335808857.0
+2018,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,India,IND,480653835.8,2144798579.0,2625452414.8
+2018,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Philippines,PHL,290261798.7,1304446557.0,1594708355.7
+2018,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,United Arab Emirates,ARE,46220670.45,770173391.7,816394062.1500001
+2018,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Viet Nam,VNM,521670273.3,1121961769.0,1643632042.3
+2018,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Australia,AUS,78275820.02,628626499.5,706902319.52
+2018,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Germany,DEU,922203635.9,929980935.1,1852184571.0
+2018,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,India,IND,149616356.5,752207759.8,901824116.3
+2018,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Philippines,PHL,307245447.3,318138255.2,625383702.5
+2018,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,United Arab Emirates,ARE,7676586.83,83862366.17,91538953.0
+2018,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Viet Nam,VNM,41489866.22,300558834.2,342048700.41999996
+2018,Organic chemicals,29,Australia,AUS,2702038.437,133626730.4,136328768.837
+2018,Organic chemicals,29,Germany,DEU,281760720.5,130232521.7,411993242.2
+2018,Organic chemicals,29,India,IND,326609670.9,1369369024.0,1695978694.9
+2018,Organic chemicals,29,Philippines,PHL,1653368.367,108084751.0,109738119.367
+2018,Organic chemicals,29,United Arab Emirates,ARE,30742099.63,42380613.16,73122712.78999999
+2018,Organic chemicals,29,Viet Nam,VNM,3368223.127,314599513.8,317967736.927
+2018,Plastics and articles thereof,39,Australia,AUS,46763607.55,256919275.8,303682883.35
+2018,Plastics and articles thereof,39,Germany,DEU,224605357.0,57704693.64,282310050.64
+2018,Plastics and articles thereof,39,India,IND,62534062.63,1094914481.0,1157448543.63
+2018,Plastics and articles thereof,39,Philippines,PHL,8826691.042,388891187.7,397717878.742
+2018,Plastics and articles thereof,39,United Arab Emirates,ARE,212331756.2,85645919.47,297977675.66999996
+2018,Plastics and articles thereof,39,Viet Nam,VNM,29139788.33,928290586.0,957430374.33
+2019,Chemical products n.e.c.,38,Australia,AUS,5896547.973,152060646.1,157957194.07299998
+2019,Chemical products n.e.c.,38,Germany,DEU,176167011.9,40576500.82,216743512.72
+2019,Chemical products n.e.c.,38,India,IND,56060515.82,248775670.7,304836186.52
+2019,Chemical products n.e.c.,38,Philippines,PHL,2383433.922,79773968.61,82157402.532
+2019,Chemical products n.e.c.,38,United Arab Emirates,ARE,1608126.923,83764199.08,85372326.00299999
+2019,Chemical products n.e.c.,38,Viet Nam,VNM,7771139.946,209681535.8,217452675.74600002
+2019,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Australia,AUS,220599062.6,963377626.1,1183976688.7
+2019,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Germany,DEU,2003154021.0,2774363719.0,4777517740.0
+2019,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,India,IND,248477633.9,2947656192.0,3196133825.9
+2019,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Philippines,PHL,5703139961.0,3128197929.0,8831337890.0
+2019,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,United Arab Emirates,ARE,106609117.8,582944411.4,689553529.1999999
+2019,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Viet Nam,VNM,1050177164.0,5056636206.0,6106813370.0
+2019,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Australia,AUS,31225886.08,234598421.6,265824307.68
+2019,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Germany,DEU,186188533.2,5208186.46,191396719.66
+2019,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,India,IND,67274511.67,44967860.02,112242371.69
+2019,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Philippines,PHL,7079244.614,311207942.0,318287186.614
+2019,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,United Arab Emirates,ARE,12750908.75,71965906.59,84716815.34
+2019,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Viet Nam,VNM,6605228.263,434221673.7,440826901.963
+2019,Metal; miscellaneous products of base metal,83,Australia,AUS,4766735.898,20958333.31,25725069.207999997
+2019,Metal; miscellaneous products of base metal,83,Germany,DEU,22793816.99,39378701.54,62172518.53
+2019,Metal; miscellaneous products of base metal,83,India,IND,5402926.693,11146318.67,16549245.363
+2019,Metal; miscellaneous products of base metal,83,Philippines,PHL,984984.09,14383124.73,15368108.82
+2019,Metal; miscellaneous products of base metal,83,United Arab Emirates,ARE,105837.302,4993736.182,5099573.484
+2019,Metal; miscellaneous products of base metal,83,Viet Nam,VNM,7961377.773,10541783.01,18503160.783
+2019,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Australia,AUS,2549195900.0,4273910550.0,6823106450.0
+2019,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Germany,DEU,40603684.69,34105.662,40637790.352
+2019,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,India,IND,2688126314.0,635622300.0,3323748614.0
+2019,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Philippines,PHL,275981555.7,1071620361.0,1347601916.7
+2019,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,United Arab Emirates,ARE,10279054379.0,278513437.8,10557567816.8
+2019,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Viet Nam,VNM,382515808.3,1663054909.0,2045570717.3
+2019,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Australia,AUS,1696066933.0,305663067.6,2001730000.6
+2019,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Germany,DEU,65542506.07,45122658.19,110665164.25999999
+2019,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,India,IND,741373314.2,603865543.6,1345238857.8000002
+2019,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Philippines,PHL,1552731.725,50251941.08,51804672.805
+2019,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,United Arab Emirates,ARE,621128732.5,1131364949.0,1752493681.5
+2019,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Viet Nam,VNM,29270609.32,22665116.84,51935726.16
+2019,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Australia,AUS,177074906.0,1649215318.0,1826290224.0
+2019,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Germany,DEU,2432047885.0,1059896206.0,3491944091.0
+2019,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,India,IND,721254932.0,2046214043.0,2767468975.0
+2019,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Philippines,PHL,382665944.1,1341171024.0,1723836968.1
+2019,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,United Arab Emirates,ARE,33741980.39,899580720.0,933322700.39
+2019,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Viet Nam,VNM,540321199.6,1140812301.0,1681133500.6
+2019,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Australia,AUS,76864101.43,600522548.1,677386649.53
+2019,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Germany,DEU,851215052.9,978891321.0,1830106373.9
+2019,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,India,IND,144963948.8,872429751.7,1017393700.5
+2019,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Philippines,PHL,400061879.2,363129277.9,763191157.0999999
+2019,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,United Arab Emirates,ARE,16681541.48,124938922.2,141620463.68
+2019,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Viet Nam,VNM,48305225.48,333302073.2,381607298.68
+2019,Organic chemicals,29,Australia,AUS,3019484.708,229167618.5,232187103.208
+2019,Organic chemicals,29,Germany,DEU,264456624.0,98578699.7,363035323.7
+2019,Organic chemicals,29,India,IND,375839985.4,911106247.1,1286946232.5
+2019,Organic chemicals,29,Philippines,PHL,9080250.085,95280649.46,104360899.54499999
+2019,Organic chemicals,29,United Arab Emirates,ARE,42269936.62,13518895.23,55788831.849999994
+2019,Organic chemicals,29,Viet Nam,VNM,3120350.589,291093109.0,294213459.589
+2019,Plastics and articles thereof,39,Australia,AUS,15771860.26,205834835.1,221606695.35999998
+2019,Plastics and articles thereof,39,Germany,DEU,229951040.9,65330311.44,295281352.34000003
+2019,Plastics and articles thereof,39,India,IND,93486758.48,1025319072.0,1118805830.48
+2019,Plastics and articles thereof,39,Philippines,PHL,7403572.979,357010690.4,364414263.37899995
+2019,Plastics and articles thereof,39,United Arab Emirates,ARE,132242822.4,78881910.84,211124733.24
+2019,Plastics and articles thereof,39,Viet Nam,VNM,26159924.48,953063073.2,979222997.6800001
+2020,Chemical products n.e.c.,38,Australia,AUS,7309717.431,127376860.7,134686578.131
+2020,Chemical products n.e.c.,38,Germany,DEU,180518980.6,27403043.17,207922023.76999998
+2020,Chemical products n.e.c.,38,India,IND,69078718.16,211296813.1,280375531.26
+2020,Chemical products n.e.c.,38,Philippines,PHL,3148108.426,78076761.13,81224869.556
+2020,Chemical products n.e.c.,38,United Arab Emirates,ARE,1246155.859,68609926.91,69856082.769
+2020,Chemical products n.e.c.,38,Viet Nam,VNM,11880869.73,204285474.8,216166344.53
+2020,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Australia,AUS,58324622.79,857269727.3,915594350.0899999
+2020,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Germany,DEU,2170578541.0,2548351446.0,4718929987.0
+2020,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,India,IND,202639664.0,2412852931.0,2615492595.0
+2020,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Philippines,PHL,5250494142.0,2566551932.0,7817046074.0
+2020,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,United Arab Emirates,ARE,69565694.13,602324309.5,671890003.63
+2020,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Viet Nam,VNM,1641388471.0,6260831682.0,7902220153.0
+2020,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Australia,AUS,23929484.04,226875058.9,250804542.94
+2020,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Germany,DEU,86526280.73,3925656.374,90451937.104
+2020,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,India,IND,54770737.3,34217370.23,88988107.53
+2020,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Philippines,PHL,7222486.92,302591409.6,309813896.52000004
+2020,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,United Arab Emirates,ARE,9748783.817,60237271.1,69986054.917
+2020,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Viet Nam,VNM,6477198.659,402137317.9,408614516.55899996
+2020,Metal; miscellaneous products of base metal,83,Australia,AUS,2412828.169,15695381.47,18108209.639000002
+2020,Metal; miscellaneous products of base metal,83,Germany,DEU,17637603.02,41167537.28,58805140.3
+2020,Metal; miscellaneous products of base metal,83,India,IND,5079857.451,11726331.96,16806189.411000002
+2020,Metal; miscellaneous products of base metal,83,Philippines,PHL,1417811.597,15839427.15,17257238.747
+2020,Metal; miscellaneous products of base metal,83,United Arab Emirates,ARE,330342.38,4283808.104,4614150.484
+2020,Metal; miscellaneous products of base metal,83,Viet Nam,VNM,6508945.263,10480092.03,16989037.292999998
+2020,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Australia,AUS,1808720400.0,2488235771.0,4296956171.0
+2020,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Germany,DEU,13982105.49,171185.413,14153290.903
+2020,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,India,IND,2103032601.0,492610088.5,2595642689.5
+2020,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Philippines,PHL,111739704.6,889898167.9,1001637872.5
+2020,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,United Arab Emirates,ARE,5020801802.0,61321128.45,5082122930.45
+2020,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Viet Nam,VNM,191706359.5,822291442.9,1013997802.4
+2020,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Australia,AUS,1057584581.0,365173213.1,1422757794.1
+2020,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Germany,DEU,65560763.64,51194724.04,116755487.68
+2020,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,India,IND,378938986.3,671674765.6,1050613751.9000001
+2020,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Philippines,PHL,3525078.246,87950646.44,91475724.686
+2020,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,United Arab Emirates,ARE,471135895.3,646539660.6,1117675555.9
+2020,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Viet Nam,VNM,18947719.52,28963334.39,47911053.91
+2020,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Australia,AUS,139478263.1,1353384428.0,1492862691.1
+2020,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Germany,DEU,2124503967.0,1177368639.0,3301872606.0
+2020,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,India,IND,448728629.3,1675638745.0,2124367374.3
+2020,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Philippines,PHL,406448615.8,1283736857.0,1690185472.8
+2020,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,United Arab Emirates,ARE,43149136.45,852669082.1,895818218.5500001
+2020,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Viet Nam,VNM,530464078.7,1109865821.0,1640329899.7
+2020,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Australia,AUS,75107819.88,553566314.0,628674133.88
+2020,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Germany,DEU,799745908.5,898728228.6,1698474137.1
+2020,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,India,IND,122925242.1,698248121.4,821173363.5
+2020,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Philippines,PHL,847427730.6,326865858.1,1174293588.7
+2020,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,United Arab Emirates,ARE,17167574.72,71543572.01,88711146.73
+2020,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Viet Nam,VNM,35438127.79,294599863.1,330037990.89000005
+2020,Organic chemicals,29,Australia,AUS,5694325.671,101618615.1,107312940.771
+2020,Organic chemicals,29,Germany,DEU,256142864.9,104456085.6,360598950.5
+2020,Organic chemicals,29,India,IND,298683279.9,736039237.3,1034722517.1999999
+2020,Organic chemicals,29,Philippines,PHL,3095328.347,108417568.6,111512896.947
+2020,Organic chemicals,29,United Arab Emirates,ARE,905921.426,16677944.2,17583865.626
+2020,Organic chemicals,29,Viet Nam,VNM,11050656.21,291404778.6,302455434.81
+2020,Plastics and articles thereof,39,Australia,AUS,12295229.34,191200800.9,203496030.24
+2020,Plastics and articles thereof,39,Germany,DEU,219262463.5,48067730.25,267330193.75
+2020,Plastics and articles thereof,39,India,IND,116422775.6,778163425.9,894586201.5
+2020,Plastics and articles thereof,39,Philippines,PHL,5922608.881,294760399.1,300683007.981
+2020,Plastics and articles thereof,39,United Arab Emirates,ARE,85023542.41,42517734.34,127541276.75
+2020,Plastics and articles thereof,39,Viet Nam,VNM,23802083.83,827172129.5,850974213.33
+2021,Chemical products n.e.c.,38,Australia,AUS,4986754.023,154918894.2,159905648.223
+2021,Chemical products n.e.c.,38,Germany,DEU,264252230.6,20307656.96,284559887.56
+2021,Chemical products n.e.c.,38,India,IND,92014608.14,272944083.7,364958691.84
+2021,Chemical products n.e.c.,38,Philippines,PHL,2782668.65,137076562.9,139859231.55
+2021,Chemical products n.e.c.,38,United Arab Emirates,ARE,713280.89,84148899.2,84862180.09
+2021,Chemical products n.e.c.,38,Viet Nam,VNM,9685590.819,254793078.0,264478668.819
+2021,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Australia,AUS,68521144.68,841480469.4,910001614.0799999
+2021,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Germany,DEU,2494351794.0,3371770924.0,5866122718.0
+2021,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,India,IND,276653180.0,2914809680.0,3191462860.0
+2021,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Philippines,PHL,5909750341.0,3196631434.0,9106381775.0
+2021,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,United Arab Emirates,ARE,28220197.89,754876534.9,783096732.79
+2021,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Viet Nam,VNM,1541177890.0,8051757220.0,9592935110.0
+2021,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Australia,AUS,24450072.27,219931599.4,244381671.67000002
+2021,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Germany,DEU,94720483.88,3677005.748,98397489.62799999
+2021,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,India,IND,49219307.41,48043746.88,97263054.28999999
+2021,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Philippines,PHL,9218900.256,316465283.3,325684183.556
+2021,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,United Arab Emirates,ARE,16264916.87,65311438.36,81576355.23
+2021,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Viet Nam,VNM,9635475.571,422658768.3,432294243.871
+2021,Metal; miscellaneous products of base metal,83,Australia,AUS,2046629.011,21185361.92,23231990.931
+2021,Metal; miscellaneous products of base metal,83,Germany,DEU,25829306.33,38681355.45,64510661.78
+2021,Metal; miscellaneous products of base metal,83,India,IND,5841783.599,11058732.51,16900516.109
+2021,Metal; miscellaneous products of base metal,83,Philippines,PHL,1988052.178,22607128.7,24595180.878
+2021,Metal; miscellaneous products of base metal,83,United Arab Emirates,ARE,44879.603,3136907.502,3181787.105
+2021,Metal; miscellaneous products of base metal,83,Viet Nam,VNM,7784001.938,10588212.35,18372214.288
+2021,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Australia,AUS,3209408569.0,5815939933.0,9025348502.0
+2021,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Germany,DEU,32458935.94,4519345.923,36978281.863000005
+2021,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,India,IND,2998817362.0,840612730.3,3839430092.3
+2021,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Philippines,PHL,30700762.31,1486121682.0,1516822444.31
+2021,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,United Arab Emirates,ARE,11146688924.0,290220463.8,11436909387.8
+2021,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Viet Nam,VNM,433592459.5,1055911920.0,1489504379.5
+2021,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Australia,AUS,2121230294.0,454658127.3,2575888421.3
+2021,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Germany,DEU,91297250.54,85775523.01,177072773.55
+2021,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,India,IND,916621526.4,1211229783.0,2127851309.4
+2021,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Philippines,PHL,21027763.39,96328949.66,117356713.05
+2021,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,United Arab Emirates,ARE,823865534.3,939988776.9,1763854311.1999998
+2021,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Viet Nam,VNM,9280231.869,32668593.18,41948825.049
+2021,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Australia,AUS,143330041.3,1655477791.0,1798807832.3
+2021,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Germany,DEU,2245437496.0,1600097059.0,3845534555.0
+2021,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,India,IND,592201587.7,2287327182.0,2879528769.7
+2021,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Philippines,PHL,513697895.1,1436648507.0,1950346402.1
+2021,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,United Arab Emirates,ARE,96161752.21,913097575.0,1009259327.21
+2021,"Nuclear reactors, boilers, machinery and mechanical appliances; parts thereof",84,Viet Nam,VNM,644903310.5,1437578834.0,2082482144.5
+2021,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Australia,AUS,82122380.6,611267854.5,693390235.1
+2021,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Germany,DEU,977105860.6,939386991.3,1916492851.9
+2021,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,India,IND,132075695.6,867816463.8,999892159.4
+2021,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Philippines,PHL,1307392598.0,295194693.0,1602587291.0
+2021,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,United Arab Emirates,ARE,13449173.0,85370641.92,98819814.92
+2021,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Viet Nam,VNM,49236212.71,316339084.5,365575297.21
+2021,Organic chemicals,29,Australia,AUS,5527845.209,164944760.9,170472606.109
+2021,Organic chemicals,29,Germany,DEU,231213785.4,165383626.8,396597412.20000005
+2021,Organic chemicals,29,India,IND,493883209.6,1204562480.0,1698445689.6
+2021,Organic chemicals,29,Philippines,PHL,16575624.1,102032108.5,118607732.6
+2021,Organic chemicals,29,United Arab Emirates,ARE,12651365.57,100736966.3,113388331.87
+2021,Organic chemicals,29,Viet Nam,VNM,4690371.488,353956219.8,358646591.288
+2021,Plastics and articles thereof,39,Australia,AUS,16889726.25,246334468.5,263224194.75
+2021,Plastics and articles thereof,39,Germany,DEU,254073107.8,88168915.53,342242023.33000004
+2021,Plastics and articles thereof,39,India,IND,79741486.19,1151130480.0,1230871966.19
+2021,Plastics and articles thereof,39,Philippines,PHL,9884380.033,350988972.8,360873352.833
+2021,Plastics and articles thereof,39,United Arab Emirates,ARE,65375815.04,79554349.52,144930164.56
+2021,Plastics and articles thereof,39,Viet Nam,VNM,28336995.02,1037256100.0,1065593095.02
+2022,Chemical products n.e.c.,38,Australia,AUS,7271555.355,229593336.1,236864891.45499998
+2022,Chemical products n.e.c.,38,Germany,DEU,196386679.3,38931917.48,235318596.78
+2022,Chemical products n.e.c.,38,India,IND,80136429.98,349786347.1,429922777.08000004
+2022,Chemical products n.e.c.,38,Philippines,PHL,1798402.076,103095641.0,104894043.076
+2022,Chemical products n.e.c.,38,United Arab Emirates,ARE,4528798.106,97964266.51,102493064.61600001
+2022,Chemical products n.e.c.,38,Viet Nam,VNM,9696178.416,241198916.6,250895095.016
+2022,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Australia,AUS,59216645.93,982779273.9,1041995919.8299999
+2022,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Germany,DEU,2156153834.0,4269195269.0,6425349103.0
+2022,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,India,IND,288725993.7,3569617156.0,3858343149.7
+2022,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Philippines,PHL,6360919819.0,3572948958.0,9933868777.0
+2022,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,United Arab Emirates,ARE,37959995.82,948956287.5,986916283.32
+2022,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Viet Nam,VNM,1946768873.0,7788262279.0,9735031152.0
+2022,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Australia,AUS,24201781.87,258931239.9,283133021.77
+2022,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Germany,DEU,81310114.7,1535870.887,82845985.587
+2022,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,India,IND,46065054.32,50042344.21,96107398.53
+2022,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Philippines,PHL,15382153.26,364771664.0,380153817.26
+2022,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,United Arab Emirates,ARE,19466656.88,63165878.27,82632535.15
+2022,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Viet Nam,VNM,7120645.055,556794657.6,563915302.655
+2022,"Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",84,Australia,AUS,113555115.6,1681031134.0,1794586249.6
+2022,"Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",84,Germany,DEU,2369330911.0,1083253660.0,3452584571.0
+2022,"Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",84,India,IND,656436478.3,2786818440.0,3443254918.3
+2022,"Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",84,Philippines,PHL,458400271.2,1690595013.0,2148995284.2
+2022,"Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",84,United Arab Emirates,ARE,126581212.8,1412024951.0,1538606163.8
+2022,"Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",84,Viet Nam,VNM,913748625.5,1931582399.0,2845331024.5
+2022,Metal; miscellaneous products of base metal,83,Australia,AUS,3554891.193,17993072.26,21547963.453
+2022,Metal; miscellaneous products of base metal,83,Germany,DEU,22708840.87,11406081.94,34114922.81
+2022,Metal; miscellaneous products of base metal,83,India,IND,6380569.863,13851126.18,20231696.042999998
+2022,Metal; miscellaneous products of base metal,83,Philippines,PHL,2300747.578,15691338.22,17992085.798
+2022,Metal; miscellaneous products of base metal,83,United Arab Emirates,ARE,358181.576,3627799.317,3985980.8929999997
+2022,Metal; miscellaneous products of base metal,83,Viet Nam,VNM,8778351.773,11249774.4,20028126.173
+2022,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Australia,AUS,4295191374.0,8488581200.0,12783772574.0
+2022,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Germany,DEU,36009483.74,14814364.09,50823847.83
+2022,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,India,IND,3501086773.0,814288622.6,4315375395.6
+2022,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Philippines,PHL,25271597.39,2210392918.0,2235664515.39
+2022,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,United Arab Emirates,ARE,14140565829.0,426957147.9,14567522976.9
+2022,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Viet Nam,VNM,280834826.6,2259910006.0,2540744832.6
+2022,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Australia,AUS,2211579158.0,643659168.6,2855238326.6
+2022,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Germany,DEU,86604883.31,70982975.94,157587859.25
+2022,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,India,IND,1291049481.0,543322240.8,1834371721.8
+2022,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Philippines,PHL,33268573.93,85674386.45,118942960.38
+2022,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,United Arab Emirates,ARE,1012759461.0,1062166667.0,2074926128.0
+2022,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Viet Nam,VNM,274673141.4,59404568.08,334077709.47999996
+2022,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Australia,AUS,82388505.17,668436764.8,750825269.9699999
+2022,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Germany,DEU,1106734424.0,873481238.8,1980215662.8
+2022,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,India,IND,143056324.9,1004544849.0,1147601173.9
+2022,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Philippines,PHL,1098661158.0,391307318.9,1489968476.9
+2022,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,United Arab Emirates,ARE,15340491.27,105306842.7,120647333.97
+2022,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Viet Nam,VNM,55651893.03,304377529.7,360029422.73
+2022,Organic chemicals,29,Australia,AUS,4593434.47,130656017.2,135249451.67000002
+2022,Organic chemicals,29,Germany,DEU,213904165.2,741898772.9,955802938.0999999
+2022,Organic chemicals,29,India,IND,736944111.8,1345045997.0,2081990108.8
+2022,Organic chemicals,29,Philippines,PHL,56042820.74,94082950.51,150125771.25
+2022,Organic chemicals,29,United Arab Emirates,ARE,19573744.4,538843511.4,558417255.8
+2022,Organic chemicals,29,Viet Nam,VNM,3552195.835,310350742.9,313902938.73499995
+2022,Plastics and articles thereof,39,Australia,AUS,16688452.34,261578672.4,278267124.74
+2022,Plastics and articles thereof,39,Germany,DEU,236140942.8,85939477.36,322080420.16
+2022,Plastics and articles thereof,39,India,IND,89276782.24,1208215692.0,1297492474.24
+2022,Plastics and articles thereof,39,Philippines,PHL,13933061.87,378379071.4,392312133.27
+2022,Plastics and articles thereof,39,United Arab Emirates,ARE,54900354.59,106681773.3,161582127.89
+2022,Plastics and articles thereof,39,Viet Nam,VNM,27931317.89,1108139472.0,1136070789.89
+2023,Chemical products n.e.c.,38,Australia,AUS,4615038.753,250166612.5,254781651.253
+2023,Chemical products n.e.c.,38,Germany,DEU,215656277.3,70867684.11,286523961.41
+2023,Chemical products n.e.c.,38,India,IND,69321430.07,336787955.8,406109385.87
+2023,Chemical products n.e.c.,38,Philippines,PHL,1719011.464,116464284.7,118183296.164
+2023,Chemical products n.e.c.,38,United Arab Emirates,ARE,7111345.076,83528754.12,90640099.19600001
+2023,Chemical products n.e.c.,38,Viet Nam,VNM,6031620.296,199889423.2,205921043.496
+2023,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Australia,AUS,62721982.09,988926046.2,1051648028.2900001
+2023,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Germany,DEU,2216809246.0,4453175030.0,6669984276.0
+2023,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,India,IND,333204769.2,4256319258.0,4589524027.2
+2023,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Philippines,PHL,3885671988.0,3531782011.0,7417453999.0
+2023,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,United Arab Emirates,ARE,24997506.46,1108948835.0,1133946341.46
+2023,"Electrical machinery and equipment and parts thereof; sound recorders and reproducers; television image and sound recorders and reproducers, parts and accessories of such articles",85,Viet Nam,VNM,1811178122.0,8411555236.0,10222733358.0
+2023,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Australia,AUS,20974570.5,277196541.5,298171112.0
+2023,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Germany,DEU,58851452.43,2324339.653,61175792.083
+2023,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,India,IND,54006125.54,60492035.53,114498161.07
+2023,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Philippines,PHL,14524053.08,383696175.4,398220228.47999996
+2023,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,United Arab Emirates,ARE,36991917.2,88252488.05,125244405.25
+2023,"Essential oils and resinoids; perfumery, cosmetic or toilet preparations",33,Viet Nam,VNM,7469843.332,494053772.5,501523615.832
+2023,"Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",84,Australia,AUS,130661832.3,1487253488.0,1617915320.3
+2023,"Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",84,Germany,DEU,2793945896.0,1078153291.0,3872099187.0
+2023,"Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",84,India,IND,661639258.0,2839527238.0,3501166496.0
+2023,"Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",84,Philippines,PHL,452268713.7,1479489659.0,1931758372.7
+2023,"Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",84,United Arab Emirates,ARE,90452818.56,1382047527.0,1472500345.56
+2023,"Machinery and mechanical appliances, boilers, nuclear reactors; parts thereof",84,Viet Nam,VNM,769591479.5,1228704217.0,1998295696.5
+2023,Metal; miscellaneous products of base metal,83,Australia,AUS,1621712.974,18023319.98,19645032.954
+2023,Metal; miscellaneous products of base metal,83,Germany,DEU,27961098.54,18152339.47,46113438.01
+2023,Metal; miscellaneous products of base metal,83,India,IND,5550510.485,12493864.25,18044374.735
+2023,Metal; miscellaneous products of base metal,83,Philippines,PHL,986849.153,9562980.497,10549829.65
+2023,Metal; miscellaneous products of base metal,83,United Arab Emirates,ARE,230308.237,7580554.113,7810862.35
+2023,Metal; miscellaneous products of base metal,83,Viet Nam,VNM,7710777.606,9540837.15,17251614.756
+2023,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Australia,AUS,3010333046.0,7189819953.0,10200152999.0
+2023,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Germany,DEU,26850681.78,195296.149,27045977.929
+2023,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,India,IND,2668579200.0,795734843.0,3464314043.0
+2023,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Philippines,PHL,96327669.26,1719467085.0,1815794754.26
+2023,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,United Arab Emirates,ARE,10617980206.0,304694453.3,10922674659.3
+2023,"Mineral fuels, mineral oils and products of their distillation; bituminous substances; mineral waxes",27,Viet Nam,VNM,220294709.6,2298456849.0,2518751558.6
+2023,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Australia,AUS,1969429369.0,371506673.3,2340936042.3
+2023,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Germany,DEU,81973809.98,72643764.63,154617574.61
+2023,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,India,IND,918892730.5,883438517.9,1802331248.4
+2023,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Philippines,PHL,6980469.323,80597131.73,87577601.053
+2023,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,United Arab Emirates,ARE,1101079329.0,803568527.0,1904647856.0
+2023,"Natural, cultured pearls; precious, semi-precious stones; precious metals, metals clad with precious metal, and articles thereof; imitation jewellery; coin",71,Viet Nam,VNM,25024497.83,68079940.98,93104438.81
+2023,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Australia,AUS,67636845.44,719647985.5,787284830.94
+2023,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Germany,DEU,1102811435.0,987954141.7,2090765576.7
+2023,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,India,IND,151800375.5,1056237510.0,1208037885.5
+2023,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Philippines,PHL,135662760.5,425368323.9,561031084.4
+2023,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,United Arab Emirates,ARE,16256294.41,162846388.5,179102682.91
+2023,"Optical, photographic, cinematographic, measuring, checking, medical or surgical instruments and apparatus; parts and accessories",90,Viet Nam,VNM,38567730.69,318100914.7,356668645.39
+2023,Organic chemicals,29,Australia,AUS,7102210.452,87502358.8,94604569.252
+2023,Organic chemicals,29,Germany,DEU,169441554.3,415467281.1,584908835.4000001
+2023,Organic chemicals,29,India,IND,613793034.4,945461898.6,1559254933.0
+2023,Organic chemicals,29,Philippines,PHL,23465169.54,54954536.01,78419705.55
+2023,Organic chemicals,29,United Arab Emirates,ARE,1787468.279,366107866.9,367895335.17899996
+2023,Organic chemicals,29,Viet Nam,VNM,9554134.029,267882079.7,277436213.729
+2023,Plastics and articles thereof,39,Australia,AUS,16979808.31,234079965.3,251059773.61
+2023,Plastics and articles thereof,39,Germany,DEU,210510955.3,77383341.94,287894297.24
+2023,Plastics and articles thereof,39,India,IND,105232516.8,1156903172.0,1262135688.8
+2023,Plastics and articles thereof,39,Philippines,PHL,10408033.0,306324038.0,316732071.0
+2023,Plastics and articles thereof,39,United Arab Emirates,ARE,11248794.44,89592124.46,100840918.89999999
+2023,Plastics and articles thereof,39,Viet Nam,VNM,29745703.13,912134921.7,941880624.83

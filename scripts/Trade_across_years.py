@@ -38,8 +38,22 @@ trade_pdt_df = trade_pdt_df.sort_values(by='Year').reset_index(drop=True)
 
 # trade_pdt_df.to_csv("10_years_trade_frontend.csv", index=False)
 
-### import predicted imports data
-predicted_df = pd.read_csv("data/cleaned data/predicted_imports_2024_2026.csv")
+#%%
+
+#import predicted imports data
+predicted_imports = pd.read_csv("data/cleaned data/predicted_imports_2024_2026.csv")
+
+# import predicted exports data
+predicted_exports = pd.read_csv("data/cleaned data/predicted export.csv")
+predicted_exports = predicted_exports[predicted_exports['Partner'].isin([
+    "China", "Indonesia", "Japan", "Malaysia", "Saudi Arabia", 
+    "South Korea", "Thailand", "United States of America"
+])]
+
+# Merge the predicted_imports and predicted_exports datasets on common columns
+predicted_df = pd.merge(predicted_imports, predicted_exports, 
+    on=['Partner', 'HS Code', 'HS_Section', 'Target Year'], how='inner'  
+)
 predicted_df['Partner'] = predicted_df['Partner'].replace({
     'United States of America': 'United States'
 })
@@ -57,7 +71,6 @@ hs_code_to_product = {
     39: "Plastics",
     99: "All Products"
 }
-
 # Create product column
 predicted_df['HS Code'] = predicted_df['HS Code'].replace('All Products', 99)
 predicted_df['HS Code'] = pd.to_numeric(predicted_df['HS Code'], errors='coerce')
@@ -66,17 +79,17 @@ predicted_df = predicted_df.drop(columns=['HS_Section'])
 predicted_df = predicted_df.rename(columns={
     'Partner': 'Country',
     'Target Year': 'Year',
-    'Predicted Imports': 'Imports'
+    'Predicted Imports': 'Imports',
+    'Predicted Exports': 'Exports'
 })
 
-# Add missing columns with NaNs
-predicted_df['Exports'] = pd.NA
-predicted_df['Trade Volume'] = pd.NA
+# Create Trade Volume column
+predicted_df['Trade Volume'] = predicted_df['Imports'] + predicted_df['Exports']
 predicted_df = predicted_df[trade_pdt_df.columns]
 
 # concatenate trade_pdt_df with predicted
 combined_df = pd.concat([trade_pdt_df, predicted_df], ignore_index=True)
 
-#combined_df.to_csv("data/cleaned data/trade_with_predicted.csv", index=False)
+combined_df.to_csv("data/cleaned data/trade_with_predicted.csv", index=False)
 
 
