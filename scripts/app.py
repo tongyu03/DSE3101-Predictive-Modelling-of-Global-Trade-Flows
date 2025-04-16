@@ -208,7 +208,7 @@ def server(input, output, session):
             <div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
                 <p><strong>Track how a partner country's trade and geopolitical relationship with Singapore has changed over time.</strong><br><br>
                 The first line chart shows historical trade volume with Singapore from 2013–2023.<br>
-                <strong>It also includes a prediction of import and export volumes for the selected industry from 2024 to 2026.</strong></p>
+                <strong>It also includes a prediction of import and export volumes for the selected industry in 2024.</strong></p>
 
                 <p style="margin-top: 20px; cursor: pointer; color: #007bff;" onclick="var x = document.getElementById('geo-trend-explainer'); x.style.display = x.style.display === 'none' ? 'block' : 'none';">
                 <strong>ⓘ How is this trade prediction made?</strong>
@@ -222,7 +222,6 @@ def server(input, output, session):
                         <li>Exchange rate with the partner country and its rate of change</li>
                     </ul>
                     <p>These features allow the model to capture both economic and geopolitical patterns that influence trade over time.</p>
-                    <p>Predictions for 2025 and 2026 are extrapolated from the 2024 forecast, assuming that geopolitical and macroeconomic factors (e.g. UNGA alignment, FTAs) remain constant at 2023 levels due to data availability constraints.</p>
                     <p>If up-to-date data were available (e.g., through April 2025), the model could confidently predict trade flows up to 2026.</p>
                 </div>
                 <p><strong>Geopolitical Distance</strong> is also charted to show how bilateral alignment has evolved annually.<br>

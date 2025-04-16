@@ -194,7 +194,17 @@ def plot_trade_line_graph(country, industry, trade_pred_df):
         margin=dict(t=60, l=100, r=20, b=100),
         xaxis=dict(range=[filtered_data['Year'].min(), 2024.05]),
         title_font=dict(size=20),
-        title_x=0.5
+        title_x=0.5,
+        shapes=[
+            dict(
+                type="line",
+                x0=2023, x1=2023,
+                y0=0, y1=1,
+                xref='x',
+                yref='paper',
+                line=dict(color="red", width=1, dash="dash")
+            )
+        ]
     )
     fig.add_annotation(
         text="Fig 3: Line plot displaying level of imports/exports for specified trade partner per industry over the years",
