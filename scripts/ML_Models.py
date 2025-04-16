@@ -183,6 +183,7 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
         #grace: removed GDP_Growth
         #grace: removed Time_Since_FTA
         feature_cols = [
+                        "year",
                         "log_Import_Lag1", 
                         "IdealPointDistance", "log_GDP_Lag1", 'log_SG_GDP_Lag1',
                         'Exchange Rate (per US$)', 'Adjusted_value'] #added sgp gdp code
@@ -199,6 +200,7 @@ def prepare_data_for_regression(log_transform=True, add_interactions=True):
         #grace: removed GDP_Growth
         #grace: removed Time_Since_FTA
         feature_cols = [
+                        "year",
                         "Import_Lag1",
                         "IdealPointDistance", "GDP_Lag1", 'SG_GDP_Lag1',
                         'Exchange Rate (per US$)', 'Adjusted_value'] #added sgp gdp code
@@ -518,6 +520,7 @@ def predict_2024_with_correction():
     predict_data["IdealPointDistance"] = data_2023["IdealPointDistance"]
 
     feature_cols = [
+        "year",
         "log_Import_Lag1", 
         "IdealPointDistance", "log_GDP_Lag1", "log_SG_GDP_Lag1",
         "Exchange Rate (per US$)", "Adjusted_value"
@@ -530,7 +533,7 @@ def predict_2024_with_correction():
     log_preds = model.predict(X_2024_scaled)
     raw_preds = np.exp(log_preds)
 
-    results = predict_data[["Partner", "Product"]].copy()
+    results = predict_data[["Partner", "HS_Section"]].copy()
     results["Raw_Predicted_Import_2024"] = raw_preds
 
     # Sum predicted imports per partner
@@ -569,33 +572,15 @@ def predict_2024_with_correction():
         * 100
     )
 
-<<<<<<< HEAD
     print("\n2024 Raw vs Corrected Predictions (Top 10 by Corrected Volume):")
     print(
         comparison_df.sort_values("Corrected_Predicted_Import_2024", ascending=False)
         .head(10)
         .round(2)
     )
-=======
-        next_input['log_Import_Lag3'] = current_input['log_Import_Lag2']
-        next_input['log_Import_Lag2'] = current_input['log_Import_Lag1']
-        next_input['log_Import_Lag1'] = np.log(next_input['Import_Lag1'].clip(lower=1))
-
-        current_input = next_input  # update for next year
-
-    final_df = pd.concat(results).reset_index(drop=True)
-    return final_df
-
-# predict_import_value(2024)
-# predict_import_value(range(2024, 2027))
-
-#predicted_imports_2024__2026 = predict_import_value(range(2024, 2027))
-#predicted_imports_2024__2026.to_csv("predicted_imports_2024_2026.csv", index=False)
-
-
->>>>>>> b70371ef3b1e57a42939a1b433594374114f2a1c
 
     return results, comparison_df
+
 
 
 
