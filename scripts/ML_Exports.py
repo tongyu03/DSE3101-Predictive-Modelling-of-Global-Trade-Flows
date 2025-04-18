@@ -597,3 +597,9 @@ def predict_export_value(year_or_range):
 predict_export_value(2024)
 predict_export_value(range(2024, 2028))
 
+
+# Get predictions from 2024 to 2027
+#predictions = predict_export_value(2024)
+
+# Save to CSV
+#predictions.to_csv("predicted_exports_2024.csv", index=False)

@@ -164,14 +164,14 @@ def server(input, output, session):
             <div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
                 <p><strong>Explore Singapore's imports and exports across major industries and trade partners between 2013 and 2023.</strong><br><br>
                 Use the filters on the left to select an industry, trade type, and year to visualize historical trade volumes in the bubble plot.<br><br>
-                The bar graph shows the Geopolitical Distance with Singapore for the selected year. 
-                <strong>A higher score indicates a greater geopolitical distance — i.e., less political and economic alignment with Singapore.</strong></p>
+                The bar graph shows the Geo-Economic Proximity with Singapore for the selected year. 
+                <strong>A higher score indicates a greater Geo-Economic Proximity — i.e., less political and economic alignment with Singapore.</strong></p>
                 
                 <p style="margin-top: 20px; cursor: pointer; color: #007bff;" onclick="var x = document.getElementById('geo-explainer'); x.style.display = x.style.display === 'none' ? 'block' : 'none';">
-                <strong>ⓘ What is Geopolitical Distance?</strong>
+                <strong>ⓘ What is Geo-Economic Proximity?</strong>
                 </p>
                 <div id="geo-explainer" style="display: none; background-color: #ffffff; padding: 10px; border-left: 4px solid #007bff; margin-top: 5px; border-radius: 6px;">
-                    <p>Geopolitical Distance is a composite score reflecting how closely a country aligns with Singapore’s foreign policy and economic priorities.
+                    <p>Geo-Economic Proximity is a composite score reflecting how closely a country aligns with Singapore’s foreign policy and economic priorities.
                     It is computed using historical indicators and scaled as part of our modeling process.</p>
                     <p>The score incorporates:</p>
                     <ul style="padding-left: 20px; margin-top: 5px;">
@@ -206,7 +206,7 @@ def server(input, output, session):
     def pg3_intro_text():
         return ui.HTML("""
             <div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px;">
-                <p><strong>Track how a partner country's trade and geopolitical relationship with Singapore has changed over time.</strong><br><br>
+                <p><strong>Track how a partner country's trade and geo-economic relationship with Singapore has changed over time.</strong><br><br>
                 The first line chart shows historical trade volume with Singapore from 2013–2023.<br>
                 <strong>It also includes a prediction of import and export volumes for the selected industry in 2024.</strong></p>
 
@@ -224,8 +224,8 @@ def server(input, output, session):
                     <p>These features allow the model to capture both economic and geopolitical patterns that influence trade over time.</p>
                     <p>If up-to-date data were available (e.g., through April 2025), the model could confidently predict trade flows up to 2026.</p>
                 </div>
-                <p><strong>Geopolitical Distance</strong> is also charted to show how bilateral alignment has evolved annually.<br>
-                    A <strong>rising score</strong> reflects increasing geopolitical distance (weaker alignment), while a <strong>declining score</strong> indicates closer ties with Singapore over time.</p>
+                <p><strong>Geo-Economic Proximity</strong> is also charted to show how bilateral alignment has evolved annually.<br>
+                    A <strong>rising score</strong> reflects increasing Geo-Economic Proximity (weaker alignment), while a <strong>declining score</strong> indicates closer ties with Singapore over time.</p>
             </div>
         """)
 

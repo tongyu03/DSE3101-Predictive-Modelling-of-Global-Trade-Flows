@@ -116,8 +116,8 @@ def plot_geopol_distance(input_year):
         x="Geopolitical_Score",
         y="Country",
         orientation="h",  
-        title=f"Geopolitical Distance with Singapore in {input_year}",
-        labels={"Geopolitical_Score": "Geopolitical Distance", "Country": "Country"},
+        title=f"Geo-Economic Proximity with Singapore in {input_year}",
+        labels={"Geopolitical_Score": "Geo-Economic Proximity", "Country": "Country"},
         color="Country", 
         color_discrete_sequence=color_scale  
     )
@@ -135,7 +135,7 @@ def plot_geopol_distance(input_year):
         )
     )
     fig.add_annotation(
-        text="Fig 2: Bar plot displaying geopolitical distance of Singapore with key trade partner over the years",
+        text="Fig 2: Bar plot displaying Geo-Economic Proximity of Singapore with key trade partner over the years",
         xref="paper", yref="paper", 
         x=0.5, y=-0.3,  
         showarrow=False,
@@ -231,13 +231,13 @@ def plot_geo_pol_line_graph(country):
     fig = px.line(score_df, 
                   x = 'year', 
                   y = "Geopolitical_Score", 
-                  title=f'Geopolitical Distance of {country} with Singapore Over Time',
-                  labels={'year': 'Year', 'Geopolitical_Score': 'Geopolitical Score'},
+                  title=f'Geo-Economic Proximity of {country} with Singapore Over Time',
+                  labels={'year': 'Year', 'Geopolitical_Score': 'Geo-Economic Proximity'},
                   markers=True)
     fig.update_layout(
         template='plotly_white',
         xaxis_title="Year",
-        yaxis_title="Geopolitical Distance",
+        yaxis_title="Geo-Economic Proximity",
         margin=dict(t=60, l=100, r=20, b=100),
         xaxis=dict(range=[score_df['year'].min(), 2024]),
         title=dict(
@@ -246,7 +246,7 @@ def plot_geo_pol_line_graph(country):
             font=dict(size=20))
     )
     fig.add_annotation(
-        text="Fig 4: Line plot displaying geopolitical distance of Singapore with specified trade partner over the years",
+        text="Fig 4: Line plot displaying Geo-Economic Proximity of Singapore with specified trade partner over the years",
         xref="paper", yref="paper",  
         x=0.5, y=-0.3,  
         showarrow=False,
