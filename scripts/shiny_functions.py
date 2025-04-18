@@ -8,11 +8,11 @@ trade_pdt_df = pd.read_csv("data/cleaned data/10 years Trade Product Data.csv")
 #import Geopolitical distance data
 geo_pol_df = pd.read_csv("data/cleaned data/geopolitical_data.csv")
 #import geopolitical distance data
-from Geopolitical_dist import get_geopolitical_data
+from scripts.Geopolitical_dist import get_geopolitical_data
 #import trade predictions data
 trade_pred_df = pd.read_csv("data/cleaned data/trade_with_predicted.csv")
 #import geopolitical dist year function
-from Geopolitical_dist import get_geopolitical_data_for_year
+from scripts.Geopolitical_dist import get_geopolitical_data_for_year
 
 
 # Pg 2 Figure 1: Bubble Plot

@@ -3,10 +3,10 @@ import pandas as pd
 import shinywidgets
 from shinywidgets import render_widget
 from shinyswatch import theme
-from shiny_functions import plot_trade_line_graph
-from shiny_functions import plot_geopol_distance
-from shiny_functions import plot_bubble
-from shiny_functions import plot_geo_pol_line_graph
+from scripts.shiny_functions import plot_trade_line_graph
+from scripts.shiny_functions import plot_geopol_distance
+from scripts.shiny_functions import plot_bubble
+from scripts.shiny_functions import plot_geo_pol_line_graph
 
 #Import datasets
 trade_pdt_df = pd.read_csv("data/cleaned data/10_years_trade_frontend.csv")
@@ -25,7 +25,7 @@ def read_intro():
 
 ## ui
 app_ui = ui.page_fluid(
-    ui.include_css("scripts\\styles.css"),
+    ui.include_css("scripts/styles.css"),
     ui.tags.head(
         ui.tags.style("""
             .navbar { background-color: #004080 !important; }
