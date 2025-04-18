@@ -12,6 +12,8 @@ from shiny_functions import plot_geo_pol_line_graph
 trade_pdt_df = pd.read_csv("data/cleaned data/10_years_trade_frontend.csv")
 geo_pol_df = pd.read_csv("data/cleaned data/geopolitical_data.csv")
 trade_pred_df = pd.read_csv("data/cleaned data/trade_with_predicted.csv")
+geo_score_df = pd.read_csv("data/cleaned data/geopolitical_scores_all_years.csv")
+
 
 
 #product list for industry
@@ -189,7 +191,7 @@ def server(input, output, session):
     @output
     @render_widget
     def bar_plot():
-        return plot_geopol_distance(input.slide_year())
+        return plot_geopol_distance(input.slide_year(), geo_score_df)
 
     @output
     @render_widget
@@ -197,7 +199,7 @@ def server(input, output, session):
         industry = input.select_industry1()
         trade_type = input.select_trade()
         year = input.slide_year()
-        return plot_bubble(industry, trade_type, year, trade_pdt_df)
+        return plot_bubble(industry, trade_type, year, trade_pdt_df, geo_score_df )
     
     #Pg 3
 
@@ -240,7 +242,7 @@ def server(input, output, session):
     @render_widget
     def geo_pol_line_plot():
         country = input.select_country()
-        return plot_geo_pol_line_graph(country)
+        return plot_geo_pol_line_graph(country, geo_score_df)
 
 
 app = App(app_ui, server)
