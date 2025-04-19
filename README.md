@@ -43,6 +43,20 @@ Filtered for Singapore, transposed to set years as index, renamed GDP to "Singap
 ### add_trade_clean.py - Historical Import and Export data 
 Extracted UN Comtrade trade data (2013–2023), reshaped into long format, and cleaned to ensure compatibility for merging into the final models.
 
+## Pre-processing steps
+Missing values were handled, ensuring consistent formats across trade and macroeconomic datasets. Lag features were created, and features were engineered with time-dependency characteristics in mind. Scaling was also applied for linear models to normalise feature ranges.
+
+## Models
+
+We explored several supervised regression models to forecast Singapore’s bilateral import volumes, including:
+
+### Linear Regression, Ridge, and Lasso – Used as baseline models to assess the performance of regularized linear approaches.
+
+### Random Forest and Gradient Boosting (XGBoost) – Tree-based models used to capture non-linear interactions and complex feature relationships.
+
+After comparing models, XGBoost was chosen for its strong out-of-sample performance. A final log-space residual correction using linear regression, based on 2023 errors, was applied improved the accuracy of 2024 forecasts.
+
+
 ## Model Validation
 
 We used time series cross-validation to evaluate model performance while respecting the temporal order of the data. Unlike traditional k-fold cross-validation, this method preserves the time-dependent structure by training on past data and validating on future data.
