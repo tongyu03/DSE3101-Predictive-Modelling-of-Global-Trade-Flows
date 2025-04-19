@@ -9,3 +9,7 @@ docker run -p 8000:8000 lowevie/trade-dashboard:latest
 3) Open your browser and go to:
 http://localhost:8000
 
+## Description of key files and folders
+
+### app.py
+Shiny Script which contains our final trade dashboard. Instructions to run and view are as stated above
