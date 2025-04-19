@@ -35,7 +35,7 @@ Transformed exchange rate data into long format, standardized country names (e.g
 Reshaped GDP data into long format, standardized country names, merged with country codes, and filtered for years from 2013 onwards to align with trade data.
 
 ### gdp_script_1.py - Gross Domestic Product (GDP)
-Filtered for Singapore only, transposed data to set years as index, renamed GDP column to "Singapore_GDP", and removed the first row used for renaming.
+Reshaped GDP data into long format, standardized country names, merged with country codes, and filtered for years from 2013 onwards to align with trade data.ed for Singapore only, transposed data to set years as index, renamed GDP column to "Singapore_GDP", and removed the first row used for renaming.
 
 ### sg_gdp.py - Singapore GDP
 Filtered for Singapore, transposed to set years as index, renamed GDP to "Singapore_GDP", and removed the initial row used for renaming.
