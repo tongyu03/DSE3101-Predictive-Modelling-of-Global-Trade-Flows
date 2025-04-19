@@ -179,3 +179,18 @@ def get_geopolitical_data_for_year(year):
 #print(get_geopolitical_data_for_year(2023))
 
 
+# Calculate geopolitical scores for all rows
+Geopol_df['Geopolitical_Score'] = (
+    500 +
+    4 * Geopol_df['IdealPointDistance'] +
+    -28 * np.log10(Geopol_df['GDP_Lag1']) +
+    -0.7 * Geopol_df['Exchange Rate (per US$)_scaled'] +
+    -16 * Geopol_df['Adjusted_value'] +
+    -16 * Geopol_df['FTA_binary']
+)
+
+# Select only the relevant columns
+geopolitical_scores_df = Geopol_df[['Country', 'year', 'Geopolitical_Score']]
+
+# Save to CSV
+geopolitical_scores_df.to_csv("geopolitical_scores_all_years.csv", index=False)

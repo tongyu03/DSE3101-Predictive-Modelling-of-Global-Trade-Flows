@@ -64,7 +64,7 @@ predicted_imports['HS Code'] = pd.to_numeric(predicted_imports['HS Code'], error
 
 
 # import predicted exports data
-predicted_exports = pd.read_csv("data/cleaned data/predicted export.csv")
+predicted_exports = pd.read_csv("data/cleaned data/predicted_exports_2024.csv")
 predicted_exports = predicted_exports.drop(columns=['HS_Section'])
 predicted_exports['HS Code'] = predicted_exports['HS Code'].replace('All Products', 99)
 predicted_exports = predicted_exports.rename(columns={

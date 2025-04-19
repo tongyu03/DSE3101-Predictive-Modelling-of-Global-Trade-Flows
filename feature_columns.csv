@@ -1,7 +1,8 @@
 0
-log_Import_Lag1
-log_Import_Lag2
-log_Import_Lag3
+year
+log_Export_Lag1
+log_Export_Lag2
+log_Export_Lag3
 IdealPointDistance
 log_GDP_Lag1
 log_SG_GDP_Lag1

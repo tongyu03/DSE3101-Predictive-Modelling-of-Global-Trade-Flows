@@ -588,5 +588,5 @@ predictions_2024 = predict_2024_with_correction()
 
 
 # Save to CSV
-results, comparison_df = predict_2024_with_correction()
-results.to_csv("predicted_2024.csv", index=False)
+#results, comparison_df = predict_2024_with_correction()
+#results.to_csv("predicted_2024.csv", index=False)

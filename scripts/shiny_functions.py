@@ -15,82 +15,88 @@ trade_pred_df = pd.read_csv("data/cleaned data/trade_with_predicted.csv")
 from Geopolitical_dist import get_geopolitical_data_for_year
 
 
+# import geopol scores
+geo_scrore_df = pd.read_csv("data/cleaned data/geopolitical_scores_all_years.csv")
+
+
+
 # Pg 2 Figure 1: Bubble Plot
 
 
-def plot_bubble(industry, trade_type_col, year, trade_pdt_df):
-    # Filter the DataFrame for the specified industry and year
+def plot_bubble(industry, trade_type_col, year, trade_pdt_df, geo_score_df):
+    # Filter the trade data for the selected industry and year
     filtered = trade_pdt_df[
         (trade_pdt_df['Product'] == industry) & 
         (trade_pdt_df['Year'] == year)
     ]
-    # Exclude South Korea from the data
+    # Exclude South Korea
     filtered = filtered[filtered['Country'] != 'South Korea']
     
     if filtered.empty:
         return px.scatter(
             title="No data available for the selected filters.", x=[], y=[]
         )
-    geo_data = get_geopolitical_data_for_year(year)
-    if 'Country' not in geo_data.columns or 'Geopolitical_Score' not in geo_data.columns:
-        print("Required columns missing in geopolitical data.")
-        return None
 
-    geo_data = geo_data[['Country', 'Geopolitical_Score']]  
+    # Filter the geopolitical data for the selected year
+    geo_data = geo_score_df[geo_score_df['year'] == year][['Country', 'Geopolitical_Score']]
+
+    # Create mapping of country to geopolitical score
     geo_data_dict = geo_data.set_index('Country')['Geopolitical_Score'].to_dict()
-    
-    # Add a new column to the filtered dataframe with the geopolitical scores
+
+    # Map geopolitical score to the trade data
     filtered['Geopolitical_Score'] = filtered['Country'].map(geo_data_dict)
 
-    # Sort the countries by Geopolitical_Score for consistent coloring
+    # Sort countries by score for consistent coloring
     geo_data = geo_data.sort_values(by="Geopolitical_Score", ascending=True)
     num_colors = len(geo_data)
-    color_scale = px.colors.sequential.Viridis[:num_colors]
-    # Reverse the color scale
-    reversed_color_scale = color_scale[::-1]
-    # Create the bubble plot 
+    color_scale = px.colors.sequential.Viridis[:num_colors][::-1]  # Reverse scale
+
     fig = px.scatter(
         filtered, 
         x="Country", 
         y=trade_type_col,
         size=trade_type_col,
-        color="Geopolitical_Score",  # Color by Geopolitical_Score
+        color="Geopolitical_Score",
         hover_name="Country", 
-        hover_data={ 
-            "Product": True, 
-            trade_type_col: ':.2f',  
-            "Country": False,  
-            "Year": False,  
-            "Geopolitical_Score": ':,.2f'  # Display the geopolitical score in hover
+        hover_data={
+            "Product": True,
+            trade_type_col: ':.2f',
+            "Country": False,
+            "Year": False,
+            "Geopolitical_Score": ':.2f'
         },
         title=f"Singapore {industry} {trade_type_col} in {year}",
         size_max=60,
-        color_continuous_scale=reversed_color_scale  # Use reversed color scale
+        color_continuous_scale=color_scale
     )
+    
     fig.update_layout(
         xaxis=dict(
             title="Country", 
-            categoryorder='array', 
-            categoryarray=filtered.sort_values(by="Geopolitical_Score")["Country"].unique() 
+            categoryorder='array',
+            categoryarray=filtered.sort_values(by="Geopolitical_Score")["Country"].unique()
         ),
         yaxis_title=trade_type_col,
         margin=dict(t=60, l=100, r=20, b=100),
         template='plotly_white',
-        showlegend= False,  # Remove the legend
+        showlegend=False,
         title=dict(
-            x=0.5, 
+            x=0.5,
             xanchor='center',
-            font=dict(size=20)),
+            font=dict(size=20)
+        ),
         coloraxis_showscale=False
     )
+    
     fig.add_annotation(
         text="Fig 1: Bubble plot displaying level of imports/exports for Singapore's main trade partners per industry, colored by geopolitical score",
-        xref="paper", yref="paper",  
+        xref="paper", yref="paper",
         x=0.5, y=-0.3,
         showarrow=False,
-        font=dict(size=14), 
+        font=dict(size=14),
         align="center"
     )
+    
     return fig
 
 # Pg 2 Figure 2: Geopolitical Distance Bar Graph
@@ -98,35 +104,40 @@ def plot_bubble(industry, trade_type_col, year, trade_pdt_df):
 # List of countries
 Countries = ['China', 'Hong Kong', 'South Korea', 'Thailand', 'Malaysia', 'United States', 'Saudi Arabia', 'Japan', 'Indonesia']
 
-def plot_geopol_distance(input_year):
-    # Get geopolitical data for all countries in the input year
-    year_data = get_geopolitical_data_for_year(input_year)
+def plot_geopol_distance(input_year, geo_score_df):
+    # Filter geo_score_df for the selected year
+    year_data = geo_score_df[geo_score_df['year'] == input_year].copy()
+    
+    # Ensure correct data types
     year_data['Geopolitical_Score'] = year_data['Geopolitical_Score'].astype(float)
     year_data['Country'] = year_data['Country'].astype(str)
-    
+
     if year_data.empty:
         print(f"No data available for the year {input_year}.")
         return None
-    # Sort the countries by Geopolitical_Score in descending order for the bar plot
+
+    # Sort by Geopolitical_Score in descending order
     year_data = year_data.sort_values(by="Geopolitical_Score", ascending=False)
     num_colors = len(year_data)
-    color_scale = px.colors.sequential.Viridis[:num_colors] 
+    color_scale = px.colors.sequential.Viridis[:num_colors]
+
+    # Create horizontal bar plot
     fig = px.bar(
         year_data,
         x="Geopolitical_Score",
         y="Country",
-        orientation="h",  
-        title=f"Geopolitical Distance with Singapore in {input_year}",
-        labels={"Geopolitical_Score": "Geopolitical Distance", "Country": "Country"},
-        color="Country", 
-        color_discrete_sequence=color_scale  
+        orientation="h",
+        title=f"Geo-Economic Proximity with Singapore in {input_year}",
+        labels={"Geopolitical_Score": "Geo-Economic Proximity", "Country": "Country"},
+        color="Country",
+        color_discrete_sequence=color_scale
     )
 
     fig.update_layout(
-        xaxis=dict(range=[year_data['Geopolitical_Score'].min() - 10, year_data['Geopolitical_Score'].max()]),  
-        yaxis=dict(categoryorder='array', categoryarray=year_data['Country'].values),  
-        margin=dict(t=60, l=100, r=20, b=100),  
-        template="plotly_white", 
+        xaxis=dict(range=[year_data['Geopolitical_Score'].min() - 10, year_data['Geopolitical_Score'].max()]),
+        yaxis=dict(categoryorder='array', categoryarray=year_data['Country'].values),
+        margin=dict(t=60, l=100, r=20, b=100),
+        template="plotly_white",
         showlegend=False,
         title=dict(
             x=0.5,
@@ -134,14 +145,16 @@ def plot_geopol_distance(input_year):
             font=dict(size=20)
         )
     )
+
     fig.add_annotation(
-        text="Fig 2: Bar plot displaying geopolitical distance of Singapore with key trade partner over the years",
-        xref="paper", yref="paper", 
-        x=0.5, y=-0.3,  
+        text="Fig 2: Bar plot displaying Geo-Economic Proximity of Singapore with key trade partners over the years",
+        xref="paper", yref="paper",
+        x=0.5, y=-0.3,
         showarrow=False,
-        font=dict(size=14), 
+        font=dict(size=14),
         align="center"
     )
+
     return fig
 
 
@@ -219,44 +232,50 @@ def plot_trade_line_graph(country, industry, trade_pred_df):
 
 
 # Pg 3 Fig 2: Geopolitical Distance line graph
-def plot_geo_pol_line_graph(country):
-    years = geo_pol_df["year"].unique()
-    years.sort()
-    scores = []
-    for y in years:
-        data = get_geopolitical_data(country, y)
-        if not data.empty:
-            scores.append(data[["year", "Geopolitical_Score"]].iloc[0])
-    score_df = pd.DataFrame(scores)
-    fig = px.line(score_df, 
-                  x = 'year', 
-                  y = "Geopolitical_Score", 
-                  title=f'Geopolitical Distance of {country} with Singapore Over Time',
-                  labels={'year': 'Year', 'Geopolitical_Score': 'Geopolitical Score'},
-                  markers=True)
+def plot_geo_pol_line_graph(country, geo_score_df):
+    # Filter for the selected country
+    country_data = geo_score_df[geo_score_df["Country"] == country].copy()
+    
+    if country_data.empty:
+        print(f"No data available for {country}.")
+        return None
+
+    # Sort by year
+    country_data = country_data.sort_values(by="year")
+
+    # Plot line graph
+    fig = px.line(
+        country_data,
+        x='year',
+        y='Geopolitical_Score',
+        title=f'Geo-Economic Proximity of {country} with Singapore Over Time',
+        labels={'year': 'Year', 'Geopolitical_Score': 'Geo-Economic Proximity'},
+        markers=True
+    )
+
     fig.update_layout(
         template='plotly_white',
         xaxis_title="Year",
-        yaxis_title="Geopolitical Distance",
+        yaxis_title="Geo-Economic Proximity",
         margin=dict(t=60, l=100, r=20, b=100),
-        xaxis=dict(range=[score_df['year'].min(), 2024]),
+        xaxis=dict(range=[country_data['year'].min(), 2024]),
         title=dict(
             x=0.5,
             xanchor='center',
-            font=dict(size=20))
+            font=dict(size=20)
+        )
     )
+
     fig.add_annotation(
-        text="Fig 4: Line plot displaying geopolitical distance of Singapore with specified trade partner over the years",
-        xref="paper", yref="paper",  
-        x=0.5, y=-0.3,  
+        text="Fig 4: Line plot displaying Geo-Economic Proximity of Singapore with specified trade partner over the years",
+        xref="paper", yref="paper",
+        x=0.5, y=-0.3,
         showarrow=False,
-        font=dict(size=14), 
+        font=dict(size=14),
         align="center"
     )
+
     return fig
-
-
-
 
 
 
